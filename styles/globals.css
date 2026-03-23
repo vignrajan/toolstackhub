@@ -1,0 +1,170 @@
+/* ============================================================
+   ToolStackHub — Global Styles
+   ============================================================ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   
+   /* ── Base Reset ── */
+   @layer base {
+     *, *::before, *::after { box-sizing: border-box; }
+   
+     html {
+       scroll-behavior: smooth;
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+     }
+   
+     body {
+       @apply font-body bg-surface-50 text-surface-900;
+       font-feature-settings: "kern" 1, "liga" 1, "cv11" 1;
+       letter-spacing: -0.01em;
+     }
+   
+     h1, h2, h3, h4, h5, h6 {
+       @apply font-display font-semibold text-surface-950;
+       letter-spacing: -0.02em;
+     }
+   
+     p, li, span, label, td, th {
+       @apply text-surface-800;
+     }
+   
+     code, pre, kbd, samp {
+       @apply font-mono;
+     }
+   
+     :focus-visible {
+       @apply outline-2 outline-offset-2 outline-brand-500 rounded;
+     }
+   }
+   
+   /* ── Utility Layer ── */
+   @layer utilities {
+     .text-shadow-sm {
+       text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+     }
+   
+     .glass {
+       background: rgba(255, 255, 255, 0.7);
+       backdrop-filter: blur(12px);
+       -webkit-backdrop-filter: blur(12px);
+       border: 1px solid rgba(255, 255, 255, 0.9);
+     }
+   
+     .gradient-text {
+       @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-brand-400;
+     }
+   
+     .noise { position: relative; }
+     .noise::after {
+       content: '';
+       position: absolute;
+       inset: 0;
+       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+       pointer-events: none;
+       border-radius: inherit;
+     }
+   
+     .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+     .custom-scrollbar::-webkit-scrollbar-track { @apply bg-surface-100 rounded-full; }
+     .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-surface-300 rounded-full hover:bg-surface-400; }
+   }
+   
+   /* ── Component Layer ── */
+   @layer components {
+     .badge {
+       @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full;
+     }
+   
+     .tool-card {
+       @apply bg-white rounded-2xl border border-surface-200 p-5 transition-all duration-200;
+       @apply hover:shadow-lg hover:shadow-brand-500/5 hover:-translate-y-0.5 hover:border-brand-200;
+     }
+   
+     .btn-primary {
+       @apply inline-flex items-center justify-center gap-2 px-5 py-2.5;
+       @apply bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl;
+       @apply transition-all duration-150 active:scale-95 shadow-sm;
+       @apply focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+       letter-spacing: -0.01em;
+     }
+   
+     .btn-secondary {
+       @apply inline-flex items-center justify-center gap-2 px-5 py-2.5;
+       @apply bg-white hover:bg-surface-50 text-surface-900 font-semibold rounded-xl;
+       @apply border border-surface-200 hover:border-surface-300;
+       @apply transition-all duration-150 active:scale-95;
+       letter-spacing: -0.01em;
+     }
+   
+     .btn-ghost {
+       @apply inline-flex items-center justify-center gap-2 px-4 py-2;
+       @apply text-surface-700 hover:text-brand-600 hover:bg-brand-50 font-medium rounded-lg;
+       @apply transition-all duration-150;
+     }
+   
+     .input-field {
+       @apply w-full px-4 py-2.5 bg-white border border-surface-200 rounded-xl;
+       @apply text-surface-900 placeholder:text-surface-400 font-medium;
+       @apply focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100;
+       @apply transition-all duration-150;
+     }
+   
+     .textarea-field {
+       @apply w-full px-4 py-3 bg-white border border-surface-200 rounded-xl;
+       @apply text-surface-900 placeholder:text-surface-400 font-mono text-sm leading-relaxed;
+       @apply focus:outline-none focus:border-brand-400 focus:ring-2 focus:ring-brand-100;
+       @apply transition-all duration-150 resize-y;
+     }
+   
+     .section-title {
+       @apply font-display font-bold text-surface-950;
+       letter-spacing: -0.025em;
+     }
+   
+     .code-block {
+       @apply bg-surface-900 text-surface-100 rounded-xl p-4 font-mono text-sm overflow-x-auto;
+       @apply custom-scrollbar;
+     }
+   }
+   
+   /* ── Ad Banner Placeholder ── */
+   .ad-placeholder {
+     @apply relative overflow-hidden rounded-xl border-2 border-dashed border-surface-200;
+     @apply bg-surface-50 flex items-center justify-center text-surface-500 text-sm;
+     background-image: repeating-linear-gradient(
+       45deg,
+       transparent,
+       transparent 8px,
+       rgba(0,0,0,0.015) 8px,
+       rgba(0,0,0,0.015) 16px
+     );
+   }
+   
+   /* ── Markdown Preview Styles ── */
+   .markdown-preview { @apply text-surface-800 leading-relaxed max-w-none text-sm; }
+   .markdown-preview h1 { @apply text-2xl font-bold mb-4 mt-6 text-surface-950; letter-spacing: -0.025em; }
+   .markdown-preview h2 { @apply text-xl font-semibold mb-3 mt-5 text-surface-950 pb-2 border-b border-surface-200; letter-spacing: -0.02em; }
+   .markdown-preview h3 { @apply text-lg font-semibold mb-2 mt-4 text-surface-900; }
+   .markdown-preview h4 { @apply text-base font-semibold mb-2 mt-3 text-surface-900; }
+   .markdown-preview p  { @apply mb-3 text-surface-800 leading-relaxed; }
+   .markdown-preview ul { @apply list-disc pl-5 mb-3 space-y-1; }
+   .markdown-preview ol { @apply list-decimal pl-5 mb-3 space-y-1; }
+   .markdown-preview li { @apply text-surface-800; }
+   .markdown-preview a  { @apply text-brand-600 underline hover:text-brand-800; }
+   .markdown-preview strong { @apply font-semibold text-surface-950; }
+   .markdown-preview em { @apply italic; }
+   .markdown-preview del { @apply line-through text-surface-500; }
+   .markdown-preview pre { @apply bg-surface-900 text-emerald-300 rounded-xl p-4 overflow-x-auto my-4 font-mono text-sm; }
+   .markdown-preview code { @apply bg-surface-100 text-brand-700 px-1.5 py-0.5 rounded text-sm font-mono; }
+   .markdown-preview pre code { @apply bg-transparent text-emerald-300 p-0; }
+   .markdown-preview blockquote { @apply border-l-4 border-brand-400 pl-4 text-surface-700 italic my-3 bg-brand-50 py-1 rounded-r-lg; }
+   .markdown-preview table { @apply w-full border-collapse text-sm my-4; }
+   .markdown-preview th { @apply bg-surface-100 font-semibold text-surface-900 px-3 py-2 border border-surface-200 text-left; }
+   .markdown-preview td { @apply px-3 py-2 border border-surface-200 text-surface-800; }
+   .markdown-preview hr { @apply my-6 border-surface-200; }
+   .markdown-preview img { @apply max-w-full rounded-xl my-4; }

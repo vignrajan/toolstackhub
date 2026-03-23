@@ -1,0 +1,190 @@
+import Link from 'next/link';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
+import CountdownTimer from '../../components/tools/CountdownTimer';
+import { SITE_CONFIG } from '../../data/tools';
+
+export const metadata = {
+  title: 'Countdown Timer Online Free – Set Timer with Alarm Instantly',
+  description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+  alternates: { canonical: `${SITE_CONFIG.url}/countdown-timer-online` },
+  openGraph: {
+    title: 'Countdown Timer Online Free – Set Timer with Alarm Instantly',
+    description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+    url: `${SITE_CONFIG.url}/countdown-timer-online`,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Free',
+      description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+      url: `${SITE_CONFIG.url}/countdown-timer-online`,
+      applicationCategory: 'WebApplication',
+      operatingSystem: 'Web Browser',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      provider: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
+        { '@type': 'ListItem', position: 2, name: 'Utility Tools', item: `${SITE_CONFIG.url}/#{'utility'}` },
+        { '@type': 'ListItem', position: 3, name: 'Free', item: `${SITE_CONFIG.url}/countdown-timer-online` },
+      ],
+    },
+  ],
+};
+
+const relatedLinks = [
+  { href: '/online-stopwatch', label: 'Online Stopwatch', desc: 'Measure elapsed time upward' },
+              { href: '/pomodoro-timer-online', label: 'Pomodoro Timer Online', desc: 'Structured 25/5-minute focus cycles' },
+              { href: '/age-calculator-online', label: 'Age Calculator Online', desc: 'Calculate time until a future date' },
+              { href: '/unix-timestamp-converter', label: 'Unix Timestamp Converter', desc: 'Convert countdown end time to timestamp' },
+];
+
+const variantLinks = [
+  { href: '/5-minute-timer-online', label: '5 Minute Timer Online' },
+              { href: '/10-minute-timer-online', label: '10 Minute Timer Online' },
+              { href: '/25-minute-timer-online', label: '25 Minute Timer Online' },
+              { href: '/countdown-timer-with-alarm', label: 'Countdown Timer with Alarm' },
+];
+
+const faqs = [
+  { q: 'What happens when the countdown reaches zero?', a: 'An audio alarm plays and the timer display flashes to alert you, even if the browser tab is not in focus.' },
+  { q: 'Can I set a timer for more than an hour?', a: 'Yes — enter hours, minutes, and seconds for any duration up to 99 hours.' },
+  { q: 'Can I pause and resume the timer?', a: 'Yes — click Pause to hold the countdown and Resume to continue from exactly where you left off.' },
+  { q: 'Is there a sound alert?', a: 'Yes — a distinct alarm plays when the countdown reaches zero.' },
+  { q: 'Is the countdown timer free?', a: 'Yes — completely free with no account or download required.' },
+];
+
+export default function Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+
+        <div className="bg-surface-50 border-b border-surface-100 py-3">
+          <AdBanner variant="top" />
+        </div>
+
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li>
+                  <Link href="/#{'utility'}" className="hover:text-brand-600 transition-colors text-violet-600">
+                    Utility Tools
+                  </Link>
+                </li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium">Free</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">
+              Free Online Countdown Timer – Count Down from Any Duration with Alarm
+            </h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {['✅ 100% Free', '⚡ Instant Results', '🔒 No Signup', '📱 Mobile Friendly', '🔐 No Data Stored'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <CountdownTimer />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+          <AffiliateCTA toolName="Free" />
+        </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+          <AdBanner variant="content" />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Common Use Cases</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { icon: '🍳', title: 'Kitchen Timer', desc: 'Set precise cooking timers for boiling eggs, roasting vegetables, baking, and any recipe step.' },
+              { icon: '📚', title: 'Study Sessions', desc: 'Set focused study intervals (25, 45, or 60 minutes) and study until the alarm.' },
+              { icon: '🤝', title: 'Meeting Management', desc: 'Keep discussions on schedule by setting a countdown for agenda items in meetings.' },
+              { icon: '🏋️', title: 'Workout Intervals', desc: 'Time exercise sets, rest periods, HIIT intervals, and circuit training rounds.' },
+              { icon: '🎮', title: 'Games & Quizzes', desc: 'Set time limits for quiz rounds, board game turns, and classroom activities.' },
+              { icon: '🎤', title: 'Speaking Practice', desc: 'Time mock interviews, pitch rehearsals, and public speaking practice.' },
+              ].map(uc => (
+                <div key={uc.title} className="flex gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl">
+                  <span className="text-2xl shrink-0">{uc.icon}</span>
+                  <div>
+                    <div className="font-semibold text-surface-900 text-sm">{uc.title}</div>
+                    <div className="text-xs text-surface-500 mt-1 leading-relaxed">{uc.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related Pages</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              {variantLinks.map(v => (
+                <Link key={v.href} href={v.href}
+                  className="flex items-center p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors group">
+                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{v.label}</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-5">More Free Tools</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {relatedLinks.map(l => (
+                <Link key={l.href} href={l.href}
+                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors group">
+                  <div>
+                    <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{l.label}</div>
+                    <div className="text-xs text-surface-500 mt-0.5">{l.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
