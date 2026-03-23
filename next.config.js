@@ -65,7 +65,8 @@ const nextConfig = {
       { source: '/tools/ai-prompts-seo',              destination: '/ai-prompts/seo',              permanent: true },
       { source: '/tools/emi-calculator',              destination: '/emi-calculator',              permanent: true },
       { source: '/tools/home-loan-emi-calculator',    destination: '/home-loan-emi-calculator',    permanent: true },
-      { source: '/tools/car-loan-emi-calculator',     destination: '/car-loan-emi-calculator',     permanent: true },
+      { source: '/tools/sip-calculator',              destination: '/sip-calculator',              permanent: true },  
+
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main
       // (302 = temporary, keeps variants indexable separately)

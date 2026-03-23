@@ -762,6 +762,14 @@ export const tools = [
   description: 'Calculate car loan and two-wheeler loan EMI instantly. Compare bank rates and see full payment breakdown.',
   href:        '/car-loan-emi-calculator',
 },
+{
+  slug:        'sip-calculator',
+  name:        'SIP Calculator',
+  category:    'utility',
+  icon:        '📈',
+  description: 'Calculate mutual fund SIP returns, maturity value, and wealth gained. Includes step-up SIP and lumpsum calculator with growth chart.',
+  href:        '/sip-calculator',
+},
 
 
 
