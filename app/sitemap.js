@@ -133,7 +133,11 @@ export default function sitemap() {
     p('/online-stopwatch',            0.85),
     p('/screen-resolution-checker',   0.80),
     p('/ai-prompt-generator-online',  0.85),
-    p('/ai-prompts-seo', 0.85),
+    p('/ai-prompts-seo',              0.85),
+    p('/emi-calculator',              0.90),
+    p('/home-loan-emi-calculator',     0.88),
+    p('/car-loan-emi-calculator',      0.85),
+    p('/personal-loan-emi-calculator', 0.85),
 
     // Utility programmatic cluster
     p('/qr-code-for-website',             0.75),

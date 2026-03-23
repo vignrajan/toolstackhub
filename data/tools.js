@@ -734,6 +734,36 @@ export const tools = [
     ],
     relatedSlugs: ['password-generator', 'uuid-generator', 'random-number-generator'],
   },
+  // ── ADD THESE 3 ENTRIES TO YOUR data/tools.js ────────────────
+// Find the 'utility' category tools array and add these entries.
+// Place them alongside other calculator tools like percentage-calculator-online.
+
+{
+  slug:        'emi-calculator',
+  name:        'EMI Calculator',
+  category:    'utility',
+  icon:        '🧮',
+  description: 'Calculate monthly EMI for home loan, car loan, and personal loan. View amortization schedule, total interest, and payment breakdown.',
+  href:        '/emi-calculator',
+},
+{
+  slug:        'home-loan-emi-calculator',
+  name:        'Home Loan EMI Calculator',
+  category:    'utility',
+  icon:        '🏠',
+  description: 'Calculate home loan EMI for any amount and tenure. Compare SBI, HDFC, ICICI rates. Full amortization schedule included.',
+  href:        '/home-loan-emi-calculator',
+},
+{
+  slug:        'car-loan-emi-calculator',
+  name:        'Car Loan EMI Calculator',
+  category:    'utility',
+  icon:        '🚗',
+  description: 'Calculate car loan and two-wheeler loan EMI instantly. Compare bank rates and see full payment breakdown.',
+  href:        '/car-loan-emi-calculator',
+},
+
+
 
   // ── BATCH 3 ──────────────────────────────────────────────
   {
