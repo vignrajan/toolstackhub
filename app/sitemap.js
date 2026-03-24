@@ -142,6 +142,8 @@ export default function sitemap() {
     p('/car-loan-emi-calculator',      0.85),
     p('/personal-loan-emi-calculator', 0.85),
     p('/sip-calculator',               0.90),
+    p('/invoice-generator',            0.92),
+
 
     // Utility programmatic cluster
     p('/qr-code-for-website',             0.75),

@@ -778,6 +778,14 @@ export const tools = [
   description: 'Calculate mutual fund SIP returns, maturity value, and wealth gained. Includes step-up SIP and lumpsum calculator with growth chart.',
   href:        '/sip-calculator',
 },
+{
+  slug:        'invoice-generator',
+  name:        'Invoice Generator',
+  category:    'utility',
+  icon:        '🧾',
+  description: 'Create professional PDF invoices free. GST support, 6 currencies, 4 templates, discount. No signup, no watermark, unlimited invoices.',
+  href:        '/invoice-generator',
+},
 
 
 
