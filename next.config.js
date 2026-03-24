@@ -23,9 +23,10 @@ const nextConfig = {
       { source: '/tools/markdown-preview',      destination: '/markdown-editor-online',     permanent: true },
       { source: '/tools/text-to-speech',        destination: '/text-to-speech-online',      permanent: true },
       { source: '/tools/remove-duplicate-lines',destination: '/remove-duplicate-lines-online', permanent: true },
-      { source: '/tools/remove-extra-spaces',   destination: '/remove-extra-spaces',         permanent: true},
-      { source: '/tools/remove-line-breaks',    destination: '/remove-line-breaks',          permanent: true},
-      { source: '/tools/remove-empty-lines',    destination: '/remove-empty-lines', permanent: true},
+      { source: '/tools/remove-extra-spaces',   destination: '/remove-extra-spaces',         permanent: true },
+      { source: '/tools/remove-line-breaks',    destination: '/remove-line-breaks',          permanent: true },
+      { source: '/tools/remove-empty-lines',    destination: '/remove-empty-lines',          permanent: true },
+      { source: '/tools/text-repeater',         destination: '/text-repeater',               permanent: true },
 
       // ════════════════════════════════════════════════
       // DEVELOPER TOOLS — /tools/* → clean URL (301 permanent)

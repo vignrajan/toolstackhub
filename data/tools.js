@@ -222,6 +222,14 @@ export const tools = [
     description: 'Collapse multiple spaces into single spaces and clean up whitespace from any text. Free.',
     href:        '/remove-extra-spaces',
   },
+  {
+    slug:        'text-repeater',
+    name:        'Text Repeater',
+    category:    'text',
+    icon:        '🔁',
+    description: 'Repeat any text, word, or sentence multiple times instantly. Choose new line, space, comma, or custom separator. Free, no signup.',
+    href:        '/text-repeater',
+  },
 
 
 

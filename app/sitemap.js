@@ -51,6 +51,8 @@ export default function sitemap() {
     p('/remove-empty-lines',   0.80),
     p('/remove-extra-spaces',  0.80),
     p('/tools/text',           0.75),
+    p('/text-repeater',               0.85),
+
 
     // Text programmatic cluster
     p('/convert-text-to-handwriting',      0.80),
@@ -138,6 +140,7 @@ export default function sitemap() {
     p('/home-loan-emi-calculator',     0.88),
     p('/car-loan-emi-calculator',      0.85),
     p('/personal-loan-emi-calculator', 0.85),
+    p('/sip-calculator',               0.90),
 
     // Utility programmatic cluster
     p('/qr-code-for-website',             0.75),
