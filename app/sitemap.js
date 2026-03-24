@@ -115,6 +115,7 @@ export default function sitemap() {
     p('/blog/how-to-check-typing-speed-online',                   0.75),
     p('/blog/how-to-compress-images-without-losing-quality',      0.75),
     p('/blog/how-to-minify-json-for-faster-api-responses',        0.75),
+    p('/blog/how-to-repeat-text-online-free',                     0.75),
 
 
     // SEO programmatic cluster

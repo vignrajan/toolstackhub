@@ -75,6 +75,25 @@ export const blogPosts = [
         toolName:    'JSON Formatter & Minifier',
         featured:    true,
       },
+      {
+        slug:        'how-to-repeat-text-online-free',
+        title:       'How to Repeat Text Online Free (10 Real Uses You Need to Know)',
+        metaTitle:   'How to Repeat Text Online Free (10 Real Uses You Need to Know)',
+        metaDesc:    'Learn how to repeat text online instantly using a free tool. 10 real use cases for developers, students, and designers. No code, no signup. Try now.',
+        excerpt:     'Repeating text manually 50 times wastes minutes. This guide covers every method — online tool, Word, Excel, Python — and 10 real workflows where a text repeater saves significant time.',
+        category:    'Text Tools',
+        categorySlug:'text-tools',
+        author:      'ToolStackHub Team',
+        publishedAt: '2026-03-24',
+        updatedAt:   '2026-03-24',
+        readTime:    7,
+        coverEmoji:  '🔁',
+        coverBg:     'from-brand-500 to-violet-600',
+        tags:        ['text tools', 'productivity', 'developer tools'],
+        toolUrl:     '/text-repeater',
+        toolName:    'Text Repeater',
+        featured:    true,
+      },
 
 
 
