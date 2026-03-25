@@ -69,6 +69,7 @@ const nextConfig = {
       { source: '/tools/sip-calculator',              destination: '/sip-calculator',              permanent: true },  
       { source: '/tools/invoice-generator',              destination: '/invoice-generator',        permanent: true },
       { source: '/tools/gst-calculator',              destination: '/gst-calculator',              permanent: true },
+      { source: '/tools/salary-calculator',              destination: '/salary-calculator',        permanent: true },
 
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main

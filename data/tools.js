@@ -794,6 +794,14 @@ export const tools = [
   description: 'Calculate GST for all rates. Add or remove GST, CGST/SGST/IGST breakdown, intra and inter-state. Free, instant, no signup.',
   href:        '/gst-calculator',
 },
+{
+  slug:        'salary-calculator',
+  name:        'Salary & Gratuity Calculator',
+  category:    'utility',
+  icon:        '💰',
+  description: 'Calculate take-home salary, CTC breakup, old vs new tax regime, and gratuity. India 2026. Free, no signup.',
+  href:        '/salary-calculator',
+},
 
 
 

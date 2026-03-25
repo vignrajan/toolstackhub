@@ -117,6 +117,10 @@ export default function sitemap() {
     p('/blog/how-to-minify-json-for-faster-api-responses',        0.75),
     p('/blog/how-to-repeat-text-online-free',                     0.75),
     p('/blog/free-invoice-generator-online-complete-guide',       0.80),
+    p('/blog/how-to-calculate-in-hand-salary-india',              0.75),
+    p('/blog/how-to-generate-strong-passwords-online',            0.75),
+    p('/blog/how-to-convert-word-to-pdf-free',                    0.75),
+    p('/blog/what-is-cibil-score-how-to-improve',                 0.78),
 
 
 
@@ -146,6 +150,8 @@ export default function sitemap() {
     p('/sip-calculator',               0.90),
     p('/invoice-generator',            0.92),
     p('/gst-calculator',               0.92),
+    p('/salary-calculator',            0.92),
+
 
 
     // Utility programmatic cluster
