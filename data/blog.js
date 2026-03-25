@@ -94,6 +94,24 @@ export const blogPosts = [
         toolName:    'Text Repeater',
         featured:    true,
       },
+      {
+        slug:        'free-invoice-generator-online-complete-guide',
+        title:       'Free Invoice Generator Online – Create GST Invoice in 60 Seconds (No Login)',
+        metaDesc:    'Create professional invoices free online. No signup, no watermark, instant PDF download. Complete guide for freelancers, small businesses & GST invoicing in India.',
+        excerpt:     'Stop wasting time on Excel invoices. Create a professional GST-compliant invoice in 60 seconds — free, no login, no watermark, unlimited downloads.',
+        category:    'Business Tools',
+        categorySlug:'business-tools',
+        author:      'ToolStackHub Team',
+        publishedAt: '2026-03-25',
+        updatedAt:   '2026-03-25',
+        readTime:    10,
+        coverEmoji:  '🧾',
+        coverBg:     'from-emerald-600 to-teal-700',
+        tags:        ['invoice', 'gst', 'freelance', 'business'],
+        toolUrl:     '/invoice-generator',
+        toolName:    'Free Invoice Generator',
+        featured:    true,
+      },
 
 
 
