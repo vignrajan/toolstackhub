@@ -116,6 +116,8 @@ export default function sitemap() {
     p('/blog/how-to-compress-images-without-losing-quality',      0.75),
     p('/blog/how-to-minify-json-for-faster-api-responses',        0.75),
     p('/blog/how-to-repeat-text-online-free',                     0.75),
+    p('/blog/free-invoice-generator-online-complete-guide',       0.80),
+
 
 
     // SEO programmatic cluster
@@ -143,6 +145,7 @@ export default function sitemap() {
     p('/personal-loan-emi-calculator', 0.85),
     p('/sip-calculator',               0.90),
     p('/invoice-generator',            0.92),
+    p('/gst-calculator',               0.92),
 
 
     // Utility programmatic cluster

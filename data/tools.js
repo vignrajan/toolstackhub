@@ -786,6 +786,14 @@ export const tools = [
   description: 'Create professional PDF invoices free. GST support, 6 currencies, 4 templates, discount. No signup, no watermark, unlimited invoices.',
   href:        '/invoice-generator',
 },
+{
+  slug:        'gst-calculator',
+  name:        'GST Calculator',
+  category:    'utility',
+  icon:        '🧮',
+  description: 'Calculate GST for all rates. Add or remove GST, CGST/SGST/IGST breakdown, intra and inter-state. Free, instant, no signup.',
+  href:        '/gst-calculator',
+},
 
 
 

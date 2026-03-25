@@ -68,6 +68,7 @@ const nextConfig = {
       { source: '/tools/home-loan-emi-calculator',    destination: '/home-loan-emi-calculator',    permanent: true },
       { source: '/tools/sip-calculator',              destination: '/sip-calculator',              permanent: true },  
       { source: '/tools/invoice-generator',              destination: '/invoice-generator',        permanent: true },
+      { source: '/tools/gst-calculator',              destination: '/gst-calculator',              permanent: true },
 
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main
