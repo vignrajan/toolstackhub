@@ -353,9 +353,33 @@ export default function FuelBillGenerator({ prefill = {} }) {
       {/* Print CSS */}
       <style>{`
         @media print {
-          body > * { display: none !important; }
-          #fuel-bill-preview { display: block !important; position: fixed; top: 0; left: 0; width: 100%; }
-          #fuel-bill-preview * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          header, nav, footer,
+          [data-noprint],
+          .no-print { display: none !important; }
+
+          body { margin: 0 !important; padding: 0 !important; background: white !important; }
+
+          /* Hide everything except the bill */
+          body * { visibility: hidden; }
+          #fuel-bill-preview,
+          #fuel-bill-preview * { visibility: visible; }
+
+          #fuel-bill-preview {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+          }
+
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
         }
       `}</style>
     </div>

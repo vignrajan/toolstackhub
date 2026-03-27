@@ -11,6 +11,8 @@ const nextConfig = {
       { source: '/tools/image-resizer',    destination: '/resize-image-online',         permanent: true },
       { source: '/tools/jpg-to-png',       destination: '/jpg-to-png-converter-online', permanent: true },
       { source: '/tools/Image-to-pdf', destination: '/image-to-pdf-converter-online', permanent:true},
+      { source: '/tools/speech-bubble-maker', destination: '/speech-bubble-maker', permanent:true},
+
 
       // ════════════════════════════════════════════════
       // TEXT TOOLS — /tools/* → clean URL (301 permanent)
