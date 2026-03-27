@@ -70,6 +70,7 @@ const nextConfig = {
       { source: '/tools/invoice-generator',              destination: '/invoice-generator',        permanent: true },
       { source: '/tools/gst-calculator',              destination: '/gst-calculator',              permanent: true },
       { source: '/tools/salary-calculator',              destination: '/salary-calculator',        permanent: true },
+      { source: '/tools/fuel-bill-generator',              destination: '/fuel-bill-generator',        permanent: true },
 
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main

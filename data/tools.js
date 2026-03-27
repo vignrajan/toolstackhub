@@ -98,6 +98,12 @@ export const tools = [
     description: 'Convert JPG, PNG, and WEBP images to a single PDF file instantly. Multiple images supported with drag-to-reorder. No server upload, no watermarks.',
     relatedSlugs: ['image-compressor', 'image-resizer', 'jpg-to-png'],
   },
+  {
+    slug: 'speech-bubble-maker', name: 'Speech Bubble Maker',
+    category: 'image', icon: '💬',
+    description: 'Add speech bubbles to any image free online. 6 styles, drag & resize, instant PNG download.',
+    href: '/speech-bubble-maker',
+  },
 
   // ── TEXT TOOLS ───────────────────────────────────────────
   {
@@ -801,6 +807,12 @@ export const tools = [
   icon:        '💰',
   description: 'Calculate take-home salary, CTC breakup, old vs new tax regime, and gratuity. India 2026. Free, no signup.',
   href:        '/salary-calculator',
+},
+{
+  slug: 'fuel-bill-generator', name: 'Fuel Bill Generator',
+  category: 'utility', icon: '⛽',
+  description: 'Generate petrol, diesel, CNG bills for reimbursement. GST support, PDF download, WhatsApp sharing. Free, no signup.',
+  href: '/fuel-bill-generator',
 },
 
 

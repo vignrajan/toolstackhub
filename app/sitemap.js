@@ -37,6 +37,11 @@ export default function sitemap() {
     p('/resize-image-for-linkedin',            0.75),
     p('/resize-image-to-passport-size',        0.75),
     p('/jpg-to-png-transparent-background',    0.75),
+    p('/speech-bubble-maker',                  0.90),
+    p('/add-speech-bubble-to-image',           0.85),
+    p('/speech-bubble-maker-for-memes',        0.85),
+    p('/speech-bubble-maker-for-instagram',    0.82),
+    p('/speech-bubble-png-generator',          0.80),
 
     // ── Text tools ────────────────────────────────────────────
     p('/word-counter-online',        0.90),
@@ -151,6 +156,13 @@ export default function sitemap() {
     p('/invoice-generator',            0.92),
     p('/gst-calculator',               0.92),
     p('/salary-calculator',            0.92),
+    p('/fuel-bill-generator',                        0.90),
+    p('/fuel-bill-generator-for-reimbursement',      0.85),
+    p('/petrol-bill-generator-online-free',          0.85),
+    p('/fuel-receipt-generator-india',               0.83),
+    p('/fuel-bill-generator-with-gst',               0.83),
+    p('/diesel-bill-generator-online',               0.80),
+    p('/cng-bill-generator-online',                  0.80),
 
 
 
