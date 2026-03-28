@@ -1,419 +1,356 @@
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import AgeCalculator from '../../components/tools/AgeCalculator';
 import { SITE_CONFIG } from '../../data/tools';
 
-// ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Age Calculator Online Free – Find Your Exact Age Instantly',
-  description: 'Calculate your exact age in years, months, days, hours, and minutes free. Birth day of week and next birthday countdown included. No signup. Try now!',
+  title: 'Age Calculator – Calculate Exact Age in Years, Months & Days | Free',
+  description: 'Free age calculator by date of birth. Get exact age in years, months, days, weeks, hours. Next birthday countdown, zodiac sign. No signup, instant results.',
   keywords: [
-    'age calculator online',
-    'age calculator by date of birth',
-    'how old am i calculator',
-    'exact age calculator',
-    'age in days calculator',
-    'birthday countdown calculator',
-    'date of birth age calculator',
-    'calculate age from birthday',
+    'age calculator', 'calculate my age', 'how old am i', 'age calculator by date of birth',
+    'exact age calculator', 'age in days calculator', 'age in months', 'age calculator india',
+    'how many days old am i', 'birthday age calculator', 'age calculator online free',
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/age-calculator-online` },
   openGraph: {
-    title: 'Age Calculator Online Free – Find Your Exact Age Instantly',
-    description: 'Calculate exact age in years, months, days, hours, and minutes. Birth day of week and birthday countdown included. Free, no signup.',
+    title: 'Age Calculator – Exact Age in Years, Months, Days | Free Online',
+    description: 'Calculate your exact age instantly. Years, months, days, weeks, hours. Birthday countdown. Free, no signup.',
     url: `${SITE_CONFIG.url}/age-calculator-online`,
-    type: 'website',
-    siteName: SITE_CONFIG.name,
+    type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Age Calculator Online Free – Exact Age Instantly',
-    description: 'Calculate your exact age in years, months, days, hours, and minutes. Free, no signup.',
-    creator: SITE_CONFIG.twitterHandle,
-  },
 };
 
-// ── FAQ data ──────────────────────────────────────────────────
 const faqs = [
   {
-    q: 'How accurate is the age calculation?',
-    a: 'The calculation is accurate to the day, accounting for all leap years, varying month lengths (28, 29, 30, or 31 days), and whether your birthday has already occurred in the current calendar year. The hours and minutes display is based on the current time at the moment you open the tool — it updates in real time.',
+    q: 'How do I calculate my exact age?',
+    a: 'To calculate your exact age: subtract your birth year from the current year, then adjust for whether your birthday has occurred this year. If your birthday is still to come this year, subtract 1. For months and days: count complete months since your last birthday, then remaining days. Or simply enter your date of birth above — the calculator does all of this instantly and shows your age in years, months, days, weeks, hours, and minutes.',
   },
   {
-    q: 'Can I calculate age between two custom dates?',
-    a: 'Yes — set both a start date and an end date to calculate the exact duration between any two historical or future dates. This is useful for calculating project durations, contract lengths, employment tenure, or time elapsed between any two events.',
+    q: 'How many days old am I?',
+    a: 'To calculate total days old: count the number of days from your date of birth to today, accounting for leap years (which have 366 days). The formula is: Total days = (Today\'s date − Date of Birth) in milliseconds ÷ 86,400,000 (milliseconds per day). For example, someone born on January 1, 2000 is approximately 9,583 days old as of March 2026. Enter your birthdate above to get your exact total days.',
   },
   {
-    q: 'What day of the week was I born on?',
-    a: 'The tool automatically shows the exact day of the week for any date of birth you enter — calculated precisely from the Gregorian calendar including all historical calendar adjustments. Enter your birth date and the day appears instantly below the result.',
+    q: 'How old am I if I was born in 2000?',
+    a: 'If you were born in 2000, you are 25 or 26 years old in 2026, depending on whether your birthday has passed this year. If born January 1, 2000, you turned 26 on January 1, 2026. If born December 31, 2000, you are still 25 years old until December 31, 2026. Enter your exact birthdate in the calculator above to get your precise age in years, months, and days.',
   },
   {
-    q: 'Is the age calculator free?',
-    a: 'Yes — completely free with no account, no signup, and no usage limits. Calculate age for any date of birth instantly.',
+    q: 'What is the formula to calculate age from date of birth?',
+    a: 'The age formula is: Age in years = Current year − Birth year − (1 if birthday not yet occurred this year, else 0). For complete age with months and days: (1) Calculate years as above. (2) Months = current month − birth month (add 12 if negative, subtract 1 from years). (3) Days = current day − birth day (add days in previous month if negative, subtract 1 from months). The online calculator above handles all edge cases including leap years automatically.',
   },
   {
-    q: 'Does it account for leap years?',
-    a: 'Yes — the calculator fully accounts for leap years. If you were born on February 29th (a leap day), the tool correctly handles age calculation for years when February 29th does not exist, following the standard convention of treating March 1st as the birthday in non-leap years.',
+    q: 'How many weeks old am I?',
+    a: 'Total weeks old = Total days old ÷ 7 (rounded down). A 25-year-old is approximately 1,304 weeks old. A 30-year-old is approximately 1,565 weeks old. The exact number depends on your birth date and the number of leap years in between. Use the calculator above to see your exact total weeks.',
+  },
+  {
+    q: 'How do I calculate age for a government exam or job application in India?',
+    a: 'For Indian government exam age calculation: (1) Use the official cutoff date from the notification (usually January 1 or August 1 of the exam year). (2) Calculate your age as on that specific cutoff date — not today\'s date. (3) Check if you meet the minimum and maximum age limits specified in the notification. The "Age As On Date" field in our calculator lets you enter any specific cutoff date to check your eligibility accurately.',
+  },
+  {
+    q: 'How is age calculated when birthdate is the last day of a month?',
+    a: 'When calculating age for birthdays at month-end: if born February 28 (or 29 in a leap year), age increases by one month on March 28 (or 29 in non-leap year). If born January 31, the next monthly anniversary is February 28 (or 29 in leap year). Our calculator uses the standard chronological age system used in India and most countries.',
+  },
+  {
+    q: 'What is the difference between chronological age and biological age?',
+    a: 'Chronological age is the number of years since your date of birth — what this calculator measures. Biological age is how old your body is based on health markers, lifestyle, and genetics — it can be higher or lower than your chronological age. This age calculator measures chronological age, which is the legal age used for all official purposes including government exams, voting eligibility, retirement planning, and legal documents.',
   },
 ];
 
-// ── Structured data ───────────────────────────────────────────
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'SoftwareApplication',
-      name: 'Age Calculator Online',
-      description: 'Free online age calculator. Calculate exact age in years, months, days, hours, and minutes from any date of birth. Shows birth day of week, next birthday countdown, and supports custom date ranges.',
-      url: `${SITE_CONFIG.url}/age-calculator-online`,
-      applicationCategory: 'UtilitiesApplication',
-      operatingSystem: 'Web Browser',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      featureList: [
-        'Exact age in years, months, days, hours, and minutes',
-        'Day of the week for any date of birth',
-        'Next birthday countdown in days',
-        'Custom date range calculation',
-        'Accurate leap year handling',
-        'Real-time calculation — no submit button',
-      ],
-      provider: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: faqs.map(f => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home',          item: SITE_CONFIG.url },
-        { '@type': 'ListItem', position: 2, name: 'Utility Tools', item: `${SITE_CONFIG.url}/#utility` },
-        { '@type': 'ListItem', position: 3, name: 'Age Calculator', item: `${SITE_CONFIG.url}/age-calculator-online` },
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Calculate Your Age Online',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Enter date of birth', text: 'Click the date picker and select your date of birth — day, month, and year.' },
-        { '@type': 'HowToStep', position: 2, name: 'View your age',       text: 'Your exact age appears instantly in years, months, days, hours, and minutes.' },
-        { '@type': 'HowToStep', position: 3, name: 'See your birth day',  text: 'The day of the week you were born is shown automatically below your age.' },
-        { '@type': 'HowToStep', position: 4, name: 'Check countdown',     text: 'The next birthday countdown shows how many days until your next birthday.' },
-      ],
-    },
-  ],
-};
-
-// ── Age milestones data ───────────────────────────────────────
-const milestones = [
-  { age: '18',  label: 'Legal adulthood',      desc: 'Voting age in most countries, legal driving age in many regions, eligibility for adult contracts and agreements.' },
-  { age: '21',  label: 'Full adult rights',    desc: 'Legal drinking age in the United States, full legal capacity in many jurisdictions for financial and legal matters.' },
-  { age: '25',  label: 'Lower car insurance',  desc: 'Car insurance rates typically drop significantly at 25. Also the age for unrestricted car rental in most countries.' },
-  { age: '59½', label: 'Retirement accounts',  desc: 'Minimum age for penalty-free withdrawals from US 401(k) and IRA retirement accounts.' },
-  { age: '65',  label: 'Medicare & retirement',desc: 'Medicare eligibility age in the US. Full retirement age for Social Security benefits for many birth years.' },
-  { age: '100', label: 'Centenarian',           desc: 'Reaching 100 years makes you a centenarian — a milestone recognized by heads of state in many countries.' },
+const PROGRAMMATIC_PAGES = [
+  { href: '/how-old-am-i',                 label: 'How Old Am I – Age Calculator'          },
+  { href: '/age-calculator-by-date-of-birth',label:'Age Calculator by Date of Birth'       },
+  { href: '/exact-age-calculator',          label: 'Exact Age Calculator'                  },
+  { href: '/age-in-days-calculator',        label: 'Age in Days Calculator'                },
+  { href: '/age-in-months-calculator',      label: 'Age in Months Calculator'              },
+  { href: '/age-calculator-for-govt-exams', label: 'Age Calculator for Government Exams'  },
+  { href: '/age-calculator-for-ssc',        label: 'Age Calculator for SSC'               },
+  { href: '/age-calculator-for-upsc',       label: 'Age Calculator for UPSC'              },
+  { href: '/birthday-age-calculator',       label: 'Birthday Age Calculator'              },
+  { href: '/age-in-weeks-calculator',       label: 'Age in Weeks Calculator'              },
 ];
 
-// ── Page ──────────────────────────────────────────────────────
-export default function AgeCalculatorOnlinePage() {
+export default function AgeCalculatorPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Age Calculator – Exact Age by Date of Birth',
+        description: 'Free online age calculator. Calculate exact age in years, months, days, weeks, hours from date of birth. Birthday countdown, zodiac sign. No signup required.',
+        url: `${SITE_CONFIG.url}/age-calculator-online`,
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'Web Browser',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+        featureList: [
+          'Exact age in years, months, days',
+          'Total days, weeks, months, hours',
+          'Next birthday live countdown',
+          'Age as on any specific date',
+          'Zodiac sign calculator',
+          'Age for government exam cutoff dates',
+          'No signup required',
+        ],
+        provider: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(f => ({
+          '@type': 'Question', name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'Age Calculator', item: `${SITE_CONFIG.url}/age-calculator-online` },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main className="flex-1">
 
-        <div className="bg-surface-50 border-b border-surface-100 py-3">
-          <AdBanner variant="top" />
-        </div>
-
+        {/* ── Hero ─────────────────────────────────────────── */}
         <div className="bg-white border-b border-surface-100">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <nav aria-label="Breadcrumb" className="mb-4">
               <ol className="flex items-center gap-2 text-sm text-surface-500">
-                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
-                <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/#utility" className="hover:text-brand-600 transition-colors text-violet-600">Utility Tools</Link></li>
+                <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">Age Calculator</li>
               </ol>
             </nav>
             <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">
-              Free Age Calculator Online – Find Your Exact Age in Years, Months & Days
+              Age Calculator – Calculate Exact Age in Years, Months and Days
             </h1>
             <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">
-              Enter your date of birth and instantly see your exact age in years, months,
-              days, hours, and minutes. Includes your birth day of the week and a countdown
-              to your next birthday. Free, no signup, updates in real time.
+              Calculate your <strong className="text-surface-700">exact age by date of birth</strong> instantly.
+              Get age in years, months, days, weeks, total hours, next birthday countdown, and
+              zodiac sign. Works for any date — past or future. Free, no login, no app required.
             </p>
             <div className="flex flex-wrap gap-2 mt-5">
-              {[
-                '✅ 100% Free',
-                '📅 Exact to the Day',
-                '🎂 Birthday Countdown',
-                '🗓️ Day of Week',
-                '⚡ Real-Time',
-                '📱 Mobile Friendly',
-              ].map(b => (
+              {['🆓 100% Free', '⚡ Instant Results', '🚫 No Signup', '📅 Any Date', '🎂 Birthday Countdown', '🏛️ Govt Exam Ready'].map(b => (
                 <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
               ))}
             </div>
           </div>
         </div>
 
+        {/* ── Calculator ───────────────────────────────────── */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <AgeCalculator />
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-          <AffiliateCTA toolName="Age Calculator" />
-        </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-          <AdBanner variant="content" />
-        </div>
-
+        {/* ── SEO Content ──────────────────────────────────── */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-14">
 
-          {/* Section 1 — About */}
-          <section aria-labelledby="about-heading">
-            <h2 id="about-heading" className="font-display font-bold text-2xl text-surface-900 mb-4">
-              Age Calculator Online – Exact Age from Any Date of Birth
+          {/* Section 1: What is an Age Calculator */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-4">
+              What is an Age Calculator?
             </h2>
             <div className="space-y-3 text-surface-600 leading-relaxed">
               <p>
-                Our free <strong>age calculator online</strong> tells you exactly how old you
-                are — down to years, months, days, hours, and minutes — with precise leap year
-                handling that ensures a mathematically correct result rather than a rough
-                approximation. Simple subtraction of birth year from current year gives the
-                wrong answer for anyone whose birthday has not yet occurred this year. This
-                tool handles all of those edge cases automatically.
+                An <strong className="text-surface-800">age calculator</strong> is a tool that computes the exact
+                time elapsed between your date of birth and today — or any other target date. Unlike simply
+                subtracting birth year from current year, a proper age calculator accounts for the exact day
+                and month, leap years, and the varying number of days in each month.
               </p>
               <p>
-                Enter your date of birth and your exact age appears instantly — no button press
-                required. The calculator also shows the day of the week you were born (ever
-                wondered if you were born on a Monday?), and a live countdown showing exactly
-                how many days remain until your next birthday.
+                The result is your <strong className="text-surface-800">chronological age</strong> — the legal
+                age used for all official purposes in India: government exam eligibility, school admissions,
+                job applications, retirement calculations, insurance policies, and legal documents.
+                Our calculator shows your complete age breakdown: years, months, days, total weeks,
+                total days, total hours, and a live countdown to your next birthday.
               </p>
               <p>
-                Need to calculate age between two specific dates — not just birth to today?
-                Set a custom end date and the tool calculates the exact duration between any
-                two points in time. Use it as an <strong>age calculator by date of birth</strong>
-                for official forms, as a <strong>how old am I calculator</strong> for curiosity,
-                or as a date duration tool for project timelines and contract calculations.
+                The "Age As On Date" feature is especially useful for Indian government exam aspirants —
+                enter the exam's official cutoff date (e.g., August 1, 2026 for SSC CGL) to check your
+                exact age as on that date and verify your eligibility instantly.
               </p>
             </div>
           </section>
 
-          {/* Section 2 — How to Use */}
-          <section aria-labelledby="howto-heading">
-            <h2 id="howto-heading" className="font-display font-bold text-2xl text-surface-900 mb-6">
-              How to Calculate Your Age Online
+          {/* Section 2: How to Calculate Age Manually */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">
+              How to Calculate Age Manually — Step by Step
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                { step: '01', icon: '📅', title: 'Enter Date of Birth',   desc: 'Click the date picker and select your birth date — day, month, and year. Or type it directly in the field.' },
-                { step: '02', icon: '⚡', title: 'See Instant Result',    desc: 'Your exact age in years, months, days, hours, and minutes appears immediately — no submit button needed.' },
-                { step: '03', icon: '🗓️', title: 'View Birth Day',        desc: 'See exactly what day of the week you were born on, calculated precisely from the Gregorian calendar.' },
-                { step: '04', icon: '🎂', title: 'Check Your Countdown',  desc: 'The next birthday countdown shows how many days remain until your next birthday — down to today\'s date.' },
-              ].map(item => (
-                <div key={item.step} className="flex flex-col gap-3 p-5 bg-white border border-surface-200 rounded-2xl">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-violet-600 text-white font-bold text-sm flex items-center justify-center shrink-0">{item.step}</div>
-                    <span className="text-2xl">{item.icon}</span>
-                  </div>
-                  <h3 className="font-semibold text-surface-900">{item.title}</h3>
-                  <p className="text-sm text-surface-500 leading-relaxed">{item.desc}</p>
+            <div className="bg-surface-900 rounded-2xl p-6 mb-5 font-mono text-sm leading-7">
+              <div className="text-xs font-bold uppercase tracking-wider text-brand-300 mb-4">Age Calculation Formula</div>
+              <div className="space-y-1">
+                <div className="text-white">Step 1: Years = Current Year − Birth Year</div>
+                <div className="text-surface-400 ml-4">If birthday hasn't occurred yet this year: subtract 1</div>
+                <div className="text-white mt-2">Step 2: Months = Current Month − Birth Month</div>
+                <div className="text-surface-400 ml-4">If negative: add 12 and subtract 1 from years</div>
+                <div className="text-white mt-2">Step 3: Days = Current Day − Birth Day</div>
+                <div className="text-surface-400 ml-4">If negative: add days in previous month, subtract 1 from months</div>
+                <div className="text-emerald-300 font-bold mt-3">Result: Age = Years years, Months months, Days days</div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="font-display font-bold text-lg text-surface-900">Worked Example</h3>
+              <div className="p-5 bg-blue-50 border border-blue-200 rounded-xl">
+                <div className="font-semibold text-blue-900 mb-3">Example: Born May 15, 2000 → Age on March 28, 2026</div>
+                <div className="space-y-2 text-sm text-blue-800">
+                  <div>Years: 2026 − 2000 = 26. But May 15 has not come yet in 2026. So: <strong>25 years</strong></div>
+                  <div>Months: March (3) − May (5) = −2. Add 12 = 10 months. <strong>10 months</strong></div>
+                  <div>Days: 28 − 15 = 13. <strong>13 days</strong></div>
+                  <div className="pt-2 border-t border-blue-200 font-bold">Age = 25 years, 10 months, 13 days</div>
                 </div>
-              ))}
+              </div>
             </div>
           </section>
 
-          {/* Section 3 — Features */}
-          <section aria-labelledby="features-heading">
-            <h2 id="features-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">
-              Key Features
+          {/* Section 3: Age examples table */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-4">
+              Age Calculation Examples — Birth Years to 2026
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { icon: '📊', title: 'Age in 5 Units',              desc: 'Years, months, days, hours, and minutes — all displayed simultaneously so you have the exact answer for any context.' },
-                { icon: '🗓️', title: 'Birth Day of the Week',       desc: 'Instantly see which day of the week (Monday–Sunday) you were born on — calculated from the Gregorian calendar.' },
-                { icon: '🎂', title: 'Next Birthday Countdown',     desc: 'Shows exactly how many days until your next birthday — updates daily and accounts for leap year birthdays.' },
-                { icon: '📅', title: 'Custom Date Range',           desc: 'Calculate the exact duration between any two dates — not just birth to today. Use for project timelines, contracts, and anniversaries.' },
-                { icon: '🔢', title: 'Accurate Leap Year Handling', desc: 'Full leap year support including February 29th birthdays, which are handled using the March 1st convention in non-leap years.' },
-                { icon: '⚡', title: 'Real-Time Updates',           desc: 'Age updates instantly as you enter your date — no submit button needed. Hours and minutes update based on current time.' },
-                { icon: '🔒', title: 'Private & Secure',            desc: 'All calculations run locally in your browser. Your date of birth is never sent to any server or stored anywhere.' },
-                { icon: '📱', title: 'Mobile Friendly',             desc: 'The date picker works perfectly on iPhone and Android touch screens. Calculate your age directly on your phone.' },
-              ].map(f => (
-                <div key={f.title} className="flex gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl">
-                  <span className="text-2xl shrink-0">{f.icon}</span>
-                  <div>
-                    <div className="font-semibold text-surface-900 text-sm">{f.title}</div>
-                    <div className="text-xs text-surface-500 mt-1 leading-relaxed">{f.desc}</div>
-                  </div>
-                </div>
-              ))}
+            <p className="text-surface-600 leading-relaxed mb-5">
+              Quick reference for common birth years. Exact age depends on birth month and day.
+              Use the calculator above for your precise age:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-surface-100">
+                    <th className="text-left px-4 py-3 font-semibold text-surface-700 rounded-tl-xl">Birth Year</th>
+                    <th className="text-right px-4 py-3 font-semibold text-surface-700">Age in 2026</th>
+                    <th className="text-right px-4 py-3 font-semibold text-surface-700">Total Days (approx)</th>
+                    <th className="text-right px-4 py-3 font-semibold text-surface-700 rounded-tr-xl">Total Weeks (approx)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { yr:'2010', age:'15–16', days:'5,479–5,844',  weeks:'783–835'   },
+                    { yr:'2005', age:'20–21', days:'7,305–7,670',  weeks:'1,043–1,095'},
+                    { yr:'2000', age:'25–26', days:'9,131–9,496',  weeks:'1,304–1,356'},
+                    { yr:'1995', age:'30–31', days:'10,957–11,322',weeks:'1,565–1,617'},
+                    { yr:'1990', age:'35–36', days:'12,783–13,148',weeks:'1,826–1,878'},
+                    { yr:'1985', age:'40–41', days:'14,610–14,975',weeks:'2,087–2,139'},
+                    { yr:'1980', age:'45–46', days:'16,436–16,801',weeks:'2,348–2,400'},
+                    { yr:'1970', age:'55–56', days:'20,089–20,454',weeks:'2,870–2,922'},
+                    { yr:'1960', age:'65–66', days:'23,741–24,106',weeks:'3,391–3,443'},
+                  ].map((r, i) => (
+                    <tr key={r.yr} className={i % 2 === 0 ? 'bg-white' : 'bg-surface-50'}>
+                      <td className="px-4 py-3 font-semibold text-surface-900">{r.yr}</td>
+                      <td className="px-4 py-3 text-right font-bold text-brand-700">{r.age} years</td>
+                      <td className="px-4 py-3 text-right text-surface-600">{r.days}</td>
+                      <td className="px-4 py-3 text-right text-surface-600">{r.weeks}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
 
-          {/* Section 4 — Use Cases */}
-          <section aria-labelledby="usecases-heading">
-            <h2 id="usecases-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">
-              Common Use Cases
+          {/* Section 4: Use Cases */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">
+              When Do You Need an Exact Age Calculator?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                {
-                  icon: '📋',
-                  title: 'Official Forms & Applications',
-                  desc: 'Calculate exact age for passport applications, visa forms, government ID applications, insurance forms, and other official documents that require precise age in years and months — not just birth year.',
-                },
-                {
-                  icon: '🏦',
-                  title: 'Financial & Retirement Planning',
-                  desc: 'Determine exact age for retirement account eligibility thresholds (59½ for 401k withdrawal, 65 for Medicare), pension calculation milestones, and age-based contribution limit changes.',
-                },
-                {
-                  icon: '🏥',
-                  title: 'Medical & Clinical Records',
-                  desc: 'Calculate patient age precisely for medical assessments, pediatric dosing calculations based on exact age in months, age-based health screening schedules, and clinical trial age eligibility.',
-                },
-                {
-                  icon: '🎂',
-                  title: 'Birthday Planning & Milestones',
-                  desc: 'Find out exactly how many days until a significant birthday — 18th, 21st, 30th, 50th, or 100th. Calculate the exact day of the week a future birthday falls on for planning purposes.',
-                },
-                {
-                  icon: '📅',
-                  title: 'Project & Contract Durations',
-                  desc: 'Calculate exact duration between any two dates — project start to end, contract signing to expiry, employment start date to today. Useful for notice period calculations, probation periods, and SLA verification.',
-                },
-                {
-                  icon: '🎓',
-                  title: 'Academic & Program Eligibility',
-                  desc: 'Verify age eligibility for school enrollment cutoff dates, academic program requirements, scholarship age restrictions, competitive sports age categories, and age-restricted program participation.',
-                },
+                { icon: '🏛️', title: 'Government Exam Applications',
+                  desc: 'UPSC, SSC, IBPS, RRB, NDA, Agniveer — all government exam notifications specify age limits calculated as on a specific cutoff date. Enter the cutoff date in "Age As On Date" to check your exact eligibility, including relaxations for OBC, SC/ST, and PwD categories.' },
+                { icon: '🎓', title: 'School and College Admissions',
+                  desc: 'School admission cutoffs (typically age 6 as on September 30), university age limits, scholarship age criteria, and entrance exam eligibility all require exact age calculation. Our tool handles all these with the custom date feature.' },
+                { icon: '💼', title: 'Job Applications and HR',
+                  desc: 'Private sector jobs often have age limits (e.g., 18–35 years). HR professionals use exact age calculation to verify eligibility. The calculator is also used for EPF/ESI registration, contract age verification, and gratuity eligibility (minimum 5 years service at age 18+).' },
+                { icon: '🏥', title: 'Medical and Insurance',
+                  desc: 'Health insurance premiums are based on exact age bands. Term life insurance, senior citizen schemes, and Ayushman Bharat eligibility all use specific age criteria. Medical professionals use chronological age for pediatric dosing and developmental milestone assessment.' },
+                { icon: '🏠', title: 'Legal and Property Matters',
+                  desc: 'Age of majority (18 years) for contracts, 21 years for property registration in some states, age for making a will, minor guardianship cases — all require exact age verification. Courts and legal documents often require age as on a specific date.' },
+                { icon: '📊', title: 'Retirement and Financial Planning',
+                  desc: 'Calculate years to retirement (60 for government, 58 for some PSUs), EPF withdrawal eligibility (55 years for premature withdrawal), Senior Citizen FD rates (60+ years), and pension scheme eligibility. Use our EMI calculator alongside age planning for loan tenures.' },
+                { icon: '🌟', title: 'Astrology and Numerology',
+                  desc: 'Vedic astrology uses exact age and birth time for kundali matching, dasha calculations, and auspicious event timing. Numerology uses birth date to calculate life path number. Our calculator shows your Western zodiac sign as a quick reference.' },
+                { icon: '🎉', title: 'Milestone Birthdays',
+                  desc: 'Plan for 18th, 21st, 25th, 50th, 60th, and 75th (Amrit Mahotsav) birthday celebrations. The live countdown to your next birthday makes it easy to know exactly how many days, hours, and seconds until your special day.' },
               ].map(uc => (
-                <div key={uc.title} className="flex gap-4 p-5 bg-white border border-surface-200 rounded-xl hover:border-violet-200 transition-colors">
+                <div key={uc.title} className="flex gap-4 p-5 bg-white border border-surface-200 rounded-xl">
                   <span className="text-2xl shrink-0">{uc.icon}</span>
                   <div>
-                    <div className="font-semibold text-surface-900">{uc.title}</div>
-                    <div className="text-sm text-surface-500 mt-1 leading-relaxed">{uc.desc}</div>
+                    <h3 className="font-semibold text-surface-900 mb-1">{uc.title}</h3>
+                    <p className="text-sm text-surface-500 leading-relaxed">{uc.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Section 5 — Age milestones */}
-          <section aria-labelledby="milestones-heading">
-            <h2 id="milestones-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">
-              Important Age Milestones
+          {/* Section 5: Government exam age limits */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-4">
+              Age Limits for Major Indian Government Exams (2026)
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {milestones.map(m => (
-                <div key={m.age} className="p-4 bg-white border border-surface-200 rounded-xl hover:border-violet-200 transition-colors">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-12 h-12 rounded-xl bg-violet-100 text-violet-700 font-display font-bold text-lg flex items-center justify-center shrink-0">
-                      {m.age}
-                    </div>
-                    <div className="font-semibold text-surface-900 text-sm">{m.label}</div>
-                  </div>
-                  <p className="text-xs text-surface-500 leading-relaxed">{m.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Section 6 — How it works */}
-          <section aria-labelledby="advanced-heading">
-            <h2 id="advanced-heading" className="font-display font-bold text-2xl text-surface-900 mb-4">
-              How Age Calculation Works
-            </h2>
-            <div className="space-y-3 text-surface-600 leading-relaxed mb-8">
-              <p>
-                A simple year subtraction (current year − birth year) gives the wrong answer
-                for anyone whose birthday has not yet passed this year. For example, if you
-                were born in November 1990 and the current date is March 2026, simple
-                subtraction gives 36 — but your actual age is 35 because your 2026 birthday
-                has not yet occurred.
-              </p>
-              <p>
-                This calculator uses JavaScript's <code className="bg-surface-100 text-brand-700 px-1.5 py-0.5 rounded text-sm font-mono">Date</code> object
-                to compute the difference precisely — first calculating full years elapsed
-                (checking whether the birthday month and day have passed yet this year),
-                then remaining months, then remaining days. Hours and minutes are calculated
-                from the current timestamp for completeness.
-              </p>
-              <p>
-                Leap years are handled automatically. The calendar system accounts for all
-                366-day years since the Gregorian calendar reform, ensuring the day count
-                is always exact regardless of how many leap years fall between the two dates.
-              </p>
-            </div>
-
-            <h3 className="font-display font-bold text-xl text-surface-900 mb-4">
-              Why Use This Calculator vs Others
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { label: 'vs Manual calculation',     point: 'Mental arithmetic doesn\'t account for whether your birthday has passed this year, how many days are in each month, or leap years — leading to errors of 1 day to 1 year.' },
-                { label: 'vs Phone calculator',       point: 'A standard calculator can only subtract years. It cannot calculate months, days, account for leap years, or show the day of the week you were born.' },
-                { label: 'vs Age calculators on government sites', point: 'Most government and bank sites only calculate age to the nearest year. This tool gives you years, months, and days — the level of precision required for many forms and medical contexts.' },
-                { label: 'vs Spreadsheet formulas',  point: 'DATEDIF in Excel and Sheets works but requires knowing the formula syntax. This tool gives instant results with no formula knowledge, on any device including phones.' },
-              ].map(c => (
-                <div key={c.label} className="p-4 bg-surface-50 border border-surface-200 rounded-xl">
-                  <div className="font-semibold text-surface-900 text-sm mb-1">{c.label}</div>
-                  <div className="text-xs text-surface-500 leading-relaxed">{c.point}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Section 7 — Keyword variation */}
-          <section aria-labelledby="about2-heading">
-            <h2 id="about2-heading" className="font-display font-bold text-2xl text-surface-900 mb-4">
-              The Most Accurate Free Age Calculator Online
-            </h2>
-            <div className="space-y-3 text-surface-600 leading-relaxed">
-              <p>
-                Whether you need an <strong>age calculator by date of birth</strong> for
-                an official document, a <strong>how old am I calculator</strong> that gives
-                the answer in days and hours, a <strong>birthday countdown calculator</strong>
-                for your next milestone birthday, or an <strong>exact age calculator</strong>
-                that properly handles leap years — this tool covers all of it in one place.
-              </p>
-              <p>
-                The <strong>age in days calculator</strong> feature is especially useful for
-                medical and scientific contexts where exact elapsed time matters — pediatric
-                development milestones, clinical trial eligibility, newborn age calculations,
-                and research studies that require age expressed in days rather than years.
+            <p className="text-surface-600 leading-relaxed mb-5">
+              Use the "Age As On Date" field in the calculator above with the cutoff dates below
+              to check your exact eligibility for each exam:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-surface-100">
+                    <th className="text-left px-4 py-3 font-semibold text-surface-700 rounded-tl-xl">Exam</th>
+                    <th className="text-center px-4 py-3 font-semibold text-surface-700">Min Age</th>
+                    <th className="text-center px-4 py-3 font-semibold text-surface-700">Max Age (Gen)</th>
+                    <th className="text-center px-4 py-3 font-semibold text-surface-700">OBC Relax</th>
+                    <th className="text-center px-4 py-3 font-semibold text-surface-700 rounded-tr-xl">SC/ST Relax</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { exam:'UPSC CSE',    min:'21', max:'32', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'SSC CGL',     min:'18', max:'32', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'SSC CHSL',    min:'18', max:'27', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'IBPS PO',     min:'20', max:'30', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'IBPS Clerk',  min:'20', max:'28', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'RRB NTPC',    min:'18', max:'33', obc:'+3 yrs', scst:'+5 yrs' },
+                    { exam:'NDA',         min:'16.5','max':'19.5', obc:'None', scst:'None' },
+                    { exam:'Agniveer',    min:'17.5','max':'21',   obc:'None', scst:'None' },
+                  ].map((r, i) => (
+                    <tr key={r.exam} className={i % 2 === 0 ? 'bg-white' : 'bg-surface-50'}>
+                      <td className="px-4 py-3 font-semibold text-surface-900">{r.exam}</td>
+                      <td className="px-4 py-3 text-center text-surface-700">{r.min}</td>
+                      <td className="px-4 py-3 text-center font-bold text-brand-700">{r.max}</td>
+                      <td className="px-4 py-3 text-center text-emerald-700">{r.obc}</td>
+                      <td className="px-4 py-3 text-center text-emerald-700">{r.scst}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="text-xs text-surface-400 mt-2">
+                * Verify exact limits and cutoff dates from official notifications. Age limits may change each cycle.
               </p>
             </div>
           </section>
 
-          {/* Section 8 — FAQ */}
-          <section aria-labelledby="faq-heading">
-            <h2 id="faq-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">
-              Frequently Asked Questions
+          {/* FAQ Section */}
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">
+              Frequently Asked Questions — Age Calculator
             </h2>
             <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
               {faqs.map((faq, i) => (
                 <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
                   itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors"
-                    itemProp="name">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors" itemProp="name">
                     {faq.q}
-                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed"
+                  <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
                     itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <span itemProp="text">{faq.a}</span>
                   </div>
@@ -422,48 +359,35 @@ export default function AgeCalculatorOnlinePage() {
             </div>
           </section>
 
-          {/* Section 9 — Programmatic variants */}
-          <section aria-labelledby="variants-heading">
-            <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">
-              More Age & Date Calculator Tools
-            </h2>
+          {/* Programmatic pages */}
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Age Calculators</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[
-                { href: '/age-calculator-by-date-of-birth', label: 'Age Calculator by Date of Birth', desc: 'Calculate exact age from any specific date of birth' },
-                { href: '/how-many-days-old-am-i',          label: 'How Many Days Old Am I',          desc: 'Find your exact age expressed as total days lived' },
-                { href: '/birthday-countdown-calculator',   label: 'Birthday Countdown Calculator',   desc: 'Count down the days until your next birthday' },
-                { href: '/age-calculator-years-months-days',label: 'Age in Years, Months & Days',     desc: 'Display age broken down into years, months, and days' },
-                { href: '/date-difference-calculator',      label: 'Date Difference Calculator',      desc: 'Calculate the exact duration between any two dates' },
-                { href: '/retirement-age-calculator',       label: 'Retirement Age Calculator',       desc: 'Calculate how many years until retirement age' },
-              ].map(v => (
+              {PROGRAMMATIC_PAGES.map(v => (
                 <Link key={v.href} href={v.href}
-                  className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">
-                  <div className="font-semibold text-violet-800 text-sm group-hover:underline">{v.label}</div>
-                  <div className="text-xs text-violet-600">{v.desc}</div>
+                  className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">
+                  <span className="text-brand-600">🎂</span>
+                  <span className="font-semibold text-brand-800 text-sm group-hover:underline">{v.label}</span>
                 </Link>
               ))}
             </div>
           </section>
 
-          {/* Section 10 — Related tools */}
-          <section aria-labelledby="related-heading">
-            <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-5">
-              More Free Utility Tools
-            </h2>
+          {/* Related Tools */}
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/unix-timestamp-converter',   icon: '⏱️', label: 'Unix Timestamp Converter',   desc: 'Convert Unix timestamps to human-readable dates and back' },
-                { href: '/countdown-timer-online',     icon: '⏳', label: 'Countdown Timer Online',     desc: 'Count down from any duration with an audio alarm' },
-                { href: '/percentage-calculator-online',icon: '📊',label: 'Percentage Calculator',      desc: 'Calculate percentage change, increase, and decrease' },
-                { href: '/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range instantly' },
-                { href: '/pomodoro-timer-online',      icon: '🍅', label: 'Pomodoro Timer Online',      desc: 'Structured 25-minute focus sessions with breaks' },
-                { href: '/online-stopwatch',           icon: '⏱️', label: 'Online Stopwatch',           desc: 'Millisecond precision stopwatch with unlimited laps' },
+                { href: '/bmi-calculator',         icon: '⚖️', label: 'BMI Calculator',           desc: 'Calculate body mass index with Indian standards'      },
+                { href: '/salary-calculator',      icon: '💰', label: 'Salary & Gratuity',         desc: 'Check gratuity eligibility based on years of service' },
+                { href: '/emi-calculator',         icon: '🧮', label: 'EMI Calculator',            desc: 'Plan loans based on age and retirement timeline'      },
+                { href: '/percentage-calculator-online', icon:'📊', label:'Percentage Calculator', desc: 'Calculate age percentages and ratios'                 },
               ].map(l => (
                 <Link key={l.href} href={l.href}
-                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">
-                  <span className="text-2xl">{l.icon}</span>
+                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                  <span className="text-xl">{l.icon}</span>
                   <div>
-                    <div className="font-semibold text-surface-800 group-hover:text-violet-800 text-sm">{l.label}</div>
+                    <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{l.label}</div>
                     <div className="text-xs text-surface-500 mt-0.5">{l.desc}</div>
                   </div>
                 </Link>
