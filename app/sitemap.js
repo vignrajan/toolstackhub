@@ -127,6 +127,8 @@ export default function sitemap() {
     p('/blog/how-to-convert-word-to-pdf-free',                    0.75),
     p('/blog/what-is-cibil-score-how-to-improve',                 0.78),
     p('/blog/how-to-calculate-gratuity-india',                    0.85),
+    p('/blog/old-vs-new-tax-regime-2025-26',                      0.90),
+
 
 
 

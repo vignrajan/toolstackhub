@@ -271,6 +271,92 @@ export const blogPosts = [
     'gratuity maximum limit india',
   ],
   },
+  // ── Add this entry to your blogs array in data/blog.js ────────
+  {
+  slug:        'old-vs-new-tax-regime-2025-26',
+  title:       'Old vs New Tax Regime 2025-26 — Which is Better for You? (Complete Guide with Decision Table)',
+  metaTitle:   'Old vs New Tax Regime 2025-26 — Which is Better? (Decision Table)',
+  metaDesc:    'Old vs new tax regime FY 2025-26 compared. Decision table at every income level, breakeven deductions, 8 real examples from ₹5L to ₹30L. Find out which saves you more in 60 seconds.',
+  excerpt:     'Budget 2025 raised the tax-free limit to ₹12 lakh under the new regime. But is it really better for you? This guide gives you the exact answer for your income and deduction level — with a decision table nobody else shows you, 8 worked examples, and the exact breakeven point where old regime wins.',
+
+  category:     'Income Tax',
+  categorySlug: 'income-tax',
+
+  author:       'ToolStackHub Finance Team',
+  authorBio:    'Our finance team researches and verifies all content against official government sources including the Income Tax Department, Finance Act, and CBDT notifications.',
+  authorUrl:    '/about',
+
+  publishedAt:  '2026-03-29',
+  updatedAt:    '2026-03-29',
+  readTime:     14,
+
+  coverEmoji:   '⚖️',
+  coverBg:      'from-brand-700 to-indigo-800',
+
+  tags: [
+    'income tax',
+    'old tax regime',
+    'new tax regime',
+    'tax regime 2025-26',
+    'income tax slab',
+    'section 87A',
+    'budget 2025',
+    'ITR filing',
+    'tax saving',
+    'salary',
+    'salaried employee',
+    'finance',
+  ],
+
+  toolUrl:  '/salary-calculator',
+  toolName: 'Salary & Tax Calculator',
+
+  featured:    true,
+  pinned:      true,
+  trending:    true,
+
+  canonicalUrl: '/blog/old-vs-new-tax-regime-2025-26',
+  ogImage:      '/og/old-vs-new-tax-regime-2025-26.png',
+  noIndex:      false,
+
+  schemaType: 'Article',
+  hasHowTo:   false,
+  hasFAQ:     true,
+  hasTable:   true,
+
+  relatedSlugs: [
+    'how-to-calculate-gratuity-india',
+    'how-to-save-tax-on-salary-india',
+    'hra-exemption-calculation-india',
+  ],
+
+  relatedTools: [
+    { name: 'Salary Calculator',  url: '/salary-calculator'  },
+    { name: 'EMI Calculator',     url: '/emi-calculator'     },
+    { name: 'GST Calculator',     url: '/gst-calculator'     },
+    { name: 'Invoice Generator',  url: '/invoice-generator'  },
+  ],
+
+  wordCount:         3500,
+  primaryKeyword:    'old vs new tax regime',
+  secondaryKeywords: [
+    'old vs new tax regime 2025-26',
+    'which tax regime is better',
+    'new tax regime vs old tax regime',
+    'income tax regime comparison india 2026',
+    'should i choose old or new tax regime',
+    'tax regime for salaried 2025-26',
+    'income tax slab 2025-26',
+    'tax free income 12 lakh',
+    'section 87a rebate 2025-26',
+    'breakeven deductions old new regime',
+  ],
+
+  // SEO seasonal signals
+  seasonal:     true,
+  seasonPeak:   'April–July 2026',
+  urgencyTag:   'ITR Filing by July 31, 2026',
+  },
 ];
 
 export function getPostBySlug(slug) {
