@@ -6,26 +6,30 @@ import Footer from '../../components/Footer';
 import BMICalculator from '../../components/tools/BMICalculator';
 import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import AgeCalculator from '../../components/tools/AgeCalculator';
+import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
 import { getBMIPageBySlug, getAllBMISlugs } from '../../data/bmi-pages';
 import { getPageBySlug, getRelatedPages, getAllSlugs } from '../../data/speech-bubble-pages';
 import { getAgePageBySlug, getAllAgeSlugs } from '../../data/age-pages';
+import { getInvoicePageBySlug, getAllInvoiceSlugs } from '../../data/invoice-pages';
 import { SITE_CONFIG } from '../../data/tools';
 
-// ── Collect all slugs from every programmatic dataset ─────────
+// ── Static params — all slugs from all datasets ───────────────
 export async function generateStaticParams() {
   return [
     ...getAllBMISlugs().map(slug => ({ slug })),
     ...getAllSlugs().map(slug => ({ slug })),
     ...getAllAgeSlugs().map(slug => ({ slug })),
+    ...getAllInvoiceSlugs().map(slug => ({ slug })),
   ];
 }
 
 // ── Dynamic metadata ──────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const bmi    = getBMIPageBySlug(params.slug);
-  const speech = getPageBySlug(params.slug);
-  const age    = getAgePageBySlug(params.slug);
-  const page   = bmi || speech || age;
+  const bmi     = getBMIPageBySlug(params.slug);
+  const speech  = getPageBySlug(params.slug);
+  const age     = getAgePageBySlug(params.slug);
+  const invoice = getInvoicePageBySlug(params.slug);
+  const page    = bmi || speech || age || invoice;
   if (!page) return {};
   return {
     title:       `${page.title} | ToolStackHub`,
@@ -42,7 +46,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// ── BMI variant page ──────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// BMI PAGE
+// ══════════════════════════════════════════════════════════════
 function BMIPage({ page }) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -108,25 +114,20 @@ function BMIPage({ page }) {
             </div>
           </div>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
             <BMICalculator prefill={page.prefill || {}} />
           </Suspense>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
           <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
-            <strong>Medical Disclaimer:</strong> This BMI calculator is for informational purposes only. Not a substitute for professional medical advice. Consult a qualified healthcare provider for health decisions.
+            <strong>Medical Disclaimer:</strong> This BMI calculator is for informational purposes only. Not a substitute for professional medical advice.
           </div>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
           {page.tips?.length > 0 && (
             <section>
-              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">
-                Tips for {page.h1.replace(/–.*/, '').trim()}
-              </h2>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Tips for {page.h1.replace(/–.*/, '').trim()}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {page.tips.map((tip, i) => (
                   <div key={i} className="flex gap-3 p-4 bg-white border border-surface-200 rounded-xl">
@@ -137,50 +138,38 @@ function BMIPage({ page }) {
               </div>
             </section>
           )}
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-3">{page.useCaseH2}</h2>
             <p className="text-surface-600 leading-relaxed">{page.useCaseText}</p>
           </section>
-
           {page.additionalContent?.map((section, i) => (
             <section key={i}>
               <h3 className="font-display font-bold text-lg text-surface-900 mb-3">{section.h3}</h3>
               <ul className="space-y-2">
                 {section.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm text-surface-600">
-                    <span className="text-brand-600 mt-0.5 shrink-0">•</span>
-                    <span>{item}</span>
+                    <span className="text-brand-600 mt-0.5 shrink-0">•</span><span>{item}</span>
                   </li>
                 ))}
               </ul>
             </section>
           ))}
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More BMI Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/bmi-calculator"
-                className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/bmi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">⚖️</span>
-                <div>
-                  <div className="font-bold text-white text-sm">BMI Calculator India</div>
-                  <div className="text-xs text-brand-200">Main tool — all features</div>
-                </div>
+                <div><div className="font-bold text-white text-sm">BMI Calculator India</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
-              {(page.internalLinks || [])
-                .filter(l => l !== `/${page.slug}` && l !== '/bmi-calculator')
-                .slice(0, 3)
-                .map(href => {
-                  const meta = LINK_META[href] || { icon: '⚖️', label: href.replace(/^\/|-/g, m => m === '/' ? '' : ' ') };
-                  return (
-                    <Link key={href} href={href}
-                      className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
-                      <span className="text-xl">{meta.icon}</span>
-                      <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{meta.label}</div>
-                    </Link>
-                  );
-                })}
+              {(page.internalLinks || []).filter(l => l !== `/${page.slug}` && l !== '/bmi-calculator').slice(0, 3).map(href => {
+                const meta = LINK_META[href] || { icon: '⚖️', label: href.replace(/^\/|-/g, m => m === '/' ? '' : ' ') };
+                return (
+                  <Link key={href} href={href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                    <span className="text-xl">{meta.icon}</span>
+                    <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{meta.label}</div>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         </div>
@@ -190,10 +179,11 @@ function BMIPage({ page }) {
   );
 }
 
-// ── Speech Bubble variant page ────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// SPEECH BUBBLE PAGE
+// ══════════════════════════════════════════════════════════════
 function SpeechBubblePage({ page }) {
   const related = getRelatedPages(page.slug);
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -216,7 +206,6 @@ function SpeechBubblePage({ page }) {
       },
     ],
   };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -242,19 +231,15 @@ function SpeechBubblePage({ page }) {
             </div>
           </div>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
             <SpeechBubbleMaker />
           </Suspense>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
           {page.tips?.length > 0 && (
             <section>
-              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">
-                Tips for {page.h1.replace(/–.*/, '').trim()}
-              </h2>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Tips for {page.h1.replace(/–.*/, '').trim()}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {page.tips.map((tip, i) => (
                   <div key={i} className="flex gap-3 p-4 bg-white border border-surface-200 rounded-xl">
@@ -265,15 +250,14 @@ function SpeechBubblePage({ page }) {
               </div>
             </section>
           )}
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">How to Use This Tool</h2>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
               {[
-                { n: '1', label: 'Upload Image', desc: 'Click "Upload Image" or start with blank canvas' },
-                { n: '2', label: 'Add Bubble',   desc: 'Click "+ Add Bubble" and choose your style'     },
-                { n: '3', label: 'Customize',    desc: 'Type text, pick colors, font, and style'        },
-                { n: '4', label: 'Download PNG', desc: 'Click Download — no watermark, instant save'    },
+                { n:'1', label:'Upload Image', desc:'Click "Upload Image" or start with blank canvas' },
+                { n:'2', label:'Add Bubble',   desc:'Click "+ Add Bubble" and choose your style'     },
+                { n:'3', label:'Customize',    desc:'Type text, pick colors, font, and style'        },
+                { n:'4', label:'Download PNG', desc:'Click Download — no watermark, instant save'    },
               ].map(s => (
                 <div key={s.n} className="p-4 bg-brand-50 border border-brand-200 rounded-xl">
                   <div className="w-7 h-7 rounded-full bg-brand-600 text-white font-bold text-sm flex items-center justify-center mb-2">{s.n}</div>
@@ -283,21 +267,15 @@ function SpeechBubblePage({ page }) {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Speech Bubble Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/speech-bubble-maker"
-                className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/speech-bubble-maker" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">💬</span>
-                <div>
-                  <div className="font-bold text-white text-sm">Free Speech Bubble Maker</div>
-                  <div className="text-xs text-brand-200">Main tool — all features</div>
-                </div>
+                <div><div className="font-bold text-white text-sm">Free Speech Bubble Maker</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
               {related.map(r => (
-                <Link key={r.slug} href={`/${r.slug}`}
-                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                <Link key={r.slug} href={`/${r.slug}`} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
                   <span className="text-brand-600 text-xl">💬</span>
                   <div>
                     <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{r.h1}</div>
@@ -305,14 +283,6 @@ function SpeechBubblePage({ page }) {
                   </div>
                 </Link>
               ))}
-              <Link href="/compress-image-online"
-                className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
-                <span className="text-xl">🗜️</span>
-                <div>
-                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">Image Compressor</div>
-                  <div className="text-xs text-surface-500 mt-0.5">Compress after adding speech bubbles</div>
-                </div>
-              </Link>
             </div>
           </section>
         </div>
@@ -322,7 +292,9 @@ function SpeechBubblePage({ page }) {
   );
 }
 
-// ── Age Calculator variant page ───────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// AGE PAGE
+// ══════════════════════════════════════════════════════════════
 function AgePage({ page }) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -346,7 +318,6 @@ function AgePage({ page }) {
       },
     ],
   };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -372,17 +343,117 @@ function AgePage({ page }) {
             </div>
           </div>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
             <AgeCalculator />
+          </Suspense>
+        </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+          {page.tips?.length > 0 && (
+            <section>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Tips & Notes</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {page.tips.map((tip, i) => (
+                  <div key={i} className="flex gap-3 p-4 bg-white border border-surface-200 rounded-xl">
+                    <div className="w-6 h-6 rounded-full bg-brand-100 text-brand-700 font-bold text-xs flex items-center justify-center shrink-0">{i + 1}</div>
+                    <span className="text-sm text-surface-600 leading-relaxed">{tip}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-3">{page.useCaseH2}</h2>
+            <p className="text-surface-600 leading-relaxed">{page.useCaseText}</p>
+          </section>
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Age Calculators</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <Link href="/age-calculator-online" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+                <span className="text-2xl">🎂</span>
+                <div><div className="font-bold text-white text-sm">Age Calculator</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
+              </Link>
+              {[
+                { href:'/bmi-calculator',    icon:'⚖️', label:'BMI Calculator'    },
+                { href:'/salary-calculator', icon:'💰', label:'Salary Calculator' },
+                { href:'/emi-calculator',    icon:'🧮', label:'EMI Calculator'    },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                  <span className="text-xl">{l.icon}</span>
+                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{l.label}</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+// ══════════════════════════════════════════════════════════════
+// INVOICE PAGE
+// ══════════════════════════════════════════════════════════════
+function InvoicePage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'SoftwareApplication',
+        name: page.title, description: page.metaDesc,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web Browser',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+        provider: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',              item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'Invoice Generator', item: `${SITE_CONFIG.url}/invoice-generator` },
+          { '@type': 'ListItem', position: 3, name: page.h1,             item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li><Link href="/invoice-generator" className="hover:text-brand-600 text-brand-600">Invoice Generator</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium truncate">{page.h1}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {['🆓 100% Free', '🚫 No Signup', '✅ GST Compliant', '📄 PDF Download', '🏷️ No Watermark'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
+            <InvoiceGenerator />
           </Suspense>
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
           {page.tips?.length > 0 && (
             <section>
-              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Tips & Notes</h2>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Tips & Guidance</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {page.tips.map((tip, i) => (
                   <div key={i} className="flex gap-3 p-4 bg-white border border-surface-200 rounded-xl">
@@ -399,28 +470,47 @@ function AgePage({ page }) {
             <p className="text-surface-600 leading-relaxed">{page.useCaseText}</p>
           </section>
 
+          {page.additionalContent?.map((section, i) => (
+            <section key={i}>
+              <h3 className="font-display font-bold text-lg text-surface-900 mb-3">{section.h3}</h3>
+              <ul className="space-y-2">
+                {section.items.map((item, j) => (
+                  <li key={j} className="flex items-start gap-2 text-sm text-surface-600">
+                    <span className="text-brand-600 mt-0.5 shrink-0">•</span><span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
           <section>
-            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Age Calculators</h2>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Invoice Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/age-calculator-online"
-                className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
-                <span className="text-2xl">🎂</span>
-                <div>
-                  <div className="font-bold text-white text-sm">Age Calculator</div>
-                  <div className="text-xs text-brand-200">Main tool — all features</div>
-                </div>
+              <Link href="/invoice-generator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+                <span className="text-2xl">🧾</span>
+                <div><div className="font-bold text-white text-sm">Free Invoice Generator</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
-              {[
-                { href: '/bmi-calculator',    icon: '⚖️', label: 'BMI Calculator'    },
-                { href: '/salary-calculator', icon: '💰', label: 'Salary Calculator' },
-                { href: '/emi-calculator',    icon: '🧮', label: 'EMI Calculator'    },
-              ].map(l => (
-                <Link key={l.href} href={l.href}
-                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
-                  <span className="text-xl">{l.icon}</span>
-                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{l.label}</div>
-                </Link>
-              ))}
+              {(page.internalLinks || [])
+                .filter(l => l !== `/${page.slug}` && l !== '/invoice-generator')
+                .slice(0, 3)
+                .map(href => {
+                  const LABELS = {
+                    '/gst-calculator':                    { icon: '🧮', label: 'GST Calculator'            },
+                    '/salary-calculator':                  { icon: '💰', label: 'Salary Calculator'         },
+                    '/emi-calculator':                     { icon: '📊', label: 'EMI Calculator'            },
+                    '/gst-invoice-generator-free':         { icon: '🧾', label: 'GST Invoice Generator'     },
+                    '/free-invoice-maker-online-no-login': { icon: '🧾', label: 'Invoice Maker No Login'    },
+                    '/invoice-generator-for-freelancers':  { icon: '💻', label: 'Invoice for Freelancers'   },
+                    '/invoice-generator-for-small-business':{ icon:'🏪', label: 'Invoice for Small Biz'    },
+                  };
+                  const meta = LABELS[href] || { icon: '🧾', label: href.replace(/^\/|-/g, m => m === '/' ? '' : ' ') };
+                  return (
+                    <Link key={href} href={href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                      <span className="text-xl">{meta.icon}</span>
+                      <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{meta.label}</div>
+                    </Link>
+                  );
+                })}
             </div>
           </section>
         </div>
@@ -430,16 +520,21 @@ function AgePage({ page }) {
   );
 }
 
-// ── Main router ───────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// MAIN ROUTER — checks all datasets in order
+// ══════════════════════════════════════════════════════════════
 export default function DynamicSlugPage({ params }) {
-  const bmiPage    = getBMIPageBySlug(params.slug);
-  if (bmiPage)    return <BMIPage page={bmiPage} />;
+  const bmiPage     = getBMIPageBySlug(params.slug);
+  if (bmiPage)     return <BMIPage page={bmiPage} />;
 
-  const speechPage = getPageBySlug(params.slug);
-  if (speechPage) return <SpeechBubblePage page={speechPage} />;
+  const speechPage  = getPageBySlug(params.slug);
+  if (speechPage)  return <SpeechBubblePage page={speechPage} />;
 
-  const agePage    = getAgePageBySlug(params.slug);
-  if (agePage)    return <AgePage page={agePage} />;
+  const agePage     = getAgePageBySlug(params.slug);
+  if (agePage)     return <AgePage page={agePage} />;
+
+  const invoicePage = getInvoicePageBySlug(params.slug);
+  if (invoicePage) return <InvoicePage page={invoicePage} />;
 
   notFound();
 }
