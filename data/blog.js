@@ -352,11 +352,101 @@ export const blogPosts = [
     'breakeven deductions old new regime',
   ],
 
+
+
   // SEO seasonal signals
   seasonal:     true,
   seasonPeak:   'April–July 2026',
   urgencyTag:   'ITR Filing by July 31, 2026',
   },
+  // ── Add this entry to your blogs array in data/blog.js ────────
+  {
+  slug:        'in-hand-salary-calculator-lpa-india',
+  title:       '10 LPA In-Hand Salary Per Month 2025-26 — Exact Breakdown for 5 LPA to 30 LPA',
+  metaTitle:   '10 LPA In-Hand Salary Per Month 2025-26 — Exact Breakdown for 8 CTC Levels',
+  metaDesc:    'Exact monthly in-hand salary for 5 LPA, 8 LPA, 10 LPA, 12 LPA, 15 LPA, 20 LPA, 25 LPA, 30 LPA CTC. Full deduction breakdown — PF, professional tax, TDS. New vs old tax regime. FY 2025-26.',
+  excerpt:     'Got a job offer and wondering what actually hits your bank account? This guide gives you the exact monthly in-hand salary for every major CTC level — with full PF, professional tax, and TDS deduction breakdown, new vs old regime comparison, and the 5 hidden components that shrink your take-home from CTC.',
+
+  category:     'Salary & Tax',
+  categorySlug: 'salary-tax',
+
+  author:       'ToolStackHub Finance Team',
+  authorBio:    'Our finance team calculates and verifies all salary figures against Income Tax Act FY 2025-26 provisions, new tax regime slabs, and Section 87A rebate rules.',
+  authorUrl:    '/about',
+
+  publishedAt:  '2026-03-29',
+  updatedAt:    '2026-03-29',
+  readTime:     10,
+
+  coverEmoji:   '💵',
+  coverBg:      'from-emerald-600 to-teal-700',
+
+  tags: [
+    'in hand salary',
+    '10 lpa salary',
+    '15 lpa salary',
+    '20 lpa salary',
+    'ctc to in hand',
+    'salary calculator',
+    'take home salary',
+    'new tax regime',
+    'PF deduction',
+    'professional tax',
+    'income tax',
+    'salary structure india',
+    'FY 2025-26',
+  ],
+
+  toolUrl:  '/salary-calculator',
+  toolName: 'Salary & Gratuity Calculator',
+
+  featured:    true,
+  pinned:      false,
+  trending:    true,
+
+  canonicalUrl: '/blog/in-hand-salary-calculator-lpa-india',
+  ogImage:      '/og/in-hand-salary-lpa-india-2025-26.png',
+  noIndex:      false,
+
+  schemaType: 'Article',
+  hasHowTo:   false,
+  hasFAQ:     true,
+  hasTable:   true,
+
+  relatedSlugs: [
+    'old-vs-new-tax-regime-2025-26',
+    'how-to-calculate-gratuity-india',
+    'how-to-save-tax-on-salary-india',
+  ],
+
+  relatedTools: [
+    { name: 'Salary Calculator',  url: '/salary-calculator'  },
+    { name: 'EMI Calculator',     url: '/emi-calculator'     },
+    { name: 'GST Calculator',     url: '/gst-calculator'     },
+  ],
+
+  wordCount:         2800,
+  primaryKeyword:    '10 lpa in hand salary per month',
+  secondaryKeywords: [
+    'in hand salary from ctc india 2025-26',
+    '15 lpa in hand salary',
+    '20 lpa in hand salary per month',
+    'ctc to in hand salary calculator india',
+    '12 lpa in hand salary',
+    '25 lpa in hand salary',
+    '8 lpa in hand salary',
+    '5 lpa in hand salary',
+    '30 lpa in hand salary',
+    'how to calculate in hand salary from ctc india',
+    'gross salary vs in hand salary',
+    'what is ctc in india',
+  ],
+
+  seasonal:     false,
+  seasonPeak:   null,
+  urgencyTag:   null,
+  },
+
 ];
 
 export function getPostBySlug(slug) {
