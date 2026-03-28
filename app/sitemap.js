@@ -126,6 +126,8 @@ export default function sitemap() {
     p('/blog/how-to-generate-strong-passwords-online',            0.75),
     p('/blog/how-to-convert-word-to-pdf-free',                    0.75),
     p('/blog/what-is-cibil-score-how-to-improve',                 0.78),
+    p('/blog/how-to-calculate-gratuity-india',                    0.85),
+
 
 
 

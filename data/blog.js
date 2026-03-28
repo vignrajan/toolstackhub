@@ -190,6 +190,87 @@ export const blogPosts = [
     toolName:    'Home Loan EMI Calculator',
     featured:    true,
   },
+  // ── Add this entry to your blogs array in data/blog.js ────────
+  {
+  slug:        'how-to-calculate-gratuity-india',
+  title:       'How to Calculate Gratuity in India 2026 – Formula, Examples & New Labour Code Rules',
+  metaTitle:   'How to Calculate Gratuity in India 2026 – Formula, Examples & New Rules',
+  metaDesc:    'Complete gratuity calculation guide for India 2026. Learn the 15/26 formula, step-by-step examples for every salary, new labour code changes (Nov 2025), tax rules & eligibility. Free calculator.',
+  excerpt:     'Everything you need to know about gratuity in India — the 15/26 formula explained simply, 6 worked examples from ₹3L to ₹40L CTC, the new Labour Code 2026 changes that increase your payout, tax rules, and your rights if your employer delays payment.',
+
+  category:     'Finance & Tax',
+  categorySlug: 'finance-tax',
+
+  author:       'ToolStackHub Finance Team',
+  authorBio:    'Our finance team researches and verifies all content against official government sources, including Ministry of Labour FAQs and Income Tax Department guidelines.',
+
+  publishedAt:  '2026-03-29',
+  updatedAt:    '2026-03-29',
+  readTime:     12,
+
+  coverEmoji:   '💰',
+  coverBg:      'from-emerald-600 to-teal-700',
+
+  tags: [
+    'gratuity',
+    'gratuity formula',
+    'gratuity calculation',
+    'labour law india',
+    'salary',
+    'new labour code 2026',
+    'finance',
+    'employee rights',
+    'tax',
+    'retirement',
+  ],
+
+  // Internal tool linking
+  toolUrl:  '/salary-calculator',
+  toolName: 'Salary & Gratuity Calculator',
+
+  // Homepage / blog listing flags
+  featured:    true,
+  pinned:      false,
+  trending:    true,
+
+  // SEO extras
+  canonicalUrl:   '/blog/how-to-calculate-gratuity-india',
+  ogImage:        '/og/gratuity-calculation-india-2026.png',  // create this if you have OG image generation
+  noIndex:        false,
+
+  // Schema / rich result
+  schemaType:     'Article',            // Article | HowTo | FAQPage
+  hasHowTo:       true,
+  hasFAQ:         true,
+  hasTable:       true,
+
+  // Related content for sidebar / recommendations
+  relatedSlugs: [
+    'how-to-calculate-emi',
+    'gst-on-freelance-income',
+    'in-hand-salary-from-ctc',
+  ],
+
+  // Cross-linking to tools
+  relatedTools: [
+    { name: 'Salary Calculator',  url: '/salary-calculator'  },
+    { name: 'GST Calculator',     url: '/gst-calculator'     },
+    { name: 'EMI Calculator',     url: '/emi-calculator'     },
+  ],
+
+  // Content signals for Google
+  wordCount:     3200,
+  primaryKeyword:  'how to calculate gratuity',
+  secondaryKeywords: [
+    'gratuity formula india',
+    'gratuity formula 15 26',
+    'gratuity calculation 2026',
+    'new gratuity rules 2026',
+    'gratuity eligibility india',
+    'is gratuity taxable',
+    'gratuity maximum limit india',
+  ],
+  },
 ];
 
 export function getPostBySlug(slug) {
