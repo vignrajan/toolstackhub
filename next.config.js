@@ -74,6 +74,12 @@ const nextConfig = {
       { source: '/tools/salary-calculator',              destination: '/salary-calculator',        permanent: true },
       { source: '/tools/fuel-bill-generator',              destination: '/fuel-bill-generator',        permanent: true },
 
+
+
+      // UTILITY TOOLS — /tools/* → clean URL (301 permanent)
+      { source: '/tools/bmi-calculator',              destination: '/bmi-calculator',        permanent: true },
+
+
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main
       // (302 = temporary, keeps variants indexable separately)

@@ -815,6 +815,13 @@ export const tools = [
   href: '/fuel-bill-generator',
 },
 
+{
+  slug: 'bmi-calculator', name: 'BMI Calculator',
+  category: 'health', icon: '⚖️',
+  description: 'Free BMI calculator India with Indian/Asian WHO thresholds. Healthy weight range, health risk assessment.',
+  href: '/bmi-calculator',
+},
+
 
 
   // ── BATCH 3 ──────────────────────────────────────────────
@@ -944,6 +951,8 @@ export const categories = [
   { id: 'developer', label: 'Developer Tools',  icon: '💻',  color: 'accent-developer', description: 'JSON, Base64, UUID, and more' },
   { id: 'seo',       label: 'SEO Tools',        icon: '🔍',  color: 'accent-seo',       description: 'Optimize your content for search engines' },
   { id: 'utility',   label: 'Utility Tools',    icon: '🛠️',  color: 'accent-utility',   description: 'QR codes, passwords, and random generators' },
+  { id: 'health',   label: 'Health Tools',    icon: '🏥',  color: 'emerald',   description: 'Free health calculators for India — BMI, ideal weight, calorie intake, and more.' },
+
 ];
 
 /**
@@ -955,4 +964,5 @@ export const categoryColors = {
   developer: { bg: 'bg-blue-50',     text: 'text-blue-700',    border: 'border-blue-200',   dot: 'bg-blue-400'    },
   seo:       { bg: 'bg-pink-50',     text: 'text-pink-700',    border: 'border-pink-200',   dot: 'bg-pink-400'    },
   utility:   { bg: 'bg-violet-50',   text: 'text-violet-700',  border: 'border-violet-200', dot: 'bg-violet-400'  },
+  health:    { border: 'border-emerald-200', bg: 'bg-emerald-50', text: 'text-emerald-700' },
 };
