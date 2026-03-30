@@ -7,10 +7,12 @@ import BMICalculator from '../../components/tools/BMICalculator';
 import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import AgeCalculator from '../../components/tools/AgeCalculator';
 import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
+import NumberToWords from '../../components/tools/NumberToWords';
 import { getBMIPageBySlug, getAllBMISlugs } from '../../data/bmi-pages';
 import { getPageBySlug, getRelatedPages, getAllSlugs } from '../../data/speech-bubble-pages';
 import { getAgePageBySlug, getAllAgeSlugs } from '../../data/age-pages';
 import { getInvoicePageBySlug, getAllInvoiceSlugs } from '../../data/invoice-pages';
+import { getNumberWordsPageBySlug, getAllNumberWordsSlugs } from '../../data/number-words-pages';
 import { SITE_CONFIG } from '../../data/tools';
 
 // ── Static params — all slugs from all datasets ───────────────
@@ -20,16 +22,18 @@ export async function generateStaticParams() {
     ...getAllSlugs().map(slug => ({ slug })),
     ...getAllAgeSlugs().map(slug => ({ slug })),
     ...getAllInvoiceSlugs().map(slug => ({ slug })),
+    ...getAllNumberWordsSlugs().map(slug => ({ slug })),
   ];
 }
 
 // ── Dynamic metadata ──────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const bmi     = getBMIPageBySlug(params.slug);
-  const speech  = getPageBySlug(params.slug);
-  const age     = getAgePageBySlug(params.slug);
-  const invoice = getInvoicePageBySlug(params.slug);
-  const page    = bmi || speech || age || invoice;
+  const bmi      = getBMIPageBySlug(params.slug);
+  const speech   = getPageBySlug(params.slug);
+  const age      = getAgePageBySlug(params.slug);
+  const invoice  = getInvoicePageBySlug(params.slug);
+  const numWords = getNumberWordsPageBySlug(params.slug);
+  const page     = bmi || speech || age || invoice || numWords;
   if (!page) return {};
   return {
     title:       `${page.title} | ToolStackHub`,
@@ -44,6 +48,147 @@ export async function generateMetadata({ params }) {
       images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
     },
   };
+}
+
+
+// ══════════════════════════════════════════════════════════════
+// NUMBER WORDS PAGE
+// ══════════════════════════════════════════════════════════════
+function NumberWordsPage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: page.h1,
+        description: page.metaDesc,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        author: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+        publisher: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+        datePublished: '2026-03-29',
+        dateModified:  '2026-03-29',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',             item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'Number to Words',  item: `${SITE_CONFIG.url}/number-to-words` },
+          { '@type': 'ListItem', position: 3, name: page.h1,            item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+
+  const formatted = '₹' + page.amount.toLocaleString('en-IN');
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-400">
+                <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
+                <li>/</li>
+                <li><Link href="/number-to-words" className="hover:text-brand-600 text-brand-600">Number to Words</Link></li>
+                <li>/</li>
+                <li className="text-surface-700 font-medium">{page.h1}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+          </div>
+        </div>
+
+        {/* Quick answer — featured snippet target */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-brand-50 border border-brand-200 rounded-2xl p-6 mb-8">
+            <div className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3">
+              {formatted} in Words
+            </div>
+            <div className="space-y-3">
+              {[
+                { label: 'Plain words',   value: page.words,  key: 'w' },
+                { label: 'Rupees format', value: page.rupees, key: 'r' },
+                { label: 'Cheque format', value: page.cheque, key: 'c' },
+              ].map(row => (
+                <div key={row.key} className="flex items-start gap-4 p-4 bg-white rounded-xl border border-brand-100">
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-1">{row.label}</div>
+                    <div className="text-xl font-black text-surface-900">{row.value}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Calculator with prefill */}
+          <div className="mb-8">
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Try the Number to Words Converter</h2>
+            <Suspense fallback={<div className="h-64 bg-surface-100 rounded-2xl animate-pulse" />}>
+              <NumberToWords prefill={page.amount} />
+            </Suspense>
+          </div>
+
+          {/* Facts */}
+          {page.facts?.length > 0 && (
+            <div className="mb-8">
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Key Facts</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {page.facts.map((fact, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl">
+                    <span className="text-brand-600 shrink-0">•</span>
+                    <span className="text-sm text-surface-700">{fact}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related amounts */}
+          <div className="mb-8">
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related Amounts in Words</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <Link href="/number-to-words" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+                <span className="text-2xl">🔤</span>
+                <div>
+                  <div className="font-bold text-white text-sm">Number to Words Tool</div>
+                  <div className="text-xs text-brand-200">Convert any amount</div>
+                </div>
+              </Link>
+              {(page.related || []).map(rel => (
+                <Link key={rel} href={`/${rel}`}
+                  className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm capitalize">
+                    {rel.replace(/-/g, ' ').replace('in words', 'in Words')}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Related tools */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { href:'/invoice-generator', icon:'🧾', label:'Invoice Generator', desc:'Create GST invoices — amount in words auto-filled' },
+              { href:'/gst-calculator',    icon:'🧮', label:'GST Calculator',     desc:'Calculate CGST, SGST, IGST on any amount'       },
+            ].map(l => (
+              <Link key={l.href} href={l.href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
+                <span className="text-xl">{l.icon}</span>
+                <div>
+                  <div className="font-semibold text-surface-800 group-hover:text-brand-700 text-sm">{l.label}</div>
+                  <div className="text-xs text-surface-500 mt-0.5">{l.desc}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -443,13 +588,11 @@ function InvoicePage({ page }) {
             </div>
           </div>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
             <InvoiceGenerator />
           </Suspense>
         </div>
-
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
           {page.tips?.length > 0 && (
             <section>
@@ -464,12 +607,10 @@ function InvoicePage({ page }) {
               </div>
             </section>
           )}
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-3">{page.useCaseH2}</h2>
             <p className="text-surface-600 leading-relaxed">{page.useCaseText}</p>
           </section>
-
           {page.additionalContent?.map((section, i) => (
             <section key={i}>
               <h3 className="font-display font-bold text-lg text-surface-900 mb-3">{section.h3}</h3>
@@ -482,7 +623,6 @@ function InvoicePage({ page }) {
               </ul>
             </section>
           ))}
-
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Invoice Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -495,13 +635,13 @@ function InvoicePage({ page }) {
                 .slice(0, 3)
                 .map(href => {
                   const LABELS = {
-                    '/gst-calculator':                    { icon: '🧮', label: 'GST Calculator'            },
-                    '/salary-calculator':                  { icon: '💰', label: 'Salary Calculator'         },
-                    '/emi-calculator':                     { icon: '📊', label: 'EMI Calculator'            },
-                    '/gst-invoice-generator-free':         { icon: '🧾', label: 'GST Invoice Generator'     },
-                    '/free-invoice-maker-online-no-login': { icon: '🧾', label: 'Invoice Maker No Login'    },
-                    '/invoice-generator-for-freelancers':  { icon: '💻', label: 'Invoice for Freelancers'   },
-                    '/invoice-generator-for-small-business':{ icon:'🏪', label: 'Invoice for Small Biz'    },
+                    '/gst-calculator':                     { icon: '🧮', label: 'GST Calculator'          },
+                    '/salary-calculator':                   { icon: '💰', label: 'Salary Calculator'       },
+                    '/emi-calculator':                      { icon: '📊', label: 'EMI Calculator'          },
+                    '/gst-invoice-generator-free':          { icon: '🧾', label: 'GST Invoice Generator'   },
+                    '/free-invoice-maker-online-no-login':  { icon: '🧾', label: 'Invoice Maker No Login'  },
+                    '/invoice-generator-for-freelancers':   { icon: '💻', label: 'Invoice for Freelancers' },
+                    '/invoice-generator-for-small-business':{ icon: '🏪', label: 'Invoice for Small Biz'  },
                   };
                   const meta = LABELS[href] || { icon: '🧾', label: href.replace(/^\/|-/g, m => m === '/' ? '' : ' ') };
                   return (
@@ -535,6 +675,9 @@ export default function DynamicSlugPage({ params }) {
 
   const invoicePage = getInvoicePageBySlug(params.slug);
   if (invoicePage) return <InvoicePage page={invoicePage} />;
+
+  const numWordsPage = getNumberWordsPageBySlug(params.slug);
+  if (numWordsPage) return <NumberWordsPage page={numWordsPage} />;
 
   notFound();
 }

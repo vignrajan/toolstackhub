@@ -814,6 +814,14 @@ export const tools = [
   description: 'Generate petrol, diesel, CNG bills for reimbursement. GST support, PDF download, WhatsApp sharing. Free, no signup.',
   href: '/fuel-bill-generator',
 },
+{
+  slug:        'number-to-words',
+  name:        'Number to Words',
+  category:    'utility',
+  icon:        '🔤',
+  description: 'Convert any number or rupee amount to words in Indian format — Lakh, Crore. Perfect for cheques, GST invoices, and legal documents. Free, no signup.',
+  href:        '/number-to-words',
+},
 
 {
   slug: 'bmi-calculator', name: 'BMI Calculator',
@@ -821,6 +829,8 @@ export const tools = [
   description: 'Free BMI calculator India with Indian/Asian WHO thresholds. Healthy weight range, health risk assessment.',
   href: '/bmi-calculator',
 },
+
+
 
 
 

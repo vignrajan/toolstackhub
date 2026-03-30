@@ -78,6 +78,7 @@ const nextConfig = {
 
       // UTILITY TOOLS — /tools/* → clean URL (301 permanent)
       { source: '/tools/bmi-calculator',              destination: '/bmi-calculator',        permanent: true },
+      { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
 
 
       // ════════════════════════════════════════════════

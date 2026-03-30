@@ -170,6 +170,26 @@ export default function sitemap() {
     p('/cng-bill-generator-online',                  0.80),
 
 
+    // ── Number to Words — main tool ───────────────────────────────
+    p('/number-to-words', 0.92),
+
+    // ── Number to Words — programmatic pages (lakh series) ────────
+    p('/1-lakh-in-words',   0.88),
+    p('/2-lakh-in-words',   0.85),
+    p('/5-lakh-in-words',   0.88),
+    p('/10-lakh-in-words',  0.88),
+    p('/25-lakh-in-words',  0.85),
+    p('/50-lakh-in-words',  0.88),
+    p('/75-lakh-in-words',  0.83),
+
+    // ── Number to Words — programmatic pages (crore series) ───────
+    p('/1-crore-in-words',  0.90),
+    p('/2-crore-in-words',  0.85),
+    p('/5-crore-in-words',  0.87),
+    p('/10-crore-in-words', 0.85),
+    p('/25-crore-in-words', 0.83),
+
+
 
     // Utility programmatic cluster
     p('/qr-code-for-website',             0.75),
