@@ -447,6 +447,31 @@ export const blogPosts = [
   urgencyTag:   null,
   },
 
+  {
+    slug:        'income-tax-changes-2026-india',
+    title:       'Income Tax Changes 2026 India — New Rules, Slabs & What Changes From April 1',
+    metaTitle:   'Income Tax Changes 2026 India — New Rules, Slabs & April 1 Impact',
+    metaDesc:    'Complete guide to income tax changes in India from April 1, 2026. New Tax Act 2025, FY 2026-27 slabs, old vs new regime, ITR deadlines. Updated March 2026.',
+    excerpt:     'April 1, 2026 is not just a new financial year — India\'s entire tax law gets rewritten. New Income Tax Act 2025, unchanged slabs, extended ITR deadlines, and how your salary changes explained.',
+    category:    'Income Tax',
+    categorySlug:'income-tax',
+    author:      'ToolStackHub Finance Team',
+    publishedAt: '2026-03-30',
+    updatedAt:   '2026-03-30',
+    readTime:     14,
+    coverEmoji:  '📋',
+    coverBg:     'from-rose-600 to-pink-700',
+    tags:        ['income tax','tax changes 2026','new tax act','FY 2026-27','ITR','salary'],
+    toolUrl:     '/salary-calculator',
+    toolName:    'Salary Calculator',
+    featured:    true,
+    pinned:      true,
+    trending:    true,
+    seasonal:    true,
+    seasonPeak:  'April–July 2026',
+    urgencyTag:  'Effective April 1, 2026',
+  }
+
 ];
 
 export function getPostBySlug(slug) {

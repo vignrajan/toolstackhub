@@ -129,6 +129,7 @@ export default function sitemap() {
     p('/blog/how-to-calculate-gratuity-india',                    0.85),
     p('/blog/old-vs-new-tax-regime-2025-26',                      0.90),
     p('/blog/in-hand-salary-calculator-lpa-india',                0.92),
+    p('/blog/income-tax-changes-2026-india',                      0.92),
 
 
 
