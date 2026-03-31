@@ -210,5 +210,32 @@ export default function sitemap() {
     p('/chatgpt-prompt-generator',        0.75),
     p('/claude-prompt-generator',         0.75),
 
+    // AI Tools Hub
+    p('/ai-tools', 0.92),
+
+    // Individual tool pages
+    p('/ai-tools/chatgpt',    0.88),
+    p('/ai-tools/claude',     0.88),
+    p('/ai-tools/gemini',     0.87),
+    p('/ai-tools/jasper',     0.83),
+    p('/ai-tools/copyai',     0.82),
+    p('/ai-tools/grammarly',  0.85),
+    p('/ai-tools/midjourney', 0.84),
+    p('/ai-tools/notion-ai',  0.82),
+
+    // Comparisons
+    p('/ai-tools/claude-vs-chatgpt', 0.90),
+    p('/ai-tools/jasper-vs-copyai',  0.85),
+
+    // Use-case pages
+    p('/ai-tools/use-cases/ai-tools-for-salary-calculation',    0.88),
+    p('/ai-tools/use-cases/ai-tools-for-tax-planning-india',    0.87),
+    p('/ai-tools/use-cases/ai-tools-for-students-india-free',   0.88),
+    p('/ai-tools/use-cases/ai-tools-for-resume-freshers-india', 0.85),
+    p('/ai-tools/use-cases/ai-tools-for-job-offer-comparison',  0.85),
+
+
   ];
+  
+
 }

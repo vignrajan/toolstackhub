@@ -17,6 +17,7 @@ export default function Header() {
     { href: '/#all-tools',  label: 'All Tools'  },
     { href: '/about',       label: 'About'       },
     { href: '/blog', label: "Blog"},
+    { href: '/ai-tools', label: 'AI Tools' },
     
   ];
 
