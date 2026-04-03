@@ -131,6 +131,7 @@ export default function sitemap() {
     p('/blog/in-hand-salary-calculator-lpa-india',                0.92),
     p('/blog/income-tax-changes-2026-india',                      0.92),
     p('/blog/how-to-save-tokens-in-claude',                       0.88),
+    p('/blog/claude-prompt-templates-save-tokens',                0.88),
 
 
 
