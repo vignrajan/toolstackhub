@@ -80,6 +80,8 @@ const nextConfig = {
       { source: '/tools/bmi-calculator',              destination: '/bmi-calculator',        permanent: true },
       { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
 
+      // BLOG-CLUADE TOKENS
+      { source: '/blog/save-claude-tokens-guide',              destination: '/blog/how-to-save-tokens-in-claude',        permanent: true },
 
       // ════════════════════════════════════════════════
       // JSON CLUSTER — variant pages soft-redirect to main
