@@ -133,6 +133,7 @@ export default function sitemap() {
     p('/blog/how-to-save-tokens-in-claude',                       0.88),
     p('/blog/claude-prompt-templates-save-tokens',                0.88),
     p('/blog/claude-prompt-techniques',                           0.90),
+    p('/blog/claude-hacks-improve-ai-results',                    0.88),
 
 
 
