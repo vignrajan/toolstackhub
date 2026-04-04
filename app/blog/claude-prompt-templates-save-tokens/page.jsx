@@ -473,7 +473,7 @@ export default function ClaudePromptTemplatesBlog() {
               <div className="text-xs font-bold uppercase tracking-wider text-surface-400 mb-3">
                 📌 What Makes a Claude Prompt Low-Token?
               </div>
-              <p className="text-sm text-white/80 leading-relaxed mb-4">
+              <p className="text-sm text-white leading-relaxed mb-4">
                 A low-token Claude prompt constrains output format, specifies role in one line, limits explanation ("no commentary"), and batches related tasks into a single message. It tells Claude exactly what to produce — and exactly what to leave out.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -487,7 +487,7 @@ export default function ClaudePromptTemplatesBlog() {
                   { do: false, text: 'No output constraints'                            },
                   { do: false, text: 'Pasting entire files for 1-function fixes'       },
                 ].map((item, i) => (
-                  <div key={i} className={`flex items-start gap-2 text-sm ${item.do ? 'text-emerald-300' : 'text-rose-300'}`}>
+                  <div key={i} style={{color: item.do ? '#4ade80' : '#f87171'}} className="flex items-start gap-2 text-sm font-medium">
                     <span className="shrink-0 font-bold">{item.do ? '✓' : '✗'}</span>
                     <span>{item.text}</span>
                   </div>
@@ -635,11 +635,11 @@ export default function ClaudePromptTemplatesBlog() {
                     {/* Header */}
                     <div className={`${hd} text-white rounded-t-2xl px-6 py-5`}>
                       <div className="flex items-center gap-3 mb-1">
-                        <span className="font-black text-white/40 font-mono text-sm">{t.n}</span>
+                        <span className="font-black text-white font-mono text-sm">{t.n}</span>
                         <span className="text-2xl">{t.icon}</span>
                       </div>
                       <h2 className="font-display font-black text-xl text-white">{t.title}</h2>
-                      <div className="text-sm text-white/70 mt-1">{t.subtitle}</div>
+                      <div className="text-sm text-white mt-1">{t.subtitle}</div>
                     </div>
 
                     <div className={`border-2 ${bg.split(' ')[1]} rounded-b-2xl p-6 space-y-6`}>
@@ -677,7 +677,7 @@ export default function ClaudePromptTemplatesBlog() {
                             {t.example.filled}
                           </pre>
                           <div className="text-xs font-bold text-surface-400 mb-2">What Claude Returns:</div>
-                          <div className="text-sm text-white/80 bg-white/5 rounded-lg p-3 leading-relaxed">
+                          <div className="text-sm text-white bg-white/10 rounded-lg p-3 leading-relaxed">
                             {t.example.output}
                           </div>
                         </div>
@@ -757,10 +757,10 @@ export default function ClaudePromptTemplatesBlog() {
                 <div className="overflow-x-auto rounded-2xl border border-surface-200">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="bg-surface-900 text-white">
-                        <th className="text-left px-4 py-3 font-semibold rounded-tl-2xl">Mistake</th>
-                        <th className="text-center px-4 py-3 font-semibold">Token Impact</th>
-                        <th className="text-left px-4 py-3 font-semibold rounded-tr-2xl">Fix</th>
+                      <tr className="bg-surface-900">
+                        <th style={{color:'#ffffff'}} className="text-left px-4 py-3 font-semibold rounded-tl-2xl">Mistake</th>
+                        <th style={{color:'#ffffff'}} className="text-center px-4 py-3 font-semibold">Token Impact</th>
+                        <th style={{color:'#ffffff'}} className="text-left px-4 py-3 font-semibold rounded-tr-2xl">Fix</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -865,7 +865,7 @@ export default function ClaudePromptTemplatesBlog() {
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
                   <div className="font-bold text-white mb-2">🔖 Bookmark This Page</div>
-                  <p className="text-white/70 text-sm mb-4">
+                  <p className="text-white text-sm mb-4">
                     These templates are ready to copy-paste. Save this page and come back whenever you start a new Claude session.
                     Share with your team — every prompt they write efficiently saves collective budget.
                   </p>
