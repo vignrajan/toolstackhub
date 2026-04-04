@@ -19,10 +19,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const tool  = getAIToolBySlug(params.slug);
-  const comp  = getAIComparisonBySlug(params.slug);
-  const isUseCase = params.slug.startsWith('use-cases/');
-  const uc    = isUseCase ? getAIUseCaseBySlug(params.slug.replace('use-cases/', '')) : null;
+  const { slug } = await params;
+  const tool  = getAIToolBySlug(slug);
+  const comp  = getAIComparisonBySlug(slug);
+  const isUseCase = slug.startsWith('use-cases/');
+  const uc    = isUseCase ? getAIUseCaseBySlug(slug.replace('use-cases/', '')) : null;
   const item  = tool || comp || uc;
   if (!item) return {};
   return {
@@ -491,8 +492,8 @@ function UseCasePage({ uc }) {
 }
 
 // ── MAIN ROUTER ───────────────────────────────────────────────
-export default function AIToolSlugPage({ params }) {
-  const { slug } = params;
+export default async function AIToolSlugPage({ params }) {
+  const { slug } = await params;
 
   if (slug.startsWith('use-cases/')) {
     const ucSlug = slug.replace('use-cases/', '');
