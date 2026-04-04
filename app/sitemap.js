@@ -134,6 +134,7 @@ export default function sitemap() {
     p('/blog/claude-prompt-templates-save-tokens',                0.88),
     p('/blog/claude-prompt-techniques',                           0.90),
     p('/blog/claude-hacks-improve-ai-results',                    0.88),
+    p('/blog/old-vs-new-regime-15-lpa-salary-2026-27',            0.92),
 
 
 
