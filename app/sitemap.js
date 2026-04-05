@@ -112,6 +112,7 @@ export default function sitemap() {
 
     // ── SEO tools ─────────────────────────────────────────────
     p('/meta-tag-generator-online', 0.85),
+    p('/chat-screenshot-generator', 0.92),
 
     // ── Blogs ─────────────────────────────────────────────
 

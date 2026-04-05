@@ -822,6 +822,14 @@ export const tools = [
   description: 'Convert any number or rupee amount to words in Indian format — Lakh, Crore. Perfect for cheques, GST invoices, and legal documents. Free, no signup.',
   href:        '/number-to-words',
 },
+{
+  slug:        'chat-screenshot-generator',
+  name:        'Chat Screenshot Generator',
+  category:    'utility',
+  icon:        '💬',
+  description: 'Create realistic WhatsApp, iMessage, and Instagram DM chat screenshots. 10 viral templates, HD PNG export, phone frame toggle. Free, no login, nothing uploaded.',
+  href:        '/chat-screenshot-generator',
+},
 
 {
   slug: 'bmi-calculator', name: 'BMI Calculator',
