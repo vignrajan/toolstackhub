@@ -228,8 +228,8 @@ export default function ClaudeTokenBlogPage() {
 
             {/* Featured snippet — quick answer */}
             <div className="bg-surface-900 rounded-2xl p-6 mb-6">
-              <div className="text-xs font-bold uppercase tracking-wider text-surface-400 mb-3">
-                📌 Quick Answer — How to Save Tokens in Claude
+              <div className="text-xs font-bold uppercase tracking-wider mb-3">
+                <span style={{ color: '#94a3b8' }}>📌 Quick Answer — How to Save Tokens in Claude</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
@@ -240,9 +240,9 @@ export default function ClaudeTokenBlogPage() {
                   'Turn off unused features (Extended Thinking, Search)',
                   'Spread work across the day (5-hour rolling window)',
                 ].map((tip, i) => (
-                  <div key={i} className="flex items-start gap-2 text-sm text-white/80">
-                    <span className="text-brand-400 shrink-0 font-bold">{String(i+1).padStart(2,'0')}</span>
-                    <span>{tip}</span>
+                  <div key={i} className="flex items-start gap-2 text-sm">
+                    <span className="shrink-0 font-bold" style={{ color: '#818cf8' }}>{String(i+1).padStart(2,'0')}</span>
+                    <span style={{ color: '#ffffff' }}>{tip}</span>
                   </div>
                 ))}
               </div>
@@ -563,10 +563,10 @@ export default function ClaudeTokenBlogPage() {
                 <div className="overflow-x-auto rounded-2xl border border-surface-200">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="bg-surface-900 text-white">
-                        <th className="text-left px-4 py-3 font-semibold rounded-tl-2xl">Factor</th>
-                        <th className="text-center px-4 py-3 font-semibold">Claude (Anthropic)</th>
-                        <th className="text-center px-4 py-3 font-semibold rounded-tr-2xl">ChatGPT (OpenAI)</th>
+                      <tr className="bg-surface-900">
+                        <th className="text-left px-4 py-3 font-semibold rounded-tl-2xl" style={{ color: '#ffffff' }}>Factor</th>
+                        <th className="text-center px-4 py-3 font-semibold" style={{ color: '#ffffff' }}>Claude (Anthropic)</th>
+                        <th className="text-center px-4 py-3 font-semibold rounded-tr-2xl" style={{ color: '#ffffff' }}>ChatGPT (OpenAI)</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -657,7 +657,7 @@ export default function ClaudeTokenBlogPage() {
 
               {/* Summary */}
               <section className="bg-surface-900 rounded-2xl p-6 text-white">
-                <h2 className="font-display font-bold text-xl mb-5">TL;DR — Claude Token Saving Cheatsheet</h2>
+                <h2 className="font-display font-bold text-xl mb-5" style={{ color: '#ffffff' }}>TL;DR — Claude Token Saving Cheatsheet</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                   {[
                     'Edit prompts — don\'t send follow-up corrections',
@@ -672,16 +672,16 @@ export default function ClaudeTokenBlogPage() {
                     'Enable overage billing to protect mid-project momentum',
                   ].map((t, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="text-brand-400 shrink-0 font-mono text-xs mt-0.5">{String(i+1).padStart(2,'0')}</span>
-                      <span className="text-white/80 text-sm">{t}</span>
+                      <span className="shrink-0 font-mono text-xs mt-0.5" style={{ color: '#818cf8' }}>{String(i+1).padStart(2,'0')}</span>
+                      <span className="text-sm" style={{ color: '#ffffff' }}>{t}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Final CTA */}
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="font-bold text-white mb-2">🔖 Bookmark This Page</div>
-                  <p className="text-white/70 text-sm mb-4">
+                  <div className="font-bold mb-2" style={{ color: '#ffffff' }}>🔖 Bookmark This Page</div>
+                  <p className="text-sm mb-4" style={{ color: '#ffffffb3' }}>
                     Claude's limits update regularly. Bookmark this guide and check back for the latest optimization strategies.
                     Share it with your team — every person using Claude more efficiently saves the whole team's budget.
                   </p>

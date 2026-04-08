@@ -470,10 +470,10 @@ export default function ClaudePromptTemplatesBlog() {
 
             {/* Featured snippet block */}
             <div className="bg-surface-900 text-white rounded-2xl p-6 mb-6">
-              <div className="text-xs font-bold uppercase tracking-wider text-surface-400 mb-3">
+              <div className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: '#94a3b8' }}>
                 📌 What Makes a Claude Prompt Low-Token?
               </div>
-              <p className="text-sm text-white leading-relaxed mb-4">
+              <p className="text-sm leading-relaxed mb-4" style={{ color: '#ffffff' }}>
                 A low-token Claude prompt constrains output format, specifies role in one line, limits explanation ("no commentary"), and batches related tasks into a single message. It tells Claude exactly what to produce — and exactly what to leave out.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -487,9 +487,9 @@ export default function ClaudePromptTemplatesBlog() {
                   { do: false, text: 'No output constraints'                            },
                   { do: false, text: 'Pasting entire files for 1-function fixes'       },
                 ].map((item, i) => (
-                  <div key={i} style={{color: item.do ? '#4ade80' : '#f87171'}} className="flex items-start gap-2 text-sm font-medium">
-                    <span className="shrink-0 font-bold">{item.do ? '✓' : '✗'}</span>
-                    <span>{item.text}</span>
+                  <div key={i} className="flex items-start gap-2 text-sm font-medium">
+                    <span className="shrink-0 font-bold" style={{color: item.do ? '#4ade80' : '#f87171'}}>{item.do ? '✓' : '✗'}</span>
+                    <span style={{color: item.do ? '#4ade80' : '#f87171'}}>{item.text}</span>
                   </div>
                 ))}
               </div>
@@ -633,13 +633,13 @@ export default function ClaudePromptTemplatesBlog() {
                 return (
                   <section key={t.id} id={t.id}>
                     {/* Header */}
-                    <div className={`${hd} text-white rounded-t-2xl px-6 py-5`}>
+                    <div className={`${hd} rounded-t-2xl px-6 py-5`}>
                       <div className="flex items-center gap-3 mb-1">
-                        <span className="font-black text-white font-mono text-sm">{t.n}</span>
+                        <span className="font-black font-mono text-sm" style={{ color: '#ffffff' }}>{t.n}</span>
                         <span className="text-2xl">{t.icon}</span>
                       </div>
-                      <h2 className="font-display font-black text-xl text-white">{t.title}</h2>
-                      <div className="text-sm text-white mt-1">{t.subtitle}</div>
+                      <h2 className="font-display font-black text-xl" style={{ color: '#ffffff' }}>{t.title}</h2>
+                      <div className="text-sm mt-1" style={{ color: '#ffffff' }}>{t.subtitle}</div>
                     </div>
 
                     <div className={`border-2 ${bg.split(' ')[1]} rounded-b-2xl p-6 space-y-6`}>
@@ -667,17 +667,17 @@ export default function ClaudePromptTemplatesBlog() {
                       {/* Real example */}
                       <div className="bg-surface-900 rounded-xl overflow-hidden">
                         <div className="px-5 py-3 border-b border-white/10">
-                          <div className="text-xs font-bold uppercase tracking-wider text-surface-400">
+                          <div className="text-xs font-bold uppercase tracking-wider" style={{ color: '#94a3b8' }}>
                             Real Example — {t.example.context}
                           </div>
                         </div>
                         <div className="p-5">
-                          <div className="text-xs font-bold text-surface-400 mb-2">Filled Template:</div>
-                          <pre className="text-sm font-mono text-emerald-300 whitespace-pre-wrap leading-relaxed mb-4 overflow-x-auto">
+                          <div className="text-xs font-bold mb-2" style={{ color: '#94a3b8' }}>Filled Template:</div>
+                          <pre className="text-sm font-mono whitespace-pre-wrap leading-relaxed mb-4 overflow-x-auto" style={{ color: '#6ee7b7' }}>
                             {t.example.filled}
                           </pre>
-                          <div className="text-xs font-bold text-surface-400 mb-2">What Claude Returns:</div>
-                          <div className="text-sm text-white bg-white/10 rounded-lg p-3 leading-relaxed">
+                          <div className="text-xs font-bold mb-2" style={{ color: '#94a3b8' }}>What Claude Returns:</div>
+                          <div className="text-sm bg-white/10 rounded-lg p-3 leading-relaxed" style={{ color: '#ffffff' }}>
                             {t.example.output}
                           </div>
                         </div>
@@ -850,22 +850,22 @@ export default function ClaudePromptTemplatesBlog() {
 
               {/* Summary */}
               <section className="bg-surface-900 rounded-2xl p-6 text-white">
-                <h2 className="font-display font-bold text-xl mb-5">Cheatsheet — 8 Templates at a Glance</h2>
+                <h2 className="font-display font-bold text-xl mb-5" style={{ color: '#ffffff' }}>Cheatsheet — 8 Templates at a Glance</h2>
                 <div className="space-y-2 mb-6">
                   {TEMPLATES.map(t => (
                     <div key={t.id} className="flex items-start gap-3">
-                      <span className="font-mono text-surface-500 text-xs shrink-0 mt-0.5">{t.n}</span>
+                      <span className="font-mono text-xs shrink-0 mt-0.5" style={{ color: '#64748b' }}>{t.n}</span>
                       <span className="text-lg shrink-0">{t.icon}</span>
                       <div>
-                        <span className="text-white font-semibold text-sm">{t.title}</span>
-                        <span className="text-surface-400 text-xs ml-2">— {t.subtitle}</span>
+                        <span className="font-semibold text-sm" style={{ color: '#ffffff' }}>{t.title}</span>
+                        <span className="text-xs ml-2" style={{ color: '#94a3b8' }}>— {t.subtitle}</span>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="bg-white/10 rounded-xl p-5">
-                  <div className="font-bold text-white mb-2">🔖 Bookmark This Page</div>
-                  <p className="text-white text-sm mb-4">
+                  <div className="font-bold mb-2" style={{ color: '#ffffff' }}>🔖 Bookmark This Page</div>
+                  <p className="text-sm mb-4" style={{ color: '#ffffff' }}>
                     These templates are ready to copy-paste. Save this page and come back whenever you start a new Claude session.
                     Share with your team — every prompt they write efficiently saves collective budget.
                   </p>
