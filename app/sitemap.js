@@ -136,6 +136,7 @@ export default function sitemap() {
     p('/blog/claude-prompt-techniques',                           0.90),
     p('/blog/claude-hacks-improve-ai-results',                    0.88),
     p('/blog/old-vs-new-regime-15-lpa-salary-2026-27',            0.92),
+    p('/blog/indieappcircle-review',                              0.85),
 
 
 
@@ -218,6 +219,7 @@ export default function sitemap() {
 
     // AI Tools Hub
     p('/ai-tools', 0.92),
+    p('/ai-tools/indieappcircle', 0.85),
 
     // Individual tool pages
     p('/ai-tools/chatgpt',    0.88),
