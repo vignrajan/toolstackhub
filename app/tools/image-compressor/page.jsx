@@ -22,6 +22,7 @@ export const metadata = {
     'image size reducer',
     'compress image without losing quality',
   ],
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_CONFIG.url}/tools/image-compressor`,
   },

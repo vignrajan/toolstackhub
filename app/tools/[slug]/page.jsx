@@ -100,6 +100,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords: tool.keywords,
+    robots: { index: false, follow: true},
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title,

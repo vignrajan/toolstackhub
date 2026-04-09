@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getRelatedTools, TOOL_META } from '../../data/related-tools';
+import { getRelatedTools, TOOL_META } from '../data/related-tools';
 
 /**
  * RelatedToolsCluster

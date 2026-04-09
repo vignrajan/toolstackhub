@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
@@ -185,6 +186,8 @@ export default function CaseConverterOnlinePage() {
           </section>
 
           <TextToolsLinks currentHref="/case-converter-online" />
+
+          <RelatedToolsCluster currentSlug="case-converter-online" />
 
         </div>
       </main>

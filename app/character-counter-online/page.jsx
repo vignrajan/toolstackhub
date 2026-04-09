@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
@@ -188,6 +189,8 @@ export default function CharacterCounterOnlinePage() {
           </section>
 
           <TextToolsLinks currentHref="/character-counter-online" />
+
+          <RelatedToolsCluster currentSlug="character-counter-online" />
 
         </div>
       </main>

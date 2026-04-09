@@ -22,6 +22,7 @@ export const metadata = {
     'camelcase converter',
     'snake case converter',
   ],
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_CONFIG.url}/tools/case-converter`,
   },

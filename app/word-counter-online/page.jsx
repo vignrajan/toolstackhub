@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
@@ -336,6 +337,8 @@ export default function WordCounterOnlinePage() {
 
 {/* Section 8 — Internal linking cluster */}
 <TextToolsLinks currentHref="/word-counter-online" />
+
+          <RelatedToolsCluster currentSlug="word-counter-online" />
 
         </div>
       </main>

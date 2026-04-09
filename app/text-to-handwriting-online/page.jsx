@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
@@ -169,6 +170,8 @@ export default function Page() {
           </section>
 
           <TextToolsLinks currentHref="/text-to-handwriting-online" />
+
+          <RelatedToolsCluster currentSlug="text-to-handwriting-online" />
 
         </div>
       </main>

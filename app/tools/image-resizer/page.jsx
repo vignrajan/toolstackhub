@@ -21,6 +21,7 @@ export const metadata = {
     'resize jpg online',
     'resize png online',
   ],
+  robots: { index: false, follow: true },
   alternates: { canonical: `${SITE_CONFIG.url}/tools/image-resizer` },
   openGraph: {
     title: 'Image Resizer – Resize Images Online Free',

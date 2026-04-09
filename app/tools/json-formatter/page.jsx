@@ -22,6 +22,7 @@ export const metadata = {
     'json beautifier online',
     'json minifier online',
   ],
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_CONFIG.url}/tools/json-formatter`,
   },

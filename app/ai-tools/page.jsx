@@ -5,13 +5,13 @@ import { AI_TOOLS, AI_CATEGORIES, AI_USE_CASES, AI_COMPARISONS } from '../../dat
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Best AI Tools 2026 — Reviews, Comparisons & Use Cases for India',
-  description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, Indian pricing, free vs paid comparisons, and use-case guides for Indian professionals and students.',
-  keywords: ['best ai tools 2026', 'ai tools india', 'chatgpt vs claude', 'free ai tools india', 'ai tools for students india', 'best ai writing tools'],
+  title: 'Best AI Tools 2026 — Reviews, Comparisons & Use Cases',
+  description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, free vs paid comparisons, and use-case guides for professionals, developers, and students.',
+  keywords: ['best ai tools 2026', 'chatgpt vs claude', 'free ai tools', 'ai tools for students', 'best ai writing tools', 'ai coding tools', 'ai image generators'],
   alternates: { canonical: `${SITE_CONFIG.url}/ai-tools` },
   openGraph: {
-    title: 'Best AI Tools 2026 — Reviews & Comparisons for India',
-    description: 'Honest AI tool reviews, Indian pricing, and use-case guides for professionals and students.',
+    title: 'Best AI Tools 2026 — Reviews & Comparisons',
+    description: 'Honest AI tool reviews, pricing breakdowns, and use-case guides for professionals, developers, and students.',
     url: `${SITE_CONFIG.url}/ai-tools`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -53,7 +53,7 @@ export default function AIToolsHub() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Best AI Tools 2026 — ToolStackHub',
-    description: 'Curated reviews of the best AI tools for Indian professionals and students.',
+    description: 'Curated reviews of the best AI tools for professionals, developers, and students.',
     url: `${SITE_CONFIG.url}/ai-tools`,
     hasPart: AI_TOOLS.map(t => ({
       '@type': 'SoftwareApplication',
@@ -79,14 +79,14 @@ export default function AIToolsHub() {
                 <span className="text-2xl">🤖</span>
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-400">AI Tools Hub</span>
               </div>
-              <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl mb-5 leading-tight tracking-tight">
+              <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl mb-5 leading-tight tracking-tight text-white">
                 The Best AI Tools
-                <span className="text-brand-400"> for India</span>
+                <span className="text-brand-400"> You Actually Need</span>
                 <br/>in 2026
               </h1>
               <p className="text-surface-300 text-xl leading-relaxed mb-8 max-w-2xl">
-                Honest reviews, Indian pricing, and use-case guides for {AI_TOOLS.length}+ AI tools.
-                Find the right tool for writing, coding, tax planning, and productivity.
+                Honest reviews, pricing breakdowns, and use-case guides for {AI_TOOLS.length}+ AI tools.
+                Find the right tool for writing, coding, design, and productivity.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link href="#tools" className="bg-brand-600 hover:bg-brand-500 text-white font-bold px-6 py-3 rounded-xl transition-colors">
@@ -104,7 +104,7 @@ export default function AIToolsHub() {
                 { n:`${AI_TOOLS.length}+`,     l:'Tools Reviewed'     },
                 { n:'15+',                     l:'Use-Case Guides'    },
                 { n:'Free',                    l:'Always Free'        },
-                { n:'India',                   l:'Focused Pricing'    },
+                { n:'Global',                  l:'Pricing & Access'   },
               ].map(s => (
                 <div key={s.l} className="text-center">
                   <div className="text-3xl font-black text-white">{s.n}</div>

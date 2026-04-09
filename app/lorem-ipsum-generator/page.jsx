@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
@@ -167,6 +168,8 @@ export default function Page() {
           </section>
 
           <TextToolsLinks currentHref="/lorem-ipsum-generator" />
+
+          <RelatedToolsCluster currentSlug="lorem-ipsum-generator" />
 
         </div>
       </main>
