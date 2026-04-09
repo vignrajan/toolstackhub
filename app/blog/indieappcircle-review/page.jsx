@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: 'Is IndieAppCircle free to use?',
-    a: 'Yes. IndieAppCircle started as a fully free platform and still offers a free tier where you earn credits by testing other apps. If you want to skip the testing queue, you can also buy credits directly. A paid subscription is available for featured placement on the landing page and homepage.',
+    a: 'Yes. IndieAppCircle started as a fully free platform and still offers a free tier where you earn credits by testing other apps. If you do not have time to test other apps, you can also buy credits directly. A paid subscription is available for featured placement on the landing page and homepage.',
   },
   {
     q: 'How does IndieAppCircle prevent fake or low-effort feedback?',
@@ -128,7 +128,7 @@ export default function IndieAppCircleReviewBlog() {
                   'Feedback must be accepted before credits transfer — quality is enforced',
                   'Built solo by Luis, grown entirely on Reddit, ships updates almost daily',
                   'Free to start, credits available to buy, subscription for featured placement',
-                  'Best for: indie hackers, MVP builders, solo SaaS founders pre-launch',
+                  'Best for: indie hackers, MVP builders, solo SaaS founders pre-launch and post-launch',
                 ].map((item, i) => (
                   <div key={i} style={{display:'flex', alignItems:'flex-start', gap:'0.5rem'}}>
                     <span style={{color:'#818cf8', flexShrink:0, fontWeight:700, fontSize:'0.875rem'}}>→</span>
