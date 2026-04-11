@@ -809,6 +809,14 @@ export const tools = [
   href:        '/salary-calculator',
 },
 {
+  slug: 'professional-tax-calculator',
+  name: 'Professional Tax Calculator',
+  category: 'utility',
+  icon: '⚖️',
+  description: 'Calculate Professional Tax for all 18 PT-levying Indian states. State-wise slabs, monthly & annual PT, take-home after deduction. Free, instant, no login.',
+  href: '/professional-tax-calculator',
+},
+{
   slug: 'fuel-bill-generator', name: 'Fuel Bill Generator',
   category: 'utility', icon: '⛽',
   description: 'Generate petrol, diesel, CNG bills for reimbursement. GST support, PDF download, WhatsApp sharing. Free, no signup.',

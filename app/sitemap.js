@@ -169,6 +169,7 @@ export default function sitemap() {
     p('/invoice-generator',            0.92),
     p('/gst-calculator',               0.92),
     p('/salary-calculator',            0.92),
+    p('/professional-tax-calculator',                0.92),
     p('/fuel-bill-generator',                        0.90),
     p('/fuel-bill-generator-for-reimbursement',      0.85),
     p('/petrol-bill-generator-online-free',          0.85),

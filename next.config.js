@@ -72,8 +72,9 @@ const nextConfig = {
       { source: '/tools/invoice-generator',              destination: '/invoice-generator',        permanent: true },
       { source: '/tools/gst-calculator',              destination: '/gst-calculator',              permanent: true },
       { source: '/tools/salary-calculator',              destination: '/salary-calculator',        permanent: true },
-      { source: '/tools/fuel-bill-generator',              destination: '/fuel-bill-generator',        permanent: true },
-      { source: '/tools/chat-screenshot-generator',  destination: '/chat-screenshot-generator',        permanent: true },
+      { source: '/tools/fuel-bill-generator',              destination: '/fuel-bill-generator',    permanent: true },
+      { source: '/tools/chat-screenshot-generator',  destination: '/chat-screenshot-generator',    permanent: true },
+      { source: '/tools/professional-tax-calculator', destination: '/professional-tax-calculator', permanent: true },
 
 
 

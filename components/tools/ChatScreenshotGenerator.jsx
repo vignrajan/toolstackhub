@@ -484,19 +484,41 @@ export default function ChatScreenshotGenerator() {
   );
 
   // Time display at top
-  const StatusBar = () => (
-    <div style={{
-      display: 'flex', justifyContent: 'space-between', padding: '8px 20px 0',
-      background: p.header, color: p.headerText, fontSize: '13px', fontWeight: 600, fontFamily: p.fontFamily,
-    }}>
-      <span>{currentTime}</span>
-      <div style={{ display: 'flex', gap: '6px', alignItems: 'center', fontSize: '12px' }}>
-        <span>●●●</span>
-        <span>WiFi</span>
-        <span>🔋</span>
+  const StatusBar = () => {
+    const c = p.headerText;
+    return (
+      <div style={{
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        padding: '10px 26px 2px', background: p.header, color: c,
+        fontSize: '16px', fontWeight: 600, fontFamily: '-apple-system, SF Pro Text, ' + p.fontFamily,
+        letterSpacing: '0.4px',
+      }}>
+        <span style={{ fontFeatureSettings: '"tnum"' }}>{currentTime}</span>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          {/* ── Cellular: 4 bars ── */}
+          <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="10" width="3.2" height="3" rx="0.8" fill={c}/>
+            <rect x="5" y="7" width="3.2" height="6" rx="0.8" fill={c}/>
+            <rect x="10" y="3.5" width="3.2" height="9.5" rx="0.8" fill={c}/>
+            <rect x="15" y="0" width="3.2" height="13" rx="0.8" fill={c}/>
+          </svg>
+          {/* ── WiFi: 3 bold arcs + dot ── */}
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <path d="M0.5 3.8a11 11 0 0115 0" stroke={c} strokeWidth="2.8" strokeLinecap="round"/>
+            <path d="M3 6.3a7 7 0 0110 0" stroke={c} strokeWidth="2.8" strokeLinecap="round"/>
+            <path d="M5.5 8.7a3.5 3.5 0 015 0" stroke={c} strokeWidth="2.8" strokeLinecap="round"/>
+            <circle cx="8" cy="11" r="1.3" fill={c}/>
+          </svg>
+          {/* ── Battery ── */}
+          <svg width="29" height="14" viewBox="0 0 29 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.65" y="0.65" width="23.7" height="11.7" rx="2.6" stroke={c} strokeWidth="1.3" opacity="0.4"/>
+            <rect x="25.5" y="4" width="2.2" height="5" rx="1.1" fill={c} opacity="0.4"/>
+            <rect x="2.5" y="2.5" width="20" height="8" rx="1.5" fill={c}/>
+          </svg>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const bgStyle = platform === 'whatsapp' ? {
     backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h100v100H0z\' fill=\'%23E5DDD5\'/%3E%3C/svg%3E")',
