@@ -1,173 +1,368 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo, useCallback } from 'react';
+
+const SEPARATORS = [
+  { id: 'newline', label: 'New Line',  value: '\n'  },
+  { id: 'space',   label: 'Space',     value: ' '   },
+  { id: 'comma',   label: 'Comma',     value: ', '  },
+  { id: 'none',    label: 'None',      value: ''    },
+  { id: 'custom',  label: 'Custom',    value: null  },
+];
+
+const QUICK_COUNTS = [3, 5, 10, 50, 100, 1000];
+
+const MODES = [
+  { id: 'simple',    icon: '🔁', label: 'Simple Repeat'     },
+  { id: 'increment', icon: '🔢', label: 'With Increment'    },
+  { id: 'rotate',    icon: '🔄', label: 'Multi-Text Rotate' },
+];
+
+const PLACEHOLDERS = ['{n}', '#', '{i}', '{num}'];
+const ZERO_PADS   = [
+  { label: 'None',    digits: 0 },
+  { label: '2 digits (01, 02)', digits: 2 },
+  { label: '3 digits (001, 002)', digits: 3 },
+  { label: '4 digits (0001, 0002)', digits: 4 },
+];
+
+function padNum(n, digits) {
+  if (digits === 0) return String(n);
+  return String(n).padStart(digits, '0');
+}
 
 export default function TextRepeater() {
-  const [text,      setText]      = useState('');
-  const [times,     setTimes]     = useState(5);
-  const [separator, setSeparator] = useState('newline'); // newline | space | comma | custom
-  const [custom,    setCustom]    = useState('');
-  const [output,    setOutput]    = useState('');
-  const [copied,    setCopied]    = useState(false);
-  const [processed, setProcessed] = useState(false);
+  // ── shared state ─────────────────────────────────────────
+  const [mode,        setMode]        = useState('simple');
+  const [text,        setText]        = useState('');
+  const [count,       setCount]       = useState(5);
+  const [sepId,       setSepId]       = useState('newline');
+  const [customSep,   setCustomSep]   = useState('');
+  const [output,      setOutput]      = useState('');
+  const [copied,      setCopied]      = useState(false);
 
-  const getSeparator = () => {
-    switch (separator) {
-      case 'newline': return '\n';
-      case 'space':   return ' ';
-      case 'comma':   return ', ';
-      case 'none':    return '';
-      case 'custom':  return custom;
-      default:        return '\n';
+  // ── increment-mode state ──────────────────────────────────
+  const [incStart,    setIncStart]    = useState(1);
+  const [incStep,     setIncStep]     = useState(1);
+  const [incPad,      setIncPad]      = useState(0);     // digits
+  const [incPlaceholder, setIncPlaceholder] = useState('{n}');
+
+  // ── derived separator ─────────────────────────────────────
+  const sep = useMemo(() => {
+    const found = SEPARATORS.find(s => s.id === sepId);
+    return sepId === 'custom' ? customSep : (found?.value ?? '\n');
+  }, [sepId, customSep]);
+
+  // ── generate output ───────────────────────────────────────
+  const generate = useCallback(() => {
+    const n = Math.min(Math.max(1, Math.floor(count)), 1000);
+
+    if (mode === 'simple') {
+      if (!text) { setOutput(''); return; }
+      setOutput(Array.from({ length: n }, () => text).join(sep));
     }
-  };
 
-  const repeat = () => {
-    if (!text.trim()) return;
-    const sep    = getSeparator();
-    const result = Array(times).fill(text).join(sep);
-    setOutput(result);
-    setProcessed(true);
-  };
+    else if (mode === 'increment') {
+      if (!text) { setOutput(''); return; }
+      const placeholder = incPlaceholder;
+      const lines = Array.from({ length: n }, (_, i) => {
+        const num = incStart + i * incStep;
+        const numStr = padNum(num, incPad);
+        // Replace ALL occurrences of the placeholder
+        return text.split(placeholder).join(numStr);
+      });
+      setOutput(lines.join(sep));
+    }
 
-  const copy = () => {
+    else if (mode === 'rotate') {
+      const rawLines = text.split('\n').filter(l => l.length > 0);
+      if (rawLines.length === 0) { setOutput(''); return; }
+      const lines = Array.from({ length: n }, (_, i) => rawLines[i % rawLines.length]);
+      setOutput(lines.join(sep));
+    }
+  }, [mode, text, count, sep, incStart, incStep, incPad, incPlaceholder]);
+
+  const handleCopy = useCallback(async () => {
     if (!output) return;
-    navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+    try {
+      await navigator.clipboard.writeText(output);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { /* fallback */ }
+  }, [output]);
 
-  const clear = () => {
-    setText('');
-    setOutput('');
-    setProcessed(false);
-    setCopied(false);
-  };
+  const handleClear = () => { setText(''); setOutput(''); };
 
-  const outputChars = output.length;
-  const outputLines = output ? output.split('\n').length : 0;
+  const wordCount   = output ? output.split(/\s+/).filter(Boolean).length : 0;
+  const charCount   = output.length;
+
+  // ── rotate: parsed lines for preview ─────────────────────
+  const rotateLines = useMemo(() => {
+    if (mode !== 'rotate') return [];
+    return text.split('\n').filter(l => l.length > 0);
+  }, [mode, text]);
+
+  // ── increment: placeholder present? ──────────────────────
+  const placeholderMissing = mode === 'increment' && text.length > 0 && !text.includes(incPlaceholder);
+
+  const inputPlaceholder = mode === 'simple'
+    ? 'Type or paste your text here...'
+    : mode === 'increment'
+    ? `Use ${incPlaceholder} as the number placeholder\nExample: Item ${incPlaceholder} or user_${incPlaceholder}@test.com`
+    : 'Enter multiple texts — one per line.\nThe tool will cycle through them round-robin style.\n\nExample:\nRed\nGreen\nBlue';
 
   return (
-    <div className="bg-white border border-surface-200 rounded-2xl overflow-hidden shadow-sm">
+    <div className="space-y-5">
 
-      {/* ── Options bar ───────────────────────────────────── */}
-      <div className="px-5 py-3 bg-surface-50 border-b border-surface-200 flex flex-wrap items-center gap-4">
-
-        {/* Repeat times */}
-        <div className="flex items-center gap-2">
-          <label className="text-xs font-semibold text-surface-600 whitespace-nowrap">Repeat</label>
-          <input
-            type="number" min="1" max="1000" value={times}
-            onChange={e => setTimes(Math.max(1, Math.min(1000, Number(e.target.value))))}
-            className="w-16 text-sm font-bold text-surface-900 bg-white border border-surface-200 rounded-lg px-2 py-1.5 focus:outline-none focus:border-brand-400 text-center"
-          />
-          <span className="text-xs text-surface-500">times</span>
-        </div>
-
-        {/* Separator */}
-        <div className="flex items-center gap-2 flex-wrap">
-          <label className="text-xs font-semibold text-surface-600">Separator</label>
-          <div className="flex flex-wrap gap-1.5">
-            {[
-              { id: 'newline', label: '↵ New Line'  },
-              { id: 'space',   label: '⎵ Space'     },
-              { id: 'comma',   label: ', Comma'      },
-              { id: 'none',    label: '∅ None'       },
-              { id: 'custom',  label: '✏️ Custom'    },
-            ].map(s => (
-              <button key={s.id} onClick={() => setSeparator(s.id)}
-                className={`text-[10px] font-bold px-2.5 py-1 rounded-full border transition-colors ${
-                  separator === s.id
-                    ? 'bg-brand-600 text-white border-brand-600'
-                    : 'bg-white text-surface-600 border-surface-200 hover:border-brand-300'
-                }`}>
-                {s.label}
-              </button>
-            ))}
-          </div>
-          {separator === 'custom' && (
-            <input
-              type="text" value={custom} placeholder="Type separator..."
-              onChange={e => setCustom(e.target.value)}
-              className="text-xs border border-surface-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-brand-400 w-32"
-            />
-          )}
-        </div>
+      {/* ── Mode tabs ────────────────────────────────────── */}
+      <div className="bg-white border border-surface-200 rounded-2xl p-2 flex gap-2">
+        {MODES.map(m => (
+          <button key={m.id} onClick={() => { setMode(m.id); setOutput(''); }}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-sm font-bold transition-all ${
+              mode === m.id
+                ? 'bg-brand-600 text-white shadow-sm'
+                : 'text-surface-600 hover:bg-surface-100'
+            }`}>
+            <span>{m.icon}</span>
+            <span className="hidden sm:inline" style={mode === m.id ? {color:'#ffffff'} : {}}>{m.label}</span>
+          </button>
+        ))}
       </div>
 
-      {/* ── Input / Output ────────────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-surface-200">
+      {/* ── Increment settings bar ──────────────────────── */}
+      {mode === 'increment' && (
+        <div className="bg-brand-50 border border-brand-200 rounded-2xl p-4">
+          <div className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3">🔢 Increment Settings</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {/* Start */}
+            <div>
+              <label className="text-xs font-semibold text-surface-600 block mb-1">Start Number</label>
+              <input type="number" value={incStart}
+                onChange={e => setIncStart(parseInt(e.target.value) || 0)}
+                className="w-full text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400 bg-white font-semibold" />
+            </div>
+            {/* Step */}
+            <div>
+              <label className="text-xs font-semibold text-surface-600 block mb-1">Step (can be negative)</label>
+              <input type="number" value={incStep}
+                onChange={e => setIncStep(parseInt(e.target.value) || 1)}
+                className="w-full text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400 bg-white font-semibold" />
+            </div>
+            {/* Placeholder */}
+            <div>
+              <label className="text-xs font-semibold text-surface-600 block mb-1">Placeholder</label>
+              <select value={incPlaceholder} onChange={e => setIncPlaceholder(e.target.value)}
+                className="w-full text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400 bg-white font-semibold">
+                {PLACEHOLDERS.map(p => <option key={p} value={p}>{p}</option>)}
+              </select>
+            </div>
+            {/* Zero-pad */}
+            <div>
+              <label className="text-xs font-semibold text-surface-600 block mb-1">Zero-Padding</label>
+              <select value={incPad} onChange={e => setIncPad(Number(e.target.value))}
+                className="w-full text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400 bg-white font-semibold">
+                {ZERO_PADS.map(z => <option key={z.digits} value={z.digits}>{z.label}</option>)}
+              </select>
+            </div>
+          </div>
+          {/* Live preview of first 3 values */}
+          <div className="mt-3 flex items-center gap-2 flex-wrap">
+            <span className="text-xs text-surface-400">Preview values:</span>
+            {[0, 1, 2].map(i => (
+              <span key={i} className="text-xs font-mono bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-bold">
+                {padNum(incStart + i * incStep, incPad)}
+              </span>
+            ))}
+            <span className="text-xs text-surface-400">... up to {padNum(incStart + (count - 1) * incStep, incPad)}</span>
+          </div>
+        </div>
+      )}
+
+      {/* ── Rotate info bar ──────────────────────────────── */}
+      {mode === 'rotate' && rotateLines.length > 0 && (
+        <div className="bg-purple-50 border border-purple-200 rounded-2xl p-4 flex items-start gap-3">
+          <span className="text-lg shrink-0">🔄</span>
+          <div className="text-sm text-purple-800">
+            <strong>{rotateLines.length} texts</strong> detected · cycling {count} times →
+            produces <strong>{count} items</strong>
+            {count % rotateLines.length !== 0 && (
+              <span className="text-purple-600"> (last cycle is partial — {count % rotateLines.length} of {rotateLines.length} texts)</span>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ── Main input + output ──────────────────────────── */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
         {/* Input */}
-        <div className="flex flex-col">
-          <div className="flex items-center justify-between px-4 py-2.5 bg-surface-50/50 border-b border-surface-100">
-            <span className="text-xs font-semibold text-surface-500 uppercase tracking-wider">Input Text</span>
-            <span className="text-[10px] text-surface-400">{text.length} chars</span>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <label className="text-sm font-bold text-surface-700">
+              {mode === 'simple'    ? '📝 Your Text'         :
+               mode === 'increment' ? `📝 Template Text (use ${incPlaceholder} as placeholder)` :
+                                      '📝 Texts to Rotate (one per line)'}
+            </label>
+            <button onClick={handleClear} className="text-xs text-surface-400 hover:text-surface-600 transition-colors">
+              Clear
+            </button>
           </div>
           <textarea
             value={text}
             onChange={e => setText(e.target.value)}
-            placeholder="Type or paste the text you want to repeat..."
-            className="w-full flex-1 min-h-[200px] px-4 py-3 text-sm text-surface-800 leading-relaxed resize-none focus:outline-none bg-white placeholder:text-surface-300"
-            spellCheck={false}
+            placeholder={inputPlaceholder}
+            rows={mode === 'rotate' ? 8 : 5}
+            className="w-full text-sm text-surface-900 bg-white border border-surface-200 rounded-2xl px-4 py-3 focus:outline-none focus:border-brand-400 resize-none leading-relaxed"
           />
+
+          {/* Placeholder-missing warning */}
+          {placeholderMissing && (
+            <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-2.5 text-xs text-amber-800 flex items-start gap-2">
+              <span className="shrink-0">⚠️</span>
+              <span>Placeholder <strong>{incPlaceholder}</strong> not found in your text. Numbers won't be inserted. Add <strong>{incPlaceholder}</strong> where you want the number to appear.</span>
+            </div>
+          )}
+
+          {/* Count + quick buttons */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <label className="text-xs font-bold uppercase tracking-wider text-surface-500">
+                {mode === 'rotate' ? 'Total Items' : 'Repeat Count'}
+              </label>
+              <span className="text-xs text-surface-400">Max 1,000</span>
+            </div>
+            <div className="flex items-center gap-2 flex-wrap">
+              <input
+                type="number"
+                value={count}
+                min={1} max={1000}
+                onChange={e => setCount(Math.min(1000, Math.max(1, parseInt(e.target.value) || 1)))}
+                className="w-24 text-sm font-bold border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400 text-center"
+              />
+              {QUICK_COUNTS.map(n => (
+                <button key={n} onClick={() => setCount(n)}
+                  className={`px-3 py-2 text-xs font-bold rounded-xl border transition-all ${
+                    count === n ? 'bg-brand-600 text-white border-brand-600' : 'bg-white border-surface-200 text-surface-600 hover:border-brand-300'
+                  }`}>
+                  ×{n}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Separator */}
+          <div>
+            <label className="text-xs font-bold uppercase tracking-wider text-surface-500 block mb-2">Separator</label>
+            <div className="flex gap-2 flex-wrap">
+              {SEPARATORS.map(s => (
+                <button key={s.id} onClick={() => setSepId(s.id)}
+                  className={`px-3 py-1.5 text-xs font-bold rounded-xl border transition-all ${
+                    sepId === s.id ? 'bg-brand-600 text-white border-brand-600' : 'bg-white border-surface-200 text-surface-600 hover:border-brand-300'
+                  }`}>
+                  {s.label}
+                </button>
+              ))}
+            </div>
+            {sepId === 'custom' && (
+              <input
+                type="text"
+                value={customSep}
+                onChange={e => setCustomSep(e.target.value)}
+                placeholder='e.g. " | " or " → "'
+                className="mt-2 w-full text-sm border border-surface-200 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-400"
+              />
+            )}
+          </div>
+
+          {/* Generate button */}
+          <button
+            onClick={generate}
+            className="w-full py-3 bg-brand-600 text-white font-bold rounded-2xl hover:bg-brand-700 transition-colors text-sm flex items-center justify-center gap-2">
+            {mode === 'simple'    ? '🔁 Repeat Text'         :
+             mode === 'increment' ? '🔢 Generate Sequence'   :
+                                    '🔄 Rotate & Generate'}
+          </button>
         </div>
 
         {/* Output */}
-        <div className="flex flex-col">
-          <div className="flex items-center justify-between px-4 py-2.5 bg-surface-50/50 border-b border-surface-100">
-            <span className="text-xs font-semibold text-surface-500 uppercase tracking-wider">Output</span>
-            <span className="text-[10px] text-surface-400">
-              {processed ? `${outputLines} lines · ${outputChars} chars` : '—'}
-            </span>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <label className="text-sm font-bold text-surface-700">📋 Output</label>
+            {output && (
+              <span className="text-xs text-surface-400">{charCount.toLocaleString()} chars · {wordCount.toLocaleString()} words</span>
+            )}
           </div>
           <textarea
             value={output}
             readOnly
-            placeholder={`Your text repeated ${times} time${times !== 1 ? 's' : ''} will appear here...`}
-            className="w-full flex-1 min-h-[200px] px-4 py-3 text-sm text-surface-800 leading-relaxed resize-none focus:outline-none bg-surface-50/30 placeholder:text-surface-300"
+            placeholder="Your output will appear here..."
+            rows={mode === 'rotate' ? 8 : 5}
+            className="w-full text-sm text-surface-900 bg-surface-50 border border-surface-200 rounded-2xl px-4 py-3 focus:outline-none resize-none leading-relaxed font-mono"
           />
-        </div>
-      </div>
 
-      {/* ── Actions ───────────────────────────────────────── */}
-      <div className="flex flex-wrap items-center gap-3 px-5 py-4 bg-surface-50 border-t border-surface-200">
-        <button onClick={repeat} disabled={!text.trim()}
-          className="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors">
-          🔁 Repeat Text
-        </button>
-
-        <button onClick={copy} disabled={!output}
-          className={`flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-xl border transition-colors disabled:opacity-40 disabled:cursor-not-allowed
-            ${copied ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-white text-surface-700 border-surface-200 hover:border-brand-300 hover:text-brand-700'}`}>
-          {copied ? '✅ Copied!' : '📋 Copy Output'}
-        </button>
-
-        <button onClick={clear}
-          className="flex items-center gap-2 text-sm font-medium text-surface-500 hover:text-surface-700 px-4 py-2.5 rounded-xl border border-surface-200 hover:border-surface-300 bg-white transition-colors">
-          🗑️ Clear
-        </button>
-
-        {/* Quick repeat chips */}
-        <div className="flex items-center gap-1.5 ml-auto">
-          <span className="text-[10px] text-surface-400 font-medium">Quick:</span>
-          {[3, 5, 10, 25, 50, 100].map(n => (
-            <button key={n} onClick={() => setTimes(n)}
-              className={`text-[10px] font-bold px-2 py-1 rounded-full border transition-colors ${
-                times === n ? 'bg-brand-600 text-white border-brand-600' : 'bg-white text-surface-600 border-surface-200 hover:border-brand-300'
+          {output && (
+            <button onClick={handleCopy}
+              className={`w-full py-3 font-bold rounded-2xl transition-all text-sm flex items-center justify-center gap-2 ${
+                copied
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-surface-900 text-white hover:bg-surface-800'
               }`}>
-              ×{n}
+              {copied ? '✅ Copied to Clipboard!' : '📋 Copy Output'}
             </button>
-          ))}
+          )}
+
+          {/* Mode-specific tips */}
+          {!output && mode === 'increment' && (
+            <div className="bg-surface-50 border border-surface-200 rounded-2xl p-4 space-y-2">
+              <div className="text-xs font-bold text-surface-600 mb-2">💡 Increment Mode Examples</div>
+              {[
+                { input: `user_{n}@test.com`,           desc: '→ 100 numbered emails'         },
+                { input: `<option value="{n}">{n}</option>`, desc: '→ HTML options 1–20'       },
+                { input: `photo_{n}.jpg`,                desc: '→ sequential filenames'        },
+                { input: `Row {n}: data`,                desc: '→ CSV/spreadsheet rows'        },
+              ].map(ex => (
+                <div key={ex.input} className="flex items-start gap-2 text-xs">
+                  <code className="bg-brand-50 text-brand-700 px-2 py-0.5 rounded font-mono shrink-0">{ex.input}</code>
+                  <span className="text-surface-500">{ex.desc}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {!output && mode === 'rotate' && (
+            <div className="bg-surface-50 border border-surface-200 rounded-2xl p-4 space-y-2">
+              <div className="text-xs font-bold text-surface-600 mb-2">💡 Rotate Mode Examples</div>
+              {[
+                { lines: 'Red\nGreen\nBlue',      count: '9',  desc: '→ 3 colours × 3 cycles' },
+                { lines: 'Male\nFemale\nOther',   count: '30', desc: '→ rotating test data'   },
+                { lines: 'Monday\nTuesday\n...',  count: '14', desc: '→ 2 weeks of days'       },
+              ].map(ex => (
+                <div key={ex.lines} className="flex items-start gap-2 text-xs">
+                  <code className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded font-mono shrink-0 whitespace-pre">{ex.lines.split('\n').join(' / ')}</code>
+                  <span className="text-surface-500">{ex.desc} ({ex.count} items)</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      {/* ── Stats strip ───────────────────────────────────── */}
-      {processed && output && (
-        <div className="px-5 py-3 bg-emerald-50 border-t border-emerald-100 flex flex-wrap gap-6 text-xs text-emerald-700">
-          <span>✅ Repeated <strong>{times}×</strong></span>
-          <span>📝 <strong>{outputLines}</strong> lines</span>
-          <span>🔤 <strong>{outputChars.toLocaleString()}</strong> characters</span>
-          <span>📖 <strong>{output.split(/\s+/).filter(Boolean).length.toLocaleString()}</strong> words</span>
+      {/* ── Use case chips ────────────────────────────────── */}
+      {mode !== 'simple' && (
+        <div className="bg-surface-50 border border-surface-200 rounded-2xl p-4">
+          <div className="text-xs font-bold uppercase tracking-wider text-surface-500 mb-3">
+            {mode === 'increment' ? '🔢 Increment Mode Use Cases' : '🔄 Rotate Mode Use Cases'}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {mode === 'increment' ? [
+              'Numbered test emails', 'Sequential filenames', 'HTML option elements',
+              'CSV row generation', 'Database seed data', 'Numbered documentation lists',
+            ] : [
+              'Alternate gender values', 'Rotating color names', 'Round-robin assignments',
+              'CSS class rotation', 'A/B test data', 'Weekly schedule generation',
+            ].map(tag => (
+              <span key={tag} className="text-xs bg-white border border-surface-200 text-surface-600 px-3 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
         </div>
       )}
     </div>
