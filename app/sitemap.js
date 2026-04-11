@@ -137,6 +137,7 @@ export default function sitemap() {
     p('/blog/claude-hacks-improve-ai-results',                    0.88),
     p('/blog/old-vs-new-regime-15-lpa-salary-2026-27',            0.92),
     p('/blog/indieappcircle-review',                              0.85),
+    p('/blog/how-to-calculate-hra-exemption-fy-2026-27',          0.92),
 
 
 
@@ -170,6 +171,8 @@ export default function sitemap() {
     p('/gst-calculator',               0.92),
     p('/salary-calculator',            0.92),
     p('/professional-tax-calculator',                0.92),
+    p('/hra-calculator',                             0.92),
+    p('/ppf-calculator',                             0.92),
     p('/fuel-bill-generator',                        0.90),
     p('/fuel-bill-generator-for-reimbursement',      0.85),
     p('/petrol-bill-generator-online-free',          0.85),

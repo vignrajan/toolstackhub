@@ -817,6 +817,23 @@ export const tools = [
   href: '/professional-tax-calculator',
 },
 {
+  slug: 'hra-calculator',
+  name: 'HRA Exemption Calculator',
+  category: 'utility',
+  icon: '🏠',
+  description: 'Calculate HRA exemption under Section 10(13A). All 3 conditions shown, 8 updated metro cities for FY 2026-27, ideal rent calculator, and tax saving estimate.',
+  href: '/hra-calculator',
+},
+{
+  slug: 'ppf-calculator',
+  name: 'PPF Calculator',
+  category: 'utility',
+  icon: '🏦',
+  description: 'Calculate PPF maturity value, year-wise interest, and tax savings at 7.1%. Full year-by-year breakdown, EEE tax status explained. Free, no login.',
+  href: '/ppf-calculator',
+},
+
+{
   slug: 'fuel-bill-generator', name: 'Fuel Bill Generator',
   category: 'utility', icon: '⛽',
   description: 'Generate petrol, diesel, CNG bills for reimbursement. GST support, PDF download, WhatsApp sharing. Free, no signup.',
