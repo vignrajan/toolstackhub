@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import AiPromptGenerator from '../../components/tools/AiPromptGenerator';
 import { SITE_CONFIG } from '../../data/tools';
+import NewsletterBanner from '../../components/NewsletterBanner';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -565,6 +566,7 @@ export default function AiPromptGeneratorOnlinePage() {
 
         </div>
       </main>
+      <NewsletterBanner variant="tool" />
       <Footer />
     </>
   );

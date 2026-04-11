@@ -633,6 +633,26 @@ export const blogPosts = [
     seasonal:    true,
     seasonPeak:  'April–July 2026',
     urgencyTag:  'Updated April 2026',
+  },
+  {
+    slug:        'instagram-carousel-generator',
+    title:       'How to Create Instagram Carousels That Stop the Scroll (2026 Designer\'s Playbook)',
+    metaTitle:   'Instagram Carousel Generator — Design System Playbook 2026',
+    metaDesc:    'Build on-brand Instagram carousels with a 6-token color system, 7-slide arc, and 1080px export pipeline. The designer\'s system, not a template.',
+    excerpt:     'Most carousels fail before the second swipe because they\'re built slide by slide, not system by system. Here\'s the full framework: 6-token color palette, font pairings, 7-slide narrative arc, reusable components, and a Playwright export pipeline.',
+    category:    'Design & Tools',
+    categorySlug:'ai-tools',
+    author:      'ToolStackHub Design Team',
+    publishedAt: '2026-04-11',
+    updatedAt:   '2026-04-11',
+    readTime:    9,
+    coverEmoji:  '🎨',
+    coverBg:     'from-violet-600 to-purple-700',
+    tags:        ['instagram', 'carousel design', 'design system', 'social media', 'content creation'],
+    toolUrl:     '/ai-tools',
+    toolName:    'AI Tools Hub',
+    featured:    true,
+    trending:    true,
   }
   
   
