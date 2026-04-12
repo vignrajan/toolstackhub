@@ -653,6 +653,17 @@ export const blogPosts = [
     toolName:    'AI Tools Hub',
     featured:    true,
     trending:    true,
+  },
+  {
+    slug: 'claude-md-guide',
+    title: 'CLAUDE.md Guide — The Perfect Setup for Every Project Type (2026)',
+    description: 'Complete CLAUDE.md guide with 7 copy-paste templates for React, Python, Node.js, Go & more. Best practices, diagnostic checklist, and token-saving strategies.',
+    category: 'Claude Code',
+    date: '2026-04-12',
+    readTime: '18 min read',
+    tags: ['claude code', 'claude.md', 'ai tools', 'developer tools', 'productivity'],
+    icon: '⚙️',   // or whatever icon field your posts use
+    featured: true,
   }
   
   
