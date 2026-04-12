@@ -18,6 +18,7 @@ export default function sitemap() {
     p('/about',   0.4, 'yearly'),
     p('/privacy', 0.3, 'yearly'),
     p('/terms',   0.3, 'yearly'),
+    p('/about/garry',      0.80),
 
     // ── Image tools ───────────────────────────────────────────
     p('/compress-image-online',       0.95),

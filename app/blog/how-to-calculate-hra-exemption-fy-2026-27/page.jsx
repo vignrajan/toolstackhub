@@ -709,7 +709,6 @@ export default function HRAExemptionBlog() {
                   ))}
                 </div>
               </section>
-
               {/* Final CTA */}
               <section className="bg-surface-900 rounded-2xl p-7 text-white">
                 <h2 className="font-display font-bold text-2xl mb-4" style={{color:'#ffffff'}}>Calculate Your Exact HRA Exemption Now</h2>
