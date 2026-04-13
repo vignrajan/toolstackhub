@@ -664,6 +664,28 @@ export const blogPosts = [
     tags: ['claude code', 'claude.md', 'ai tools', 'developer tools', 'productivity'],
     icon: '⚙️',   // or whatever icon field your posts use
     featured: true,
+  },
+  {
+    slug:        'claude-memory-preferences-guide',
+    title:       'How to Use Claude Memory & Preferences — Set It Up Once, Save Hours (2026)',
+    metaTitle:   'Claude Memory & Preferences — Complete Setup Guide 2026',
+    metaDesc:    'Complete guide to Claude memory, user preferences, and personalization. 10 role templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
+    excerpt:     'You\'ve told Claude you\'re a React developer 47 times this month. Tomorrow, it\'ll ask again. This guide fixes that permanently — memory setup, user preferences generator, 10 role templates, and a ChatGPT migration path.',
+    category:    'AI Tools',
+    categorySlug:'ai-tools',
+    author:      'ToolStackHub AI Team',
+    publishedAt: '2026-04-13',
+    updatedAt:   '2026-04-13',
+    readTime:    14,
+    coverEmoji:  '🧠',
+    coverBg:     'from-purple-600 to-violet-700',
+    tags:        ['claude', 'memory', 'preferences', 'personalization', 'ai productivity'],
+    toolUrl:     '/ai-tools/claude',
+    toolName:    'Claude Review',
+    featured:    true,
+    trending:    true,
+    seasonal:    false,
+    urgencyTag:  null,
   }
   
   
