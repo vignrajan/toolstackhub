@@ -38,7 +38,7 @@ const FAQS = [
   },
   {
     q: 'How much does LinkedGrow cost?',
-    a: 'LinkedGrow has a flat subscription (check linkedgrow.com for current pricing) plus whatever you pay your AI provider directly. Because it\'s Bring Your Own Key, your AI usage costs roughly $2-4/month for typical posting volumes — you pay the provider at cost, with zero markup from LinkedGrow. This is fundamentally different from Taplio ($49-99/month) and Typegrow, which both resell AI at a markup and cap generation. LinkedGrow also has a lifetime deal available, which no token-reselling competitor can offer.',
+    a: 'LinkedGrow has a flat subscription (check linkedgrow.ai for current pricing) plus whatever you pay your AI provider directly. Because it\'s Bring Your Own Key, your AI usage costs roughly $2-4/month for typical posting volumes — you pay the provider at cost, with zero markup from LinkedGrow. This is fundamentally different from Taplio ($49-99/month) and Typegrow, which both resell AI at a markup and cap generation. LinkedGrow also has a lifetime deal available, which no token-reselling competitor can offer.',
   },
   {
     q: 'Does LinkedGrow sound human or like AI?',
@@ -102,7 +102,7 @@ export default function LinkedGrowReviewBlog() {
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description: 'AI-powered LinkedIn content creation and automation platform. Bring Your Own Key model — 6 text AI providers, voice training, REST API, cross-promotion engine.',
-        url: 'https://linkedgrow.com',
+        url: 'https://linkedgrow.ai',
         author: {
           '@type': 'Person',
           name: 'Nicolas Lecocq',
@@ -221,7 +221,7 @@ export default function LinkedGrowReviewBlog() {
                 <div className="bg-blue-600 rounded-2xl p-4 text-white">
                   <div className="font-bold text-sm mb-2">🔗 Try LinkedGrow</div>
                   <p className="text-blue-200 text-xs leading-relaxed mb-3">Free trial. Bring your own AI key. No markup on tokens.</p>
-                  <a href="https://linkedgrow.com" target="_blank" rel="noopener noreferrer"
+                  <a href="https://linkedgrow.ai" target="_blank" rel="noopener noreferrer"
                     className="block text-center bg-white text-blue-700 font-bold text-xs py-2 rounded-xl hover:bg-blue-50 transition-colors">
                     Visit LinkedGrow →
                   </a>
@@ -642,7 +642,7 @@ export default function LinkedGrowReviewBlog() {
                   {[
                     {
                       n:'01', title:'Create Account & Connect LinkedIn',
-                      desc:'Sign up at linkedgrow.com and connect your LinkedIn account via OAuth. This is how LinkedGrow publishes on your behalf.',
+                      desc:'Sign up at linkedgrow.ai and connect your LinkedIn account via OAuth. This is how LinkedGrow publishes on your behalf.',
                     },
                     {
                       n:'02', title:'Add Your AI API Keys (BYOK)',
@@ -722,7 +722,7 @@ export default function LinkedGrowReviewBlog() {
                   <p className="text-blue-200 text-sm leading-relaxed mb-4">
                     Free trial available. Bring your own AI key and pay $2-4/month in actual usage instead of $49-99/month in markup.
                   </p>
-                  <a href="https://linkedgrow.com" target="_blank" rel="noopener noreferrer"
+                  <a href="https://linkedgrow.ai" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
                     Try LinkedGrow Free →
                   </a>
@@ -754,7 +754,7 @@ export default function LinkedGrowReviewBlog() {
               </section>
 
               <div className="p-4 bg-surface-50 border border-surface-200 rounded-xl text-xs text-surface-500 leading-relaxed">
-                <strong>Disclosure:</strong> This review is based on published product information and publicly available data from the LinkedGrow beta. ToolStackHub may earn a referral commission if you sign up via links in this article, at no extra cost to you. Pricing, features, and availability are subject to change — verify current details at linkedgrow.com.
+                <strong>Disclosure:</strong> This review is based on published product information and publicly available data from the LinkedGrow beta. ToolStackHub may earn a referral commission if you sign up via links in this article, at no extra cost to you. Pricing, features, and availability are subject to change — verify current details at linkedgrow.ai.
               </div>
 
             </article>
