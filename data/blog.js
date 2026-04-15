@@ -686,6 +686,26 @@ export const blogPosts = [
     trending:    true,
     seasonal:    false,
     urgencyTag:  null,
+  },
+  {
+    slug:        'linkedgrow-review',
+    title:       'LinkedGrow Review 2026 — Best AI LinkedIn Content Tool? (Honest Deep-Dive)',
+    metaTitle:   'LinkedGrow Review 2026 — AI LinkedIn Tool, Taplio Alternative?',
+    metaDesc:    'LinkedGrow reviewed honestly: voice training, repurposing, API, carousels. Taplio vs Typegrow vs LinkedGrow compared. Real results, pricing, who it\'s for.',
+    excerpt:     'You know you should be posting on LinkedIn. LinkedGrow fixes the blank-page problem with voice-trained AI content, multi-source repurposing, and a REST API for full automation. Full honest review.',
+    category:    'AI Tools',
+    categorySlug:'ai-tools',
+    author:      'ToolStackHub AI Team',
+    publishedAt: '2026-04-15',
+    updatedAt:   '2026-04-15',
+    readTime:    11,
+    coverEmoji:  '🔗',
+    coverBg:     'from-blue-600 to-indigo-700',
+    tags:        ['linkedin', 'ai tools', 'content creation', 'social media', 'automation'],
+    toolUrl:     '/ai-tools',
+    toolName:    'AI Tools Hub',
+    featured:    true,
+    trending:    true,
   }
   
   

@@ -142,6 +142,7 @@ export default function sitemap() {
     p('/blog/instagram-carousel-generator',                       0.85),
     p('blog/claude-md-guide',                                     0.85),
     p('/blog/claude-memory-preferences-guide',                    0.90),
+    p('/blog/linkedgrow-review',                                  0.85),
 
 
 
