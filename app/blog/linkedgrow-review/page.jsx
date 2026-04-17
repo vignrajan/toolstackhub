@@ -102,7 +102,7 @@ export default function LinkedGrowReviewBlog() {
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description: 'AI-powered LinkedIn content creation and automation platform. Bring Your Own Key model — 6 text AI providers, voice training, REST API, cross-promotion engine.',
-        url: 'https://linkedgrow.ai',
+        url: 'https://linkedgrow.ai/?ref=vignesh-fas5',
         author: {
           '@type': 'Person',
           name: 'Nicolas Lecocq',
@@ -221,7 +221,7 @@ export default function LinkedGrowReviewBlog() {
                 <div className="bg-blue-600 rounded-2xl p-4 text-white">
                   <div className="font-bold text-sm mb-2">🔗 Try LinkedGrow</div>
                   <p className="text-blue-200 text-xs leading-relaxed mb-3">Free trial. Bring your own AI key. No markup on tokens.</p>
-                  <a href="https://linkedgrow.ai" target="_blank" rel="noopener noreferrer"
+                  <a href="https://linkedgrow.ai/?ref=vignesh-fas5" target="_blank" rel="noopener noreferrer"
                     className="block text-center bg-white text-blue-700 font-bold text-xs py-2 rounded-xl hover:bg-blue-50 transition-colors">
                     Visit LinkedGrow →
                   </a>
@@ -446,7 +446,7 @@ export default function LinkedGrowReviewBlog() {
                         ['Team/role access',     '✅ Business plan',             '⚠️ Limited',                 '⚠️ Limited'],
                         ['Lifetime deal',        '✅ Available',                 '❌ Impossible (BYOK)',        '❌ No'],
                         ['CRM / outreach',       '❌ No',                        '✅ Full CRM',                '⚠️ Basic'],
-                        ['Comment automation',   '❌ No',                        '✅ Yes',                     '⚠️ Limited'],
+                        ['Comment automation',   '✅ Yes',                        '✅ Yes',                     '⚠️ Limited'],
                         ['Founder credibility',  'OceanWP (15yr track record)',  'VC-backed',                  'Newer team'],
                       ].map((r, i) => (
                         <tr key={r[0]} className={i % 2 === 0 ? 'bg-white' : 'bg-surface-50'}>
@@ -722,7 +722,7 @@ export default function LinkedGrowReviewBlog() {
                   <p className="text-blue-200 text-sm leading-relaxed mb-4">
                     Free trial available. Bring your own AI key and pay $2-4/month in actual usage instead of $49-99/month in markup.
                   </p>
-                  <a href="https://linkedgrow.ai" target="_blank" rel="noopener noreferrer"
+                  <a href="https://linkedgrow.ai/?ref=vignesh-fas5" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm">
                     Try LinkedGrow Free →
                   </a>
