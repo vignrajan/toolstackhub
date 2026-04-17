@@ -862,6 +862,14 @@ export const tools = [
   description: 'Free BMI calculator India with Indian/Asian WHO thresholds. Healthy weight range, health risk assessment.',
   href: '/bmi-calculator',
 },
+{
+  slug: 'claude-code-token-calculator',
+  name: 'Claude Code Token Calculator',
+  category: 'utility',
+  icon: '+-', // Lucide icon. Alternatives: 'Coins', 'Wallet', 'Receipt', 'Bot'
+  description: 'Estimate your monthly Claude Code cost in seconds. Compares API, Pro, Max 5x, and Max 20x plans with INR pricing.',
+  href: '/claude-code-token-calculator',
+},
 
 
 

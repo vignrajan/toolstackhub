@@ -143,6 +143,7 @@ export default function sitemap() {
     p('blog/claude-md-guide',                                     0.85),
     p('/blog/claude-memory-preferences-guide',                    0.90),
     p('/blog/linkedgrow-review',                                  0.85),
+    
 
 
 
@@ -185,6 +186,7 @@ export default function sitemap() {
     p('/fuel-bill-generator-with-gst',               0.83),
     p('/diesel-bill-generator-online',               0.80),
     p('/cng-bill-generator-online',                  0.80),
+    p('/claude-code-token-calculator',               0.90),
 
 
     // ── Number to Words — main tool ───────────────────────────────

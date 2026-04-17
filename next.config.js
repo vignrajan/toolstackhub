@@ -82,6 +82,7 @@ const nextConfig = {
       // UTILITY TOOLS — /tools/* → clean URL (301 permanent)
       { source: '/tools/bmi-calculator',              destination: '/bmi-calculator',        permanent: true },
       { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
+      { source: '/tools/claude-code-token-calculator', destination: '/claude-code-token-calculator', permanent: true },
 
       // BLOG-CLUADE TOKENS
       { source: '/blog/save-claude-tokens-guide',              destination: '/blog/how-to-save-tokens-in-claude',        permanent: true },
