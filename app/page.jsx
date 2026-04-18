@@ -15,13 +15,13 @@ export const metadata = {
 
 // ── Bento grid data ───────────────────────────────────────────
 const BENTO_HERO = {
-  slug:    'typing-test',
-  icon:    '⌨️',
-  name:    'Typing Speed Test',
-  desc:    'Test your WPM and accuracy in real time. 4 time modes, 3 difficulty levels.',
-  vol:     '3.5M searches/mo',
+  slug:    'claude-code-token-calculator',
+  icon:    '🧮',
+  name:    'Claude Code Token Calculator',
+  desc:    'Estimate your monthly Claude Code bill before you commit. Get an INR + USD breakdown instantly.',
+  vol:     'New Tool',
   badge:   'New',
-  href:    '/typing-test',
+  href:    '/claude-code-token-calculator',
 };
 
 const BENTO_TOOLS = [
