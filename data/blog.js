@@ -706,6 +706,28 @@ export const blogPosts = [
     toolName:    'AI Tools Hub',
     featured:    true,
     trending:    true,
+  },
+  {
+    slug:        'claude-code-for-non-programmers',
+    title:       'Claude Code for Non-Programmers: A Gentle Beginner\'s Guide (2026)',
+    metaTitle:   'Claude Code for Non-Programmers — Complete Beginner\'s Guide (2026)',
+    metaDesc:    'Can you use Claude Code without coding? Yes. Full guide: install without terminal, INR pricing, Plan Mode, CLAUDE.md, and 9 mistakes to avoid. India-focused.',
+    excerpt:     'Six weeks ago I\'d never opened a terminal. I\'ve now automated GST invoicing, cleaned 800 rows of client data, and renamed entire folders — zero code written. This is the guide I couldn\'t find anywhere.',
+    category:    'AI Tools',
+    categorySlug:'ai-tools',
+    author:      'Garry',
+    publishedAt: '2026-04-18',
+    updatedAt:   '2026-04-18',
+    readTime:    13,
+    coverEmoji:  '💻',
+    coverBg:     'from-purple-600 to-violet-700',
+    tags:        ['claude code', 'beginners', 'non-programmers', 'ai tools', 'india', 'tutorial'],
+    toolUrl:     '/ai-tools/claude',
+    toolName:    'Claude Review',
+    featured:    true,
+    trending:    true,
+    seasonal:    false,
+    urgencyTag:  null,
   }
   
   
