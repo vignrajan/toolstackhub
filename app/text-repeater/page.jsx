@@ -76,7 +76,7 @@ const USE_CASES = [
 
 const FAQS = [
   {
-    q: 'What is a text repeater?',
+    q: 'What is text repeater?',
     a: 'A text repeater is an online tool that takes any text you enter — a word, sentence, emojis, or paragraph  — and duplicates it a specified number of times. You can choose how many repetitions you want and add a separator (space, comma, new line, or custom character) between each copy. The output is instant and ready to copy.',
   },
   {
