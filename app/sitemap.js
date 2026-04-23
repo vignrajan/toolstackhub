@@ -233,6 +233,8 @@ export default function sitemap() {
     // AI Tools Hub
     p('/ai-tools', 0.92),
     p('/ai-tools/indieappcircle', 0.85),
+    p('/ai-tools/whacka',         0.85),
+
 
     // Individual tool pages
     p('/ai-tools/chatgpt',    0.88),

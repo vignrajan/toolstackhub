@@ -49,6 +49,8 @@ const COLOR = {
   green:   { bg:'bg-green-50',   border:'border-green-200',   badge:'bg-green-100 text-green-800',   text:'text-green-700',  btn:'bg-green-600 hover:bg-green-700'  },
   amber:   { bg:'bg-amber-50',   border:'border-amber-200',   badge:'bg-amber-100 text-amber-800',   text:'text-amber-700',  btn:'bg-amber-600 hover:bg-amber-700'  },
   surface: { bg:'bg-surface-50', border:'border-surface-200', badge:'bg-surface-100 text-surface-700',text:'text-surface-700',btn:'bg-surface-700 hover:bg-surface-800'},
+  orange:  { bg:'bg-orange-50',  border:'border-orange-200',  badge:'bg-orange-100 text-orange-800',  text:'text-orange-700', btn:'bg-orange-600 hover:bg-orange-700' },
+  violet:  { bg:'bg-violet-50',  border:'border-violet-200',  badge:'bg-violet-100 text-violet-800',  text:'text-violet-700', btn:'bg-violet-600 hover:bg-violet-700' },
 };
 
 function StarRating({ rating }) {
@@ -209,11 +211,12 @@ function ToolPage({ tool }) {
           {/* Salary Calculator CTA */}
           <div className="bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl p-6 flex items-center justify-between flex-wrap gap-4">
             <div>
-              <div className="font-bold text-white mb-1">Calculate Your Salary — No AI Needed</div>
-              <div className="text-brand-200 text-sm">Our free salary calculator gives exact in-hand salary instantly.</div>
+              <div className="font-bold text-white mb-1">Claude Code Token Calculator</div>
+              <div className="text-brand-200 text-sm">  See exactly how many tokens you'll use and what Claude Code costs per month in INR and USD.
+              </div>
             </div>
-            <Link href="/salary-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
-              Free Salary Calculator →
+            <Link href="/claude-code-token-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
+              Claude Token Calculator →
             </Link>
           </div>
 
@@ -320,7 +323,7 @@ function ComparisonPage({ comp }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {comp.categories.map((cat, i) => {
+                  {(comp.categories || []).map((cat, i) => {
                     const w = cat.winner === comp.tool1 ? t1?.name : cat.winner === comp.tool2 ? t2?.name : 'Tie';
                     return (
                       <tr key={cat.cat} className={i%2===0?'bg-white':'bg-surface-50'}>

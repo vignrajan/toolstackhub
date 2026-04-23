@@ -29,6 +29,8 @@ const COLOR = {
   green:   { bg:'bg-green-50',   border:'border-green-200',   badge:'bg-green-100 text-green-800',   dot:'bg-green-500',  icon:'bg-green-100' },
   amber:   { bg:'bg-amber-50',   border:'border-amber-200',   badge:'bg-amber-100 text-amber-800',   dot:'bg-amber-500',  icon:'bg-amber-100' },
   surface: { bg:'bg-surface-50', border:'border-surface-200', badge:'bg-surface-100 text-surface-700',dot:'bg-surface-400',icon:'bg-surface-100'},
+  orange:  { bg:'bg-orange-50',  border:'border-orange-200',  badge:'bg-orange-100 text-orange-800',  dot:'bg-orange-500',  icon:'bg-orange-100' },
+  violet:  { bg:'bg-violet-50',  border:'border-violet-200',  badge:'bg-violet-100 text-violet-800',  dot:'bg-violet-500',  icon:'bg-violet-100' },
 };
 
 function StarRating({ rating }) {
@@ -253,14 +255,14 @@ export default function AIToolsHub() {
               <div className="bg-gradient-to-br from-brand-600 to-brand-700 rounded-2xl p-5 flex flex-col justify-between">
                 <div>
                   <div className="text-2xl mb-3">💰</div>
-                  <h3 className="font-bold text-white text-sm mb-2">Calculate Your Salary + AI</h3>
+                  <h3 className="font-bold text-white text-sm mb-2">Estimate your Claude Code Token Usage</h3>
                   <p className="text-brand-200 text-xs leading-relaxed">
-                    Use our salary calculator + AI tools to understand your exact take-home pay and tax savings.
+                    See exactly how many tokens you'll use and what Claude Code costs per month in INR and USD.
                   </p>
                 </div>
-                <Link href="/salary-calculator"
+                <Link href="/claude-code-token-calculator"
                   className="mt-4 bg-white text-brand-700 font-bold text-xs px-4 py-2 rounded-lg hover:bg-brand-50 transition-colors text-center">
-                  Open Salary Calculator →
+                  Claude Code Token Calculator →
                 </Link>
               </div>
             </div>

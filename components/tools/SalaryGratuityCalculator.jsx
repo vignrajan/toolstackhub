@@ -67,7 +67,7 @@ function SalaryCalc() {
 
     // Deductions
     const employeePF = basic * 0.12;
-    const professionalTax = STATES_PT[inputs.state] || 0;
+    const professionalTax = STATES_PT[inputs.state];
 
     // Tax calculation
     const stdDeduction = 75000;

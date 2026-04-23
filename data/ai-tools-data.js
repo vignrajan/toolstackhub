@@ -456,6 +456,56 @@ export const AI_TOOLS = [
     metaDesc:    'IndieAppCircle review 2026. How the credit-based feedback platform helps indie developers validate MVPs and get real early users. Free to start, no bots.',
   },
   {
+    slug:        'whacka',
+    name:        'Whacka',
+    tagline:     'Turn any idea into a real app from your phone — no coding, no desktop required',
+    icon:        '📱',
+    color:       'orange',
+    badge:       'Best Mobile App Builder',
+    pricing:     { free: true, paid: 'Credit packs for more generation', enterprise: 'Subscription plans available' },
+    rating:      4.6,
+    reviews:     940,
+    category:    'No-Code & App Building',
+    tags:        ['No-Code', 'App Builder', 'Mobile', 'PWA', 'AI Apps', 'Free tier'],
+    url:         'https://whacka.app',
+    affiliate:   false,
+    description: 'Whacka is a mobile-first AI app builder that turns a plain text description into a real, working app — directly from your phone. Describe what you want, and Whacka generates a functional PWA you can save to your home screen and share by link. No desktop, no code, no App Store approval needed. Built on Claude and GPT-4 under the hood, it also has a social layer where you can explore and remix apps other users have published.',
+    useCases: [
+      { icon:'💡', title:'Idea-to-App in Minutes',    desc:'Describe your app idea in plain English and Whacka builds a working version you can use and share immediately.' },
+      { icon:'📲', title:'Home Screen Apps',           desc:'Generated apps are PWAs — save them to your phone\'s home screen and use them like native apps without the App Store.' },
+      { icon:'🛠️', title:'Personal Productivity Tools', desc:'Build a custom habit tracker, expense logger, event planner, or niche calculator built exactly for your use case.' },
+      { icon:'🎮', title:'Games & Fun Apps',           desc:'Create lightweight games and interactive apps and share them with friends via a simple link.' },
+      { icon:'🚀', title:'MVP Prototyping',            desc:'Entrepreneurs can prototype an app concept in under 10 minutes to test a business idea before committing to development.' },
+      { icon:'🌐', title:'Community & Remixing',       desc:'Explore what others have built, play community apps, and remix existing creations into something new.' },
+    ],
+    features: [
+      'Natural language to working app — no coding needed',
+      'Mobile-first: build entirely from your smartphone',
+      'PWA output — apps installable to home screen without App Store',
+      'Share apps by link, poster, or teaser asset',
+      'Explore feed with Editor\'s Picks and community creations',
+      'Remix other users\' apps as a starting point',
+      'Powered by Claude and GPT-4 for app generation',
+      'Credit-based system — free to start',
+    ],
+    pros: [
+      'Genuinely the fastest path from idea to working app on mobile',
+      'No desktop or coding knowledge required at any step',
+      'Social layer adds discovery and remix features most builders lack',
+      'Transparent about AI providers (Claude + OpenAI) in privacy policy',
+      'PWA format means apps work without App Store approval',
+    ],
+    cons: [
+      'Generated code is not guaranteed to be bug-free — always test before sharing widely',
+      'Credit model means heavy usage requires purchase',
+      'Best suited for lightweight apps — not enterprise or data-heavy products',
+      'App complexity is limited by mobile-first prompt interface',
+    ],
+    alternatives: ['chatgpt', 'claude', 'notion-ai'],
+    metaTitle:   'Whacka Review 2026 — Build Real Apps from Your Phone with AI',
+    metaDesc:    'Whacka review 2026. Mobile-first AI app builder that turns text into working PWAs — no code needed. Features, pricing, and honest pros and cons.',
+  },
+  {
     slug:        'perplexity',
     name:        'Perplexity AI',
     tagline:     'AI-powered search engine that gives cited, real-time answers',
@@ -715,6 +765,8 @@ export const AI_CATEGORIES = [
   { slug:'marketing',    label:'Marketing & Copy',     icon:'📢', count:3 },
   { slug:'research',     label:'Research & Search',    icon:'🔍', count:3 },
   { slug:'audio',        label:'Audio & Voice',        icon:'🎙️', count:1 },
+  { slug:'no-code',      label:'No-Code & App Building', icon:'📱', count:1 },
+
 ];
 
 export const AI_USE_CASES = [
@@ -851,6 +903,7 @@ export const AI_COMPARISONS = [
       { cat:'Solo / Freelance Use',winner:'copyai',  tool1Score:5.0, tool2Score:9.5, note:'Copy.ai free tier is ideal for solo users' },
     ],
   },
+  
 ];
 
 export function getAIToolBySlug(slug) {
