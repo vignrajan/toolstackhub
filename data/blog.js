@@ -728,6 +728,26 @@ export const blogPosts = [
     trending:    true,
     seasonal:    false,
     urgencyTag:  null,
+  },
+  {
+    slug:        'best-mcp-servers-claude-code-2026',
+    title:       'Best MCP Servers for Claude Code in 2026 — Tested & Ranked',
+    metaTitle:   'Best MCP Servers for Claude Code in 2026 | ToolStackHub',
+    metaDesc:    'Tested: 10 best MCP servers for Claude Code in 2026. Install commands, real use cases, trade-offs. Free guide with GitHub, Playwright, Postgres, Notion & more.',
+    excerpt:     'I was rebuilding ToolStackHub\'s Invoice Generator burning tokens grepping the repo by hand. Three MCP servers later, I finished a two-day task in five hours. Here\'s the definitive tested list.',
+    category:    'AI Tools',
+    categorySlug:'ai-tools',
+    author:      'Garry',
+    publishedAt: '2026-04-19',
+    updatedAt:   '2026-04-19',
+    readTime:    14,
+    coverEmoji:  '🔌',
+    coverBg:     'from-emerald-600 to-teal-700',
+    tags:        ['claude code', 'mcp', 'developer tools', 'ai coding', 'model context protocol'],
+    toolUrl:     '/claude-code-token-calculator',
+    toolName:    'Claude Code Token Calculator',
+    featured:    true,
+    trending:    true,
   }
   
   

@@ -144,6 +144,7 @@ export default function sitemap() {
     p('/blog/claude-memory-preferences-guide',                    0.90),
     p('/blog/linkedgrow-review',                                  0.85),
     p('/blog/claude-code-for-non-programmers',                    0.92),
+    p('/blog/best-mcp-servers-claude-code-2026',                  0.92),
     
 
 

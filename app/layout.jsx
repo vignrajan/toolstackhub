@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import '../styles/globals.css';
 import { SITE_CONFIG } from '../data/tools';
+import TelegramWidget from '../components/TelegramWidget';
+
 
 
 /**
@@ -92,6 +94,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         {children}
+        <TelegramWidget />
+
       </body>
     </html>
   );
