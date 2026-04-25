@@ -52,7 +52,7 @@ export default function Footer() {
                 {cat.tools.map(tool => (
                   <li key={tool.slug}>
                     <Link
-                      href={`/tools/${tool.slug}`}
+                      href={tool.href || `/tools/${tool.slug}`}
                       className="text-sm text-surface-400 hover:text-brand-400 transition-colors flex items-center gap-1.5"
                     >
                       <span>{tool.icon}</span>

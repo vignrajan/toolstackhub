@@ -29,6 +29,7 @@ export const tools = [
   {
     slug:        'image-compressor',
     name:        'Image Compressor',
+    href:        '/compress-image-online',
     category:    'image',
     icon:        '🗜️',
     description: 'Compress images online for free without losing quality. Reduce JPEG, PNG, and WebP file sizes instantly in your browser.',
@@ -51,6 +52,7 @@ export const tools = [
   {
     slug:        'image-resizer',
     name:        'Image Resizer',
+    href: '/resize-image-online',
     category:    'image',
     icon:        '📐',
     description: 'Resize images online to any dimension. Set exact pixel width and height while maintaining aspect ratio. Free and instant.',
@@ -72,6 +74,7 @@ export const tools = [
   {
     slug:        'jpg-to-png',
     name:        'JPG to PNG Converter',
+    href: '/jpg-to-png-converter-online',
     category:    'image',
     icon:        '🔄',
     description: 'Convert JPG images to PNG format online for free. Maintain transparency and quality with instant browser-based conversion.',
@@ -93,6 +96,7 @@ export const tools = [
   {
     slug:        'image-to-pdf',
     name:        'Image to PDF Converter',
+    href: '/image-to-pdf-converter-online',
     category:    'image',
     icon:        '📄',
     description: 'Convert JPG, PNG, and WEBP images to a single PDF file instantly. Multiple images supported with drag-to-reorder. No server upload, no watermarks.',
@@ -109,6 +113,7 @@ export const tools = [
   {
     slug:        'word-counter',
     name:        'Word Counter',
+    href: '/word-counter-online',
     category:    'text',
     icon:        '📝',
     description: 'Count words, characters, sentences, and paragraphs in any text. Free online word counter tool with real-time statistics.',
@@ -130,6 +135,7 @@ export const tools = [
   {
     slug:        'character-counter',
     name:        'Character Counter',
+    href: '/character-counter-online',
     category:    'text',
     icon:        '🔢',
     description: 'Count characters with and without spaces, letters, numbers, and special characters. Perfect for Twitter, SMS, and form limits.',
@@ -151,6 +157,7 @@ export const tools = [
   {
     slug:        'case-converter',
     name:        'Case Converter',
+    href: '/case-converter-online',
     category:    'text',
     icon:        '🔡',
     description: 'Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and more. Free text case changer.',
@@ -171,6 +178,7 @@ export const tools = [
   {
     slug:        'remove-duplicate-lines',
     name:        'Remove Duplicate Lines',
+    href: '/remove-duplicate-lines-online',
     category:    'text',
     icon:        '🧹',
     description: 'Remove duplicate lines from any text instantly. Clean email lists, keyword lists, CSV rows, and log files. Case-sensitive and case-insensitive modes.',
@@ -199,6 +207,7 @@ export const tools = [
   {
     slug:        'typing-speed-test',
     name:        'Typing Speed Test',
+    href: '/typing-test',
     category:    'utility',
     icon:        '⌨️',
     description: 'Test your typing speed in WPM. Real-time accuracy tracking, color-coded feedback, easy/medium/hard difficulty, and 4 time modes. Free, no signup.',
@@ -207,6 +216,7 @@ export const tools = [
   {
     slug:        'remove-line-breaks',
     name:        'Remove Line Breaks',
+    href:        '/remove-line-breaks',
     category:    'text',
     icon:        '✂️',
     description: 'Remove line breaks from any text instantly. Options to replace with space or strip empty lines. Free, no signup.',
@@ -264,6 +274,7 @@ export const tools = [
   {
     slug:        'base64-encoder',
     name:        'Base64 Encoder / Decoder',
+    href: '/base64-encoder-online',
     category:    'developer',
     icon:        '🔐',
     description: 'Encode text to Base64 or decode Base64 strings online. Free, instant, and works entirely in your browser.',
@@ -285,6 +296,7 @@ export const tools = [
   {
     slug:        'uuid-generator',
     name:        'UUID Generator',
+    href: '/uuid-generator-online',
     category:    'developer',
     icon:        '🆔',
     description: 'Generate random UUIDs (v4) online instantly. Create single or bulk UUIDs for your applications, databases, and testing.',
@@ -306,6 +318,7 @@ export const tools = [
   {
     slug:        'timestamp-converter',
     name:        'Timestamp Converter',
+    href: '/unix-timestamp-converter',
     category:    'developer',
     icon:        '⏱️',
     description: 'Convert Unix timestamps to human-readable dates and vice versa. Support for seconds and milliseconds. Free online timestamp tool.',
@@ -327,6 +340,7 @@ export const tools = [
   {
     slug:        'url-encoder',
     name:        'URL Encoder / Decoder',
+    href: '/url-encoder-online',
     category:    'developer',
     icon:        '🔗',
     description: 'Encode or decode URLs online. Convert special characters to percent-encoded format and back. Free URL encoding tool.',
@@ -349,6 +363,7 @@ export const tools = [
   {
     slug:        'qr-code-generator',
     name:        'QR Code Generator',
+    href: '/qr-code-generator-online',
     category:    'utility',
     icon:        '📱',
     description: 'Generate QR codes online for free. Create QR codes for URLs, text, WiFi, and more. Download as PNG or SVG.',
@@ -370,6 +385,7 @@ export const tools = [
   {
     slug:        'password-generator',
     name:        'Password Generator',
+    href: '/password-generator-online',
     category:    'utility',
     icon:        '🔑',
     description: 'Generate strong, secure random passwords online. Customize length, complexity, and character types. Free password generator.',
@@ -391,6 +407,7 @@ export const tools = [
   {
     slug:        'random-number-generator',
     name:        'Random Number Generator',
+    href: '/random-number-generator',
     category:    'utility',
     icon:        '🎲',
     description: 'Generate random numbers online. Set min/max range, generate integers or decimals, and create bulk random numbers.',
@@ -412,6 +429,7 @@ export const tools = [
   {
     slug:        'markdown-preview',
     name:        'Markdown Preview',
+    href: '/markdown-editor-online',
     category:    'utility',
     icon:        '✍️',
     description: 'Live Markdown editor with real-time preview. Write markdown and see it rendered instantly. Supports GFM, tables, and code highlighting.',
@@ -436,6 +454,7 @@ export const tools = [
   {
     slug:        'color-picker',
     name:        'Color Picker',
+    href: '/color-picker-online',
     category:    'developer',
     icon:        '🎨',
     description: 'Pick any color and instantly get HEX, RGB, HSL, and CMYK values. Free online color picker with sliders and preset palettes.',
@@ -457,6 +476,7 @@ export const tools = [
   {
     slug:        'meta-tag-generator',
     name:        'Meta Tag Generator',
+    href: '/meta-tag-generator-online',
     category:    'seo',
     icon:        '🏷️',
     description: 'Generate SEO meta tags for your website instantly. Create title, description, Open Graph, and Twitter Card tags for free.',
@@ -478,6 +498,7 @@ export const tools = [
   {
     slug:        'css-minifier',
     name:        'CSS Minifier',
+    href: '/css-minifier-online',
     category:    'developer',
     icon:        '🎯',
     description: 'Minify and compress CSS code online for free. Remove whitespace, comments, and redundant code to reduce CSS file size.',
@@ -499,6 +520,7 @@ export const tools = [
   {
     slug:        'html-formatter',
     name:        'HTML Formatter',
+    href: '/html-formatter-online',
     category:    'developer',
     icon:        '🌐',
     description: 'Format and beautify HTML code online for free. Pretty-print minified HTML or minify formatted HTML instantly.',
@@ -520,6 +542,7 @@ export const tools = [
   {
     slug:        'regex-tester',
     name:        'Regex Tester',
+    href: '/regex-tester-online',
     category:    'developer',
     icon:        '🔎',
     description: 'Test and debug regular expressions online. Match, highlight, and explain regex patterns in real time. Free online regex tester.',
@@ -541,6 +564,7 @@ export const tools = [
   {
     slug:        'age-calculator',
     name:        'Age Calculator',
+    href: '/age-calculator-online',
     category:    'utility',
     icon:        '🎂',
     description: 'Calculate your exact age in years, months, days, hours, and minutes. Free online age calculator with next birthday countdown.',
@@ -562,6 +586,7 @@ export const tools = [
   {
     slug:        'percentage-calculator',
     name:        'Percentage Calculator',
+    href: '/percentage-calculator-online',
     category:    'utility',
     icon:        '💯',
     description: 'Calculate percentages online for free. Find what percent of a number, percentage change, and more with instant results.',
@@ -583,6 +608,7 @@ export const tools = [
   {
     slug:        'binary-converter',
     name:        'Binary Converter',
+    href: '/binary-to-decimal-converter',
     category:    'developer',
     icon:        '💾',
     description: 'Convert between binary, decimal, hexadecimal, and octal number systems online for free. Instant number base converter.',
@@ -604,6 +630,7 @@ export const tools = [
   {
     slug:        'lorem-ipsum-generator',
     name:        'Lorem Ipsum Generator',
+    href: '/lorem-ipsum-generator',
     category:    'text',
     icon:        '📄',
     description: 'Generate Lorem Ipsum placeholder text instantly. Choose paragraphs, sentences, or words. Free lorem ipsum generator online.',
@@ -625,6 +652,7 @@ export const tools = [
   {
     slug:        'pomodoro-timer',
     name:        'Pomodoro Timer',
+    href: '/pomodoro-timer-online',
     category:    'utility',
     icon:        '🍅',
     description: 'Free online Pomodoro timer to boost productivity. 25-minute focus sessions with short and long break intervals.',
@@ -646,6 +674,7 @@ export const tools = [
   {
     slug:        'stopwatch',
     name:        'Stopwatch Online',
+    href: '/online-stopwatch',
     category:    'utility',
     icon:        '⏱️',
     description: 'Free online stopwatch with lap timer. Start, pause, and record lap times with millisecond precision in your browser.',
@@ -667,6 +696,7 @@ export const tools = [
   {
     slug:        'countdown-timer',
     name:        'Countdown Timer',
+    href: '/countdown-timer-online',
     category:    'utility',
     icon:        '⏳',
     description: 'Free online countdown timer. Set hours, minutes, and seconds and count down with an alarm sound. No sign-up needed.',
@@ -688,6 +718,7 @@ export const tools = [
   {
     slug:        'screen-resolution',
     name:        'Screen Resolution Checker',
+    href: '/screen-resolution-checker',
     category:    'utility',
     icon:        '🖥️',
     description: 'Check your screen resolution, viewport size, device pixel ratio, and browser window dimensions instantly online.',
@@ -709,6 +740,7 @@ export const tools = [
   {
     slug:        'text-to-speech',
     name:        'Text to Speech',
+    href: '/text-to-speech-online',
     category:    'utility',
     icon:        '🔊',
     description: 'Convert text to speech online for free. Listen to any text read aloud using your browser\'s speech synthesis. Multiple voices and speeds.',
@@ -730,6 +762,7 @@ export const tools = [
   {
     slug:        'password-strength-checker',
     name:        'Password Strength Checker',
+    href: '/password-strength-checker',
     category:    'utility',
     icon:        '🛡️',
     description: 'Check how strong your password is instantly. Get a detailed security analysis and tips to make your password stronger.',
@@ -879,6 +912,7 @@ export const tools = [
   {
     slug:        'ai-prompt-generator',
     name:        'AI Prompt Generator',
+    href: '/ai-prompt-generator-online',
     category:    'utility',
     icon:        '🤖',
     description: 'Generate optimized AI prompts for ChatGPT, Claude, and Gemini. Create better prompts with tone, format, and audience controls.',
@@ -900,6 +934,7 @@ export const tools = [
   {
     slug:        'text-to-handwriting',
     name:        'Text to Handwriting Generator',
+    href: '/text-to-handwriting-online',
     category:    'text',
     icon:        '✍️',
     description: 'Convert typed text into realistic handwritten notes instantly. Free text to handwriting generator with notebook paper, multiple fonts, pen colors, and PNG/PDF download.',
@@ -935,6 +970,7 @@ export const tools = [
   {
     slug:        'json-to-csv',
     name:        'JSON to CSV Converter',
+    href: '/json-to-csv-converter',
     category:    'developer',
     icon:        '📊',
     description: 'Convert JSON to CSV format online for free. Paste your JSON array and instantly download a properly formatted CSV file.',
