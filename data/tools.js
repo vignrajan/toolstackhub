@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
   name:        'ToolStackHub',
   tagline:     'Free Online Tools for Everyone',
   description: 'A collection of 50+ free online tools for developers, designers, and productivity. Image compressors, JSON formatters, QR generators, and more.',
-  url:         'https://toolstackhub.in',
+  url:         'https://www.toolstackhub.in',
   twitterHandle: '@toolstackhub',
   ogImage:     '/og-image.png',
 };

@@ -4,6 +4,14 @@ const nextConfig = {
   async redirects() {
     return [
 
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'toolstackhub.in' }],
+        destination: 'https://www.toolstackhub.in/:path*',
+        permanent: true,
+      },
+
+
       // ════════════════════════════════════════════════
       // IMAGE TOOLS — /tools/* → clean URL (301 permanent)
       // ════════════════════════════════════════════════
