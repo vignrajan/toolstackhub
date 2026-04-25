@@ -40,6 +40,7 @@ const nextConfig = {
       { source: '/tools/timestamp-converter', destination: '/unix-timestamp-converter',    permanent: true },
       { source: '/tools/binary-converter',    destination: '/binary-to-decimal-converter', permanent: true },
       { source: '/tools/text-to-binary-converter', destination: '/binary-to-decimal-converter', permanent: true },
+      { source: '/text-to-binary-converter', destination: '/binary-to-decimal-converter', permanent: true },
       { source: '/tools/regex-tester',        destination: '/regex-tester-online',         permanent: true },
       { source: '/tools/css-minifier',        destination: '/css-minifier-online',         permanent: true },
       { source: '/tools/html-formatter',      destination: '/html-formatter-online',       permanent: true },
