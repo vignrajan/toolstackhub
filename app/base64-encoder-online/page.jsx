@@ -456,7 +456,7 @@ export default function Base64EncoderOnlinePage() {
             <h2 id="faq-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+            <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
                   itemScope itemProp="mainEntity" itemType="https://schema.org/Question">

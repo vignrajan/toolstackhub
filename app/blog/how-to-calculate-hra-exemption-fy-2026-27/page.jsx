@@ -665,7 +665,7 @@ export default function HRAExemptionBlog() {
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     {
                       q: 'Which are the 8 metro cities for HRA exemption in FY 2026-27?',

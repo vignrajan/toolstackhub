@@ -961,7 +961,7 @@ session" underneath it.`}</code></pre>
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently asked questions</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {FAQS.map((f, i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
                       itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
