@@ -140,7 +140,7 @@ export default function sitemap() {
     p('/blog/indieappcircle-review',                              0.85),
     p('/blog/how-to-calculate-hra-exemption-fy-2026-27',          0.92),
     p('/blog/instagram-carousel-generator',                       0.85),
-    p('blog/claude-md-guide',                                     0.85),
+    p('/blog/claude-md-guide',                                     0.85),
     p('/blog/claude-memory-preferences-guide',                    0.90),
     p('/blog/linkedgrow-review',                                  0.85),
     p('/blog/claude-code-for-non-programmers',                    0.92),
