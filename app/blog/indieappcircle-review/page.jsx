@@ -73,8 +73,8 @@ export default function IndieAppCircleReview() {
         url: `${SITE_CONFIG.url}/blog/indieappcircle-review`,
         datePublished: '2026-04-20',
         dateModified: '2026-04-20',
-        author: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
-        publisher: { '@type': 'Organization', name: 'ToolStackHub', url: SITE_CONFIG.url },
+        author: { '@type': 'person', name: SITE_CONFIG.name, url: SITE_CONFIG.url },
+        publisher: { '@type': 'person', name: 'ToolStackHub', url: SITE_CONFIG.url },
       },
       {
         '@type': 'FAQPage',

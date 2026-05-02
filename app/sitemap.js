@@ -56,7 +56,6 @@ export default function sitemap() {
     p('/remove-line-breaks',   0.85),
     p('/remove-empty-lines',   0.80),
     p('/remove-extra-spaces',  0.80),
-    p('/tools/text',           0.75),
     p('/text-repeater',               0.85),
 
 
