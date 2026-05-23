@@ -673,7 +673,7 @@ export default function TaxRegimeBlogPage() {
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions — Old vs New Tax Regime</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     { q:'Which tax regime is better for ₹10 lakh salary in 2025-26?', a:'New regime is clearly better for ₹10 lakh salary. Under the new regime, with ₹75,000 standard deduction, your taxable income is ₹9.25 lakh. The tax on this is ₹42,500, which is fully covered by the ₹60,000 Section 87A rebate — giving you zero tax. Under the old regime, even with ₹2L in deductions, you would pay ₹54,600 in tax. The new regime wins by ₹54,600.' },
                     { q:'Which tax regime is better for ₹15 lakh salary?', a:'At ₹15 lakh salary, the new regime is better if your total deductions are below ₹3.75 lakh. If you have HRA + 80C + 80D + NPS crossing ₹3.75 lakh, the old regime wins. For a typical salaried employee paying metro rent (HRA ~₹1.5L), maxing 80C (₹1.5L), and 80D (₹25K), total deductions of ₹3.25L favour the new regime. Add a home loan interest deduction and the old regime becomes better.' },
@@ -685,8 +685,8 @@ export default function TaxRegimeBlogPage() {
                     { q:'Is there any benefit of old regime other than deductions?', a:'Yes. The old regime gives senior citizens (60-80 years) a higher basic exemption of ₹3 lakh and super senior citizens (80+ years) ₹5 lakh, compared to ₹4 lakh for all age groups under the new regime. The old regime also allows deductions for things like education loan interest (Section 80E) with no upper limit, which can be significant for those repaying large education loans.' },
                   ].map((faq, i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                      itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors" itemProp="name">
+                     >
+                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
                         {faq.q}
                         <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -694,8 +694,8 @@ export default function TaxRegimeBlogPage() {
                         </svg>
                       </summary>
                       <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                        <span itemProp="text">{faq.a}</span>
+                       >
+                        {faq.a}
                       </div>
                     </details>
                   ))}

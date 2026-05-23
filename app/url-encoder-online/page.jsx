@@ -36,7 +36,7 @@ const jsonLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
-        { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/#{'developer'}` },
+        { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/#developer` },
         { '@type': 'ListItem', position: 3, name: 'URL Encoder & Decoder', item: `${SITE_CONFIG.url}/url-encoder-online` },
       ],
     },
@@ -83,7 +83,7 @@ export default function Page() {
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li>
-                  <Link href="/#{'developer'}" className="hover:text-brand-600 transition-colors text-blue-600">
+                  <Link href="/#developer" className="hover:text-brand-600 transition-colors text-blue-600">
                     Developer Tools
                   </Link>
                 </li>
