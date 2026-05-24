@@ -477,12 +477,6 @@ export default function QrCodeGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/qr-code-for-website',       label: 'QR Code for Website',       desc: 'Generate a QR code linking directly to any webpage URL' },
-                { href: '/wifi-qr-code-generator',    label: 'WiFi QR Code Generator',    desc: 'Create a scannable QR code for WiFi guest access' },
-                { href: '/qr-code-for-business-card', label: 'QR Code for Business Card', desc: 'Business card QR code linking to your LinkedIn or portfolio' },
-                { href: '/qr-code-download-png',      label: 'QR Code Download PNG',      desc: 'Download high-resolution QR codes for print use' },
-                { href: '/custom-qr-code-generator',  label: 'Custom Color QR Code',      desc: 'QR codes with custom brand colors and styling' },
-                { href: '/vcard-qr-code-generator',   label: 'vCard QR Code Generator',   desc: 'QR codes that share your full contact information' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">

@@ -549,24 +549,6 @@ export default function RemoveDuplicateLinesPage() {
                   desc: 'Convert deduplicated text to UPPERCASE, lowercase, Title Case, or camelCase',
                   icon: '🔡',
                 },
-                {
-                  href: '/sort-text-online',
-                  label: 'Sort Text Online',
-                  desc: 'Sort your unique lines alphabetically, reverse alphabetically, or randomly',
-                  icon: '🔤',
-                },
-                {
-                  href: '/reverse-text',
-                  label: 'Reverse Text Generator',
-                  desc: 'Reverse the order of characters or lines in your cleaned text output',
-                  icon: '🔄',
-                },
-                {
-                  href: '/slug-generator',
-                  label: 'Slug Generator Online',
-                  desc: 'Convert unique lines into URL-friendly slugs for page creation',
-                  icon: '🔗',
-                },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">

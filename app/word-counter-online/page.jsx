@@ -321,10 +321,6 @@ export default function WordCounterOnlinePage() {
   </h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
     {[
-      { href: '/word-counter-for-essays',  label: 'Word Counter for Essays',   desc: 'Check essay word count for college and university submissions' },
-      { href: '/reading-time-calculator',  label: 'Reading Time Calculator',   desc: 'Calculate how long your article or blog post takes to read' },
-      { href: '/word-counter-twitter',     label: 'Word Counter for Twitter',  desc: 'Count words and characters for Twitter posts and threads' },
-      { href: '/paragraph-counter-online', label: 'Paragraph Counter Online',  desc: 'Count paragraphs and lines in any text instantly' },
     ].map(v => (
       <Link key={v.href} href={v.href}
         className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">

@@ -39,16 +39,6 @@ const RETURNS_TABLE = [
 ];
 
 const VARIANTS = [
-  { href: '/sip-calculator-5000-per-month',  label: 'SIP Calculator for ₹5,000/month'   },
-  { href: '/sip-calculator-10000-per-month', label: 'SIP Calculator for ₹10,000/month'  },
-  { href: '/sip-calculator-2000-per-month',  label: 'SIP Calculator for ₹2,000/month'   },
-  { href: '/sip-calculator-500-per-month',   label: 'SIP Calculator for ₹500/month'     },
-  { href: '/step-up-sip-calculator',         label: 'Step-Up SIP Calculator'            },
-  { href: '/lumpsum-calculator',             label: 'Lumpsum Investment Calculator'      },
-  { href: '/sip-calculator-10-years',        label: 'SIP Calculator for 10 Years'       },
-  { href: '/sip-calculator-20-years',        label: 'SIP Calculator for 20 Years'       },
-  { href: '/sip-calculator-1-crore',         label: 'SIP to Reach ₹1 Crore'            },
-  { href: '/sip-return-calculator',          label: 'SIP Return Calculator'             },
 ];
 
 const jsonLd = {

@@ -381,14 +381,6 @@ export default function TypingTestPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/typing-test-1-minute',          label: '1 Minute Typing Test',          desc: 'The standard 60-second typing speed benchmark test' },
-                { href: '/typing-test-5-minutes',         label: '5 Minute Typing Test',          desc: 'Extended test for endurance and sustained accuracy' },
-                { href: '/wpm-test-online',               label: 'WPM Test Online',               desc: 'Words per minute test with real-time feedback' },
-                { href: '/typing-test-for-jobs',          label: 'Typing Test for Jobs',          desc: 'Employment-standard typing assessment format' },
-                { href: '/typing-test-for-beginners',     label: 'Typing Test for Beginners',     desc: 'Easy passages designed for new typists learning the keyboard' },
-                { href: '/advanced-typing-test',          label: 'Advanced Typing Test',          desc: 'Hard technical passages for expert typists' },
-                { href: '/60-second-typing-test',         label: '60 Second Typing Test',         desc: 'Classic 1-minute timed typing challenge' },
-                { href: '/typing-accuracy-test',          label: 'Typing Accuracy Test',          desc: 'Focus on accuracy percentage over raw speed' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">

@@ -304,12 +304,6 @@ export default function FuelBillGeneratorPage({ searchParams }) {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More Fuel Bill Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/fuel-bill-generator-for-reimbursement', label: 'Fuel Bill Generator for Reimbursement'   },
-                { href: '/petrol-bill-generator-online-free',     label: 'Petrol Bill Generator Online Free'       },
-                { href: '/fuel-receipt-generator-india',          label: 'Fuel Receipt Generator India'            },
-                { href: '/fuel-bill-generator-with-gst',          label: 'Fuel Bill Generator with GST'            },
-                { href: '/diesel-bill-generator-online',          label: 'Diesel Bill Generator Online'            },
-                { href: '/cng-bill-generator-online',             label: 'CNG Bill Generator Online'               },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">

@@ -38,18 +38,6 @@ const faqs = [
 ];
 
 const VARIANTS = [
-  { href: '/salary-calculator-25000-per-month',  label: 'Salary Calculator ₹25,000/Month'     },
-  { href: '/salary-calculator-50000-per-month',  label: 'Salary Calculator ₹50,000/Month'     },
-  { href: '/salary-calculator-1-lakh-per-month', label: 'Salary Calculator ₹1 Lakh/Month'     },
-  { href: '/salary-calculator-new-tax-regime',   label: 'Salary Calculator New Tax Regime'    },
-  { href: '/salary-calculator-old-tax-regime',   label: 'Salary Calculator Old Tax Regime'    },
-  { href: '/ctc-calculator-india',               label: 'CTC Calculator India'                },
-  { href: '/gratuity-calculator-5-years',        label: 'Gratuity Calculator for 5 Years'     },
-  { href: '/gratuity-calculator-10-years',       label: 'Gratuity Calculator for 10 Years'    },
-  { href: '/gratuity-calculator-private-employees',label:'Gratuity for Private Employees'     },
-  { href: '/salary-calculator-freshers-india',   label: 'Salary Calculator for Freshers India'},
-  { href: '/hra-exemption-calculator',           label: 'HRA Exemption Calculator'            },
-  { href: '/pf-calculator-india',                label: 'PF Contribution Calculator India'    },
 ];
 
 const jsonLd = {

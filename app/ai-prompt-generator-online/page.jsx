@@ -522,12 +522,6 @@ export default function AiPromptGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/chatgpt-prompt-generator',      label: 'ChatGPT Prompt Generator',      desc: 'Prompts optimized for GPT-4 and ChatGPT conversation style' },
-                { href: '/claude-prompt-generator',       label: 'Claude Prompt Generator',       desc: 'XML-structured prompts optimized for Anthropic Claude' },
-                { href: '/gemini-prompt-generator',       label: 'Gemini Prompt Generator',       desc: 'Markdown-structured prompts for Google Gemini' },
-                { href: '/ai-writing-prompt-generator',   label: 'AI Writing Prompt Generator',   desc: 'Writing-specific prompts for blog posts and articles' },
-                { href: '/midjourney-prompt-generator',   label: 'Midjourney Prompt Generator',   desc: 'Detailed image generation prompts for Midjourney' },
-                { href: '/stable-diffusion-prompt',       label: 'Stable Diffusion Prompts',      desc: 'Optimized prompts for Stable Diffusion image generation' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">

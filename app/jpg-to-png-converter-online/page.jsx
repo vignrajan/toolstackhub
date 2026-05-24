@@ -51,9 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/jpg-to-png-transparent-background', label: 'JPG to PNG Transparent Background' },
-              { href: '/png-to-jpg-converter-online', label: 'PNG to JPG Converter' },
-              { href: '/jpg-to-webp-converter-online', label: 'JPG to WebP Converter' },
               { href: '/compress-image-online', label: 'Compress PNG After Converting' },
 ];
 

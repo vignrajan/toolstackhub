@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/decimal-to-binary-converter', label: 'Decimal to Binary Converter' },
-              { href: '/binary-to-hex-converter', label: 'Binary to Hex Converter' },
-              { href: '/hex-to-decimal-converter', label: 'Hex to Decimal Converter' },
-              { href: '/text-to-binary-converter', label: 'Text to Binary Converter' },
 ];
 
 const faqs = [

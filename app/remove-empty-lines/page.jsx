@@ -497,10 +497,6 @@ export default function RemoveEmptyLinesPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-blank-lines-online',  label: 'Remove Blank Lines Online',  desc: 'Variant of blank line removal for all text types' },
-                { href: '/delete-empty-lines-text',    label: 'Delete Empty Lines from Text', desc: 'Remove empty rows from pasted plain text' },
-                { href: '/remove-empty-lines-csv',     label: 'Remove Empty Lines from CSV',  desc: 'Strip blank rows before CSV import or analysis' },
-                { href: '/strip-empty-lines-online',   label: 'Strip Empty Lines Online',     desc: 'Lightweight blank line stripper for any input' },
                 { href: '/remove-line-breaks',         label: 'Remove Line Breaks',           desc: 'Remove all newline characters entirely' },
                 { href: '/remove-extra-spaces',        label: 'Remove Extra Spaces',          desc: 'Collapse multiple whitespace into single spaces' },
               ].map(v => (

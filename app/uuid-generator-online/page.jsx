@@ -450,12 +450,6 @@ export default function UuidGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/uuid-v4-generator',          label: 'UUID v4 Generator',           desc: 'Generate version 4 random UUIDs with full formatting options' },
-                { href: '/guid-generator-online',      label: 'GUID Generator Online',       desc: 'Microsoft-style GUID generation for .NET and SQL Server' },
-                { href: '/bulk-uuid-generator',        label: 'Bulk UUID Generator',         desc: 'Generate up to 100 UUIDs at once for database seeding' },
-                { href: '/unique-id-generator',        label: 'Unique ID Generator',         desc: 'Generate various formats of unique identifiers' },
-                { href: '/uuid-without-hyphens',       label: 'UUID Without Hyphens',        desc: 'Compact 32-character UUID for CHAR(32) database columns' },
-                { href: '/uuid-uppercase-generator',   label: 'UUID Uppercase Generator',    desc: 'Generate uppercase UUIDs for SQL Server compatibility' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group">

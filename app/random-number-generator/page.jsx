@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/random-number-1-to-100', label: 'Random Number 1 to 100' },
-              { href: '/lottery-number-generator', label: 'Lottery Number Generator' },
-              { href: '/dice-roller-online', label: 'Dice Roller Online' },
-              { href: '/random-winner-picker', label: 'Random Winner Picker' },
 ];
 
 const faqs = [

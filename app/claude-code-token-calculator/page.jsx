@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Calculator from '../../components/tools/Calculator';
+import { SITE_CONFIG } from '../../data/tools';
 
 // ─────────────────────────────────────────────────────────────
 // SEO Metadata
@@ -25,18 +26,18 @@ export const metadata = {
     'claude code /compact vs /clear',
   ].join(', '),
   alternates: {
-    canonical: 'https://toolstackhub.in/claude-code-token-calculator',
+    canonical: `${SITE_CONFIG.url}/claude-code-token-calculator`,
   },
   openGraph: {
     title: 'Claude Code Token Calculator — The Most Accurate One Online (2026)',
     description:
       'Estimate your real Claude Code monthly cost in seconds. Compares API, Pro, Max 5x, and Max 20x plans. Plus 12 proven ways to cut your token usage.',
-    url: 'https://toolstackhub.in/claude-code-token-calculator',
-    siteName: 'ToolStackHub',
+    url: `${SITE_CONFIG.url}/claude-code-token-calculator`,
+    siteName: SITE_CONFIG.name,
     type: 'website',
     images: [
       {
-        url: 'https://toolstackhub.in/og/claude-code-token-calculator.png',
+        url: `${SITE_CONFIG.url}/og/claude-code-token-calculator.png`,
         width: 1200,
         height: 630,
         alt: 'Claude Code Token Calculator',
@@ -52,7 +53,7 @@ export const metadata = {
 };
 
 const LAST_UPDATED = 'April 18, 2026';
-const PAGE_URL = 'https://toolstackhub.in/claude-code-token-calculator';
+const PAGE_URL = `${SITE_CONFIG.url}/claude-code-token-calculator`;
 
 // ─────────────────────────────────────────────────────────────
 // Schema.org structured data
@@ -79,8 +80,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://toolstackhub.in' },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://toolstackhub.in/tools' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: `${SITE_CONFIG.url}/tools` },
     { '@type': 'ListItem', position: 3, name: 'Claude Code Token Calculator', item: PAGE_URL },
   ],
 };

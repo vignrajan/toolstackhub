@@ -7,6 +7,20 @@ export const metadata = {
   title: 'About Us – ToolStackHub | Free Online Tools Built for Everyone',
   description: 'Learn about ToolStackHub — who we are, why we built 50+ free browser-based tools, and our mission to make powerful utilities accessible to everyone without signup or payment.',
   alternates: { canonical: `${SITE_CONFIG.url}/about` },
+  openGraph: {
+    title: 'About Us – ToolStackHub | Free Online Tools Built for Everyone',
+    description: 'Learn about ToolStackHub — who we are, why we built 50+ free browser-based tools, and our mission to make powerful utilities accessible to everyone without signup or payment.',
+    url: `${SITE_CONFIG.url}/about`,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us – ToolStackHub',
+    description: 'Learn about ToolStackHub — who we are, why we built 50+ free browser-based tools, and our mission to make powerful utilities accessible to everyone without signup or payment.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 export default function AboutPage() {

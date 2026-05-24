@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/resize-image-for-instagram', label: 'Resize Image for Instagram' },
-              { href: '/resize-image-for-linkedin', label: 'Resize Image for LinkedIn' },
-              { href: '/resize-image-to-passport-size', label: 'Resize to Passport Size' },
-              { href: '/resize-image-to-1mb', label: 'Resize Image to 1MB' },
 ];
 
 const faqs = [

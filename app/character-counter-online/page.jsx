@@ -175,10 +175,6 @@ export default function CharacterCounterOnlinePage() {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More Character Counter Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/twitter-character-counter',       label: 'Twitter Character Counter',       desc: 'Dedicated Twitter/X character counter with thread support' },
-                { href: '/sms-character-counter',           label: 'SMS Character Counter',           desc: 'Count SMS characters and avoid multi-part messages' },
-                { href: '/meta-description-length-checker', label: 'Meta Description Length Checker', desc: 'Check meta description length for Google SEO' },
-                { href: '/instagram-caption-counter',       label: 'Instagram Caption Counter',       desc: 'Count characters for Instagram posts and captions' },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">
                   <div className="font-semibold text-emerald-800 text-sm group-hover:underline">{v.label}</div>

@@ -469,9 +469,6 @@ multiple   lines.`}</pre>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-double-spaces-online',  label: 'Remove Double Spaces Online',   desc: 'Collapse double spaces into single spaces throughout text' },
-                { href: '/trim-whitespace-online',       label: 'Trim Whitespace Online',         desc: 'Remove leading and trailing whitespace from text' },
-                { href: '/fix-spacing-in-text',          label: 'Fix Spacing in Text',            desc: 'Normalize all spacing issues in pasted documents' },
                 { href: '/remove-empty-lines',           label: 'Remove Empty Lines',             desc: 'Delete blank lines alongside normalizing spaces' },
                 { href: '/remove-line-breaks',           label: 'Remove Line Breaks',             desc: 'Remove all newline characters from text' },
                 { href: '/remove-duplicate-lines-online',label: 'Remove Duplicate Lines',         desc: 'Deduplicate after normalizing whitespace' },

@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/html-beautifier-online', label: 'HTML Beautifier Online' },
-              { href: '/html-minifier-online', label: 'HTML Minifier Online' },
-              { href: '/html-code-formatter', label: 'HTML Code Formatter' },
-              { href: '/html-email-formatter', label: 'HTML Email Formatter' },
 ];
 
 const faqs = [

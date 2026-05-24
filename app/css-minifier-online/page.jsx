@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/css-minifier-beautifier', label: 'CSS Minifier and Beautifier' },
-              { href: '/minify-css-file-online', label: 'Minify CSS File Online' },
-              { href: '/css-compressor-online', label: 'CSS Compressor Online' },
-              { href: '/remove-css-whitespace', label: 'Remove CSS Whitespace' },
 ];
 
 const faqs = [

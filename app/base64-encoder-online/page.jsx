@@ -483,12 +483,6 @@ export default function Base64EncoderOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/base64-decoder-online',      label: 'Base64 Decoder Online',      desc: 'Decode any Base64 string back to plain text instantly' },
-                { href: '/base64-image-encoder',       label: 'Base64 Image Encoder',       desc: 'Convert images to Base64 data URIs for HTML and CSS' },
-                { href: '/decode-base64-to-text',      label: 'Decode Base64 to Text',      desc: 'Decode Base64 encoded strings to readable text' },
-                { href: '/jwt-decoder-online',         label: 'JWT Decoder Online',         desc: 'Decode JWT token headers and payloads from Base64' },
-                { href: '/base64-to-utf8-converter',   label: 'Base64 to UTF-8 Converter',  desc: 'Decode Base64 strings containing UTF-8 encoded text' },
-                { href: '/base64-file-encoder',        label: 'Base64 File Encoder',        desc: 'Convert files to Base64 for embedding in code' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group">

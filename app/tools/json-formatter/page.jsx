@@ -641,42 +641,42 @@ export default function JsonFormatterPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {[
                 {
-                  href: '/tools/base64-encoder',
+                  href: '/base64-encoder-online',
                   icon: '🔐',
                   name: 'Base64 Encoder / Decoder',
                   desc: 'Encode and decode Base64 strings found in JSON payloads',
                   color: 'brand',
                 },
                 {
-                  href: '/tools/url-encoder',
+                  href: '/url-encoder-online',
                   icon: '🔗',
                   name: 'URL Encoder / Decoder',
                   desc: 'Encode and decode URL-encoded values in JSON strings',
                   color: 'violet',
                 },
                 {
-                  href: '/tools/uuid-generator',
+                  href: '/uuid-generator-online',
                   icon: '🆔',
                   name: 'UUID Generator',
                   desc: 'Generate UUID v4 identifiers for JSON objects and APIs',
                   color: 'emerald',
                 },
                 {
-                  href: '/tools/timestamp-converter',
+                  href: '/unix-timestamp-converter',
                   icon: '⏱️',
                   name: 'Timestamp Converter',
                   desc: 'Convert Unix timestamps commonly found in JSON data',
                   color: 'amber',
                 },
                 {
-                  href: '/tools/regex-tester',
+                  href: '/regex-tester-online',
                   icon: '🔎',
                   name: 'Regex Tester',
                   desc: 'Test regular expressions to match patterns in JSON strings',
                   color: 'blue',
                 },
                 {
-                  href: '/tools/binary-converter',
+                  href: '/binary-to-decimal-converter',
                   icon: '💾',
                   name: 'Binary Converter',
                   desc: 'Convert decimal and hex values found in JSON numeric fields',

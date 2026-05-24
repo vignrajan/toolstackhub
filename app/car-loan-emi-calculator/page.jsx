@@ -313,9 +313,6 @@ export default function CarLoanEMIPage() {
               {[
                 { href: '/emi-calculator',               label: 'EMI Calculator — All Loans'        },
                 { href: '/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'          },
-                { href: '/personal-loan-emi-calculator', label: 'Personal Loan EMI Calculator'      },
-                { href: '/emi-calculator-10-lakh',       label: 'EMI Calculator for ₹10 Lakh Loan' },
-                { href: '/emi-calculator-20-lakh',       label: 'EMI Calculator for ₹20 Lakh Loan' },
                 { href: '/percentage-calculator-online', label: 'Percentage Calculator'             },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">

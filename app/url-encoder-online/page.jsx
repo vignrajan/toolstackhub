@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/url-encode-decode-tool', label: 'URL Encode Decode Tool' },
-              { href: '/percent-encoding-converter', label: 'Percent Encoding Converter' },
-              { href: '/decode-url-online', label: 'Decode URL Online' },
-              { href: '/encode-url-parameters', label: 'Encode URL Parameters' },
 ];
 
 const faqs = [

@@ -85,26 +85,6 @@ const LOAN_TYPES = [
     color:   'blue',
     desc:    'Short tenure, moderate rates. New car loans are cheaper than used car loans.',
   },
-  {
-    icon:    '💼',
-    name:    'Personal Loan',
-    href:    '/personal-loan-emi-calculator',
-    range:   '₹50K – ₹40L',
-    rate:    '10.5% – 24%',
-    tenure:  '1 – 5 years',
-    color:   'violet',
-    desc:    'Highest rates, no collateral required. Best for short-term needs.',
-  },
-  {
-    icon:    '🏢',
-    name:    'Business Loan',
-    href:    '/business-loan-emi-calculator',
-    range:   '₹1L – ₹5Cr',
-    rate:    '12% – 21%',
-    tenure:  '1 – 5 years',
-    color:   'amber',
-    desc:    'Rates vary widely based on business credit history and collateral.',
-  },
 ];
 
 // ── Bank rates comparison ─────────────────────────────────────
@@ -121,14 +101,6 @@ const BANK_RATES = [
 const VARIANTS = [
   { href: '/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'     },
   { href: '/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'      },
-  { href: '/personal-loan-emi-calculator', label: 'Personal Loan EMI Calculator' },
-  { href: '/business-loan-emi-calculator', label: 'Business Loan EMI Calculator' },
-  { href: '/emi-calculator-10-lakh',       label: 'EMI for ₹10 Lakh Loan'        },
-  { href: '/emi-calculator-20-lakh',       label: 'EMI for ₹20 Lakh Loan'        },
-  { href: '/emi-calculator-50-lakh',       label: 'EMI for ₹50 Lakh Loan'        },
-  { href: '/emi-calculator-1-crore',       label: 'EMI for ₹1 Crore Loan'        },
-  { href: '/sbi-home-loan-emi-calculator', label: 'SBI Home Loan EMI Calculator' },
-  { href: '/hdfc-home-loan-emi-calculator',label: 'HDFC Home Loan EMI Calculator'},
 ];
 
 // ── Structured data ───────────────────────────────────────────

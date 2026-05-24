@@ -151,10 +151,7 @@ export default function Page() {
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Text to Speech Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[{href: '/text-to-speech-english-online', label: 'Text to Speech English Online', desc: 'Free English text to speech with multiple voices'},
-              {href: '/read-text-aloud-online', label: 'Read Text Aloud Online', desc: 'Listen to any text read aloud in your browser'},
-              {href: '/tts-online-free-voices', label: 'TTS Online Free Multiple Voices', desc: 'Text to speech with voice selection'},
-              {href: '/text-to-speech-no-download', label: 'Text to Speech No Download', desc: 'Browser-based TTS requiring no installation'}].map(v => (
+              {[].map(v => (
                 <Link key={v.href} href={v.href} className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">
                   <div className="font-semibold text-emerald-800 text-sm group-hover:underline">{v.label}</div>
                   <div className="text-xs text-emerald-600">{v.desc}</div>
