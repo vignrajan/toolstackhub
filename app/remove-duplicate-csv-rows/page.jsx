@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What CSV delimiters are supported?', a: 'Comma (,), semicolon (;), and tab (\\t) delimiters are all supported. The tool auto-detects the delimiter from your data.' },
+  { q: 'Does it keep the header row?', a: 'Yes — the first row is always treated as a header and is never removed, even if its content appears again in data rows.' },
+  { q: 'What makes two rows duplicates?', a: 'Two rows are duplicates if every field in the row matches exactly — including spacing and capitalization by default.' },
+  { q: 'Does it handle quoted fields with commas inside?', a: 'Yes — standard CSV quoting is respected. A field like "Smith, John" is treated as a single value, not split at the comma.' },
+  { q: 'Is my CSV data safe?', a: 'Yes — all processing runs locally in your browser. Your CSV is never uploaded to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate CSV Rows Online – Clean Duplicate Rows from CSV Data',       item: `${SITE_CONFIG.url}/remove-duplicate-csv-rows` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Rows from CSV Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your CSV', text: 'Paste your CSV data into the input area. The tool auto-detects comma, semicolon, and tab delimiters.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Remove Duplicates', text: 'Rows where every field matches an earlier row are removed. The header row is always preserved.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click Copy to copy the deduplicated CSV to your clipboard, ready to paste back into Excel or Google Sheets.' },
       ],
     },
   ],

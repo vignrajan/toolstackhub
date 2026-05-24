@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What list formats are supported?', a: 'Bullet lists (- or •), numbered lists (1. 2. 3.), plain line-by-line lists, and comma-separated values. Each item should be on its own line or separated by a comma.' },
+  { q: 'Does it remove the bullet or number prefix?', a: 'No — the list format is preserved. "- Apple" and "- Apple" are treated as duplicates; the first is kept with its prefix intact.' },
+  { q: 'Is matching case-sensitive?', a: 'By default, matching is case-insensitive. "Apple" and "apple" in a list are treated as duplicates.' },
+  { q: 'Does it preserve list order?', a: 'Yes — items appear in the order they first appeared in your original list.' },
+  { q: 'Is my data safe?', a: 'Yes — all processing runs locally in your browser. Your list is never sent to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate List Items Online – Deduplicate Bullet and Numbered Lists',       item: `${SITE_CONFIG.url}/remove-duplicate-list-items` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Items from a List',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your list', text: 'Paste a bullet list, numbered list, or comma-separated list into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Remove Duplicates', text: 'The tool identifies and removes repeated items, keeping only the first occurrence of each.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click Copy to copy your deduplicated list to the clipboard.' },
       ],
     },
   ],

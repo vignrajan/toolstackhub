@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What does ignore-case matching mean?', a: '"Apple", "APPLE", and "apple" are all treated as the same line. Any line that matches another line when lowercased is considered a duplicate.' },
+  { q: 'When should I use ignore-case mode?', a: 'Use it when capitalization differences are not meaningful — city names, product names, usernames, or any list where you want "New York" and "new york" treated as the same entry.' },
+  { q: 'Which version of a duplicate is kept?', a: 'The first occurrence is kept exactly as written. The capitalization of the kept line is not changed.' },
+  { q: 'Does it preserve line order?', a: 'Yes — lines appear in the order they first appeared in the original text.' },
+  { q: 'Is there a line limit?', a: 'No hard limit — the tool processes any number of lines in your browser with no upload or server required.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,17 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate Lines Ignore Case – Case-Insensitive Deduplication',       item: `${SITE_CONFIG.url}/remove-duplicate-lines-ignore-case` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Lines Ignoring Case',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your text', text: 'Paste your list or multi-line text into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Case-insensitive mode is active', text: '"Apple", "APPLE", and "apple" are all treated as the same line.' },
+        { '@type': 'HowToStep', position: 3, name: 'Click Remove Duplicates', text: 'The tool removes all lines that match any other line when capitalization is ignored.' },
+        { '@type': 'HowToStep', position: 4, name: 'Copy the result', text: 'Click Copy to copy the deduplicated output to your clipboard.' },
       ],
     },
   ],

@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What does case-sensitive matching mean?', a: '"Apple" and "apple" are treated as different lines and both kept. Only lines that are completely identical — including capitalization — are considered duplicates.' },
+  { q: 'When should I use case-sensitive mode?', a: 'Use it when capitalization carries meaning: programming identifiers, proper nouns, passwords, file paths, or any data where case differences are intentional.' },
+  { q: 'Which duplicate line is kept?', a: 'The first occurrence is always kept; all subsequent identical duplicates are removed.' },
+  { q: 'Does it preserve line order?', a: 'Yes — the output preserves the original order of first-seen lines.' },
+  { q: 'Is there a line limit?', a: 'No hard limit — the tool processes any number of lines directly in your browser.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,17 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate Lines Case Sensitive – Exact Match Deduplication',       item: `${SITE_CONFIG.url}/remove-duplicate-lines-case-sensitive` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Lines with Case-Sensitive Matching',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your text', text: 'Paste your list or multi-line text into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Case-sensitive mode is active', text: '"Apple" and "apple" are treated as different lines — exact character matching is used.' },
+        { '@type': 'HowToStep', position: 3, name: 'Click Remove Duplicates', text: 'Only lines that are byte-for-byte identical are removed. Lines differing only in capitalization are both kept.' },
+        { '@type': 'HowToStep', position: 4, name: 'Copy the result', text: 'Click Copy to copy the deduplicated output to your clipboard.' },
       ],
     },
   ],
