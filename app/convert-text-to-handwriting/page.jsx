@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 // ── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'Convert Text to Handwriting Online Free – Instant Handwriting Converter',
+  title: 'Convert Text to Handwriting Online Free – Instant Results',
   description: 'Convert text to handwriting online in seconds. Paste your text, pick a handwriting style and paper, then download as PNG or PDF. Free, no signup required.',
   keywords: [
     'convert text to handwriting',

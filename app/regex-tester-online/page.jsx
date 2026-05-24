@@ -6,11 +6,11 @@ import RegexTester from '../../components/tools/RegexTester';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Regex Tester Online Free – Test Regular Expressions in Real Time',
+  title: 'Regex Tester Online – Test Regular Expressions in Real Time',
   description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/regex-tester-online` },
   openGraph: {
-    title: 'Regex Tester Online Free – Test Regular Expressions in Real Time',
+    title: 'Regex Tester Online – Test Regular Expressions in Real Time',
     description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required. Try now!',
     url: `${SITE_CONFIG.url}/regex-tester-online`,
     type: 'website',

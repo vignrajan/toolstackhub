@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Number to Words Converter (India 2026) — Rupees, Lakh, Crore Format Free',
+  title: 'Number to Words Converter India 2026 — Rupees, Lakh, Crore',
   description: 'Free number to words converter for India. Instantly convert any amount to Indian rupees in words — Lakh, Crore, Paise. Perfect for cheques, GST invoices, and legal documents. No login, works instantly.',
   keywords: [
     'number to words converter', 'number to words', 'convert number to words',
@@ -24,6 +24,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Number to Words Converter India 2026 — Rupees, Lakh, Crore Free',
+    description: 'Free number to words converter for India. Instantly convert any amount to Indian rupees in words — Lakh, Crore, Paise. Perfect for cheques, GST invoices, and legal documents.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

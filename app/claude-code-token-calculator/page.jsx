@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ─────────────────────────────────────────────────────────────
 
 export const metadata = {
-  title: 'Claude Code Token Calculator — Cost & Plan Estimator (2026) | ToolStackHub',
+  title: 'Claude Code Token Calculator — Cost & Plan Estimator (2026)',
   description:
     'Free Claude Code token calculator. Estimate your monthly cost, find the best plan (Pro vs Max 5x vs Max 20x vs API), and learn 12 proven ways to reduce your token usage. Updated for Opus 4.7. INR pricing for India.',
   keywords: [

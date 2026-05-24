@@ -6,11 +6,11 @@ import RandomNumber from '../../components/tools/RandomNumber';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Random Number Generator Online Free – Any Range, Instant Results',
+  title: 'Random Number Generator – Any Range, Instant Results Free',
   description: 'Generate random numbers online free. Set min/max range, integers or decimals, no duplicates, bulk up to 1000. Statistics included. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/random-number-generator` },
   openGraph: {
-    title: 'Random Number Generator Online Free – Any Range, Instant Results',
+    title: 'Random Number Generator – Any Range, Instant Results Free',
     description: 'Generate random numbers online free. Set min/max range, integers or decimals, no duplicates, bulk up to 1000. Statistics included. No signup. Try now!',
     url: `${SITE_CONFIG.url}/random-number-generator`,
     type: 'website',

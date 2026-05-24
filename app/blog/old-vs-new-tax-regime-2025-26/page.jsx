@@ -21,6 +21,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Old vs New Tax Regime 2025-26 — Which Saves You More?',
+    description: 'Old vs New Tax Regime FY 2025-26 compared. Exact tax savings at every income level, breakeven deduction table, 8 real examples from ₹5L to ₹30L CTC.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TOC = [

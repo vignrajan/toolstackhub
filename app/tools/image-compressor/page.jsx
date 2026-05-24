@@ -8,7 +8,7 @@ import { SITE_CONFIG, tools } from '../../../data/tools';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Image Compressor – Compress Images Online Free Without Losing Quality',
+  title: 'Image Compressor – Reduce Image Size Free Without Quality Loss',
   description: 'Compress JPEG, PNG and WebP images online for free. Reduce image file size by up to 90% without losing quality. No upload, no signup — works in your browser.',
   keywords: [
     'image compressor',

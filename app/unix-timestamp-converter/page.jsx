@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Unix Timestamp Converter Online Free – Epoch to Date Instantly',
+  title: 'Unix Timestamp Converter – Epoch to Date Instantly Free',
   description: 'Convert Unix timestamps to human-readable dates and back online free. Supports seconds and milliseconds. Live clock included. No signup required. Try now!',
   keywords: [
     'unix timestamp converter',
@@ -21,7 +21,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/unix-timestamp-converter` },
   openGraph: {
-    title: 'Unix Timestamp Converter Online Free – Epoch to Date Instantly',
+    title: 'Unix Timestamp Converter – Epoch to Date Instantly Free',
     description: 'Convert Unix timestamps to readable dates and back. Seconds and milliseconds supported. Live clock. Free, no signup.',
     url: `${SITE_CONFIG.url}/unix-timestamp-converter`,
     type: 'website',

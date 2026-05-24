@@ -6,16 +6,22 @@ import JpgToPng from '../../components/tools/JpgToPng';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'JPG to PNG Converter Online Free – Convert JPEG to PNG Instantly',
+  title: 'JPG to PNG Converter – Convert JPEG to PNG Instantly Free',
   description: 'Convert JPG to PNG online for free. Instant browser-based conversion with no quality loss. No upload required. Preview and download instantly. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/jpg-to-png-converter-online` },
   openGraph: {
-    title: 'JPG to PNG Converter Online Free – Convert JPEG to PNG Instantly',
+    title: 'JPG to PNG Converter – Convert JPEG to PNG Instantly Free',
     description: 'Convert JPG to PNG online for free. Instant browser-based conversion with no quality loss. No upload required. Preview and download instantly. Try now!',
     url: `${SITE_CONFIG.url}/jpg-to-png-converter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JPG to PNG Converter – Convert JPEG to PNG Instantly Free',
+    description: 'Convert JPG to PNG online for free. Instant browser-based conversion with no quality loss. No upload required. Preview and download instantly.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -6,16 +6,22 @@ import JsonToCsv from '../../components/tools/JsonToCsv';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'JSON to CSV Converter Online Free – Convert JSON to CSV Instantly',
+  title: 'JSON to CSV Converter – Convert JSON to CSV Instantly Free',
   description: 'Convert JSON to CSV online for free. Paste your JSON array and download a properly formatted CSV file instantly. Supports all delimiters. No signup needed.',
   alternates: { canonical: `${SITE_CONFIG.url}/json-to-csv-converter` },
   openGraph: {
-    title: 'JSON to CSV Converter Online Free – Convert JSON to CSV Instantly',
+    title: 'JSON to CSV Converter – Convert JSON to CSV Instantly Free',
     description: 'Convert JSON arrays to CSV format instantly. Free, supports all delimiters, download as .csv. No signup.',
     url: `${SITE_CONFIG.url}/json-to-csv-converter`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON to CSV Converter – Convert JSON to CSV Instantly Free',
+    description: 'Convert JSON to CSV online for free. Paste your JSON array and download a properly formatted CSV file instantly. Supports all delimiters. No signup needed.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

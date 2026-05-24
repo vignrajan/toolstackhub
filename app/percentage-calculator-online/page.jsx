@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Percentage Calculator Online Free – Calculate Any % Instantly',
+  title: 'Percentage Calculator Online – Calculate Any % Instantly',
   description: 'Calculate percentages online free. Find what % of a number, percentage change, increase, decrease, and more. Four calculation modes. No signup. Try now!',
   keywords: [
     'percentage calculator online',
@@ -21,7 +21,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/percentage-calculator-online` },
   openGraph: {
-    title: 'Percentage Calculator Online Free – Calculate Any % Instantly',
+    title: 'Percentage Calculator Online – Calculate Any % Instantly',
     description: 'Calculate percentages online free. Four modes: % of number, change, increase, decrease. Instant results with formulas shown. No signup.',
     url: `${SITE_CONFIG.url}/percentage-calculator-online`,
     type: 'website',

@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free BMI Calculator India – Indian BMI Standards & Ideal Weight',
+    description: 'Free BMI calculator for India 2026. Uses Indian/Asian BMI thresholds (23+ overweight) recommended by WHO for South Asians. Ideal weight range, health risk assessment.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

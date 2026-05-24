@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'How to Save Tokens in Claude — 19 Proven Habits for Chat & Code (2026)',
+  title: 'How to Save Tokens in Claude — 19 Proven Habits (2026)',
   description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact & more.',
   keywords: [
     'claude token usage', 'how to save tokens in claude', 'claude usage limits',
@@ -19,11 +19,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-save-tokens-in-claude` },
   openGraph: {
-    title: 'How to Save Tokens in Claude — 19 Proven Habits for Chat & Code (2026)',
+    title: 'How to Save Tokens in Claude — 19 Proven Habits (2026)',
     description: 'The complete guide to Claude token optimization for Chat and Claude Code. 19 proven habits, cheat sheets, and workflows.',
     url: `${SITE_CONFIG.url}/blog/how-to-save-tokens-in-claude`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Save Tokens in Claude — 19 Proven Habits (2026)',
+    description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact & more.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

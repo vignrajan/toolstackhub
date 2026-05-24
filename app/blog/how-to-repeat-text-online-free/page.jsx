@@ -18,7 +18,7 @@ const POST = {
 };
 
 export const metadata = {
-  title:       `${POST.title} | ToolStackHub Blog`,
+  title:       `How to Repeat Text Online Free (10 Real Uses)`,
   description:  POST.metaDesc,
   alternates: { canonical: `${SITE_CONFIG.url}/blog/${POST.slug}` },
   openGraph: {

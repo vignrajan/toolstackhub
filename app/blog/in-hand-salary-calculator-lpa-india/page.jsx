@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: '10 LPA In-Hand Salary 2025-26 — Exact Breakdown for 8 CTC Levels',
+  title: '10 LPA In-Hand Salary 2025-26 — Breakdown for 8 CTC Levels',
   description: 'Exact monthly in-hand salary for 5–30 LPA CTC. New vs old tax regime, PF, professional tax, gratuity deductions explained. Updated FY 2025-26.',
   keywords: [
     '10 lpa in hand salary per month', 'in hand salary from ctc india 2025-26',
@@ -16,12 +16,18 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/in-hand-salary-calculator-lpa-india` },
   openGraph: {
-    title: '10 LPA In-Hand Salary 2025-26 — Exact Breakdown for 8 CTC Levels',
+    title: '10 LPA In-Hand Salary 2025-26 — Breakdown for 8 CTC Levels',
     description: 'Exact in-hand salary for 5 LPA to 30 LPA CTC. PF, tax, professional tax deductions explained. New vs old regime compared. Updated March 2026.',
     url: `${SITE_CONFIG.url}/blog/in-hand-salary-calculator-lpa-india`,
     type: 'article',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '10 LPA In-Hand Salary 2025-26 — Breakdown for 8 CTC Levels',
+    description: 'Exact monthly in-hand salary for 5–30 LPA CTC. New vs old tax regime, PF, professional tax, gratuity deductions explained. Updated FY 2025-26.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

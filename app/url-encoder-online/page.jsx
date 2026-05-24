@@ -6,11 +6,11 @@ import UrlEncoder from '../../components/tools/UrlEncoder';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'URL Encoder Decoder Online Free – Encode & Decode URLs Instantly',
+  title: 'URL Encoder Decoder – Encode & Decode URLs Instantly Free',
   description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/url-encoder-online` },
   openGraph: {
-    title: 'URL Encoder Decoder Online Free – Encode & Decode URLs Instantly',
+    title: 'URL Encoder Decoder – Encode & Decode URLs Instantly Free',
     description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup. Try now!',
     url: `${SITE_CONFIG.url}/url-encoder-online`,
     type: 'website',

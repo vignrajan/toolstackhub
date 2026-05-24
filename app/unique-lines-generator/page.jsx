@@ -6,11 +6,11 @@ import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Unique Lines Generator Online Free – Extract Unique Lines Instantly',
+  title: 'Unique Lines Generator – Extract Unique Lines Instantly Free',
   description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/unique-lines-generator` },
   openGraph: {
-    title: 'Unique Lines Generator Online Free – Extract Unique Lines Instantly',
+    title: 'Unique Lines Generator – Extract Unique Lines Instantly Free',
     description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required. Try now!',
     url: `${SITE_CONFIG.url}/unique-lines-generator`,
     type: 'website',

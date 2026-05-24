@@ -25,6 +25,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
+    description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. Free, no login.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const FAQS = [

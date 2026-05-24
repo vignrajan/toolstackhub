@@ -18,6 +18,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lorem Ipsum Generator Online Free – Instant Placeholder Text',
+    description: 'Generate Lorem Ipsum placeholder text online for free. Choose paragraphs, sentences, or words. Classic or random dummy text. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

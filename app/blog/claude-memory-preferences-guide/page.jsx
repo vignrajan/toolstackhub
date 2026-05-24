@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Claude Memory & Preferences — Set It Up Once, Save Hours (2026)',
+  title: 'Claude Memory & Preferences — Set It Up Once, Save Hours',
   description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
   keywords: [
     'claude memory settings', 'claude user preferences', 'how to use claude memory',

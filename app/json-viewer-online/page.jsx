@@ -18,6 +18,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON Viewer Online Free – View & Explore JSON',
+    description: 'View JSON online for free with syntax highlighting and clean indented output. Instantly explore nested JSON objects and arrays. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

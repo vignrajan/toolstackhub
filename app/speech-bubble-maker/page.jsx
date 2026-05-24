@@ -6,7 +6,7 @@ import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Free Speech Bubble Maker Online – Add Speech Bubble to Image Instantly',
+  title: 'Free Speech Bubble Maker – Add Speech Bubble to Any Image',
   description: 'Add speech bubbles to any image free online. Classic speech, thought clouds, shout bursts. No login, instant PNG download. Perfect for memes, comics, Instagram, WhatsApp.',
   keywords: [
     'speech bubble maker', 'add speech bubble to image', 'speech bubble generator',

@@ -18,6 +18,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON Minifier Online Free – Compress JSON Instantly',
+    description: 'Minify and compress JSON online for free. Remove all whitespace to reduce file size for production APIs and configs. Instant, no signup, browser-based.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

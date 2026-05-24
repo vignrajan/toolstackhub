@@ -8,16 +8,22 @@ import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Character Counter Online Free – Count Letters, Numbers & Symbols',
+  title: 'Character Counter – Count Letters, Numbers & Symbols Free',
   description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. Free, no signup.',
   keywords: ['character counter online', 'count characters online', 'letter counter', 'twitter character counter', 'sms character limit', 'meta description length'],
   alternates: { canonical: `${SITE_CONFIG.url}/character-counter-online` },
   openGraph: {
-    title: 'Character Counter Online Free – Count Letters, Numbers & Symbols',
+    title: 'Character Counter – Count Letters, Numbers & Symbols Free',
     description: 'Count characters with live Twitter, SMS, and meta description limit indicators. Free, no signup.',
     url: `${SITE_CONFIG.url}/character-counter-online`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Character Counter – Count Letters, Numbers & Symbols Free',
+    description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

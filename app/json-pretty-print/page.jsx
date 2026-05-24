@@ -18,6 +18,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON Pretty Print Online Free',
+    description: 'Pretty-print JSON online for free. Paste raw or minified JSON and get clean, indented, syntax-highlighted output. No signup, no install.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

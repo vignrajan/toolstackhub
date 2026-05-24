@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Claude Prompt Techniques That Actually Work in 2026 (Expert Guide)',
+  title: 'Claude Prompt Techniques That Work in 2026 (Expert Guide)',
   description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts daily.',
   keywords: [
     'claude prompt techniques', 'claude prompt examples', 'best claude prompts',
@@ -17,7 +17,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/claude-prompt-techniques` },
   openGraph: {
-    title: 'Claude Prompt Techniques That Actually Work in 2026 (Expert Guide)',
+    title: 'Claude Prompt Techniques That Work in 2026 (Expert Guide)',
     description: '10 advanced Claude prompt techniques with copy-paste examples. Real outputs, pro tips, and mistakes to avoid.',
     url: `${SITE_CONFIG.url}/blog/claude-prompt-techniques`,
     type: 'article',
@@ -25,7 +25,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Claude Prompt Techniques That Actually Work in 2026 (Expert Guide)',
+    title: 'Claude Prompt Techniques That Work in 2026 (Expert Guide)',
     description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts daily.',
     creator: SITE_CONFIG.twitterHandle,
   },

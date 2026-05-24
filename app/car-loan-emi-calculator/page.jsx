@@ -17,6 +17,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Car Loan EMI Calculator Free 2026 – Auto Loan EMI',
+    description: 'Calculate car loan EMI instantly. Compare bank rates for new and used car loans. Full amortization schedule, down payment guide, and new vs used comparison. Free.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

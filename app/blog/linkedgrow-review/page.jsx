@@ -25,6 +25,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
+    description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99. Honest deep-dive.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const FAQS = [

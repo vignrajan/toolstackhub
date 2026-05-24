@@ -6,7 +6,7 @@ import FuelBillGenerator from '../../components/tools/FuelBillGenerator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Fuel Bill Generator Online Free – Petrol Diesel Bill India 2026',
+  title: 'Fuel Bill Generator – Petrol & Diesel Bill India 2026 Free',
   description: 'Generate professional fuel bills online free. Petrol, diesel, CNG bills with GST. Instant PDF download, WhatsApp share. Perfect for reimbursement & expense claims. No signup.',
   keywords: [
     'fuel bill generator online free', 'petrol bill generator india',
@@ -21,6 +21,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/fuel-bill-generator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Fuel Bill Generator India – Petrol, Diesel, CNG Bills',
+    description: 'Generate professional fuel bills online free. Petrol, diesel, CNG bills with GST. Instant PDF download, WhatsApp share. Perfect for reimbursement & expense claims.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

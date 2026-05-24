@@ -6,7 +6,7 @@ import SIPCalculator from '../../components/tools/SIPCalculator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'SIP Calculator Online Free – Mutual Fund SIP Returns Calculator',
+  title: 'SIP Calculator – Mutual Fund SIP Returns Calculator Free',
   description: 'Free SIP calculator online. Calculate mutual fund SIP returns, maturity value, and wealth gained. Step-up SIP, lumpsum calculator included. No signup. Try now!',
   keywords: ['sip calculator', 'sip calculator online', 'mutual fund sip calculator', 'sip return calculator', 'sip maturity calculator', 'monthly sip calculator', 'sip calculator india 2026', 'step up sip calculator'],
   alternates: { canonical: `${SITE_CONFIG.url}/sip-calculator` },

@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Compress Image Online Free – Reduce Size Without Losing Quality',
+  title: 'Compress Image Online – Reduce Size Without Losing Quality',
   description: 'Compress JPEG, PNG and WebP images online for free. Reduce file size by up to 90% without losing quality. No upload to server, no signup needed. Try now!',
   keywords: [
     'compress image online',
@@ -21,7 +21,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/compress-image-online` },
   openGraph: {
-    title: 'Compress Image Online Free – Reduce Size Without Losing Quality',
+    title: 'Compress Image Online – Reduce Size Without Losing Quality',
     description: 'Compress JPEG, PNG and WebP images online free. Reduce file size by up to 90% with no quality loss. Browser-based, no upload to server.',
     url: `${SITE_CONFIG.url}/compress-image-online`,
     type: 'website',

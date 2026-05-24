@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stopwatch Online Free – Millisecond Precision with Lap Timer',
+    description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

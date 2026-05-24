@@ -17,6 +17,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Loan EMI Calculator Free 2026 – Housing Loan EMI',
+    description: 'Calculate home loan EMI instantly. Compare SBI, HDFC, ICICI rates. Full amortization schedule, prepayment savings table, tax benefits guide. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
-  title: 'EMI Calculator Online Free – Home Loan, Car Loan, Personal Loan',
+  title: 'EMI Calculator – Home Loan, Car Loan & Personal Loan Free',
   description: 'Free EMI calculator online. Calculate monthly EMI for home loan, car loan, and personal loan instantly. See amortization schedule, total interest, and payment breakdown. No signup.',
   keywords: [
     'emi calculator',
@@ -28,6 +28,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EMI Calculator Online Free – Home, Car & Personal Loan',
+    description: 'Free EMI calculator online. Calculate monthly EMI for home loan, car loan, and personal loan instantly. See amortization schedule, total interest, and payment breakdown.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

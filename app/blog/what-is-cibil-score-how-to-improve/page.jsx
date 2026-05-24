@@ -14,6 +14,12 @@ export const metadata = {
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What is CIBIL Score and How to Improve It Fast (2026)',
+    description: 'CIBIL score explained: what it is, score ranges, what affects it, and 9 proven ways to improve it fast. Includes home loan and credit card impact. Free tools included.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

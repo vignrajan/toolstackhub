@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
-  title: 'Remove Empty Lines Online Free – Delete Blank Lines from Text',
+  title: 'Remove Empty Lines Online – Delete Blank Lines from Text',
   description: 'Remove all empty and blank lines from text instantly. Free browser-based tool. Works with CSV data, code, logs, and pasted content. No signup required. Try now!',
   keywords: [
     'remove empty lines online',
@@ -22,7 +22,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/remove-empty-lines` },
   openGraph: {
-    title: 'Remove Empty Lines Online Free – Delete Blank Lines from Text',
+    title: 'Remove Empty Lines Online – Delete Blank Lines from Text',
     description: 'Remove all blank lines from any text instantly. Free, browser-based, no signup required.',
     url: `${SITE_CONFIG.url}/remove-empty-lines`,
     type: 'website',

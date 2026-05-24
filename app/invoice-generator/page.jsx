@@ -5,7 +5,7 @@ import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Free Invoice Generator Online – Create GST Invoice Instantly (No Login)',
+  title: 'Free Invoice Generator Online – Create GST Invoice Instantly',
   description: 'Create professional invoices free online. GST invoice with CGST/SGST/IGST, PDF download, no signup, no watermark. For freelancers and small businesses in India.',
   keywords: [
     'invoice generator online free', 'free invoice maker', 'gst invoice generator',
@@ -19,6 +19,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/invoice-generator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Invoice Generator Online – GST Invoice, PDF Download, No Login',
+    description: 'Create professional invoices free online. GST invoice with CGST/SGST/IGST, PDF download, no signup, no watermark. For freelancers and small businesses in India.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -6,16 +6,22 @@ import HtmlFormatter from '../../components/tools/HtmlFormatter';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'HTML Formatter Online Free – Beautify & Minify HTML Instantly',
+  title: 'HTML Formatter Online – Beautify & Minify HTML Instantly',
   description: 'Format and beautify HTML code online for free. Minify HTML to reduce file size or pretty-print for easy editing. 2 or 4-space indent. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/html-formatter-online` },
   openGraph: {
-    title: 'HTML Formatter Online Free – Beautify & Minify HTML Instantly',
+    title: 'HTML Formatter Online – Beautify & Minify HTML Instantly',
     description: 'Format and beautify HTML code online for free. Minify HTML to reduce file size or pretty-print for easy editing. 2 or 4-space indent. No signup. Try now!',
     url: `${SITE_CONFIG.url}/html-formatter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HTML Formatter Online – Beautify & Minify HTML Instantly',
+    description: 'Format and beautify HTML code online for free. Minify HTML to reduce file size or pretty-print for easy editing. 2 or 4-space indent. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

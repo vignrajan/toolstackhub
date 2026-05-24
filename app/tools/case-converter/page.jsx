@@ -8,7 +8,7 @@ import { SITE_CONFIG, tools } from '../../../data/tools';
 
 // ── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'Case Converter – Convert Text to Uppercase, Lowercase, Title Case & More',
+  title: 'Case Converter – Uppercase, Lowercase, Title Case & More',
   description: 'Free Case Converter tool to instantly convert text to uppercase, lowercase, sentence case, title case, camelCase, snake_case and more. Change text case online in seconds.',
   keywords: [
     'case converter',

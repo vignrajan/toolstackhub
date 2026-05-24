@@ -23,6 +23,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HRA Calculator FY 2026-27 — HRA Exemption India',
+    description: 'Free HRA calculator for FY 2026-27. Calculate House Rent Allowance exemption under Section 10(13A). Updated with 8 metro cities. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const FAQS = [

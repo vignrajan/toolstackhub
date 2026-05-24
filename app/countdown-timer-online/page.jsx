@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Countdown Timer Online Free – Set Timer with Alarm Instantly',
+    description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {
