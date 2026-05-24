@@ -26,6 +26,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What is JSON pretty print?', a: 'JSON pretty print formats raw or minified JSON into readable output with consistent indentation and line breaks, making the structure easy to scan and understand.' },
+  { q: 'What indentation does pretty print use?', a: 'By default, 2-space indentation is used. Many tools also offer 4-space indentation to match different style guides.' },
+  { q: 'Is pretty printing the same as formatting or beautifying?', a: 'Yes — "pretty print", "format", and "beautify" all refer to the same operation: adding whitespace to make JSON human-readable.' },
+  { q: 'Does pretty printing validate my JSON?', a: 'Yes — the tool must parse your JSON before printing it. If your JSON has syntax errors, an error message is shown instead.' },
+  { q: 'Is my JSON data safe?', a: 'Yes — all processing runs locally in your browser. Your JSON is never sent to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'JSON Pretty Print', item: `${SITE_CONFIG.url}/json-pretty-print` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Pretty Print JSON Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your JSON', text: 'Paste your compact or minified JSON into the input panel.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Pretty Print', text: 'Click the Format or Pretty Print button to apply indentation and line breaks.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the output', text: 'Click Copy to copy the pretty-printed JSON to your clipboard.' },
       ],
     },
   ],
@@ -122,6 +140,23 @@ export default function JsonPrettyPrintPage() {
                 document after pretty-printing — transforming something unreadable into
                 something immediately understandable.
               </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
             </div>
           </section>
 

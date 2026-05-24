@@ -26,6 +26,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What does a JSON minifier do?', a: 'A JSON minifier removes all unnecessary whitespace, line breaks, and indentation from JSON, compressing it into a single line to reduce file size.' },
+  { q: 'Does minifying change my JSON data?', a: 'No — minifying only removes whitespace. All keys, values, and structure remain exactly the same.' },
+  { q: 'Why should I minify JSON?', a: 'Minified JSON reduces file size, which speeds up API responses, reduces bandwidth usage, and improves page load times in production applications.' },
+  { q: 'Can I reverse minified JSON back to readable format?', a: 'Yes — use the JSON Formatter or JSON Beautifier to re-expand minified JSON back into indented, readable format.' },
+  { q: 'Is my JSON data safe?', a: 'Yes — all processing runs locally in your browser. Your JSON is never sent to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'JSON Minifier Online', item: `${SITE_CONFIG.url}/json-minifier-online` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Minify JSON Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your JSON', text: 'Paste your formatted or beautified JSON into the input panel.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Minify', text: 'Click the Minify button to strip all whitespace and compress to a single line.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the output', text: 'Click Copy to copy the minified JSON string to your clipboard.' },
       ],
     },
   ],
@@ -148,6 +166,23 @@ export default function JsonMinifierPage() {
                   <li>→ Easy to read (intentional)</li>
                 </ul>
               </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
             </div>
           </section>
 
