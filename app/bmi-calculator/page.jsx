@@ -291,8 +291,6 @@ export default function BMICalculatorPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 { href: '/bmi-calculator',          icon: '⚖️', label: 'BMI Calculator',         desc: 'Body Mass Index with Indian standards',       active: true  },
-                { href: '/calorie-calculator',       icon: '🥗', label: 'Calorie Calculator',      desc: 'Daily calorie intake for your goals',          active: false },
-                { href: '/water-intake-calculator',  icon: '💧', label: 'Water Intake Calculator', desc: 'Daily water requirement by weight',            active: false },
                 { href: '/age-calculator-online',    icon: '🎂', label: 'Age Calculator',          desc: 'Exact age in years, months and days',          active: true  },
               ].map(l => (
                 <Link key={l.href} href={l.href}

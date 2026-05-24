@@ -464,12 +464,6 @@ export default function ColorPickerOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/hex-color-picker-online',  label: 'HEX Color Picker Online',  desc: 'Pick a color and get its 6-digit HEX code instantly' },
-                { href: '/rgb-color-picker-online',  label: 'RGB Color Picker Online',  desc: 'Get RGB values (0–255) for any selected color' },
-                { href: '/hex-to-rgb-converter',     label: 'HEX to RGB Converter',     desc: 'Convert any HEX color code to RGB values' },
-                { href: '/color-palette-generator',  label: 'Color Palette Generator',  desc: 'Generate harmonious color palettes from a base color' },
-                { href: '/hsl-color-picker-online',  label: 'HSL Color Picker Online',  desc: 'Pick colors using Hue, Saturation, and Lightness values' },
-                { href: '/cmyk-to-rgb-converter',    label: 'CMYK to RGB Converter',    desc: 'Convert print CMYK values to screen RGB format' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">

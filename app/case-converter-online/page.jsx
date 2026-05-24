@@ -172,10 +172,6 @@ export default function CaseConverterOnlinePage() {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More Case Converter Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/uppercase-to-lowercase-converter', label: 'Uppercase to Lowercase Converter', desc: 'Convert ALL CAPS text to lowercase instantly' },
-                { href: '/title-case-converter-online',      label: 'Title Case Converter Online',      desc: 'Format headings and titles in proper Title Case' },
-                { href: '/sentence-case-converter',          label: 'Sentence Case Converter',          desc: 'Capitalize only the first letter of each sentence' },
-                { href: '/camelcase-to-snake-case',          label: 'CamelCase to snake_case',          desc: 'Convert programming variable name formats' },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">
                   <div className="font-semibold text-emerald-800 text-sm group-hover:underline">{v.label}</div>

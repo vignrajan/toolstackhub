@@ -435,12 +435,6 @@ export default function CompressImageOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/compress-image-to-50kb',            label: 'Compress Image to 50KB',              desc: 'Reduce any image down to under 50KB for size-restricted uploads' },
-                { href: '/compress-image-to-100kb',           label: 'Compress Image to 100KB',             desc: 'Target exactly 100KB for government forms and portals' },
-                { href: '/compress-jpeg-without-losing-quality', label: 'Compress JPEG Without Losing Quality', desc: 'Maximum JPEG compression with no visible artifacts' },
-                { href: '/reduce-png-file-size',              label: 'Reduce PNG File Size',                 desc: 'Lossless PNG optimization for logos and graphics' },
-                { href: '/compress-image-for-website',        label: 'Compress Image for Website',           desc: 'Optimize images specifically for web performance' },
-                { href: '/compress-image-to-200kb',           label: 'Compress Image to 200KB',             desc: 'Target 200KB file size for social media and email' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-amber-50 border border-amber-200 rounded-xl hover:bg-amber-100 transition-colors group">

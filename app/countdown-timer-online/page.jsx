@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/5-minute-timer-online', label: '5 Minute Timer Online' },
-              { href: '/10-minute-timer-online', label: '10 Minute Timer Online' },
-              { href: '/25-minute-timer-online', label: '25 Minute Timer Online' },
-              { href: '/countdown-timer-with-alarm', label: 'Countdown Timer with Alarm' },
 ];
 
 const faqs = [
