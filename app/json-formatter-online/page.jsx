@@ -25,6 +25,18 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'How do I format minified JSON?', a: 'Paste your minified JSON and click Format — instant indentation and line breaks added.' },
+  { q: 'Can it detect JSON errors?', a: 'Yes — syntax errors show a specific message with the problem location.' },
+  { q: 'Is there a file size limit?', a: 'No hard limit — large JSON processes based on your device performance.' },
+  { q: 'Is my JSON data safe?', a: 'Yes — all processing runs in your browser. Your data is never sent to any server.' },
+  { q: 'Can I format JSON on mobile?', a: 'Yes — the tool is responsive and works on all mobile browsers.' },
+  { q: 'What is a JSON formatter?', a: 'A JSON formatter is an online tool that takes minified, compressed, or messy JSON data and reformats it into clean, properly indented, human-readable output. It adds consistent spacing, line breaks, and indentation so that nested structures are easy to navigate and understand. Most JSON formatters also include syntax highlighting that colors strings, numbers, booleans, and null values differently for even faster comprehension.' },
+  { q: 'How do I format JSON online?', a: 'Paste your JSON string into the input panel on the left, then click the "Format" button. The tool instantly parses and reformats your JSON with proper indentation in the output panel on the right. If your JSON contains syntax errors, they are highlighted in red with a specific error message. Choose between 2-space and 4-space indentation using the selector in the toolbar.' },
+  { q: 'Is the JSON formatter free?', a: 'Yes — completely free with no account, no subscription, and no usage limits. You can format, validate, and minify unlimited JSON documents without any payment or registration.' },
+  { q: 'Can I use the JSON formatter on mobile?', a: 'Yes — the tool is fully responsive and works on all modern mobile browsers including Chrome for Android and Safari for iOS. The side-by-side panels stack vertically on small screens for comfortable use on smartphones and tablets.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -81,18 +93,6 @@ const variantLinks = [
               { href: '/json-validator-online', label: 'JSON Validator Online' },
               { href: '/json-minifier-online', label: 'JSON Minifier Online' },
               { href: '/json-viewer-online', label: 'JSON Viewer Online' },
-];
-
-const faqs = [
-  { q: 'How do I format minified JSON?', a: 'Paste your minified JSON and click Format — instant indentation and line breaks added.' },
-  { q: 'Can it detect JSON errors?', a: 'Yes — syntax errors show a specific message with the problem location.' },
-  { q: 'Is there a file size limit?', a: 'No hard limit — large JSON processes based on your device performance.' },
-  { q: 'Is my JSON data safe?', a: 'Yes — all processing runs in your browser. Your data is never sent to any server.' },
-  { q: 'Can I format JSON on mobile?', a: 'Yes — the tool is responsive and works on all mobile browsers.' },
-  { q: 'What is a JSON formatter?', a: 'A JSON formatter is an online tool that takes minified, compressed, or messy JSON data and reformats it into clean, properly indented, human-readable output. It adds consistent spacing, line breaks, and indentation so that nested structures are easy to navigate and understand. Most JSON formatters also include syntax highlighting that colors strings, numbers, booleans, and null values differently for even faster comprehension.' },
-  { q: 'How do I format JSON online?', a: 'Paste your JSON string into the input panel on the left, then click the "Format" button. The tool instantly parses and reformats your JSON with proper indentation in the output panel on the right. If your JSON contains syntax errors, they are highlighted in red with a specific error message. Choose between 2-space and 4-space indentation using the selector in the toolbar.' },
-  { q: 'Is the JSON formatter free?', a: 'Yes — completely free with no account, no subscription, and no usage limits. You can format, validate, and minify unlimited JSON documents without any payment or registration.' },
-  { q: 'Can I use the JSON formatter on mobile?', a: 'Yes — the tool is fully responsive and works on all modern mobile browsers including Chrome for Android and Safari for iOS. The side-by-side panels stack vertically on small screens for comfortable use on smartphones and tablets.' },
 ];
 
 export default function Page() {
