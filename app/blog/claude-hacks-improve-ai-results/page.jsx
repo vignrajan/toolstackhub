@@ -441,7 +441,7 @@ export default function ClaudeHacksBlogPage() {
           {/* FAQ */}
           <div>
             <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
-            <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+            <div className="space-y-3">
               {[
                 { q:'What are Claude prompt hacks?', a:'Claude prompt hacks are short modifiers you add to any prompt — like /human, EL10, X10, Alt Three, or Kill Critic — that dramatically change Claude\'s output style, depth, or tone. They work because Claude\'s training makes it highly responsive to explicit behavioral instructions.' },
                 { q:'Do these Claude hacks actually work in 2026?', a:'Yes. All five hacks in this article have been tested on current Claude models (Sonnet and Opus). The before/after examples are real outputs. They work because they give Claude explicit output contracts — not vague style preferences, but specific behavioral instructions.' },
@@ -450,8 +450,8 @@ export default function ClaudeHacksBlogPage() {
                 { q:'Is Claude better than ChatGPT for these prompting techniques?', a:'Claude responds particularly well to behavioral constraints — like /human and Kill Critic — because of how its constitutional AI training works. ChatGPT tends to respond better to step-by-step procedural instructions. For these specific hacks, Claude is the stronger platform.' },
               ].map((faq, i) => (
                 <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                  itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm" itemProp="name">
+                 >
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm">
                     {faq.q}
                     <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
                       fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -459,8 +459,8 @@ export default function ClaudeHacksBlogPage() {
                     </svg>
                   </summary>
                   <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                    itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <span itemProp="text">{faq.a}</span>
+                   >
+                    {faq.a}
                   </div>
                 </details>
               ))}

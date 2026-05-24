@@ -565,7 +565,7 @@ export default function InHandSalaryBlogPage() {
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     { q:'What is 10 LPA in hand salary per month?', a:'For ₹10 LPA CTC with standard structure (50% basic, new tax regime, FY 2025-26), the monthly in-hand salary is approximately ₹71,129. Under the new tax regime, you pay zero income tax at ₹10 LPA — the Section 87A rebate covers your entire tax liability. Monthly deductions are only Employee PF (₹5,000) and Professional Tax (₹200).' },
                     { q:'Is 10 LPA a good salary in India?', a:'Yes, ₹10 LPA is a solid salary in India for professionals with 3–6 years of experience. It puts you in the top 5% of Indian earners. With a monthly in-hand of ₹71,000, you can maintain a comfortable lifestyle in most Indian cities, save ₹15,000–20,000/month, and build meaningful investments.' },
@@ -577,8 +577,8 @@ export default function InHandSalaryBlogPage() {
                     { q:'Can I reduce Employee PF deduction to increase take-home?', a:'Technically, statutory PF deduction is required if your basic salary is above ₹15,000/month. However, many companies offer an option to cap PF contribution at the statutory minimum (12% of ₹15,000 = ₹1,800/month) instead of 12% of your actual basic salary. If your basic is ₹50,000, this saves ₹4,200/month (₹50,400/year) in mandatory PF deduction, increasing take-home by that amount. Note: lower PF means lower retirement corpus and potentially lower gratuity.' },
                   ].map((faq, i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                      itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm" itemProp="name">
+                     >
+                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm">
                         {faq.q}
                         <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -586,8 +586,8 @@ export default function InHandSalaryBlogPage() {
                         </svg>
                       </summary>
                       <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                        <span itemProp="text">{faq.a}</span>
+                       >
+                        {faq.a}
                       </div>
                     </details>
                   ))}

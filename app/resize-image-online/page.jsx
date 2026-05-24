@@ -36,7 +36,7 @@ const jsonLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
-        { '@type': 'ListItem', position: 2, name: 'Image Tools', item: `${SITE_CONFIG.url}/#{'image'}` },
+        { '@type': 'ListItem', position: 2, name: 'Image Tools', item: `${SITE_CONFIG.url}/#image` },
         { '@type': 'ListItem', position: 3, name: 'Resize Image', item: `${SITE_CONFIG.url}/resize-image-online` },
       ],
     },
@@ -83,7 +83,7 @@ export default function Page() {
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li>
-                  <Link href="/#{'image'}" className="hover:text-brand-600 transition-colors text-amber-600">
+                  <Link href="/#image" className="hover:text-brand-600 transition-colors text-amber-600">
                     Image Tools
                   </Link>
                 </li>

@@ -137,12 +137,12 @@ export default function Page() {
             <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
-                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors" itemProp="name">
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
                     {faq[0]}
                     <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   </summary>
-                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"><span itemProp="text">{faq[1]}</span></div>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq[1]}</div>
                 </details>
               ))}
             </div>

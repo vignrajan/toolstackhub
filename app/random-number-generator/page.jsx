@@ -36,7 +36,7 @@ const jsonLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
-        { '@type': 'ListItem', position: 2, name: 'Utility Tools', item: `${SITE_CONFIG.url}/#{'utility'}` },
+        { '@type': 'ListItem', position: 2, name: 'Utility Tools', item: `${SITE_CONFIG.url}/#utility` },
         { '@type': 'ListItem', position: 3, name: 'Free Random Number Generator', item: `${SITE_CONFIG.url}/random-number-generator` },
       ],
     },
@@ -83,7 +83,7 @@ export default function Page() {
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li>
-                  <Link href="/#{'utility'}" className="hover:text-brand-600 transition-colors text-violet-600">
+                  <Link href="/#utility" className="hover:text-brand-600 transition-colors text-violet-600">
                     Utility Tools
                   </Link>
                 </li>

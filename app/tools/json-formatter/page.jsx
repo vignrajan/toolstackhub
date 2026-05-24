@@ -150,25 +150,21 @@ export default function JsonFormatterPage() {
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-4">
               <ol className="flex items-center gap-2 text-sm text-surface-500"
-                itemScope itemType="https://schema.org/BreadcrumbList">
-                <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                  <Link href="/" className="hover:text-brand-600 transition-colors" itemProp="item">
-                    <span itemProp="name">Home</span>
+               >
+                <li>
+                  <Link href="/" className="hover:text-brand-600 transition-colors">
+                    <span>Home</span>
                   </Link>
-                  <meta itemProp="position" content="1" />
                 </li>
                 <li><span className="text-surface-300">/</span></li>
-                <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                  <Link href="/#developer" className="hover:text-brand-600 transition-colors text-blue-600" itemProp="item">
-                    <span itemProp="name">Developer Tools</span>
+                <li>
+                  <Link href="/#developer" className="hover:text-brand-600 transition-colors text-blue-600">
+                    <span>Developer Tools</span>
                   </Link>
-                  <meta itemProp="position" content="2" />
                 </li>
                 <li><span className="text-surface-300">/</span></li>
-                <li className="text-surface-800 font-medium"
-                  itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                  <span itemProp="name">JSON Formatter</span>
-                  <meta itemProp="position" content="3" />
+                <li className="text-surface-800 font-medium">
+                  <span>JSON Formatter</span>
                 </li>
               </ol>
             </nav>
@@ -572,16 +568,16 @@ export default function JsonFormatterPage() {
               Frequently Asked Questions
             </h2>
             <div className="space-y-3"
-              itemScope itemType="https://schema.org/FAQPage">
+             >
               {faqs.map((faq, i) => (
                 <details
                   key={i}
                   className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                  itemScope itemProp="mainEntity" itemType="https://schema.org/Question"
+                 
                 >
                   <summary
                     className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors"
-                    itemProp="name"
+                   
                   >
                     {faq.q}
                     <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
@@ -591,9 +587,9 @@ export default function JsonFormatterPage() {
                   </summary>
                   <div
                     className="px-5 pb-4 text-surface-600 text-sm leading-relaxed"
-                    itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer"
+                   
                   >
-                    <span itemProp="text">{faq.a}</span>
+                    {faq.a}
                   </div>
                 </details>
               ))}

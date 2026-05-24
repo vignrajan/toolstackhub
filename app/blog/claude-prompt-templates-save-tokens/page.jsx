@@ -803,7 +803,7 @@ export default function ClaudePromptTemplatesBlog() {
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     {
                       q:'What is a low-token prompt in Claude?',
@@ -831,8 +831,8 @@ export default function ClaudePromptTemplatesBlog() {
                     },
                   ].map((faq, i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                      itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm" itemProp="name">
+                     >
+                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm">
                         {faq.q}
                         <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -840,8 +840,8 @@ export default function ClaudePromptTemplatesBlog() {
                         </svg>
                       </summary>
                       <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                        <span itemProp="text">{faq.a}</span>
+                       >
+                        {faq.a}
                       </div>
                     </details>
                   ))}

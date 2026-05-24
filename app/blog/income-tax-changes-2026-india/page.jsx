@@ -637,7 +637,7 @@ export default function IncomeTaxChanges2026Page() {
               {/* FAQ */}
               <section id="faq">
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions — Income Tax 2026</h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     { q:'Did income tax slabs change for FY 2026-27?', a:'No. As per Budget 2026, tax slabs are unchanged for FY 2026-27. The same slabs from FY 2025-26 continue. Income up to ₹12 lakh remains effectively tax-free under the new regime (₹12.75 lakh for salaried employees).' },
                     { q:'What is the new Income Tax Act 2025?', a:'The Income Tax Act 2025 is a completely rewritten version of the old Income Tax Act 1961, effective April 1, 2026. It reduces ~500 sections to ~300+ in simpler language. Tax rates and deductions are largely unchanged — it is a structural simplification, not a tax cut.' },
@@ -649,16 +649,16 @@ export default function IncomeTaxChanges2026Page() {
                     { q:'How do I calculate my exact tax under new 2026 rules?', a:'Use our free Salary Calculator at toolstackhub.in/salary-calculator. It is updated for all FY 2026-27 changes including the new Income Tax Act, ₹75,000 standard deduction, and both old and new regime slabs. Enter your CTC and get your exact in-hand salary and tax liability in seconds.' },
                   ].map((faq,i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                      itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm" itemProp="name">
+                     >
+                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors text-sm">
                         {faq.q}
                         <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                       </summary>
                       <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                        <span itemProp="text">{faq.a}</span>
+                       >
+                        {faq.a}
                       </div>
                     </details>
                   ))}

@@ -662,7 +662,7 @@ export default function GratuityBlogPage() {
                 <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">
                   Frequently Asked Questions — Gratuity Calculation India 2026
                 </h2>
-                <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
+                <div className="space-y-3">
                   {[
                     { q:'What is the formula for gratuity calculation in India?', a:'Gratuity = (Last Drawn Basic Salary + DA) × 15 ÷ 26 × Number of completed years of service. This formula applies to employers covered under the Gratuity Act (companies with 10+ employees). For uncovered employers, use 30 instead of 26.' },
                     { q:'What is the minimum years of service for gratuity?', a:'For permanent employees, the minimum is 5 years of continuous service. Under the new labour codes (effective November 21, 2025), fixed-term/contract employees are eligible for pro-rata gratuity after just 1 year. In cases of death or permanent disability, the 5-year rule does not apply.' },
@@ -674,8 +674,8 @@ export default function GratuityBlogPage() {
                     { q:'Can gratuity be forfeited?', a:'Yes, partially or fully, if the employee is terminated for willful damage, destruction of employer\'s property, or other offenses specified in the Gratuity Act. However, it cannot be forfeited for misconduct alone without proven damage. An employee who resigns voluntarily cannot have gratuity forfeited.' },
                   ].map((faq, i) => (
                     <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden"
-                      itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors" itemProp="name">
+                     >
+                      <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
                         {faq.q}
                         <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform duration-200"
                           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -683,8 +683,8 @@ export default function GratuityBlogPage() {
                         </svg>
                       </summary>
                       <div className="px-5 pb-4 pt-3 text-surface-600 text-sm leading-relaxed border-t border-surface-100"
-                        itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                        <span itemProp="text">{faq.a}</span>
+                       >
+                        {faq.a}
                       </div>
                     </details>
                   ))}
