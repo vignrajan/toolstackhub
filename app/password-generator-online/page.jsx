@@ -435,12 +435,6 @@ export default function PasswordGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/strong-password-generator',        label: 'Strong Password Generator',        desc: 'Maximum security passwords with all character types' },
-                { href: '/random-password-generator',        label: 'Random Password Generator',        desc: 'Truly random passwords using cryptographic entropy' },
-                { href: '/wifi-password-generator',          label: 'WiFi Password Generator',          desc: 'Strong WPA2/WPA3 network passwords without ambiguous chars' },
-                { href: '/bulk-password-generator',          label: 'Bulk Password Generator',          desc: 'Generate up to 20 passwords at once for team deployments' },
-                { href: '/memorable-password-generator',     label: 'Memorable Password Generator',     desc: 'Strong but typeable passwords without ambiguous characters' },
-                { href: '/16-character-password-generator',  label: '16-Character Password Generator',  desc: 'Exactly 16 characters — the recommended security minimum' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">

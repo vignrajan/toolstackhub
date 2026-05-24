@@ -158,9 +158,7 @@ export default function Page() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Handwriting Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[{href: '/convert-text-to-handwriting', label: 'Convert Text to Handwriting', desc: 'Step-by-step guide to converting text'},
-              {href: '/text-to-handwritten-notes', label: 'Text to Handwritten Notes', desc: 'Convert typing to handwritten notebook notes'},
-              {href: '/cursive-handwriting-generator', label: 'Cursive Handwriting Generator', desc: 'Generate elegant cursive handwriting'},
-              {href: '/notebook-paper-handwriting', label: 'Notebook Paper Handwriting', desc: 'Render handwriting on ruled notebook paper'}].map(v => (
+              {href: '/text-to-handwritten-notes', label: 'Text to Handwritten Notes', desc: 'Convert typing to handwritten notebook notes'}].map(v => (
                 <Link key={v.href} href={v.href} className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">
                   <div className="font-semibold text-emerald-800 text-sm group-hover:underline">{v.label}</div>
                   <div className="text-xs text-emerald-600">{v.desc}</div>

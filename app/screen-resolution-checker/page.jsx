@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/what-is-my-screen-resolution', label: 'What Is My Screen Resolution' },
-              { href: '/browser-viewport-size-checker', label: 'Browser Viewport Size Checker' },
-              { href: '/device-pixel-ratio-checker', label: 'Device Pixel Ratio Checker' },
-              { href: '/monitor-resolution-checker', label: 'Monitor Resolution Checker' },
 ];
 
 const faqs = [

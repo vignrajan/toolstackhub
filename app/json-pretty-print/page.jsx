@@ -130,7 +130,7 @@ export default function JsonPrettyPrintPage() {
                 { href: '/json-validator-online', label: 'JSON Validator', desc: 'Validate JSON syntax instantly' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },
                 { href: '/json-viewer-online', label: 'JSON Viewer', desc: 'View and explore JSON structure' },
-                { href: '/tools/base64-encoder', label: 'Base64 Encoder', desc: 'Encode/decode Base64 in JSON payloads' },
+                { href: '/base64-encoder-online', label: 'Base64 Encoder', desc: 'Encode/decode Base64 in JSON payloads' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/pomodoro-25-minute-timer', label: 'Pomodoro 25 Minute Timer' },
-              { href: '/study-timer-pomodoro', label: 'Study Timer Pomodoro' },
-              { href: '/focus-timer-online', label: 'Focus Timer Online' },
-              { href: '/work-timer-with-breaks', label: 'Work Timer with Breaks' },
 ];
 
 const faqs = [

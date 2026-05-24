@@ -161,7 +161,7 @@ export default function JsonViewerPage() {
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indent' },
                 { href: '/json-validator-online', label: 'JSON Validator', desc: 'Validate JSON syntax instantly' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },
-                { href: '/tools/url-encoder', label: 'URL Encoder', desc: 'Encode URL values found in JSON' },
+                { href: '/url-encoder-online', label: 'URL Encoder', desc: 'Encode URL values found in JSON' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

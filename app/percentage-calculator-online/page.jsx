@@ -471,12 +471,6 @@ export default function PercentageCalculatorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/percentage-increase-calculator', label: 'Percentage Increase Calculator', desc: 'Calculate the new value after a percentage increase' },
-                { href: '/percentage-decrease-calculator', label: 'Percentage Decrease Calculator', desc: 'Calculate the new value after a percentage decrease' },
-                { href: '/discount-percentage-calculator', label: 'Discount Calculator',            desc: 'Find the sale price after any percentage discount' },
-                { href: '/tip-calculator-online',          label: 'Tip Calculator Online',          desc: 'Calculate restaurant tips at 15%, 18%, or 20%' },
-                { href: '/gst-calculator-online',          label: 'GST Calculator Online',          desc: 'Add or remove GST from any price amount' },
-                { href: '/percentage-of-number',          label: 'Percentage of a Number',         desc: 'Find X% of any number with the formula shown' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-violet-50 border border-violet-200 rounded-xl hover:bg-violet-100 transition-colors group">

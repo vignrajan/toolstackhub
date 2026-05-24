@@ -299,10 +299,6 @@ export default function HomeLoanEMIPage() {
               {[
                 { href: '/emi-calculator',               label: 'EMI Calculator — All Loans'        },
                 { href: '/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'           },
-                { href: '/personal-loan-emi-calculator', label: 'Personal Loan EMI Calculator'      },
-                { href: '/sbi-home-loan-emi-calculator', label: 'SBI Home Loan EMI Calculator'      },
-                { href: '/hdfc-home-loan-emi-calculator',label: 'HDFC Home Loan EMI Calculator'     },
-                { href: '/emi-calculator-50-lakh',       label: 'EMI Calculator for ₹50 Lakh Loan' },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">
                   <span className="text-brand-600">🧮</span>

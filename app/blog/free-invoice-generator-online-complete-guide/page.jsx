@@ -603,16 +603,8 @@ export default function PostInvoiceGenerator() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/gst-invoice-generator',            label: 'GST Invoice Generator Free'             },
-                  { href: '/freelance-invoice-generator',      label: 'Freelance Invoice Generator'            },
                   { href: '/invoice-generator-india',          label: 'Invoice Generator India'                },
-                  { href: '/invoice-generator-without-login',  label: 'Invoice Generator Without Login'        },
-                  { href: '/invoice-generator-no-watermark',   label: 'Invoice Generator Without Watermark'    },
                   { href: '/proforma-invoice-generator',       label: 'Proforma Invoice Generator'             },
-                  { href: '/service-invoice-generator',        label: 'Service Invoice Generator'              },
-                  { href: '/consulting-invoice-generator',     label: 'Consulting Invoice Generator'           },
-                  { href: '/tax-invoice-generator',            label: 'Tax Invoice Generator Online'           },
-                  { href: '/invoice-maker-online-free',        label: 'Invoice Maker Online Free'              },
                 ].map(v => (
                   <Link key={v.href} href={v.href}
                     className="flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">

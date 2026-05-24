@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/how-strong-is-my-password', label: 'How Strong Is My Password' },
-              { href: '/password-security-checker', label: 'Password Security Checker' },
-              { href: '/password-crack-time-estimator', label: 'Password Crack Time Estimator' },
-              { href: '/test-password-strength-online', label: 'Test Password Strength Online' },
 ];
 
 const faqs = [

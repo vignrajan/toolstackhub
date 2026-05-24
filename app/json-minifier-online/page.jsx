@@ -154,7 +154,7 @@ export default function JsonMinifierPage() {
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indent' },
                 { href: '/json-validator-online', label: 'JSON Validator', desc: 'Validate JSON syntax instantly' },
                 { href: '/json-viewer-online', label: 'JSON Viewer', desc: 'View and explore JSON structure' },
-                { href: '/tools/css-minifier', label: 'CSS Minifier', desc: 'Minify CSS files for production' },
+                { href: '/css-minifier-online', label: 'CSS Minifier', desc: 'Minify CSS files for production' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

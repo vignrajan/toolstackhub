@@ -499,12 +499,6 @@ export default function UnixTimestampConverterPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/unix-timestamp-to-date',       label: 'Unix Timestamp to Date',       desc: 'Convert any epoch timestamp to a readable date and time' },
-                { href: '/epoch-to-human-readable',      label: 'Epoch to Human Readable',      desc: 'Convert epoch time to a natural language date format' },
-                { href: '/milliseconds-to-date-converter',label: 'Milliseconds to Date',         desc: 'Convert 13-digit JavaScript millisecond timestamps to dates' },
-                { href: '/date-to-timestamp-converter',  label: 'Date to Timestamp Converter',  desc: 'Convert any date and time to a Unix timestamp' },
-                { href: '/timestamp-difference-calculator',label:'Timestamp Difference',          desc: 'Calculate the duration between two Unix timestamps' },
-                { href: '/utc-to-local-time-converter',  label: 'UTC to Local Time Converter',  desc: 'Convert UTC time to your local timezone' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group">

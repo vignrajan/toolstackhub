@@ -177,7 +177,7 @@ export default function JsonValidatorPage() {
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indent' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },
                 { href: '/json-viewer-online', label: 'JSON Viewer', desc: 'View and explore JSON structure' },
-                { href: '/tools/regex-tester', label: 'Regex Tester', desc: 'Test patterns on JSON strings' },
+                { href: '/regex-tester-online', label: 'Regex Tester', desc: 'Test patterns on JSON strings' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

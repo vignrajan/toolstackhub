@@ -415,12 +415,6 @@ export default function RemoveLineBreaksPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-line-breaks-from-text',  label: 'Remove Line Breaks from Text',  desc: 'Remove newlines from pasted plain text' },
-                { href: '/remove-newlines-online',        label: 'Remove Newlines Online',         desc: 'Strip \\n and \\r\\n characters from strings' },
-                { href: '/remove-line-breaks-from-pdf',   label: 'Remove Line Breaks from PDF',    desc: 'Clean copied PDF text with broken lines' },
-                { href: '/remove-line-breaks-excel',      label: 'Remove Line Breaks for Excel',   desc: 'Prepare multi-line text for spreadsheet cells' },
-                { href: '/join-lines-online',             label: 'Join Lines Online',               desc: 'Join multiple lines into one continuous string' },
-                { href: '/remove-blank-lines',            label: 'Remove Blank Lines',              desc: 'Delete empty lines from your text output' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">

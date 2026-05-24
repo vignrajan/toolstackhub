@@ -346,14 +346,6 @@ export default function GSTCalculatorPage() {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More GST Calculators</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/gst-calculator-18-percent',    label: 'GST Calculator 18%'              },
-                { href: '/gst-calculator-28-percent',    label: 'GST Calculator 28%'              },
-                { href: '/gst-calculator-12-percent',    label: 'GST Calculator 12%'              },
-                { href: '/gst-calculator-5-percent',     label: 'GST Calculator 5%'               },
-                { href: '/cgst-sgst-calculator',         label: 'CGST SGST Calculator'            },
-                { href: '/igst-calculator',              label: 'IGST Calculator'                 },
-                { href: '/remove-gst-from-amount',       label: 'Remove GST from Amount'          },
-                { href: '/gst-inclusive-exclusive-calculator', label: 'GST Inclusive Exclusive Calculator' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">

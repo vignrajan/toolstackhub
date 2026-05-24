@@ -727,7 +727,7 @@ session" underneath it.`}</code></pre>
 - When uncertain, ask me one clarifying question`}</code></pre>
                     </div>
                     <p className="text-surface-500 text-xs mt-2">
-                      See <Link href="/blog/claude-prompt-templates" className="text-brand-600 hover:text-brand-700 font-medium">battle-tested Claude prompt templates</Link> for more CLAUDE.md starting points for different roles.
+                      See <Link href="/blog/claude-prompt-templates-save-tokens" className="text-brand-600 hover:text-brand-700 font-medium">battle-tested Claude prompt templates</Link> for more CLAUDE.md starting points for different roles.
                     </p>
                   </div>
 
@@ -1028,7 +1028,7 @@ session" underneath it.`}</code></pre>
                   {[
                     { href:'/blog/how-to-save-tokens-in-claude',          icon:'💰', label:'How to Save Tokens in Claude',         desc:'Cut token usage by 60-90%. 10 habits that pay back daily.' },
                     { href:'/blog/claude-prompt-techniques',              icon:'🧠', label:'Claude Prompt Techniques',              desc:'10 expert techniques including Plan Mode context and EL10.' },
-                    { href:'/blog/claude-prompt-templates',               icon:'📋', label:'Claude Prompt Templates',               desc:'8 copy-paste templates including CLAUDE.md starters.' },
+                    { href:'/blog/claude-prompt-templates-save-tokens',               icon:'📋', label:'Claude Prompt Templates',               desc:'8 copy-paste templates including CLAUDE.md starters.' },
                     { href:'/blog/claude-memory-preferences-guide',       icon:'⚙️', label:'Claude Memory & Preferences Guide',    desc:'Set up voice, preferences, and Projects for daily use.' },
                   ].map(l => (
                     <Link key={l.href} href={l.href}

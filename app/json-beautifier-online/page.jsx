@@ -145,7 +145,7 @@ export default function JsonBeautifierPage() {
                 { href: '/json-validator-online', label: 'JSON Validator Online', desc: 'Validate JSON syntax and find errors' },
                 { href: '/json-minifier-online', label: 'JSON Minifier Online', desc: 'Compress JSON for production use' },
                 { href: '/json-viewer-online', label: 'JSON Viewer Online', desc: 'Explore JSON tree structure visually' },
-                { href: '/tools/base64-encoder', label: 'Base64 Encoder', desc: 'Encode/decode Base64 strings in JSON' },
+                { href: '/base64-encoder-online', label: 'Base64 Encoder', desc: 'Encode/decode Base64 strings in JSON' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

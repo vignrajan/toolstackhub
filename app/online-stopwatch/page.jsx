@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/online-stopwatch-with-laps', label: 'Online Stopwatch with Laps' },
-              { href: '/stopwatch-milliseconds-online', label: 'Stopwatch Milliseconds Online' },
-              { href: '/split-timer-online', label: 'Split Timer Online' },
-              { href: '/lap-timer-online', label: 'Lap Timer Online' },
 ];
 
 const faqs = [

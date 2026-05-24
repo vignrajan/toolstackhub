@@ -51,10 +51,6 @@ const relatedLinks = [
 ];
 
 const variantLinks = [
-  { href: '/javascript-regex-tester', label: 'JavaScript Regex Tester' },
-              { href: '/regex-validator-online', label: 'Regex Validator Online' },
-              { href: '/regex-match-tester', label: 'Regex Match Tester with Groups' },
-              { href: '/email-regex-validator', label: 'Email Regex Validator Online' },
 ];
 
 const faqs = [

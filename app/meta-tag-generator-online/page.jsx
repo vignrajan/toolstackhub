@@ -509,12 +509,6 @@ export default function MetaTagGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/open-graph-generator',      label: 'Open Graph Generator',      desc: 'Generate og: meta tags for Facebook and LinkedIn sharing' },
-                { href: '/twitter-card-generator',    label: 'Twitter Card Generator',    desc: 'Create Twitter Card tags for rich link previews on Twitter/X' },
-                { href: '/meta-description-generator',label: 'Meta Description Generator',desc: 'Write optimized meta descriptions with character counter' },
-                { href: '/canonical-url-generator',   label: 'Canonical URL Generator',   desc: 'Generate canonical link tags to prevent duplicate content' },
-                { href: '/seo-title-tag-generator',   label: 'SEO Title Tag Generator',   desc: 'Create keyword-optimized title tags under 60 characters' },
-                { href: '/robots-meta-tag-generator', label: 'Robots Meta Tag Generator', desc: 'Generate meta robots tags for crawl and index control' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-pink-50 border border-pink-200 rounded-xl hover:bg-pink-100 transition-colors group">
