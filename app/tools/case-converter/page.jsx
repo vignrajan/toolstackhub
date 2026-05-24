@@ -22,9 +22,8 @@ export const metadata = {
     'camelcase converter',
     'snake case converter',
   ],
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: `${SITE_CONFIG.url}/tools/case-converter`,
+    canonical: `${SITE_CONFIG.url}/case-converter-online`,
   },
   openGraph: {
     title: 'Case Converter – Free Online Text Case Changer',

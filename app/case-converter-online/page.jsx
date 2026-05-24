@@ -33,6 +33,10 @@ const faqs = [
   { q: 'Does it support programming variable name formats?', a: 'Yes — camelCase, PascalCase, snake_case, and kebab-case are all supported, covering the most common naming conventions in JavaScript, Python, and CSS.' },
   { q: 'Is the case converter free?', a: 'Yes — completely free with no limits, no account, and no watermarks.' },
   { q: 'Is my text stored anywhere?', a: 'No. The tool runs entirely in your browser. Your text is never sent to any server.' },
+  { q: 'What is a case converter?', a: 'A case converter is an online tool that instantly changes the capitalization of your text. It can transform any text into uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case, and more — with a single click.' },
+  { q: 'Can I use this to convert variable names for coding?', a: 'Yes — the tool supports camelCase, PascalCase, snake_case, and kebab-case, which are the most common naming conventions in programming languages like JavaScript, Python, and CSS.' },
+  { q: 'How do I convert text to uppercase?', a: 'Paste or type your text into the input area, then click the "UPPERCASE" button. All letters in your text will instantly be converted to capital letters.' },
+  { q: 'Can I convert text to sentence case?', a: 'Yes. Click the "Sentence case" button to capitalize the first letter of each sentence while keeping everything else lowercase. This is perfect for correcting ALL CAPS text back to normal.' },
 ];
 
 const jsonLd = {
@@ -41,6 +45,15 @@ const jsonLd = {
     { '@type': 'SoftwareApplication', name: 'Case Converter Online', description: 'Free online tool to convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, alternating case, and inverse case.', url: `${SITE_CONFIG.url}/case-converter-online`, applicationCategory: 'WebApplication', operatingSystem: 'Web Browser', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, provider: { '@type': 'Organization', name: SITE_CONFIG.name, url: SITE_CONFIG.url } },
     { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url }, { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` }, { '@type': 'ListItem', position: 3, name: 'Case Converter', item: `${SITE_CONFIG.url}/case-converter-online` }] },
+    {
+      '@type': 'HowTo',
+      name: 'How to Use the Case Converter',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Enter your text', text: 'Type or paste your text into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Choose a case format', text: 'Click any case button such as UPPERCASE, lowercase, Title Case, or camelCase.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click the Copy button to copy the converted text to your clipboard.' },
+      ],
+    },
   ],
 };
 
