@@ -7,6 +7,20 @@ export const metadata = {
   title: 'Terms of Use – ToolStackHub',
   description: 'Terms of Use for ToolStackHub. Read our terms governing access to and use of our free online tools and services.',
   alternates: { canonical: `${SITE_CONFIG.url}/terms` },
+  openGraph: {
+    title: 'Terms of Use – ToolStackHub',
+    description: 'Terms of Use for ToolStackHub. Read our terms governing access to and use of our free online tools and services.',
+    url: `${SITE_CONFIG.url}/terms`,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Use – ToolStackHub',
+    description: 'Terms of Use for ToolStackHub. Read our terms governing access to and use of our free online tools and services.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
  
 const LAST_UPDATED = 'March 26, 2026';

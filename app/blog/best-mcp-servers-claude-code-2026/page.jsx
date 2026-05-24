@@ -654,7 +654,7 @@ export default function BestMCPServersBlog() {
                     {
                       problem: 'Claude calls the wrong tool repeatedly',
                       cause: 'Vague prompts cause Claude to explore tool options rather than go directly to the right one. With 30+ tools available across multiple servers, ambiguity is expensive.',
-                      fix: 'Be explicit: name the tool or data source in your prompt ("use the GitHub MCP to..." or "query the Postgres MCP for..."). The <a href="/blog/claude-prompt-hacks" class="text-brand-600 hover:text-brand-700 font-medium">EL10 and Kill Critic prompt hacks</a> are particularly useful here — front-load your constraints so Claude commits to the right tool before it starts exploring.',
+                      fix: 'Be explicit: name the tool or data source in your prompt ("use the GitHub MCP to..." or "query the Postgres MCP for..."). The <a href="/blog/claude-hacks-improve-ai-results" class="text-brand-600 hover:text-brand-700 font-medium">EL10 and Kill Critic prompt hacks</a> are particularly useful here — front-load your constraints so Claude commits to the right tool before it starts exploring.',
                       code: '',
                     },
                   ].map((p, i) => (

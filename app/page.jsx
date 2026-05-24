@@ -11,6 +11,20 @@ export const metadata = {
   title: `${SITE_CONFIG.name} — Free Online Tools for Everyone`,
   description: SITE_CONFIG.description,
   alternates: { canonical: SITE_CONFIG.url },
+  openGraph: {
+    title: `${SITE_CONFIG.name} — Free Online Tools for Everyone`,
+    description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_CONFIG.name} — Free Online Tools for Everyone`,
+    description: SITE_CONFIG.description,
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 // ── Bento grid data ───────────────────────────────────────────

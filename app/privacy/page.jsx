@@ -6,7 +6,21 @@ import { SITE_CONFIG } from '../../data/tools';
 export const metadata = {
   title: 'Privacy Policy – ToolStackHub',
   description: 'ToolStackHub Privacy Policy — how we handle your data, cookies, and personal information. We are committed to your privacy.',
-  alternates: { canonical: `${SITE_CONFIG.url}/privacy-policy` },
+  alternates: { canonical: `${SITE_CONFIG.url}/privacy` },
+  openGraph: {
+    title: 'Privacy Policy – ToolStackHub',
+    description: 'ToolStackHub Privacy Policy — how we handle your data, cookies, and personal information. We are committed to your privacy.',
+    url: `${SITE_CONFIG.url}/privacy`,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy – ToolStackHub',
+    description: 'ToolStackHub Privacy Policy — how we handle your data, cookies, and personal information.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const LAST_UPDATED = 'March 26, 2026';

@@ -14,10 +14,12 @@ export default function sitemap() {
   return [
 
     // ── Core pages ────────────────────────────────────────────
-    p('/',        1.0, 'daily'),
-    p('/about',   0.4, 'yearly'),
-    p('/privacy', 0.3, 'yearly'),
-    p('/terms',   0.3, 'yearly'),
+    p('/',           1.0, 'daily'),
+    p('/about',      0.4, 'yearly'),
+    p('/privacy',    0.3, 'yearly'),
+    p('/terms',      0.3, 'yearly'),
+    p('/contact',    0.3, 'yearly'),
+    p('/disclaimer', 0.3, 'yearly'),
     p('/about/garry', 0.80),
 
     // ── Image tools ───────────────────────────────────────────
