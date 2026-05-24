@@ -9,7 +9,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
   title: 'Remove Empty Lines Online – Delete Blank Lines from Text',
-  description: 'Remove all empty and blank lines from text instantly. Free browser-based tool. Works with CSV data, code, logs, and pasted content. No signup required. Try now!',
+  description: 'Remove all empty and blank lines from text instantly. Free browser-based tool. Works with CSV data, code, logs, and pasted content. No signup required.',
   keywords: [
     'remove empty lines online',
     'delete blank lines from text',

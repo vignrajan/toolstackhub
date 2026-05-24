@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: '5 Claude Hacks That Improve Your AI Results (Tested 2026)',
-  description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — instantly improve output quality. Copy-paste prompts inside.',
+  description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — improve output quality. Copy-paste prompts inside.',
   keywords: [
     'claude prompt hacks', 'claude ai tips', 'how to use claude effectively',
     'best claude prompts', 'claude prompt techniques', 'claude hacks 2026',
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '5 Claude Hacks That Improve Your AI Results (Tested 2026)',
-    description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — instantly improve output quality. Copy-paste prompts inside.',
+    description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — improve output quality. Copy-paste prompts inside.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

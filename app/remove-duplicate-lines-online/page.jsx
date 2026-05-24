@@ -9,7 +9,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
   title: 'Remove Duplicate Lines Online (Free Text Cleaner Tool)',
-  description: 'Remove duplicate lines online instantly. Clean text, logs, CSV data, and keyword lists with this free browser-based tool. Case sensitive option. No signup required.',
+  description: 'Remove duplicate lines online. Clean text, logs, CSV data, and keyword lists with this free browser-based tool. Case-sensitive option. No signup required.',
   keywords: [
     'remove duplicate lines online',
     'remove duplicate text lines',

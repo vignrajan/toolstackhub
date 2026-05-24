@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'How to Convert Word to PDF Free – 6 Easy Methods (2026)',
-  description: 'Convert Word (.docx) to PDF free online without uploading files. 6 methods including browser-based, Microsoft Word, Google Docs, LibreOffice, and mobile. No signup.',
+  description: 'Convert Word (.docx) to PDF free online without uploading files. 6 methods: browser-based, Microsoft Word, Google Docs, LibreOffice, and mobile. No signup.',
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-convert-word-to-pdf-free` },
   openGraph: {
     title: 'How to Convert Word to PDF Free (2026) – 6 Easy Methods',
@@ -17,7 +17,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'How to Convert Word to PDF Free (2026) – 6 Easy Methods',
-    description: 'Convert Word (.docx) to PDF free online without uploading files. 6 methods including browser-based, Microsoft Word, Google Docs, LibreOffice, and mobile. No signup.',
+    description: 'Convert Word (.docx) to PDF free online without uploading files. 6 methods: browser-based, Microsoft Word, Google Docs, LibreOffice, and mobile. No signup.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

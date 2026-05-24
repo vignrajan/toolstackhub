@@ -7,11 +7,11 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'URL Encoder Decoder – Encode & Decode URLs Instantly Free',
-  description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup. Try now!',
+  description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup.',
   alternates: { canonical: `${SITE_CONFIG.url}/url-encoder-online` },
   openGraph: {
     title: 'URL Encoder Decoder – Encode & Decode URLs Instantly Free',
-    description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup. Try now!',
+    description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup.',
     url: `${SITE_CONFIG.url}/url-encoder-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -31,7 +31,7 @@ const jsonLd = {
     {
       '@type': 'SoftwareApplication',
       name: 'URL Encoder & Decoder',
-      description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup. Try now!',
+      description: 'Encode or decode URLs and query strings online for free. Convert special characters to percent-encoded format and back. Supports Unicode. No signup.',
       url: `${SITE_CONFIG.url}/url-encoder-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',

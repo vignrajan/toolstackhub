@@ -7,11 +7,11 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Resize Image Online Free – Resize to Any Pixel Dimension',
-  description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+  description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
   alternates: { canonical: `${SITE_CONFIG.url}/resize-image-online` },
   openGraph: {
     title: 'Resize Image Online Free – Resize to Any Pixel Dimension',
-    description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+    description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
     url: `${SITE_CONFIG.url}/resize-image-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -31,7 +31,7 @@ const jsonLd = {
     {
       '@type': 'SoftwareApplication',
       name: 'Resize Image',
-      description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+      description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
       url: `${SITE_CONFIG.url}/resize-image-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',

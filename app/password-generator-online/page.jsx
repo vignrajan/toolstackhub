@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
   title: 'Password Generator Online Free – Strong Secure Passwords',
-  description: 'Generate cryptographically secure random passwords online free. Customize length, character types, and bulk generation up to 20. No signup required. Try now!',
+  description: 'Generate cryptographically secure random passwords online free. Customize length, character types, and bulk generation up to 20. No signup required.',
   keywords: [
     'password generator online',
     'strong password generator',

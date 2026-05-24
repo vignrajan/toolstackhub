@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
-  description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. Free, no login, no watermark. 100% browser-based.',
+  description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. No login.',
   keywords: [
     'chat screenshot generator', 'fake whatsapp chat generator', 'imessage generator online',
     'instagram dm generator', 'fake chat maker', 'whatsapp chat maker online free',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
-    description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. Free, no login.',
+    description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. No login.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

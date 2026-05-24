@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Professional Tax Calculator India 2026 — PT Slabs',
-  description: 'Calculate Professional Tax for all Indian states instantly. Free PT calculator with state-wise slabs for Karnataka, Maharashtra, Tamil Nadu, West Bengal & 15 more states. No signup required.',
+  description: 'Free Professional Tax calculator for all Indian states. State-wise slabs for Karnataka, Maharashtra, Tamil Nadu, West Bengal & 15 more. No signup required.',
   keywords: [
     'professional tax calculator', 'professional tax calculator india',
     'pt calculator state wise', 'professional tax slab 2026',

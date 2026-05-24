@@ -6,12 +6,12 @@ import Stopwatch from '../../components/tools/Stopwatch';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Stopwatch Online Free – Millisecond Precision with Lap Timer',
-  description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup. Try now!',
+  title: 'Stopwatch Online Free – Millisecond Precision & Laps',
+  description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
   alternates: { canonical: `${SITE_CONFIG.url}/online-stopwatch` },
   openGraph: {
-    title: 'Stopwatch Online Free – Millisecond Precision with Lap Timer',
-    description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup. Try now!',
+    title: 'Stopwatch Online Free – Millisecond Precision & Laps',
+    description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
     url: `${SITE_CONFIG.url}/online-stopwatch`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stopwatch Online Free – Millisecond Precision with Lap Timer',
+    title: 'Stopwatch Online Free – Millisecond Precision & Laps',
     description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
     creator: SITE_CONFIG.twitterHandle,
   },

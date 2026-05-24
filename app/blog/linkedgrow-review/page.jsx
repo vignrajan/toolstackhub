@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
-  description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99. Honest deep-dive.',
+  title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool',
+  description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99.',
   keywords: [
     'linkedgrow review', 'linkedin content tool', 'ai linkedin post generator',
     'linkedin automation tool', 'taplio alternative', 'typegrow alternative',
@@ -19,7 +19,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/linkedgrow-review` },
   openGraph: {
-    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
+    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool',
     description: 'LinkedGrow uses a Bring Your Own Key model: plug in your own AI key, pay $2-4/month in actual usage. Full review, comparison, and who it\'s really for.',
     url: `${SITE_CONFIG.url}/blog/linkedgrow-review`,
     type: 'article',
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
-    description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99. Honest deep-dive.',
+    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool',
+    description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

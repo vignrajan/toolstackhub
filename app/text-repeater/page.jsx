@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── CHANGED: title, description, keywords all India-focused ──────────────────
 export const metadata = {
   title: 'Text Repeater for WhatsApp India – Repeat Text Free',
-  description: 'Free text repeater for WhatsApp India. Repeat any message, emoji, or prank text up to 1000×. Send birthday wishes, flood group chats, repeat for Instagram. No login.',
+  description: 'Free text repeater for WhatsApp India. Repeat any message, emoji, or prank text up to 1000×. Birthday wishes, group chats, Instagram. No login.',
   keywords: [
     'text repeater for whatsapp india',
     'text repeater india',

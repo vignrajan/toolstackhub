@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'Claude Memory & Preferences — Set It Up Once, Save Hours',
-  description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
+  description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist.',
   keywords: [
     'claude memory settings', 'claude user preferences', 'how to use claude memory',
     'claude ai memory guide', 'claude preferences setup', 'claude memory 2026',
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Claude Memory & Preferences — The Complete Setup Guide (2026)',
-    description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
+    description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

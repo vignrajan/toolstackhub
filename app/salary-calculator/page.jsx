@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Salary Calculator India 2026 – Take Home Salary & Gratuity',
-  description: 'Free salary calculator India 2026. Calculate take-home salary, CTC breakup, PF, tax (old & new regime). Includes gratuity calculator with 15/26 formula. No signup.',
+  description: 'Free salary calculator India 2026. Calculate take-home salary, CTC breakup, PF, tax (old & new regime). Includes gratuity calculator with 15/26 formula.',
   keywords: [
     'salary calculator india', 'take home salary calculator', 'in hand salary calculator india',
     'ctc calculator', 'net salary calculator india', 'gratuity calculator india',

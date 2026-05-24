@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'HRA Exemption FY 2026-27 — New 8 Metro Cities Rule Explained',
-  description: 'Complete HRA exemption guide for FY 2026-27. New 8-metro-city rule, Section 10(13A) formula, step-by-step examples, and the ideal rent to maximise your exemption.',
+  title: 'HRA Exemption FY 2026-27 — New 8 Metro Cities Rule',
+  description: 'HRA exemption guide FY 2026-27. New 8-metro-city rule, Section 10(13A) formula, step-by-step examples, and ideal rent to maximise your exemption.',
   keywords: [
     'hra exemption calculation fy 2026-27', 'hra 8 metro cities 2026', 'section 10 13a hra',
     'how to calculate hra exemption', 'hra metro cities bengaluru pune hyderabad ahmedabad',
@@ -14,8 +14,8 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-calculate-hra-exemption-fy-2026-27` },
   openGraph: {
-    title: 'HRA Exemption FY 2026-27 — New 8 Metro Cities Rule Explained',
-    description: 'New HRA rules from April 2026: Bengaluru, Pune, Hyderabad & Ahmedabad now qualify for 50% metro rate. Full Section 10(13A) guide with step-by-step examples.',
+    title: 'HRA Exemption FY 2026-27 — New 8 Metro Cities Rule',
+    description: 'New HRA rules from April 2026: Bengaluru, Pune, Hyderabad & Ahmedabad now qualify for 50% metro rate. Section 10(13A) guide with step-by-step examples.',
     url: `${SITE_CONFIG.url}/blog/how-to-calculate-hra-exemption-fy-2026-27`,
     type: 'article',
     siteName: SITE_CONFIG.name,
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'How to Calculate HRA Exemption FY 2026-27 — New 8 Metro Cities Rule',
-    description: 'Complete HRA exemption guide for FY 2026-27. New 8-metro-city rule, Section 10(13A) formula, step-by-step examples, and the ideal rent to maximise your exemption.',
+    description: 'HRA exemption guide FY 2026-27. New 8-metro-city rule, Section 10(13A) formula, step-by-step examples, and ideal rent to maximise your exemption.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

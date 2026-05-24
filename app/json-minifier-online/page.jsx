@@ -6,12 +6,12 @@ import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'JSON Minifier Online Free – Compress & Minify JSON Instantly',
-  description: 'Minify and compress JSON online for free. Remove all whitespace to reduce file size for production APIs and configs. Instant, no signup, browser-based. Try now!',
+  title: 'JSON Minifier Online Free – Compress & Minify JSON',
+  description: 'Minify and compress JSON online for free. Remove all whitespace to reduce file size for production APIs and configs. No signup, browser-based.',
   keywords: ['json minifier', 'json minifier online', 'minify json online', 'compress json', 'json compressor', 'json minifier free', 'reduce json size'],
   alternates: { canonical: `${SITE_CONFIG.url}/json-minifier-online` },
   openGraph: {
-    title: 'JSON Minifier Online Free – Compress JSON Instantly',
+    title: 'JSON Minifier Online Free – Compress & Minify JSON',
     description: 'Minify JSON to remove all whitespace and reduce file size. Free, instant, no signup.',
     url: `${SITE_CONFIG.url}/json-minifier-online`,
     type: 'website',
@@ -20,8 +20,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JSON Minifier Online Free – Compress JSON Instantly',
-    description: 'Minify and compress JSON online for free. Remove all whitespace to reduce file size for production APIs and configs. Instant, no signup, browser-based.',
+    title: 'JSON Minifier Online Free – Compress & Minify JSON',
+    description: 'Minify and compress JSON online for free. Remove all whitespace to reduce file size for production APIs and configs. No signup, browser-based.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

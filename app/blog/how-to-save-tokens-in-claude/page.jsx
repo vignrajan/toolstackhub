@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'How to Save Tokens in Claude — 19 Proven Habits (2026)',
-  description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact & more.',
+  description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact.',
   keywords: [
     'claude token usage', 'how to save tokens in claude', 'claude usage limits',
     'claude pricing tokens', 'how to reduce token usage in claude ai',
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'How to Save Tokens in Claude — 19 Proven Habits (2026)',
-    description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact & more.',
+    description: 'Save tokens in Claude chat and Claude Code. 19 proven habits to cut token usage by 60-90% — context management, model switching, .claudeignore, /compact.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

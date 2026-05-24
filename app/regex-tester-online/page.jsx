@@ -7,11 +7,11 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Regex Tester Online – Test Regular Expressions in Real Time',
-  description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required. Try now!',
+  description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required.',
   alternates: { canonical: `${SITE_CONFIG.url}/regex-tester-online` },
   openGraph: {
     title: 'Regex Tester Online – Test Regular Expressions in Real Time',
-    description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required. Try now!',
+    description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required.',
     url: `${SITE_CONFIG.url}/regex-tester-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -31,7 +31,7 @@ const jsonLd = {
     {
       '@type': 'SoftwareApplication',
       name: 'Free Regex Tester',
-      description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required. Try now!',
+      description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required.',
       url: `${SITE_CONFIG.url}/regex-tester-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',

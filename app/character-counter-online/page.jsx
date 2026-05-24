@@ -9,7 +9,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Character Counter – Count Letters, Numbers & Symbols Free',
-  description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. Free, no signup.',
+  description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. No signup.',
   keywords: ['character counter online', 'count characters online', 'letter counter', 'twitter character counter', 'sms character limit', 'meta description length'],
   alternates: { canonical: `${SITE_CONFIG.url}/character-counter-online` },
   openGraph: {
@@ -22,7 +22,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Character Counter – Count Letters, Numbers & Symbols Free',
-    description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. Free, no signup.',
+    description: 'Count characters with and without spaces, letters, numbers, and special chars. Check Twitter, SMS, and meta description limits in real time. No signup.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'Claude Prompt Techniques That Work in 2026 (Expert Guide)',
-  description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts daily.',
+  description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts.',
   keywords: [
     'claude prompt techniques', 'claude prompt examples', 'best claude prompts',
     'claude prompt engineering', 'claude ai prompts guide', 'claude prompt tricks',
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Claude Prompt Techniques That Work in 2026 (Expert Guide)',
-    description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts daily.',
+    description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };
