@@ -69,6 +69,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Age Calculator – How Old Am I? Exact Age by Date of Birth',
+    description: 'Free age calculator online. How old am I? Enter your date of birth and get exact age in years, months, days, weeks & hours. Birthday countdown, zodiac sign, govt exam cutoff dates. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 // ─────────────────────────────────────────────────────────────

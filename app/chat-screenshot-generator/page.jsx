@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Chat Screenshot Generator — Fake WhatsApp, iMessage, Instagram DM & Snapchat (Free)',
+  title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
   description: 'Create realistic fake chat screenshots for WhatsApp, iMessage, Instagram DM, and Snapchat. 11 viral templates, HD PNG export, phone frame toggle. Free, no login, no watermark. 100% browser-based.',
   keywords: [
     'chat screenshot generator', 'fake whatsapp chat generator', 'imessage generator online',
@@ -18,7 +18,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/chat-screenshot-generator` },
   openGraph: {
-    title: 'Chat Screenshot Generator — WhatsApp, iMessage, Instagram DM & Snapchat (Free)',
+    title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
     description: 'Build realistic chat conversations and export as HD PNG. 4 platform skins, 11 viral templates, phone frame toggle. Free, instant, no login.',
     url: `${SITE_CONFIG.url}/chat-screenshot-generator`,
     type: 'website',

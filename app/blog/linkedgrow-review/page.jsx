@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'LinkedGrow Review 2026 — The Bring-Your-Own-Key LinkedIn Tool That Changes the Pricing Game',
+  title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
   description: 'LinkedGrow reviewed: BYOK model, voice training, REST API, cross-promotion engine. Taplio alternative? Pay $2-4/month in AI costs instead of $49-99. Honest deep-dive.',
   keywords: [
     'linkedgrow review', 'linkedin content tool', 'ai linkedin post generator',
@@ -19,7 +19,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/linkedgrow-review` },
   openGraph: {
-    title: 'LinkedGrow Review 2026 — The Taplio Alternative That Actually Respects Your Budget',
+    title: 'LinkedGrow Review 2026 — BYOK LinkedIn Tool Honest Deep-Dive',
     description: 'LinkedGrow uses a Bring Your Own Key model: plug in your own AI key, pay $2-4/month in actual usage. Full review, comparison, and who it\'s really for.',
     url: `${SITE_CONFIG.url}/blog/linkedgrow-review`,
     type: 'article',

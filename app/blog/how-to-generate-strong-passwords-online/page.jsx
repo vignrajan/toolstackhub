@@ -14,6 +14,12 @@ export const metadata = {
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Generate a Strong Password Online – Free Guide',
+    description: 'Learn what makes a strong password, how to generate unbreakable passwords for free online, and how to manage them safely. Includes strength checker and 10 rules.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

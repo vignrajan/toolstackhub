@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'How to Calculate Gratuity in India 2026 – Formula, Examples & New Labour Code Rules',
-  description: 'Complete guide to gratuity calculation in India 2026. Learn the 15/26 formula, step-by-step examples for every salary range, new labour code changes (effective Nov 2025), tax rules, and eligibility. Free calculator included.',
+  title: 'How to Calculate Gratuity in India 2026 – Formula & Examples',
+  description: 'Complete guide to gratuity in India 2026. 15/26 formula, step-by-step examples, new labour code changes, tax rules, and eligibility. Free calculator included.',
   keywords: [
     'how to calculate gratuity', 'gratuity formula india', 'gratuity calculation 2026',
     'gratuity formula 15 26', 'gratuity eligibility india', 'what is gratuity',
@@ -14,12 +14,18 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-calculate-gratuity-india` },
   openGraph: {
-    title: 'How to Calculate Gratuity in India 2026 – Complete Guide with Formula & Examples',
+    title: 'How to Calculate Gratuity in India 2026 – Formula & Examples',
     description: 'The only gratuity guide you need. Formula, 6 real examples, 2026 labour code changes, tax rules. Updated March 2026.',
     url: `${SITE_CONFIG.url}/blog/how-to-calculate-gratuity-india`,
     type: 'article',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Calculate Gratuity in India 2026 – Formula & Examples',
+    description: 'Complete guide to gratuity in India 2026. 15/26 formula, step-by-step examples, new labour code changes, tax rules, and eligibility. Free calculator included.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

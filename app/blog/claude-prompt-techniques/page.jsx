@@ -23,6 +23,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claude Prompt Techniques That Actually Work in 2026 (Expert Guide)',
+    description: 'Advanced Claude prompt techniques with copy-paste examples. Role stacking, context compression, chain-of-thought, output control — used by real experts daily.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TOC = [

@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best AI Tools 2026 — Reviews & Comparisons',
+    description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, free vs paid comparisons, and use-case guides for professionals, developers, and students.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 // Color map for Tailwind (must be complete strings for Tailwind JIT)

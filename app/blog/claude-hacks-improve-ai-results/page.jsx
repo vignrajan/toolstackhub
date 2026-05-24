@@ -20,6 +20,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '5 Claude Hacks That Instantly Improve Your AI Results (Tested 2026)',
+    description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — instantly improve output quality. Copy-paste prompts inside.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const HACKS = [

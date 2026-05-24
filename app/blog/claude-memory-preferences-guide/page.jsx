@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'How to Use Claude Memory & Preferences — Set It Up Once, Save Hours (2026)',
+  title: 'Claude Memory & Preferences — Set It Up Once, Save Hours (2026)',
   description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
   keywords: [
     'claude memory settings', 'claude user preferences', 'how to use claude memory',
@@ -21,6 +21,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/blog/claude-memory-preferences-guide`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claude Memory & Preferences — The Complete Setup Guide (2026)',
+    description: 'Complete guide to Claude memory, user preferences, and personalization. Copy-paste preference templates, ChatGPT migration, memory audit checklist. Updated April 2026.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

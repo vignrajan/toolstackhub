@@ -33,6 +33,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CLAUDE.md Guide — 7 Copy-Paste Templates + Best Practices (2026)',
+    description: 'Complete CLAUDE.md guide with 7 copy-paste templates for React, Python, Node.js, Go & more. Best practices, diagnostic checklist, and token-saving strategies.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

@@ -14,6 +14,13 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/contact`,
     type: 'website',
     siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us – ToolStackHub',
+    description: 'Get in touch with the ToolStackHub team. Report a bug, suggest a new tool, or ask a question.',
+    creator: SITE_CONFIG.twitterHandle,
   },
   robots: { index: true, follow: true },
 };

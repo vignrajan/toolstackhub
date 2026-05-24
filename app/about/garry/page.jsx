@@ -7,13 +7,20 @@ export const metadata = {
   title: 'Garry — Developer, Builder & Author at ToolStackHub',
   description: 'Meet Garry, the developer and author behind ToolStackHub. Building free, browser-based tools for developers, designers, and Indian professionals.',
   keywords: ['garry toolstackhub', 'toolstackhub author', 'toolstackhub developer', 'indian tools developer'],
-  alternates: { canonical: 'https://www.toolstackhub.in/about/garry' },
+  alternates: { canonical: `${SITE_CONFIG.url}/about/garry` },
   openGraph: {
     title: 'Garry — Developer, Builder & Author at ToolStackHub',
     description: 'Full-stack developer building 50+ free browser-based tools for Indian professionals and developers. No logins. No uploads. No nonsense.',
-    url: 'https://www.toolstackhub.in/about/garry',
+    url: `${SITE_CONFIG.url}/about/garry`,
     type: 'profile',
     siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Garry — Developer & Author at ToolStackHub',
+    description: 'Full-stack developer building 50+ free browser-based tools for Indian professionals and developers.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

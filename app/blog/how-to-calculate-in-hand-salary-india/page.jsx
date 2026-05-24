@@ -15,6 +15,12 @@ export const metadata = {
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Calculate In-Hand Salary in India (2026) – Free Calculator',
+    description: 'Calculate your exact in-hand salary from CTC free. PF deduction, professional tax, old vs new regime, income tax explained with examples for ₹3L to ₹30L CTC.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

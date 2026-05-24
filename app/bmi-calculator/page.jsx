@@ -5,7 +5,7 @@ import BMICalculator from '../../components/tools/BMICalculator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'BMI Calculator India 2026 – Free Body Mass Index Calculator (Indian Standards)',
+  title: 'BMI Calculator India 2026 – Indian Standards & Ideal Weight',
   description: 'Free BMI calculator for India 2026. Uses Indian/Asian BMI thresholds (23+ overweight) recommended by WHO for South Asians. Ideal weight range, health risk assessment. No signup.',
   keywords: ['bmi calculator india','bmi calculator online free','bmi calculator for men','bmi calculator for women','healthy bmi for indians','body mass index calculator india','ideal weight calculator india'],
   alternates: { canonical: `${SITE_CONFIG.url}/bmi-calculator` },

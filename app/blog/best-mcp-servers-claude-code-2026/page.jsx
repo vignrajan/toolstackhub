@@ -20,6 +20,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best MCP Servers for Claude Code in 2026 — Tested & Ranked',
+    description: 'Tested: 10 best MCP servers for Claude Code in 2026. Install commands, real use cases, trade-offs. Free guide with GitHub, Playwright, Postgres, Notion & more.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TOC = [

@@ -20,6 +20,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claude Prompt Templates That Save Tokens (2026 Guide)',
+    description: 'Copy-paste Claude prompt templates that cut token usage by 60%. Low-token prompts for coding, writing, review, and decisions — with real examples and pro tips.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TOC = [

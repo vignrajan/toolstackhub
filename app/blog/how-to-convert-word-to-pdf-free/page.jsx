@@ -14,6 +14,12 @@ export const metadata = {
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Convert Word to PDF Free (2026) – 6 Easy Methods',
+    description: 'Convert Word (.docx) to PDF free online without uploading files. 6 methods including browser-based, Microsoft Word, Google Docs, LibreOffice, and mobile. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

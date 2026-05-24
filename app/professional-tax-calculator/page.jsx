@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Professional Tax Calculator India 2026 — State Wise PT Slab Calculator | ToolStackHub',
+  title: 'Professional Tax Calculator India 2026 — PT Slabs',
   description: 'Calculate Professional Tax for all Indian states instantly. Free PT calculator with state-wise slabs for Karnataka, Maharashtra, Tamil Nadu, West Bengal & 15 more states. No signup required.',
   keywords: [
     'professional tax calculator', 'professional tax calculator india',
@@ -18,7 +18,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/professional-tax-calculator` },
   openGraph: {
-    title: 'Professional Tax Calculator India 2026 — State Wise PT Slab Calculator',
+    title: 'Professional Tax Calculator India 2026 — PT Slabs',
     description: 'Calculate your Professional Tax instantly for all 18 PT-levying Indian states. Free, no login, no data stored.',
     url: `${SITE_CONFIG.url}/professional-tax-calculator`,
     type: 'website',
