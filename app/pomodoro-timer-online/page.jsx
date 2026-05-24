@@ -6,12 +6,12 @@ import PomodoroTimer from '../../components/tools/PomodoroTimer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Pomodoro Timer Online – 25-Minute Focus Sessions with Breaks',
-  description: 'Free Pomodoro timer with 25-minute focus sessions and 5-minute breaks. Customizable. Audio alarm. Session counter. No signup, no install. Try now!',
+  title: 'Pomodoro Timer Online – 25-Minute Focus Sessions',
+  description: 'Free Pomodoro timer with 25-minute focus sessions and 5-minute breaks. Customizable. Audio alarm. Session counter. No signup, no install.',
   alternates: { canonical: `${SITE_CONFIG.url}/pomodoro-timer-online` },
   openGraph: {
-    title: 'Pomodoro Timer Online – 25-Minute Focus Sessions with Breaks',
-    description: 'Free Pomodoro timer with 25-minute focus sessions and 5-minute breaks. Customizable. Audio alarm. Session counter. No signup, no install. Try now!',
+    title: 'Pomodoro Timer Online – 25-Minute Focus Sessions',
+    description: 'Free Pomodoro timer with 25-minute focus sessions and 5-minute breaks. Customizable. Audio alarm. Session counter. No signup, no install.',
     url: `${SITE_CONFIG.url}/pomodoro-timer-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pomodoro Timer Online – 25-Minute Focus Sessions with Breaks',
+    title: 'Pomodoro Timer Online – 25-Minute Focus Sessions',
     description: 'Free Pomodoro timer with 25-minute focus sessions and 5-minute breaks. Customizable. Audio alarm. Session counter. No signup, no install.',
     creator: SITE_CONFIG.twitterHandle,
   },

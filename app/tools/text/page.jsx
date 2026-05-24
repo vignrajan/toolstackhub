@@ -4,11 +4,11 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Free Text Tools Online – Word Counter, Case Converter & More',
+  title: 'Free Text Tools – Word Counter, Case Converter & More',
   description: 'Free online text tools: word counter, character counter, case converter, remove duplicates, remove line breaks, and more. No signup required.',
   alternates: { canonical: `${SITE_CONFIG.url}/tools/text` },
   openGraph: {
-    title: 'Free Text Tools Online – Word Counter, Case Converter & More',
+    title: 'Free Text Tools – Word Counter, Case Converter & More',
     description: 'Free online text tools for writers, developers, and students. All browser-based, no signup.',
     url: `${SITE_CONFIG.url}/tools/text`,
     type: 'website',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Text Tools Online – Word Counter, Case Converter & More',
+    title: 'Free Text Tools – Word Counter, Case Converter & More',
     description: 'Free online text tools for writers, developers, and students. All browser-based, no signup.',
     creator: SITE_CONFIG.twitterHandle,
   },

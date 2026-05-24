@@ -6,12 +6,12 @@ import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Remove Duplicate List Items Online Free – Clean Bullet Lists',
-  description: 'Remove duplicate items from any list online free. Clean bullet lists, numbered lists, and comma-separated lists instantly. No signup needed. Try now!',
+  title: 'Remove Duplicate List Items – Clean Bullet Lists',
+  description: 'Remove duplicate items from any list online free. Clean bullet lists, numbered lists, and comma-separated lists instantly. No signup needed.',
   alternates: { canonical: `${SITE_CONFIG.url}/remove-duplicate-list-items` },
   openGraph: {
-    title: 'Remove Duplicate List Items Online Free – Clean Bullet Lists',
-    description: 'Remove duplicate items from any list online free. Clean bullet lists, numbered lists, and comma-separated lists instantly. No signup needed. Try now!',
+    title: 'Remove Duplicate List Items – Clean Bullet Lists',
+    description: 'Remove duplicate items from any list online free. Clean bullet lists, numbered lists, and comma-separated lists instantly. No signup needed.',
     url: `${SITE_CONFIG.url}/remove-duplicate-list-items`,
     type: 'website',
     siteName: SITE_CONFIG.name,
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Remove Duplicate List Items Online Free – Clean Bullet Lists',
+    title: 'Remove Duplicate List Items – Clean Bullet Lists',
     description: 'Remove duplicate items from any list online free. Clean bullet lists, numbered lists, and comma-separated lists instantly. No signup needed.',
     creator: SITE_CONFIG.twitterHandle,
   },
