@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'How does the tool detect paragraph boundaries?', a: 'Paragraphs are separated by one or more blank lines. Each block of text between blank lines is treated as a single paragraph unit.' },
+  { q: 'Does whitespace inside a paragraph matter?', a: 'Minor leading/trailing whitespace is trimmed before comparison. Two paragraphs with the same words but different surrounding spaces are still treated as duplicates.' },
+  { q: 'Is matching case-sensitive?', a: 'By default, matching is case-sensitive for paragraphs. Two paragraphs that differ only in capitalization are kept as separate entries.' },
+  { q: 'What can I use this for?', a: 'Cleaning scraped or copy-pasted content, removing repeated boilerplate sections, deduplicating CMS entries, and tidying AI-generated text that repeats blocks.' },
+  { q: 'Is my text safe?', a: 'Yes — all processing runs locally in your browser. Your content is never sent to any server or stored anywhere.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate Paragraphs Online – Remove Repeated Paragraph Blocks',       item: `${SITE_CONFIG.url}/remove-duplicate-paragraphs` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Paragraphs Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your text', text: 'Paste any text with multiple paragraphs into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Remove Duplicates', text: 'The tool splits your text into paragraphs (by blank lines) and removes any repeated paragraph blocks.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click Copy to copy the cleaned text to your clipboard.' },
       ],
     },
   ],
@@ -97,6 +115,23 @@ export default function Page() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </section>
 
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">All Duplicate Removal Tools</h2>

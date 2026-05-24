@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What CSV delimiters are supported?', a: 'Comma (,), semicolon (;), and tab (\\t) delimiters are all supported. The tool auto-detects the delimiter from your data.' },
+  { q: 'Does it keep the header row?', a: 'Yes — the first row is always treated as a header and is never removed, even if its content appears again in data rows.' },
+  { q: 'What makes two rows duplicates?', a: 'Two rows are duplicates if every field in the row matches exactly — including spacing and capitalization by default.' },
+  { q: 'Does it handle quoted fields with commas inside?', a: 'Yes — standard CSV quoting is respected. A field like "Smith, John" is treated as a single value, not split at the comma.' },
+  { q: 'Is my CSV data safe?', a: 'Yes — all processing runs locally in your browser. Your CSV is never uploaded to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate CSV Rows Online – Clean Duplicate Rows from CSV Data',       item: `${SITE_CONFIG.url}/remove-duplicate-csv-rows` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Rows from CSV Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your CSV', text: 'Paste your CSV data into the input area. The tool auto-detects comma, semicolon, and tab delimiters.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Remove Duplicates', text: 'Rows where every field matches an earlier row are removed. The header row is always preserved.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click Copy to copy the deduplicated CSV to your clipboard, ready to paste back into Excel or Google Sheets.' },
       ],
     },
   ],
@@ -97,6 +115,23 @@ export default function Page() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </section>
 
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">All Duplicate Removal Tools</h2>

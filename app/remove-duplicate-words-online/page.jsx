@@ -25,6 +25,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What counts as a duplicate word?', a: 'Any word that appears more than once in your text. Only the first occurrence is kept; all subsequent repeats are removed.' },
+  { q: 'Is the matching case-sensitive?', a: 'By default, matching is case-insensitive — "Apple" and "apple" are treated as the same word. Check the tool options for case-sensitive mode.' },
+  { q: 'Does it preserve word order?', a: 'Yes — words appear in the order they first appeared in your original text.' },
+  { q: 'What can I use this for?', a: 'Building vocabulary lists, cleaning tag clouds, generating unique keyword sets from articles, and deduplicating word arrays for code or data pipelines.' },
+  { q: 'Is my text data safe?', a: 'Yes — all processing runs locally in your browser. Your text is never sent to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +52,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home',       item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Text Tools', item: `${SITE_CONFIG.url}/#text` },
         { '@type': 'ListItem', position: 3, name: 'Remove Duplicate Words Online – Keep Only Unique Words in Text',       item: `${SITE_CONFIG.url}/remove-duplicate-words-online` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Remove Duplicate Words Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your text', text: 'Paste any paragraph, article, or word list into the input area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Remove Duplicates', text: 'The tool scans your entire text and removes every repeated word, keeping only the first occurrence.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the result', text: 'Click Copy to copy your unique word list to the clipboard.' },
       ],
     },
   ],
@@ -97,6 +115,23 @@ export default function Page() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+
+          <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </section>
 
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">All Duplicate Removal Tools</h2>
