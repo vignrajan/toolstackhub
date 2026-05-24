@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Duplicate CSV Rows – Clean CSV Data Instantly Free',
+    description: 'Remove duplicate rows from CSV data online free. Paste your CSV and get unique rows instantly. Supports comma, semicolon, and tab delimiters. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

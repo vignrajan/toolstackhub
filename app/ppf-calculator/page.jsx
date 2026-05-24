@@ -23,6 +23,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PPF Calculator FY 2026-27 — Public Provident Fund Calculator India',
+    description: 'Calculate PPF maturity value, year-wise interest, and tax savings at 7.1%. Free, instant, no login.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const RATE_HISTORY = [

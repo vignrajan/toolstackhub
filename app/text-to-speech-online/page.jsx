@@ -18,6 +18,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Text to Speech Online Free – Convert Text to Audio Instantly',
+    description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [('What voices are available?', 'Available voices depend on your operating system. Windows, Mac, iOS, and Android each include different voice packages. English voices are listed first in the dropdown.'), ('Can I adjust the reading speed?', 'Yes — set reading speed from 0.5x (half speed for careful listening) to 2x (double speed for fast review).'), ('Is there a text length limit?', 'The Web Speech API works best with texts under 5000 characters. Very long texts may be automatically split into segments.'), ('Can I download the audio?', 'The Web Speech API plays audio directly in the browser. Most browsers do not support audio file download from the Speech API.'), ('Is text to speech free?', 'Yes — completely free with no account or download required.')];

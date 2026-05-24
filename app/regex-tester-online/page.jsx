@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Regex Tester Online – Test Regular Expressions in Real Time',
+    description: 'Test and debug regular expressions online for free. Real-time match highlighting, capture groups, and all JS flags (g, i, m, s). No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

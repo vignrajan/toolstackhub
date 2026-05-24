@@ -14,6 +14,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Text Tools Online – Word Counter, Case Converter & More',
+    description: 'Free online text tools for writers, developers, and students. All browser-based, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TEXT_TOOLS = [

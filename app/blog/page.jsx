@@ -15,6 +15,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog – Text Tools Tips, Guides & Tutorials | ToolStackHub',
+    description: 'Free guides on text cleaning, developer tools, and productivity.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

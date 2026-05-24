@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Duplicate Lines Ignore Case – Free Online Tool',
+    description: 'Remove duplicate lines ignoring capitalization online free. "Apple", "APPLE", and "apple" all treated as duplicates. No signup needed.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

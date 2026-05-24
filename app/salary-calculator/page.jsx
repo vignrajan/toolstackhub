@@ -22,6 +22,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Salary & Gratuity Calculator India 2026 – Free, Instant, No Login',
+    description: 'Calculate take-home salary, CTC breakup, and gratuity instantly. Old & new tax regime. Free.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

@@ -17,6 +17,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SIP Calculator Online Free – Mutual Fund Returns 2026',
+    description: 'Calculate SIP returns, maturity value, and wealth gained instantly. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

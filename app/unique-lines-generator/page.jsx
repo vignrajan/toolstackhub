@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Unique Lines Generator – Extract Unique Lines Instantly Free',
+    description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Duplicate Paragraphs – Clean Repeated Blocks Free',
+    description: 'Remove duplicate paragraphs from any text online free. Paste your content and instantly remove repeated paragraph blocks. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

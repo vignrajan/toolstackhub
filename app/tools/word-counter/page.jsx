@@ -19,6 +19,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Word Counter Online Free – Count Words Instantly',
+    description: 'Real-time word count, character count, sentence count, and reading time. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const relatedTools = tools.filter(t => ['character-counter','case-converter','lorem-ipsum-generator','markdown-preview'].includes(t.slug));

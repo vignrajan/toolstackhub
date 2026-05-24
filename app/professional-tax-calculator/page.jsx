@@ -24,6 +24,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professional Tax Calculator India 2026 — PT Slabs',
+    description: 'Calculate your Professional Tax instantly for all 18 PT-levying Indian states. Free, no login, no data stored.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const FAQS = [

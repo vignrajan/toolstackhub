@@ -18,6 +18,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Text to Handwriting Generator – Convert Text to Handwriting',
+    description: 'Convert typed text to realistic handwritten notes online free. 6 fonts, 4 paper styles, pen colors, PNG and PDF download. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

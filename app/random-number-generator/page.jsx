@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Random Number Generator – Any Range, Instant Results Free',
+    description: 'Generate random numbers online free. Set min/max range, integers or decimals, no duplicates, bulk up to 1000. Statistics included. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

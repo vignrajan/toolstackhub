@@ -22,6 +22,12 @@ export const metadata = {
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Speech Bubble Maker – Add Speech Bubble to Any Image',
+    description: 'Add speech bubbles to images free. No login, instant download. Memes, comics, social media.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const faqs = [

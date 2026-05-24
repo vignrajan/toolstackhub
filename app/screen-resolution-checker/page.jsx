@@ -17,6 +17,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Screen Resolution Checker – What Is My Screen Size? Free',
+    description: 'Check screen resolution, viewport size, device pixel ratio, and browser dimensions instantly. Updates live on resize. Free. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {
