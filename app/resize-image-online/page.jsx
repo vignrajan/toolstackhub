@@ -46,8 +46,27 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Resize Image', item: `${SITE_CONFIG.url}/resize-image-online` },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Resize an Image Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Upload your image', text: 'Click or drag your image into the upload area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Set dimensions', text: 'Enter your desired width and height in pixels, or choose a preset size.' },
+        { '@type': 'HowToStep', position: 3, name: 'Resize', text: 'Click "Resize Image" to process.' },
+        { '@type': 'HowToStep', position: 4, name: 'Download', text: 'Download your resized image.' },
+      ],
+    },
   ],
 };
+
+const presets = [
+  { name: 'HD', size: '1280 × 720px', use: 'YouTube thumbnails, presentations' },
+  { name: 'Full HD', size: '1920 × 1080px', use: 'Wallpapers, website banners' },
+  { name: 'Social Square', size: '1080 × 1080px', use: 'Instagram, Facebook posts' },
+  { name: 'Profile Picture', size: '400 × 400px', use: 'Profile avatars, team photos' },
+  { name: 'Twitter Header', size: '1500 × 500px', use: 'Twitter/X profile header' },
+  { name: 'Thumbnail', size: '150 × 150px', use: 'Website thumbnails, icons' },
+];
 
 const relatedLinks = [
   { href: '/compress-image-online', label: 'Compress Image Online', desc: 'Reduce image file size by up to 90%' },
@@ -135,6 +154,19 @@ export default function Page() {
                     <div className="font-semibold text-surface-900 text-sm">{uc.title}</div>
                     <div className="text-xs text-surface-500 mt-1 leading-relaxed">{uc.desc}</div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section aria-labelledby="presets-heading">
+            <h2 id="presets-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">Common Image Size Presets</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {presets.map(p => (
+                <div key={p.name} className="p-4 bg-white border border-surface-200 rounded-xl hover:border-amber-300 transition-colors">
+                  <div className="font-semibold text-surface-900 mb-1">{p.name}</div>
+                  <div className="font-mono text-sm text-amber-700 bg-amber-50 px-2 py-0.5 rounded mb-2 inline-block">{p.size}</div>
+                  <div className="text-xs text-surface-500">{p.use}</div>
                 </div>
               ))}
             </div>

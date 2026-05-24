@@ -46,6 +46,16 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'JPG to PNG Converter', item: `${SITE_CONFIG.url}/jpg-to-png-converter-online` },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Convert JPG to PNG Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Upload JPG', text: 'Click or drag your JPG or JPEG file into the upload area.' },
+        { '@type': 'HowToStep', position: 2, name: 'Preview', text: 'Your image is displayed in the preview area.' },
+        { '@type': 'HowToStep', position: 3, name: 'Convert', text: 'Click "Convert to PNG".' },
+        { '@type': 'HowToStep', position: 4, name: 'Download', text: 'Download your PNG file instantly.' },
+      ],
+    },
   ],
 };
 
@@ -66,6 +76,8 @@ const faqs = [
   { q: 'Does PNG support transparent backgrounds?', a: 'Yes, PNG supports full alpha channel transparency. However a converted JPG will have a solid background since JPG has no transparency channel.' },
   { q: 'Is my image uploaded to a server?', a: 'Conversion runs entirely in your browser using the HTML5 Canvas API. Your file is never uploaded anywhere.' },
   { q: 'Is this converter free?', a: 'Yes — no account, no watermarks, no download limits.' },
+  { q: 'Is JPG or PNG better for websites?', a: 'Use JPG for photos and complex images (smaller file size). Use PNG for logos, icons, screenshots, and images needing transparent backgrounds (lossless, larger file size). WebP is best for modern browsers as it supports both.' },
+  { q: 'Can I convert PNG to JPG with this tool?', a: 'This tool converts JPG to PNG only. For PNG to JPG conversion, use an image editor or search for a dedicated PNG to JPG converter tool.' },
 ];
 
 export default function Page() {
@@ -138,6 +150,38 @@ export default function Page() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section aria-labelledby="comparison-heading">
+            <h2 id="comparison-heading" className="font-display font-bold text-2xl text-surface-900 mb-5">JPG vs PNG — When to Use Each Format</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="p-5 bg-orange-50 border-2 border-orange-200 rounded-2xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-2xl">📷</span>
+                  <h3 className="font-display font-bold text-lg text-orange-800">JPG / JPEG</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-orange-900">
+                  {['Lossy compression (smaller files)', 'Best for photos and complex images', 'No transparency support', 'Smaller file sizes', 'Best for: blog photos, product images'].map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-orange-500 mt-0.5 shrink-0">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-5 bg-brand-50 border-2 border-brand-300 rounded-2xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-2xl">🖼️</span>
+                  <h3 className="font-display font-bold text-lg text-brand-800">PNG</h3>
+                </div>
+                <ul className="space-y-2 text-sm text-brand-900">
+                  {['Lossless compression (no quality loss)', 'Best for logos, icons, screenshots', 'Full transparency support ✅', 'Larger file sizes', 'Best for: logos, graphics, UI elements'].map(item => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-brand-500 mt-0.5 shrink-0">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </section>
 
