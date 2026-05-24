@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'IndieAppCircle Review 2026 — Is It the Best Feedback Platform for Indie Developers?',
+  title: 'IndieAppCircle Review 2026 — Feedback Tool for Indie Devs',
   description: 'IndieAppCircle reviewed: real experience, how it works, pros & cons, vs Product Hunt & Reddit. Is it worth it for indie devs in 2026? Honest deep-dive.',
   keywords: [
     'indieappcircle review', 'indie app feedback platform', 'indieappcircle alternative',
@@ -15,11 +15,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/indieappcircle-review` },
   openGraph: {
-    title: 'IndieAppCircle Review 2026 — Best Feedback Platform for Indie Developers?',
+    title: 'IndieAppCircle Review 2026 — Feedback Tool for Indie Devs',
     description: 'Honest IndieAppCircle review: real usage, leaderboard system, vs Product Hunt & Reddit, pro tips, and who should actually use it.',
     url: `${SITE_CONFIG.url}/blog/indieappcircle-review`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IndieAppCircle Review 2026 — Feedback Tool for Indie Devs',
+    description: 'IndieAppCircle reviewed: real experience, how it works, pros & cons, vs Product Hunt & Reddit. Is it worth it for indie devs in 2026? Honest deep-dive.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -6,8 +6,8 @@ import SIPCalculator from '../../components/tools/SIPCalculator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'SIP Calculator Online Free – Mutual Fund SIP Returns Calculator',
-  description: 'Free SIP calculator online. Calculate mutual fund SIP returns, maturity value, and wealth gained. Step-up SIP, lumpsum calculator included. No signup. Try now!',
+  title: 'SIP Calculator – Mutual Fund SIP Returns Calculator Free',
+  description: 'Free SIP calculator online. Calculate mutual fund SIP returns, maturity value, and wealth gained. Step-up SIP, lumpsum calculator included. No signup.',
   keywords: ['sip calculator', 'sip calculator online', 'mutual fund sip calculator', 'sip return calculator', 'sip maturity calculator', 'monthly sip calculator', 'sip calculator india 2026', 'step up sip calculator'],
   alternates: { canonical: `${SITE_CONFIG.url}/sip-calculator` },
   openGraph: {
@@ -16,6 +16,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/sip-calculator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SIP Calculator Online Free – Mutual Fund Returns 2026',
+    description: 'Calculate SIP returns, maturity value, and wealth gained instantly. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

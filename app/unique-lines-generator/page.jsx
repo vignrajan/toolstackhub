@@ -6,16 +6,22 @@ import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Unique Lines Generator Online Free – Extract Unique Lines Instantly',
-  description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required. Try now!',
+  title: 'Unique Lines Generator – Extract Unique Lines Free',
+  description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required.',
   alternates: { canonical: `${SITE_CONFIG.url}/unique-lines-generator` },
   openGraph: {
-    title: 'Unique Lines Generator Online Free – Extract Unique Lines Instantly',
-    description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required. Try now!',
+    title: 'Unique Lines Generator – Extract Unique Lines Free',
+    description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required.',
     url: `${SITE_CONFIG.url}/unique-lines-generator`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Unique Lines Generator – Extract Unique Lines Free',
+    description: 'Generate a list of unique lines from any text online free. Remove all duplicates and keep only distinct lines. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

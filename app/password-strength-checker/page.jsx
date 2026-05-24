@@ -6,16 +6,22 @@ import PasswordStrengthChecker from '../../components/tools/PasswordStrengthChec
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Password Strength Checker Online Free – Test Your Password Security',
+  title: 'Password Strength Checker – Test Password Security',
   description: 'Check how strong your password is instantly. Security score, crack time estimate, and specific improvement tips. 100% local — password never transmitted.',
   alternates: { canonical: `${SITE_CONFIG.url}/password-strength-checker` },
   openGraph: {
-    title: 'Password Strength Checker Online Free – Test Your Password Security',
+    title: 'Password Strength Checker – Test Password Security',
     description: 'Check how strong your password is instantly. Security score, crack time estimate, and specific improvement tips. 100% local — password never transmitted.',
     url: `${SITE_CONFIG.url}/password-strength-checker`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Password Strength Checker – Test Password Security',
+    description: 'Check how strong your password is instantly. Security score, crack time estimate, and specific improvement tips. 100% local — password never transmitted.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

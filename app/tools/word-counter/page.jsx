@@ -7,7 +7,7 @@ import WordCounter from '../../../components/tools/WordCounter';
 import { SITE_CONFIG, tools } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Word Counter Online Free – Count Words & Characters in Real Time',
+  title: 'Word Counter Online – Count Words & Characters in Real Time',
   description: 'Count words, characters, sentences, paragraphs, and reading time instantly. Free online word counter for writers, students, and bloggers. No signup needed.',
   keywords: ['word counter', 'count words online', 'word count tool', 'character counter', 'reading time calculator', 'essay word counter', 'word frequency counter'],
   robots: { index: false, follow: true },
@@ -18,6 +18,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/tools/word-counter`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Word Counter Online Free – Count Words Instantly',
+    description: 'Real-time word count, character count, sentence count, and reading time. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

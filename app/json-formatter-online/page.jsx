@@ -6,16 +6,22 @@ import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'JSON Formatter Online Free – Beautify, Validate & Minify JSON',
+  title: 'JSON Formatter Online – Beautify, Validate & Minify JSON',
   description: 'Format, validate, and beautify JSON online for free. Instant syntax highlighting, error detection, and minifier included. No signup required. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/json-formatter-online` },
   openGraph: {
-    title: 'JSON Formatter Online Free – Beautify, Validate & Minify JSON',
+    title: 'JSON Formatter Online – Beautify, Validate & Minify JSON',
     description: 'Format, validate, and beautify JSON online for free. Instant syntax highlighting, error detection, and minifier included. No signup required. Try now!',
     url: `${SITE_CONFIG.url}/json-formatter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON Formatter Online – Beautify, Validate & Minify JSON',
+    description: 'Format, validate, and beautify JSON online for free. Instant syntax highlighting, error detection, and minifier included. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

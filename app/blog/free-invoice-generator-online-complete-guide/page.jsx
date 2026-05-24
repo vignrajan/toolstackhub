@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 const POST = {
   slug:        'free-invoice-generator-online-complete-guide',
-  title:       'Free Invoice Generator Online – Create GST Invoice in 60 Seconds (No Login)',
+  title:       'Free Invoice Generator Online – Create GST Invoice Fast',
   metaDesc:    'Create professional invoices free online. No signup, no watermark, instant PDF download. Complete guide for freelancers, small businesses & GST invoicing in India.',
   category:    'Business Tools',
   categorySlug:'business-tools',
@@ -18,11 +18,11 @@ const POST = {
 };
 
 export const metadata = {
-  title:       `Free Invoice Generator Online – Create GST Invoice in 60 Seconds | ToolStackHub`,
+  title:       `Free Invoice Generator Online – Create GST Invoice in 60s`,
   description:  POST.metaDesc,
   alternates: { canonical: `${SITE_CONFIG.url}/blog/${POST.slug}` },
   openGraph: {
-    title:       POST.title,
+    title:       'Free Invoice Generator Online – Create GST Invoice Fast',
     description: POST.metaDesc,
     url:        `${SITE_CONFIG.url}/blog/${POST.slug}`,
     type:        'article',
@@ -31,6 +31,12 @@ export const metadata = {
     publishedTime: POST.publishedAt,
     modifiedTime:  POST.updatedAt,
     authors:       [POST.author],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Invoice Generator Online – Create GST Invoice in 60 Seconds',
+    description: 'Create professional invoices free online. No signup, no watermark, instant PDF download. Complete guide for freelancers, small businesses & GST invoicing in India.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

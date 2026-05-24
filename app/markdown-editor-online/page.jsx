@@ -8,15 +8,21 @@ import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Markdown Editor Online Free – Live Preview & Split-Screen Renderer',
+  title: 'Markdown Editor Online – Live Preview & Split-Screen',
   description: 'Write Markdown and see a live rendered preview. Supports GFM, tables, task lists, code blocks. Export HTML or download .md file. Free. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/markdown-editor-online` },
   openGraph: {
-    title: 'Markdown Editor Online Free – Live Preview & Split-Screen Renderer',
+    title: 'Markdown Editor Online – Live Preview & Split-Screen',
     description: 'Write Markdown and see a live rendered preview. Supports GFM, tables, task lists, code blocks. Export HTML or download .md file. Free. No signup. Try now!',
     url: `${SITE_CONFIG.url}/markdown-editor-online`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Markdown Editor Online – Live Preview & Split-Screen',
+    description: 'Write Markdown and see a live rendered preview. Supports GFM, tables, task lists, code blocks. Export HTML or download .md file. Free. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -24,6 +24,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Old vs New Regime for 15 LPA Salary — FY 2026-27',
+    description: 'Which tax regime saves more on a 15 LPA salary? Full FY 2026-27 comparison with exact calculations, monthly in-hand, and break-even deduction amount.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const FAQS = [

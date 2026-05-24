@@ -6,16 +6,22 @@ import ScreenResolution from '../../components/tools/ScreenResolution';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Screen Resolution Checker Online Free – What Is My Screen Size?',
+  title: 'Screen Resolution Checker – What Is My Screen Size? Free',
   description: 'Check screen resolution, viewport size, device pixel ratio, and browser dimensions instantly. Updates live on resize. Free. No signup required. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/screen-resolution-checker` },
   openGraph: {
-    title: 'Screen Resolution Checker Online Free – What Is My Screen Size?',
+    title: 'Screen Resolution Checker – What Is My Screen Size? Free',
     description: 'Check screen resolution, viewport size, device pixel ratio, and browser dimensions instantly. Updates live on resize. Free. No signup required. Try now!',
     url: `${SITE_CONFIG.url}/screen-resolution-checker`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Screen Resolution Checker – What Is My Screen Size? Free',
+    description: 'Check screen resolution, viewport size, device pixel ratio, and browser dimensions instantly. Updates live on resize. Free. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

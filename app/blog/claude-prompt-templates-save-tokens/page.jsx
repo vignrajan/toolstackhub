@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'Claude Prompt Templates That Save Tokens (2026 Guide)',
-  description: 'Copy-paste Claude prompt templates that cut token usage by 60%. Low-token prompts for coding, writing, review, and decisions — with real examples and pro tips.',
+  description: 'Copy-paste Claude prompt templates that cut token usage by 60%. Low-token prompts for coding, writing, review, and decisions — with real examples.',
   keywords: [
     'claude prompt templates', 'low token prompts claude', 'optimize claude token usage',
     'claude prompt engineering guide', 'best prompts for claude ai', 'reduce token cost claude',
@@ -19,6 +19,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/blog/claude-prompt-templates-save-tokens`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claude Prompt Templates That Save Tokens (2026 Guide)',
+    description: 'Copy-paste Claude prompt templates that cut token usage by 60%. Low-token prompts for coding, writing, review, and decisions — with real examples.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

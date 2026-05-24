@@ -8,8 +8,8 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
-  title: 'Remove Extra Spaces Online Free – Clean Whitespace from Text',
-  description: 'Remove extra spaces and whitespace from text instantly online. Collapse double spaces, clean copied PDF text, and normalize whitespace. Free, no signup. Try now!',
+  title: 'Remove Extra Spaces Online – Clean Whitespace Free',
+  description: 'Remove extra spaces and whitespace from text instantly online. Collapse double spaces, clean copied PDF text, and normalize whitespace. Free, no signup.',
   keywords: [
     'remove extra spaces online',
     'remove double spaces from text',
@@ -22,7 +22,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/remove-extra-spaces` },
   openGraph: {
-    title: 'Remove Extra Spaces Online Free – Clean Whitespace from Text',
+    title: 'Remove Extra Spaces Online – Clean Whitespace Free',
     description: 'Remove extra spaces and whitespace from text instantly. Free, browser-based, no signup.',
     url: `${SITE_CONFIG.url}/remove-extra-spaces`,
     type: 'website',

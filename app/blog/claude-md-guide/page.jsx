@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'CLAUDE.md Guide — The Perfect Setup for Every Project Type (2026)',
+  title: 'CLAUDE.md Guide — Perfect Setup for Every Project (2026)',
   description:
     'Complete CLAUDE.md guide with 7 copy-paste templates for React, Python, Node.js, Go & more. Best practices, diagnostic checklist, and token-saving strategies.',
   keywords: [
@@ -26,12 +26,18 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/claude-md-guide` },
   openGraph: {
-    title: 'CLAUDE.md Guide — 7 Copy-Paste Templates + Best Practices (2026)',
+    title: 'CLAUDE.md Guide — Perfect Setup for Every Project (2026)',
     description:
       'The only CLAUDE.md guide with ready-to-use templates for every project type. Stop repeating yourself. Start shipping faster.',
     url: `${SITE_CONFIG.url}/blog/claude-md-guide`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CLAUDE.md Guide — Perfect Setup for Every Project (2026)',
+    description: 'Complete CLAUDE.md guide with 7 copy-paste templates for React, Python, Node.js, Go & more. Best practices, diagnostic checklist, and token-saving strategies.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

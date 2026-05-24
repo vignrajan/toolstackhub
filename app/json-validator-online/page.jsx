@@ -18,6 +18,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JSON Validator Online Free – Check JSON Syntax Instantly',
+    description: 'Validate JSON syntax online for free. Instantly detect missing commas, unclosed brackets, invalid escapes, and all JSON errors. No signup needed.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const jsonLd = {

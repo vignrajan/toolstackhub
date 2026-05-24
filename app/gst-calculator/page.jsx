@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'GST Calculator Online Free – Calculate GST Amount Instantly',
-  description: 'Free GST calculator online. Calculate GST for all rates (3%, 5%, 12%, 18%, 28%). Add or remove GST, CGST/SGST/IGST breakdown, intra & inter-state. No signup.',
+  description: 'Free GST calculator online. Calculate GST for all rates (3%, 5%, 12%, 18%, 28%). Add or remove GST, CGST/SGST/IGST breakdown, intra & inter-state.',
   keywords: [
     'gst calculator', 'gst calculator online', 'gst calculator india',
     'gst calculator online free', 'calculate gst online', 'gst amount calculator',
@@ -21,6 +21,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/gst-calculator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GST Calculator Online Free – CGST, SGST, IGST Breakdown',
+    description: 'Free GST calculator online. Calculate GST for all rates (3%, 5%, 12%, 18%, 28%). Add or remove GST, CGST/SGST/IGST breakdown, intra & inter-state.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

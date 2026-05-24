@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'How to Create Instagram Carousels That Stop the Scroll (2026 Designer\'s Playbook)',
-  description: 'Learn how to design export-ready Instagram carousels with proper slide architecture, color systems, and typography pairings. A complete system used by top creators.',
+  title: 'How to Create Instagram Carousels That Stop the Scroll',
+  description: 'Design export-ready Instagram carousels with proper slide architecture, color systems, and typography pairings. A complete system used by top creators.',
   keywords: [
     'instagram carousel generator', 'instagram carousel design', 'create instagram carousel',
     'carousel design system', 'instagram carousel template', 'instagram post design',
@@ -14,11 +14,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/instagram-carousel-generator` },
   openGraph: {
-    title: 'How to Create Instagram Carousels That Stop the Scroll (2026 Designer\'s Playbook)',
+    title: 'How to Create Instagram Carousels That Stop the Scroll',
     description: 'A complete system for building on-brand, export-ready Instagram carousels — color system, typography, slide architecture, and export workflow.',
     url: `${SITE_CONFIG.url}/blog/instagram-carousel-generator`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Create Instagram Carousels That Stop the Scroll',
+    description: 'Design export-ready Instagram carousels with proper slide architecture, color systems, and typography pairings. A complete system used by top creators.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

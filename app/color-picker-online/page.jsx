@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
   title: 'Color Picker Online Free – Get HEX, RGB, HSL & CMYK Codes',
-  description: 'Pick any color and instantly get HEX, RGB, HSL, and CMYK values. Free online color picker with sliders, presets, and one-click copy. No signup required. Try now!',
+  description: 'Pick any color and instantly get HEX, RGB, HSL, and CMYK values. Free online color picker with sliders, presets, and one-click copy. No signup required.',
   keywords: [
     'color picker online',
     'hex color picker',

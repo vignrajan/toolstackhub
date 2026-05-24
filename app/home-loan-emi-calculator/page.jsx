@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Home Loan EMI Calculator Free – Housing Loan EMI 2026',
-  description: 'Calculate home loan EMI instantly. Compare SBI, HDFC, ICICI rates. Full amortization schedule, prepayment savings table, tax benefits guide. Free, no signup.',
+  description: 'Calculate home loan EMI instantly. Compare SBI, HDFC, ICICI rates. Amortization schedule, prepayment savings table, tax benefits guide. Free, no signup.',
   keywords: ['home loan emi calculator', 'housing loan emi calculator', 'home loan emi calculator india', 'sbi home loan emi', 'hdfc home loan emi', 'home loan calculator 2026'],
   alternates: { canonical: `${SITE_CONFIG.url}/home-loan-emi-calculator` },
   openGraph: {
@@ -16,6 +16,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/home-loan-emi-calculator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Loan EMI Calculator Free 2026 – Housing Loan EMI',
+    description: 'Calculate home loan EMI instantly. Compare SBI, HDFC, ICICI rates. Amortization schedule, prepayment savings table, tax benefits guide. Free, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ─────────────────────────────────────────────────────────────
 
 export const metadata = {
-  title: 'Claude Code Token Calculator — Estimate Cost & Usage (2026) | ToolStackHub',
+  title: 'Claude Code Token Calculator — Cost & Plan Estimator (2026)',
   description:
     'Free Claude Code token calculator. Estimate your monthly cost, find the best plan (Pro vs Max 5x vs Max 20x vs API), and learn 12 proven ways to reduce your token usage. Updated for Opus 4.7. INR pricing for India.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata = {
     canonical: `${SITE_CONFIG.url}/claude-code-token-calculator`,
   },
   openGraph: {
-    title: 'Claude Code Token Calculator — The Most Accurate One Online (2026)',
+    title: 'Claude Code Token Calculator — Cost & Plan Estimator (2026)',
     description:
       'Estimate your real Claude Code monthly cost in seconds. Compares API, Pro, Max 5x, and Max 20x plans. Plus 12 proven ways to cut your token usage.',
     url: `${SITE_CONFIG.url}/claude-code-token-calculator`,

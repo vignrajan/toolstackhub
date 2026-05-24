@@ -8,9 +8,9 @@ import { SITE_CONFIG } from '../../data/tools';
 // METADATA — covers every short + long-tail keyword
 // ─────────────────────────────────────────────────────────────
 export const metadata = {
-  title: 'Age Calculator – How Old Am I? Exact Age by Date of Birth (Free)',
+  title: 'Age Calculator – How Old Am I? Exact Age by Date of Birth',
   description:
-    'Free age calculator online. How old am I? Enter your date of birth and get exact age in years, months, days, weeks & hours. Birthday countdown, zodiac sign, govt exam cutoff dates. No signup.',
+    'Free age calculator. Enter your date of birth and get exact age in years, months, days, weeks & hours. Birthday countdown, zodiac sign & cutoff dates.',
   keywords: [
     // Head terms
     'age calculator',
@@ -68,6 +68,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Age Calculator – How Old Am I? Exact Age by Date of Birth',
+    description: 'Free age calculator online. How old am I? Enter your date of birth and get exact age in years, months, days, weeks & hours. Birthday countdown, zodiac sign, govt exam cutoff dates. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

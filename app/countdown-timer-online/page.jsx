@@ -6,16 +6,22 @@ import CountdownTimer from '../../components/tools/CountdownTimer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Countdown Timer Online Free – Set Timer with Alarm Instantly',
-  description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+  title: 'Countdown Timer Online Free – Set Timer with Alarm',
+  description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required.',
   alternates: { canonical: `${SITE_CONFIG.url}/countdown-timer-online` },
   openGraph: {
-    title: 'Countdown Timer Online Free – Set Timer with Alarm Instantly',
-    description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+    title: 'Countdown Timer Online Free – Set Timer with Alarm',
+    description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required.',
     url: `${SITE_CONFIG.url}/countdown-timer-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Countdown Timer Online Free – Set Timer with Alarm',
+    description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 
@@ -25,7 +31,7 @@ const jsonLd = {
     {
       '@type': 'SoftwareApplication',
       name: 'Free',
-      description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required. Try now!',
+      description: 'Free online countdown timer. Set hours, minutes, and seconds. Audio alarm on completion. Quick presets included. No signup, no install required.',
       url: `${SITE_CONFIG.url}/countdown-timer-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',

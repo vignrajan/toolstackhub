@@ -8,15 +8,21 @@ import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Text to Handwriting Generator Free – Convert Text to Handwritten Notes',
+  title: 'Text to Handwriting Generator – Convert Text to Handwriting',
   description: 'Convert typed text to realistic handwritten notes online free. 6 fonts, 4 paper styles, pen colors, PNG and PDF download. No signup required. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/text-to-handwriting-online` },
   openGraph: {
-    title: 'Text to Handwriting Generator Free – Convert Text to Handwritten Notes',
+    title: 'Text to Handwriting Generator – Convert Text to Handwriting',
     description: 'Convert typed text to realistic handwritten notes online free. 6 fonts, 4 paper styles, pen colors, PNG and PDF download. No signup required. Try now!',
     url: `${SITE_CONFIG.url}/text-to-handwriting-online`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Text to Handwriting Generator – Convert Text to Handwriting',
+    description: 'Convert typed text to realistic handwritten notes online free. 6 fonts, 4 paper styles, pen colors, PNG and PDF download. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

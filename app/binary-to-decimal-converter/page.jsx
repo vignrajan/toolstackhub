@@ -6,16 +6,22 @@ import BinaryConverter from '../../components/tools/BinaryConverter';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Binary to Decimal Converter Online Free – Binary, Hex & Octal',
+  title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
   description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/binary-to-decimal-converter` },
   openGraph: {
-    title: 'Binary to Decimal Converter Online Free – Binary, Hex & Octal',
+    title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
     description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
     url: `${SITE_CONFIG.url}/binary-to-decimal-converter`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
+    description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

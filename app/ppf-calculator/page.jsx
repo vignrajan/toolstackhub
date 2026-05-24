@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'PPF Calculator FY 2026-27 — Public Provident Fund Interest & Maturity Calculator | ToolStackHub',
+  title: 'PPF Calculator FY 2026-27 — Maturity & Interest',
   description: 'Free PPF calculator for FY 2026-27 at 7.1% interest rate. Calculate maturity value, interest earned & year-wise returns. No signup required.',
   keywords: [
     'ppf calculator', 'ppf calculator india', 'ppf calculator online',
@@ -22,6 +22,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/ppf-calculator`,
     type: 'website',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PPF Calculator FY 2026-27 — Public Provident Fund Calculator India',
+    description: 'Calculate PPF maturity value, year-wise interest, and tax savings at 7.1%. Free, instant, no login.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

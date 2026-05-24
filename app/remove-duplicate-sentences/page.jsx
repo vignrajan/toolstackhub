@@ -6,16 +6,22 @@ import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Remove Duplicate Sentences Online Free – Clean Repeated Sentences',
+  title: 'Remove Duplicate Sentences – Clean Repeated Sentences Free',
   description: 'Remove duplicate sentences from text online free. Paste any paragraph or article and instantly get unique sentences only. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/remove-duplicate-sentences` },
   openGraph: {
-    title: 'Remove Duplicate Sentences Online Free – Clean Repeated Sentences',
+    title: 'Remove Duplicate Sentences – Clean Repeated Sentences Free',
     description: 'Remove duplicate sentences from text online free. Paste any paragraph or article and instantly get unique sentences only. No signup. Try now!',
     url: `${SITE_CONFIG.url}/remove-duplicate-sentences`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Duplicate Sentences – Clean Repeated Sentences Free',
+    description: 'Remove duplicate sentences from text online free. Paste any paragraph or article and instantly get unique sentences only. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

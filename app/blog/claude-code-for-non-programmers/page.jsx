@@ -26,6 +26,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Claude Code for Non-Programmers: A Gentle Beginner's Guide (2026)",
+    description: 'Can you use Claude Code without knowing programming? Yes. Full guide: install, first prompts, cost in INR, Plan Mode, CLAUDE.md, and 9 mistakes to avoid.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 const TOC = [

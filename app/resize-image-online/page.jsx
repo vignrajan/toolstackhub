@@ -7,15 +7,21 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Resize Image Online Free – Resize to Any Pixel Dimension',
-  description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+  description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
   alternates: { canonical: `${SITE_CONFIG.url}/resize-image-online` },
   openGraph: {
     title: 'Resize Image Online Free – Resize to Any Pixel Dimension',
-    description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+    description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
     url: `${SITE_CONFIG.url}/resize-image-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Resize Image Online Free – Resize to Any Pixel Dimension',
+    description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 
@@ -25,7 +31,7 @@ const jsonLd = {
     {
       '@type': 'SoftwareApplication',
       name: 'Resize Image',
-      description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup required.',
+      description: 'Resize images online for free to any pixel dimensions. Set exact width and height, maintain aspect ratio, use presets, download instantly. No signup.',
       url: `${SITE_CONFIG.url}/resize-image-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',

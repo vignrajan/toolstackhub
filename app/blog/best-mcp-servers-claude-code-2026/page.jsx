@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'Best MCP Servers for Claude Code in 2026 | ToolStackHub',
-  description: 'Tested: 10 best MCP servers for Claude Code in 2026. Install commands, real use cases, trade-offs. Free guide with GitHub, Playwright, Postgres, Notion & more.',
+  description: 'Tested: 10 best MCP servers for Claude Code in 2026. Install commands, real use cases, and trade-offs. GitHub, Playwright, Postgres, Notion & more.',
   keywords: [
     'best mcp servers claude code 2026', 'mcp server setup', 'claude code mcp integration',
     'model context protocol servers', 'claude mcp add', 'best mcp tools for developers',
@@ -19,6 +19,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/blog/best-mcp-servers-claude-code-2026`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best MCP Servers for Claude Code in 2026 — Tested & Ranked',
+    description: 'Tested: 10 best MCP servers for Claude Code in 2026. Install commands, real use cases, and trade-offs. GitHub, Playwright, Postgres, Notion & more.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

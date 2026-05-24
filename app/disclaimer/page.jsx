@@ -7,6 +7,20 @@ export const metadata = {
   title: 'Disclaimer – ToolStackHub',
   description: 'Disclaimer for ToolStackHub. Information about the limitations of our free online tools and the accuracy of results provided.',
   alternates: { canonical: `${SITE_CONFIG.url}/disclaimer` },
+  openGraph: {
+    title: 'Disclaimer – ToolStackHub',
+    description: 'Disclaimer for ToolStackHub. Information about the limitations of our free online tools and the accuracy of results provided.',
+    url: `${SITE_CONFIG.url}/disclaimer`,
+    type: 'website',
+    siteName: SITE_CONFIG.name,
+    images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Disclaimer – ToolStackHub',
+    description: 'Disclaimer for ToolStackHub. Information about the limitations of our free online tools and the accuracy of results provided.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
  
 export default function DisclaimerPage() {

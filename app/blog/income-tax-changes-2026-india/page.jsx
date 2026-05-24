@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Income Tax Changes 2026 India — New Rules, Slabs & What Changes From April 1',
-  description: 'Complete guide to income tax changes in India from April 1, 2026. New Tax Act 2025 explained, FY 2026-27 slabs, old vs new regime, ITR deadlines, and salary examples. Updated March 2026.',
+  title: 'Income Tax Changes 2026 India — New Slabs & April Rules',
+  description: 'Complete guide to income tax changes from April 2026. New Tax Act 2025, FY 2026-27 slabs, old vs new regime, ITR deadlines, and salary examples.',
   keywords: [
     'income tax changes 2026 india', 'new tax rules april 2026',
     'tax slab fy 2026-27', 'new vs old tax regime 2026',
@@ -14,12 +14,18 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/income-tax-changes-2026-india` },
   openGraph: {
-    title: 'Income Tax Changes 2026 India — New Rules, Slabs & What Changes From April 1',
+    title: 'Income Tax Changes 2026 India — New Slabs & April Rules',
     description: 'Everything changing in Indian income tax from April 2026 — new tax act, FY 2026-27 slabs, filing deadlines, and salary impact explained.',
     url: `${SITE_CONFIG.url}/blog/income-tax-changes-2026-india`,
     type: 'article',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Income Tax Changes 2026 India — New Slabs & April Rules',
+    description: 'Complete guide to income tax changes from April 2026. New Tax Act 2025, FY 2026-27 slabs, old vs new regime, ITR deadlines, and salary examples.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

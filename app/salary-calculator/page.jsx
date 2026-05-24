@@ -6,8 +6,8 @@ import SalaryGratuityCalculator from '../../components/tools/SalaryGratuityCalcu
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Salary Calculator India 2026 – Take Home Salary & Gratuity Calculator Free',
-  description: 'Free salary calculator India 2026. Calculate take-home salary, CTC breakup, PF, tax (old & new regime). Includes gratuity calculator with 15/26 formula. No signup.',
+  title: 'Salary Calculator India 2026 – Take Home Salary & Gratuity',
+  description: 'Free salary calculator India 2026. Calculate take-home salary, CTC breakup, PF, tax (old & new regime). Includes gratuity calculator with 15/26 formula.',
   keywords: [
     'salary calculator india', 'take home salary calculator', 'in hand salary calculator india',
     'ctc calculator', 'net salary calculator india', 'gratuity calculator india',
@@ -21,6 +21,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/salary-calculator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Salary & Gratuity Calculator India 2026 – Free, Instant, No Login',
+    description: 'Calculate take-home salary, CTC breakup, and gratuity instantly. Old & new tax regime. Free.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

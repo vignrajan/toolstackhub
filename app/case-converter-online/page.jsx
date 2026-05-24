@@ -8,16 +8,22 @@ import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Case Converter Online Free – UPPERCASE, Lowercase, Title Case & More',
+  title: 'Case Converter Online – UPPERCASE, Lowercase & Title Case',
   description: 'Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case instantly. Free online case converter. No signup needed. Try now!',
   keywords: ['case converter online', 'uppercase converter', 'lowercase converter', 'title case converter', 'camelcase converter', 'snake case converter'],
   alternates: { canonical: `${SITE_CONFIG.url}/case-converter-online` },
   openGraph: {
-    title: 'Case Converter Online Free – UPPERCASE, Lowercase, Title Case & More',
+    title: 'Case Converter Online – UPPERCASE, Lowercase & Title Case',
     description: 'Convert text to any case format instantly. 10 formats including camelCase and snake_case. Free, no signup.',
     url: `${SITE_CONFIG.url}/case-converter-online`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Case Converter Online – UPPERCASE, Lowercase & Title Case',
+    description: 'Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case instantly. Free online case converter. No signup needed.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

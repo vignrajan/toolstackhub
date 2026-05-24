@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: '5 Claude Hacks That Instantly Improve Your AI Results (Tested 2026)',
-  description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — instantly improve output quality. Copy-paste prompts inside.',
+  title: '5 Claude Hacks That Improve Your AI Results (Tested 2026)',
+  description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — improve output quality. Copy-paste prompts.',
   keywords: [
     'claude prompt hacks', 'claude ai tips', 'how to use claude effectively',
     'best claude prompts', 'claude prompt techniques', 'claude hacks 2026',
@@ -14,11 +14,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/blog/claude-hacks-improve-ai-results` },
   openGraph: {
-    title: '5 Claude Hacks That Instantly Improve Your AI Results (Tested 2026)',
+    title: '5 Claude Hacks That Improve Your AI Results (Tested 2026)',
     description: '5 proven Claude hacks with copy-paste prompts. /human, EL10, X10, Alt Three, Kill Critic — tested and explained.',
     url: `${SITE_CONFIG.url}/blog/claude-hacks-improve-ai-results`,
     type: 'article',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '5 Claude Hacks That Improve Your AI Results (Tested 2026)',
+    description: 'Most people use Claude wrong. These 5 proven Claude hacks — /human, EL10, X10, Alt Three, Kill Critic — improve output quality. Copy-paste prompts.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 // ── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
-  title: 'Text to Handwritten Notes Generator – Free Online Notebook Notes Maker',
-  description: 'Turn any text into handwritten notes on notebook paper instantly. Free text to handwritten notes tool — choose style, paper, ink color, and download as PNG or PDF.',
+  title: 'Text to Handwritten Notes Generator – Free Notebook Maker',
+  description: 'Turn any text into handwritten notes on notebook paper. Free tool — choose style, paper, ink color, and download as PNG or PDF. No signup required.',
   keywords: [
     'text to handwritten notes',
     'text to handwriting notes',

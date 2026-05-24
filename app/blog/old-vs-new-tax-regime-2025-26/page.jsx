@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'Old vs New Tax Regime 2025-26 — Which is Better for You? (Decision Table)',
-  description: 'Old vs New Tax Regime FY 2025-26 compared. Exact tax savings at every income level, breakeven deduction table, 8 real examples from ₹5L to ₹30L CTC. Find out which regime saves you more in 60 seconds.',
+  title: 'Old vs New Tax Regime 2025-26 — Which Saves You More?',
+  description: 'Old vs New Tax Regime FY 2025-26 compared. Exact tax savings at every income level, breakeven deduction table, 8 real examples from ₹5L to ₹30L CTC.',
   keywords: [
     'old vs new tax regime', 'old vs new tax regime 2025-26', 'which tax regime is better',
     'new tax regime vs old tax regime', 'income tax regime comparison india 2026',
@@ -20,6 +20,12 @@ export const metadata = {
     type: 'article',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Old vs New Tax Regime 2025-26 — Which Saves You More?',
+    description: 'Old vs New Tax Regime FY 2025-26 compared. Exact tax savings at every income level, breakeven deduction table, 8 real examples from ₹5L to ₹30L CTC.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -7,8 +7,8 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── CHANGED: title, description, keywords all India-focused ──────────────────
 export const metadata = {
-  title: 'Text Repeater for WhatsApp India — Repeat Text, Emojis & Prank Messages Free',
-  description: 'Free text repeater for WhatsApp India. Repeat any message, emoji, or prank text up to 1000×. Send birthday wishes, flood group chats, repeat for Instagram. No login, works on mobile.',
+  title: 'Text Repeater for WhatsApp India – Repeat Text Free',
+  description: 'Free text repeater for WhatsApp India. Repeat any message, emoji, or prank text up to 1000×. Birthday wishes, group chats, Instagram. No login.',
   keywords: [
     'text repeater for whatsapp india',
     'text repeater india',
@@ -36,6 +36,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Text Repeater for WhatsApp India — Repeat Any Message Free',
+    description: 'Repeat any message, emoji, or prank text for WhatsApp and Instagram. Free, instant, no login. Works on all Android and iPhone devices in India.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

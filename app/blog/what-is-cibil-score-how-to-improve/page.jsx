@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'What is CIBIL Score and How to Improve It Fast (2026 Guide)',
-  description: 'CIBIL score explained: what it is, score ranges, what affects it, and 9 proven ways to improve it fast. Includes home loan and credit card impact. Free tools included.',
+  description: 'CIBIL score explained: what it is, score ranges, what affects it, and 9 proven ways to improve it fast. Includes home loan and credit card impact.',
   alternates: { canonical: `${SITE_CONFIG.url}/blog/what-is-cibil-score-how-to-improve` },
   openGraph: {
     title: 'What is CIBIL Score and How to Improve It Fast (2026)',
@@ -13,6 +13,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/blog/what-is-cibil-score-how-to-improve`,
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What is CIBIL Score and How to Improve It Fast (2026)',
+    description: 'CIBIL score explained: what it is, score ranges, what affects it, and 9 proven ways to improve it fast. Includes home loan and credit card impact.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

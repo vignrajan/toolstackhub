@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
   title: 'How to Generate a Strong Password Online (Free, No Signup)',
-  description: 'Learn what makes a strong password, how to generate unbreakable passwords for free online, and how to manage them safely. Includes strength checker and 10 rules.',
+  description: 'What makes a strong password, how to generate unbreakable passwords online for free, and how to manage them safely. Includes strength checker and 10 rules.',
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-generate-strong-passwords-online` },
   openGraph: {
     title: 'How to Generate a Strong Password Online – Free Guide',
@@ -13,6 +13,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/blog/how-to-generate-strong-passwords-online`,
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Generate a Strong Password Online – Free Guide',
+    description: 'What makes a strong password, how to generate unbreakable passwords online for free, and how to manage them safely. Includes strength checker and 10 rules.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

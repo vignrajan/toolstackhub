@@ -6,8 +6,8 @@ import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Free Speech Bubble Maker Online – Add Speech Bubble to Image Instantly',
-  description: 'Add speech bubbles to any image free online. Classic speech, thought clouds, shout bursts. No login, instant PNG download. Perfect for memes, comics, Instagram, WhatsApp.',
+  title: 'Free Speech Bubble Maker – Add Speech Bubble to Any Image',
+  description: 'Add speech bubbles to any image free online. Classic speech, thought clouds, shout bursts. No login, PNG download. For memes, comics, and social media.',
   keywords: [
     'speech bubble maker', 'add speech bubble to image', 'speech bubble generator',
     'meme speech bubble', 'comic bubble creator', 'free speech bubble maker online',
@@ -21,6 +21,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/speech-bubble-maker`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Speech Bubble Maker – Add Speech Bubble to Any Image',
+    description: 'Add speech bubbles to images free. No login, instant download. Memes, comics, social media.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

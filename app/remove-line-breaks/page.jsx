@@ -29,6 +29,12 @@ export const metadata = {
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Line Breaks Online Free – Clean Text Instantly',
+    description: 'Remove line breaks from any text instantly. Free, browser-based, no signup.',
+    creator: SITE_CONFIG.twitterHandle,
+  },
 };
 
 // ── FAQ data ──────────────────────────────────────────────────

@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'HRA Calculator FY 2026-27 — House Rent Allowance Exemption Calculator India | ToolStackHub',
+  title: 'HRA Calculator FY 2026-27 — HRA Exemption India',
   description: 'Free HRA calculator for FY 2026-27. Calculate House Rent Allowance exemption under Section 10(13A). Updated with 8 metro cities. No signup required.',
   keywords: [
     'hra calculator', 'hra exemption calculator', 'house rent allowance calculator',
@@ -17,11 +17,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/hra-calculator` },
   openGraph: {
-    title: 'HRA Calculator FY 2026-27 — House Rent Allowance Exemption Calculator India',
+    title: 'HRA Calculator FY 2026-27 — HRA Exemption India',
     description: 'Calculate your HRA exemption for FY 2026-27. Updated 8-metro-city rule. All 3 conditions shown instantly. Free, no login.',
     url: `${SITE_CONFIG.url}/hra-calculator`,
     type: 'website',
     siteName: SITE_CONFIG.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'HRA Calculator FY 2026-27 — HRA Exemption India',
+    description: 'Free HRA calculator for FY 2026-27. Calculate House Rent Allowance exemption under Section 10(13A). Updated with 8 metro cities. No signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

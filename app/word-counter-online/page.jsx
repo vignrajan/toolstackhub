@@ -9,7 +9,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
-  title: 'Word Counter Online Free – Count Words & Characters in Real Time',
+  title: 'Word Counter Online – Count Words & Characters in Real Time',
   description: 'Count words, characters, sentences, paragraphs, and reading time instantly. Free word counter for writers, students, and bloggers. No signup needed.',
   keywords: [
     'word counter online',
@@ -22,7 +22,7 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/word-counter-online` },
   openGraph: {
-    title: 'Word Counter Online Free – Count Words & Characters in Real Time',
+    title: 'Word Counter Online – Count Words & Characters in Real Time',
     description: 'Count words, characters, sentences, paragraphs, and reading time instantly. Free, no signup.',
     url: `${SITE_CONFIG.url}/word-counter-online`,
     type: 'website',

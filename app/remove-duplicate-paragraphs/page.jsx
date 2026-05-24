@@ -6,16 +6,22 @@ import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Remove Duplicate Paragraphs Online Free – Clean Repeated Blocks',
+  title: 'Remove Duplicate Paragraphs – Clean Repeated Blocks Free',
   description: 'Remove duplicate paragraphs from any text online free. Paste your content and instantly remove repeated paragraph blocks. No signup. Try now!',
   alternates: { canonical: `${SITE_CONFIG.url}/remove-duplicate-paragraphs` },
   openGraph: {
-    title: 'Remove Duplicate Paragraphs Online Free – Clean Repeated Blocks',
+    title: 'Remove Duplicate Paragraphs – Clean Repeated Blocks Free',
     description: 'Remove duplicate paragraphs from any text online free. Paste your content and instantly remove repeated paragraph blocks. No signup. Try now!',
     url: `${SITE_CONFIG.url}/remove-duplicate-paragraphs`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Remove Duplicate Paragraphs – Clean Repeated Blocks Free',
+    description: 'Remove duplicate paragraphs from any text online free. Paste your content and instantly remove repeated paragraph blocks. No signup.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

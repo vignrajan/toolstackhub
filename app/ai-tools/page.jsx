@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Best AI Tools 2026 — Reviews, Comparisons & Use Cases',
-  description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, free vs paid comparisons, and use-case guides for professionals, developers, and students.',
+  description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, free vs paid comparisons, and use-case guides.',
   keywords: ['best ai tools 2026', 'chatgpt vs claude', 'free ai tools', 'ai tools for students', 'best ai writing tools', 'ai coding tools', 'ai image generators'],
   alternates: { canonical: `${SITE_CONFIG.url}/ai-tools` },
   openGraph: {
@@ -16,6 +16,12 @@ export const metadata = {
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best AI Tools 2026 — Reviews & Comparisons',
+    description: 'Find the best AI tools for writing, coding, design, and productivity in 2026. Honest reviews, free vs paid comparisons, and use-case guides.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

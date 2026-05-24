@@ -5,8 +5,8 @@ import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Free Invoice Generator Online – Create GST Invoice Instantly (No Login)',
-  description: 'Create professional invoices free online. GST invoice with CGST/SGST/IGST, PDF download, no signup, no watermark. For freelancers and small businesses in India.',
+  title: 'Free Invoice Generator – Create GST Invoice Online',
+  description: 'Create professional GST invoices free online. CGST/SGST/IGST, PDF download, no signup, no watermark. For freelancers and small businesses in India.',
   keywords: [
     'invoice generator online free', 'free invoice maker', 'gst invoice generator',
     'create invoice online free', 'invoice generator india', 'free invoice generator no login',
@@ -14,11 +14,17 @@ export const metadata = {
   ],
   alternates: { canonical: `${SITE_CONFIG.url}/invoice-generator` },
   openGraph: {
-    title: 'Free Invoice Generator Online – GST Invoice, PDF Download, No Login',
+    title: 'Free Invoice Generator – Create GST Invoice Online',
     description: 'Create professional GST invoices free. PDF download, no signup, no watermark. Works for freelancers and businesses in India.',
     url: `${SITE_CONFIG.url}/invoice-generator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Invoice Generator – Create GST Invoice Online',
+    description: 'Create professional GST invoices free online. CGST/SGST/IGST, PDF download, no signup, no watermark. For freelancers and small businesses in India.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

@@ -8,7 +8,7 @@ import { SITE_CONFIG } from '../../data/tools';
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
   title: 'Typing Speed Test Online Free – Check Your WPM Instantly',
-  description: 'Test your typing speed online free. Find your WPM, accuracy, and error count with a timed typing test. 30s, 1min, 2min, 5min modes. No signup required. Try now!',
+  description: 'Test your typing speed online free. Find your WPM, accuracy, and error count with a timed typing test. 30s, 1min, 2min, 5min modes. No signup required.',
   keywords: [
     'typing speed test',
     'typing test online',

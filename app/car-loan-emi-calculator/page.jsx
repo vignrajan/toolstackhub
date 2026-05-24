@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
   title: 'Car Loan EMI Calculator Free – Auto Loan EMI 2026',
-  description: 'Calculate car loan EMI instantly. Compare bank rates for new and used car loans. Full amortization schedule, down payment guide, and new vs used comparison. Free.',
+  description: 'Calculate car loan EMI instantly. Compare bank rates for new and used car loans. Amortization schedule, down payment guide, and new vs used comparison.',
   keywords: ['car loan emi calculator', 'auto loan emi calculator', 'car loan calculator india', 'car emi calculator 2026', 'two wheeler loan emi', 'used car loan emi calculator'],
   alternates: { canonical: `${SITE_CONFIG.url}/car-loan-emi-calculator` },
   openGraph: {
@@ -16,6 +16,12 @@ export const metadata = {
     url: `${SITE_CONFIG.url}/car-loan-emi-calculator`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Car Loan EMI Calculator Free 2026 – Auto Loan EMI',
+    description: 'Calculate car loan EMI instantly. Compare bank rates for new and used car loans. Amortization schedule, down payment guide, and new vs used comparison.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

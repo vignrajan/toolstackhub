@@ -8,15 +8,21 @@ import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Text to Speech Online Free – Convert Text to Audio Instantly',
-  description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required. Try now!',
+  title: 'Text to Speech Online Free – Convert Text to Audio',
+  description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required.',
   alternates: { canonical: `${SITE_CONFIG.url}/text-to-speech-online` },
   openGraph: {
-    title: 'Text to Speech Online Free – Convert Text to Audio Instantly',
-    description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required. Try now!',
+    title: 'Text to Speech Online Free – Convert Text to Audio',
+    description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required.',
     url: `${SITE_CONFIG.url}/text-to-speech-online`,
     type: 'website', siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Text to Speech Online Free – Convert Text to Audio',
+    description: 'Convert text to speech online free. Multiple voices, adjustable speed and pitch. Browser-based Web Speech API. No upload, no signup required.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 

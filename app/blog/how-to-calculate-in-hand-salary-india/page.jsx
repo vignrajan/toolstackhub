@@ -5,15 +5,21 @@ import SalaryGratuityCalculator from '../../../components/tools/SalaryGratuityCa
 import { SITE_CONFIG } from '../../../data/tools';
 
 export const metadata = {
-  title: 'How to Calculate In-Hand Salary in India (2026) – Free Salary Calculator',
-  description: 'Calculate your exact in-hand salary from CTC free. PF deduction, professional tax, old vs new regime, income tax explained with examples for ₹3L to ₹30L CTC. Includes free salary calculator.',
+  title: 'How to Calculate In-Hand Salary in India (2026)',
+  description: 'Calculate your exact in-hand salary from CTC free. PF, professional tax, old vs new regime explained with examples for ₹3L to ₹30L CTC.',
   alternates: { canonical: `${SITE_CONFIG.url}/blog/how-to-calculate-in-hand-salary-india` },
   openGraph: {
-    title: 'How to Calculate In-Hand Salary in India (2026) – Free Salary Calculator',
+    title: 'How to Calculate In-Hand Salary in India (2026)',
     description: 'Free in-hand salary calculator India. CTC to take-home formula, PF, tax explained with worked examples.',
     url: `${SITE_CONFIG.url}/blog/how-to-calculate-in-hand-salary-india`,
     type: 'article',
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Calculate In-Hand Salary in India (2026) – Free Calculator',
+    description: 'Calculate your exact in-hand salary from CTC free. PF deduction, professional tax, old vs new regime, income tax explained with examples for ₹3L to ₹30L CTC.',
+    creator: SITE_CONFIG.twitterHandle,
   },
 };
 
