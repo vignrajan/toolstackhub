@@ -22,9 +22,8 @@ export const metadata = {
     'image size reducer',
     'compress image without losing quality',
   ],
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: `${SITE_CONFIG.url}/tools/image-compressor`,
+    canonical: `${SITE_CONFIG.url}/compress-image-online`,
   },
   openGraph: {
     title: 'Image Compressor – Compress Images Online Free',

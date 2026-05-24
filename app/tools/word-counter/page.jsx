@@ -10,8 +10,7 @@ export const metadata = {
   title: 'Word Counter Online – Count Words & Characters in Real Time',
   description: 'Count words, characters, sentences, paragraphs, and reading time instantly. Free online word counter for writers, students, and bloggers. No signup needed.',
   keywords: ['word counter', 'count words online', 'word count tool', 'character counter', 'reading time calculator', 'essay word counter', 'word frequency counter'],
-  robots: { index: false, follow: true },
-  alternates: { canonical: `${SITE_CONFIG.url}/tools/word-counter` },
+  alternates: { canonical: `${SITE_CONFIG.url}/word-counter-online` },
   openGraph: {
     title: 'Word Counter Online Free – Count Words Instantly',
     description: 'Real-time word count, character count, sentence count, and reading time. Free, no signup.',

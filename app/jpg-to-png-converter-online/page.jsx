@@ -71,6 +71,7 @@ const variantLinks = [
 ];
 
 const faqs = [
+  { q: 'How do I convert JPG to PNG online?', a: 'Upload your JPG or JPEG file, preview it in the tool, then click "Convert to PNG". Your PNG file will be ready to download instantly.' },
   { q: 'Will I lose quality converting JPG to PNG?', a: 'No additional quality is lost. PNG is lossless so the output matches the source JPG pixel-for-pixel.' },
   { q: 'Why convert JPG to PNG?', a: 'PNG supports transparency (alpha channel) which JPG does not. PNG is also lossless — perfect for logos, icons, and graphics.' },
   { q: 'Does PNG support transparent backgrounds?', a: 'Yes, PNG supports full alpha channel transparency. However a converted JPG will have a solid background since JPG has no transparency channel.' },

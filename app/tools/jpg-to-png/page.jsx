@@ -20,8 +20,7 @@ export const metadata = {
     'change jpg to png',
     'jpg to png without losing quality',
   ],
-  robots: { index: false, follow: true },
-  alternates: { canonical: `${SITE_CONFIG.url}/tools/jpg-to-png` },
+  alternates: { canonical: `${SITE_CONFIG.url}/jpg-to-png-converter-online` },
   openGraph: {
     title: 'JPG to PNG Converter – Free Online JPEG to PNG Tool',
     description: 'Convert JPG/JPEG images to PNG format instantly. Free, no upload, no quality loss, download in one click.',
