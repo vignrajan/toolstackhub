@@ -995,7 +995,27 @@ export const tools = [
     category: 'utility',
     icon: '🚀',
     description: 'Free AI prompts for keyword research, blog writing, on-page SEO, and technical audits. Works with ChatGPT, Claude, and Gemini.',
-    href: '/ai-prompts/seo',  // custom href overrides the default /tools/slug
+    href: '/ai-prompts/seo',
+  },
+  {
+    slug:        'whatsapp-link-generator',
+    name:        'WhatsApp Link Generator',
+    href:        '/whatsapp-link-generator',
+    category:    'utility',
+    icon:        '💬',
+    description: 'Generate WhatsApp click-to-chat links with pre-filled messages. Perfect for business cards, websites, and social bios. Free, no signup.',
+    keywords:    ['whatsapp link generator', 'wa.me link', 'click to chat', 'whatsapp direct link', 'whatsapp link india'],
+    relatedSlugs: ['qr-code-generator', 'url-encoder'],
+  },
+  {
+    slug:        'pan-validator',
+    name:        'PAN Card Validator',
+    href:        '/pan-validator',
+    category:    'utility',
+    icon:        '🪪',
+    description: 'Validate any PAN card number instantly. Check PAN format, identify holder type (Individual, Company, HUF), and decode PAN structure. Free, India-specific.',
+    keywords:    ['pan card validator', 'pan number validator', 'verify pan card', 'pan card format', 'pan card check india'],
+    relatedSlugs: ['gst-calculator', 'salary-calculator', 'professional-tax-calculator'],
   },
 ];
 
