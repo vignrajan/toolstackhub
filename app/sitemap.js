@@ -117,6 +117,7 @@ export default function sitemap() {
     p('/tools/image',     0.88, 'weekly'),
     p('/tools/developer', 0.88, 'weekly'),
     p('/tools/utility',   0.88, 'weekly'),
+    p('/tools/finance',   0.90, 'weekly'),
 
     // ── New India tools ───────────────────────────────────────
     p('/whatsapp-link-generator', 0.92),
@@ -127,6 +128,8 @@ export default function sitemap() {
     p('/jwt-decoder-online',           0.88),
     p('/diff-checker',                 0.88),
     p('/cron-expression-builder',      0.85),
+    p('/form-16-calculator',           0.92),
+    p('/salary-slip-generator',        0.90),
 
     // ── Utility tools ─────────────────────────────────────────
     p('/qr-code-generator-online',     0.95),

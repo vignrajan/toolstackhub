@@ -1077,6 +1077,26 @@ export const tools = [
     keywords:    ['cron expression builder', 'cron job generator', 'cron syntax', 'cron expression generator online', 'cron validator'],
     relatedSlugs: ['unix-timestamp-converter', 'regex-tester', 'json-formatter'],
   },
+  {
+    slug:        'form-16-calculator',
+    name:        'Form 16 Tax Calculator',
+    href:        '/form-16-calculator',
+    category:    'utility',
+    icon:        '🧾',
+    description: 'Calculate income tax from Form 16 data. Compare old vs new tax regime, HRA exemption, Chapter VI-A deductions, and monthly TDS. FY 2025-26.',
+    keywords:    ['form 16 calculator', 'form 16 tax calculator india', 'old vs new tax regime calculator', 'income tax calculator india 2026', 'tds calculator'],
+    relatedSlugs: ['salary-calculator', 'hra-calculator', 'professional-tax-calculator'],
+  },
+  {
+    slug:        'salary-slip-generator',
+    name:        'Salary Slip Generator',
+    href:        '/salary-slip-generator',
+    category:    'utility',
+    icon:        '🖨️',
+    description: 'Generate professional salary slips with earnings, deductions, EPF, and TDS. Print or download as PDF. Free, no signup, browser-based.',
+    keywords:    ['salary slip generator', 'payslip generator india', 'salary slip format india', 'pay stub generator free', 'salary slip online free'],
+    relatedSlugs: ['salary-calculator', 'form-16-calculator', 'epf-calculator'],
+  },
 ];
 
 /**
