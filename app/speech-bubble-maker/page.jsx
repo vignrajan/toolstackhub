@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Free Speech Bubble Maker – Add Speech Bubble to Any Image',
@@ -339,6 +340,7 @@ export default function SpeechBubbleMakerPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="speech-bubble-maker" />
       <Footer />
     </>
   );

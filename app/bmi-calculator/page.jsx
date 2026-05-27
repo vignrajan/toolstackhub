@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import BMICalculator from '../../components/tools/BMICalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'BMI Calculator India 2026 – Indian Standards & Ideal Weight',
@@ -377,6 +378,7 @@ export default function BMICalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="bmi-calculator" />
       <Footer />
     </>
   );

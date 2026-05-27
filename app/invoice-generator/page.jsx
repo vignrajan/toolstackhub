@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Free Invoice Generator – Create GST Invoice Online',
@@ -403,6 +404,7 @@ export default function InvoiceGeneratorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="invoice-generator" />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import ChatScreenshotGenerator from '../../components/tools/ChatScreenshotGenera
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Chat Screenshot Generator — WhatsApp, iMessage & Snapchat',
@@ -425,6 +426,7 @@ export default function ChatScreenshotGeneratorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="chat-screenshot-generator" />
       <Footer />
     </>
   );

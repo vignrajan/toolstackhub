@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JSON Viewer Online Free – View & Explore JSON Instantly',
@@ -214,6 +215,7 @@ export default function JsonViewerPage() {
           </section>
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="json-viewer-online" />
       <Footer />
     </>
   );

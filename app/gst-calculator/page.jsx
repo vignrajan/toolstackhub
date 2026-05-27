@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import GSTCalculator from '../../components/tools/GSTCalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'GST Calculator Online Free – Calculate GST Amount Instantly',
@@ -386,6 +387,7 @@ export default function GSTCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="gst-calculator" />
       <Footer />
     </>
   );

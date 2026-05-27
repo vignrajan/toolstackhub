@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import Base64Encoder from '../../components/tools/Base64Encoder';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -521,6 +522,7 @@ export default function Base64EncoderOnlinePage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="base64-encoder-online" />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import SalaryGratuityCalculator from '../../components/tools/SalaryGratuityCalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Salary Calculator India 2026 – Take Home Salary & Gratuity',
@@ -434,6 +435,7 @@ export default function SalaryCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="salary-calculator" />
       <Footer />
     </>
   );

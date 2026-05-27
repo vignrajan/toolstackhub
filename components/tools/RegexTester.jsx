@@ -10,12 +10,25 @@ const EXAMPLES = [
   { label: 'Date',     pattern: '\\d{4}[-/]\\d{2}[-/]\\d{2}', flags: 'g' },
 ];
 
+function copyText(text) {
+  navigator.clipboard.writeText(text).catch(() => {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  });
+}
+
 export default function RegexTester() {
   const [pattern, setPattern] = useState('');
   const [flags, setFlags]     = useState('g');
   const [testStr, setTestStr] = useState('Test text: hello@example.com and user@test.org\nVisit https://toolstackhub.in for free tools.\nPhone: +1 (555) 123-4567');
   const [replaceWith, setReplaceWith] = useState('');
   const [mode, setMode]       = useState('match'); // match | replace
+  const [copiedMatches, setCopiedMatches] = useState(false);
+  const [copiedReplace, setCopiedReplace] = useState(false);
 
   const result = useMemo(() => {
     if (!pattern) return { matches: [], highlighted: testStr, error: '', replaced: '' };
@@ -126,10 +139,18 @@ export default function RegexTester() {
         {/* Results */}
         {pattern && !result.error && (
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-semibold ${result.matches.length > 0 ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
                 {result.matches.length > 0 ? `✅ ${result.matches.length} match${result.matches.length !== 1 ? 'es' : ''}` : '❌ No matches'}
               </span>
+              {result.matches.length > 0 && mode === 'match' && (
+                <button
+                  onClick={() => { copyText(result.matches.map(m => m.match).join('\n')); setCopiedMatches(true); setTimeout(() => setCopiedMatches(false), 2000); }}
+                  className="text-xs px-3 py-1 bg-surface-100 hover:bg-brand-50 hover:text-brand-700 rounded-lg transition-colors"
+                >
+                  {copiedMatches ? 'Copied ✓' : 'Copy Matches'}
+                </button>
+              )}
             </div>
 
             {/* Highlighted matches */}
@@ -144,7 +165,17 @@ export default function RegexTester() {
             {/* Replace result */}
             {mode === 'replace' && (
               <div>
-                <p className="text-xs font-medium text-surface-500 mb-1.5">After replacement:</p>
+                <div className="flex items-center justify-between mb-1.5">
+                  <p className="text-xs font-medium text-surface-500">After replacement:</p>
+                  {result.replaced && (
+                    <button
+                      onClick={() => { copyText(result.replaced); setCopiedReplace(true); setTimeout(() => setCopiedReplace(false), 2000); }}
+                      className="text-xs px-3 py-1 bg-surface-100 hover:bg-brand-50 hover:text-brand-700 rounded-lg transition-colors"
+                    >
+                      {copiedReplace ? 'Copied ✓' : 'Copy Result'}
+                    </button>
+                  )}
+                </div>
                 <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl font-mono text-sm whitespace-pre-wrap">{result.replaced}</div>
               </div>
             )}

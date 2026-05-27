@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JSON Beautifier Online Free – Beautify & Pretty Print JSON',
@@ -198,6 +199,7 @@ export default function JsonBeautifierPage() {
           </section>
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="json-beautifier-online" />
       <Footer />
     </>
   );

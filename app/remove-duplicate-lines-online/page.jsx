@@ -5,6 +5,7 @@ import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import RemoveDuplicateLines from '../../components/tools/RemoveDuplicateLines';
 import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -617,6 +618,7 @@ export default function RemoveDuplicateLinesPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="remove-duplicate-lines-online" />
       <Footer />
     </>
   );

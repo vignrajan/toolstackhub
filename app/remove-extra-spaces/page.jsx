@@ -5,6 +5,7 @@ import AdBanner from '../../components/AdBanner';
 import RemoveLineBreaks from '../../components/tools/RemoveLineBreaks';
 import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
@@ -512,6 +513,7 @@ multiple   lines.`}</pre>
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="remove-extra-spaces" />
       <Footer />
     </>
   );

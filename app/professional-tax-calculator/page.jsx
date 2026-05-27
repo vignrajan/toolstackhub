@@ -4,6 +4,7 @@ import ProfessionalTaxCalculator from '../../components/tools/ProfessionalTaxCal
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Professional Tax Calculator India 2026 — PT Slabs',
@@ -430,6 +431,7 @@ export default function ProfessionalTaxCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="professional-tax-calculator" />
       <Footer />
     </>
   );

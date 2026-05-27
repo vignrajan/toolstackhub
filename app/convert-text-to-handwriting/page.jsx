@@ -5,6 +5,7 @@ import ToolCard from '../../components/ToolCard';
 import TextToHandwriting from '../../components/tools/TextToHandwriting';
 import { SITE_CONFIG, tools } from '../../data/tools';
 import Link from 'next/link';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ─────────────────────────────────────────────
 export const metadata = {
@@ -385,6 +386,7 @@ export default function ConvertTextToHandwritingPage() {
         </div>
       </main>
 
+      <RelatedToolsCluster currentSlug="convert-text-to-handwriting" />
       <Footer />
     </>
   );

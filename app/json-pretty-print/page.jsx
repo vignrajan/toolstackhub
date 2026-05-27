@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JSON Pretty Print Online Free – Pretty-Print JSON Instantly',
@@ -183,6 +184,7 @@ export default function JsonPrettyPrintPage() {
           </section>
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="json-pretty-print" />
       <Footer />
     </>
   );

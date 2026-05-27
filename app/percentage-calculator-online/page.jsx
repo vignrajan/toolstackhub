@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import PercentageCalculator from '../../components/tools/PercentageCalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -509,6 +510,7 @@ export default function PercentageCalculatorOnlinePage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="percentage-calculator-online" />
       <Footer />
     </>
   );

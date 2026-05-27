@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import PasswordGenerator from '../../components/tools/PasswordGenerator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -473,6 +474,7 @@ export default function PasswordGeneratorOnlinePage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="password-generator-online" />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import FuelBillGenerator from '../../components/tools/FuelBillGenerator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Fuel Bill Generator – Petrol & Diesel Bill India 2026 Free',
@@ -344,6 +345,7 @@ export default function FuelBillGeneratorPage({ searchParams }) {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="fuel-bill-generator" />
       <Footer />
     </>
   );
