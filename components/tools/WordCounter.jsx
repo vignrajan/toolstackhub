@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react';
 
 export default function WordCounter() {
   const [text, setText] = useState('');
+  const [copied, setCopied] = useState(false);
 
   const stats = useMemo(() => {
     const words      = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
@@ -36,9 +37,31 @@ export default function WordCounter() {
       {/* Toolbar */}
       <div className="flex items-center justify-between px-5 py-3 bg-surface-50 border-b border-surface-200">
         <span className="text-sm font-medium text-surface-600">Word Counter</span>
-        <button onClick={() => setText('')} className="text-xs text-surface-400 hover:text-surface-700 transition-colors">
-          Clear
-        </button>
+        <div className="flex items-center gap-3">
+          {text.trim() && (
+            <button
+              onClick={() => {
+                const summary = `Words: ${stats.words} | Characters: ${stats.chars} | Sentences: ${stats.sentences} | Paragraphs: ${stats.paragraphs} | Reading time: ${stats.readTime} min`;
+                navigator.clipboard.writeText(summary).catch(() => {
+                  const el = document.createElement('textarea');
+                  el.value = summary;
+                  document.body.appendChild(el);
+                  el.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(el);
+                });
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="text-xs text-brand-600 hover:text-brand-800 transition-colors font-medium"
+            >
+              {copied ? 'Copied ✓' : 'Copy Stats'}
+            </button>
+          )}
+          <button onClick={() => setText('')} className="text-xs text-surface-400 hover:text-surface-700 transition-colors">
+            Clear
+          </button>
+        </div>
       </div>
 
       <div className="p-5 space-y-5">

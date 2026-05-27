@@ -5,20 +5,20 @@ import { blogPosts } from '../../data/blog';
 import { SITE_CONFIG } from '../../data/tools';
 
 export const metadata = {
-  title: 'Blog – Text Tools Tips, Guides & Tutorials | ToolStackHub',
-  description: 'Free guides, tips, and tutorials on text cleaning, data formatting, developer tools, and productivity. Written by the ToolStackHub team.',
+  title: 'Free Tools Blog | Tips, Guides & Tutorials | ToolStackHub',
+  description: 'Free guides, tips, and tutorials on developer tools, image compression, JSON formatting, finance calculators, and productivity. By ToolStackHub.',
   alternates: { canonical: `${SITE_CONFIG.url}/blog` },
   openGraph: {
-    title: 'Blog – Text Tools Tips, Guides & Tutorials | ToolStackHub',
-    description: 'Free guides on text cleaning, developer tools, and productivity.',
+    title: 'Free Tools Blog | Tips, Guides & Tutorials | ToolStackHub',
+    description: 'Free guides on developer tools, image compression, JSON formatting, and productivity.',
     url: `${SITE_CONFIG.url}/blog`,
     type: 'website',
     siteName: SITE_CONFIG.name,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog – Text Tools Tips, Guides & Tutorials | ToolStackHub',
-    description: 'Free guides on text cleaning, developer tools, and productivity.',
+    title: 'Free Tools Blog | Tips, Guides & Tutorials | ToolStackHub',
+    description: 'Free guides on developer tools, image compression, JSON formatting, and productivity.',
     creator: SITE_CONFIG.twitterHandle,
   },
 };

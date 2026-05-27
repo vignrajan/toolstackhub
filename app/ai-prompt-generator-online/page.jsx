@@ -5,6 +5,7 @@ import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import AiPromptGenerator from '../../components/tools/AiPromptGenerator';
 import { SITE_CONFIG } from '../../data/tools';
 import NewsletterBanner from '../../components/NewsletterBanner';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── SEO Metadata ──────────────────────────────────────────────
 export const metadata = {
@@ -561,6 +562,7 @@ export default function AiPromptGeneratorOnlinePage() {
         </div>
       </main>
       <NewsletterBanner variant="tool" />
+      <RelatedToolsCluster currentSlug="ai-prompt-generator-online" />
       <Footer />
     </>
   );

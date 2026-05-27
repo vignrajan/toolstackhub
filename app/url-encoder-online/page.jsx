@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import UrlEncoder from '../../components/tools/UrlEncoder';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'URL Encoder Decoder – Encode & Decode URLs Instantly Free',
@@ -186,6 +187,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="url-encoder-online" />
       <Footer />
     </>
   );

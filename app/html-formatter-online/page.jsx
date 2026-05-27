@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import HtmlFormatter from '../../components/tools/HtmlFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'HTML Formatter Online – Beautify & Minify HTML Instantly',
@@ -186,6 +187,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="html-formatter-online" />
       <Footer />
     </>
   );

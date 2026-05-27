@@ -56,6 +56,10 @@ export const metadata = {
   },
   alternates: {
     canonical: SITE_CONFIG.url,
+    languages: {
+      'en':    SITE_CONFIG.url,
+      'en-IN': SITE_CONFIG.url,
+    },
   },
   verification: {
     // Add your Google Search Console verification code here

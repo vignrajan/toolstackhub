@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import CountdownTimer from '../../components/tools/CountdownTimer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Countdown Timer Online Free – Set Timer with Alarm',
@@ -186,6 +187,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="countdown-timer-online" />
       <Footer />
     </>
   );

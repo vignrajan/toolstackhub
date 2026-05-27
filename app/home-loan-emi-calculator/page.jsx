@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import EMICalculator from '../../components/tools/EMICalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Home Loan EMI Calculator Free – Housing Loan EMI 2026',
@@ -337,6 +338,7 @@ export default function HomeLoanEMIPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="home-loan-emi-calculator" />
       <Footer />
     </>
   );

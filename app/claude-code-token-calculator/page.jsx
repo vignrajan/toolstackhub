@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Calculator from '../../components/tools/Calculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ─────────────────────────────────────────────────────────────
 // SEO Metadata

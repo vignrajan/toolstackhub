@@ -4,6 +4,7 @@ import NumberToWords from '../../components/tools/NumberToWords';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Number to Words Converter India 2026 — Rupees, Lakh, Crore',
@@ -656,6 +657,7 @@ export default function NumberToWordsPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="number-to-words" />
       <Footer />
     </>
   );

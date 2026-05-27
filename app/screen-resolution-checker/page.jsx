@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import ScreenResolution from '../../components/tools/ScreenResolution';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Screen Resolution Checker – What Is My Screen Size? Free',
@@ -186,6 +187,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="screen-resolution-checker" />
       <Footer />
     </>
   );

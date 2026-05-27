@@ -5,6 +5,7 @@ import AdBanner from '../../components/AdBanner';
 import RemoveLineBreaks from '../../components/tools/RemoveLineBreaks';
 import TextToolsLinks from '../../components/TextToolsLinks';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
@@ -539,6 +540,7 @@ export default function RemoveEmptyLinesPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="remove-empty-lines" />
       <Footer />
     </>
   );

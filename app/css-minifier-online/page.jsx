@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import CssMinifier from '../../components/tools/CssMinifier';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'CSS Minifier Online Free – Compress & Minify CSS Instantly',
@@ -186,6 +187,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="css-minifier-online" />
       <Footer />
     </>
   );

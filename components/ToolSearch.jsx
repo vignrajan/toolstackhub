@@ -46,6 +46,19 @@ export default function ToolSearch({ className = '' }) {
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
+  // Cmd+K / Ctrl+K global shortcut
+  useEffect(() => {
+    const handler = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+        setFocused(true);
+      }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, []);
+
   // Keyboard navigation
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
@@ -82,8 +95,8 @@ export default function ToolSearch({ className = '' }) {
           onChange={e => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onKeyDown={handleKeyDown}
-          placeholder="Search tools… (e.g. JSON, compress, QR)"
-          className="w-full pl-12 pr-12 py-3.5 bg-white rounded-2xl border border-surface-200 text-surface-800 placeholder:text-surface-400
+          placeholder="Search 50+ tools… (e.g. JSON, compress, QR)"
+          className="w-full pl-12 pr-20 py-3.5 bg-white rounded-2xl border border-surface-200 text-surface-800 placeholder:text-surface-400
             focus:outline-none focus:border-brand-400 focus:ring-4 focus:ring-brand-100
             shadow-sm text-base transition-all duration-150"
           aria-label="Search tools"
@@ -91,19 +104,25 @@ export default function ToolSearch({ className = '' }) {
           autoComplete="off"
         />
 
-        {/* Clear button */}
-        {query && (
-          <button
-            type="button"
-            onClick={() => { setQuery(''); inputRef.current?.focus(); }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-surface-400 hover:text-surface-600 transition-colors"
-            aria-label="Clear search"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        )}
+        {/* Keyboard shortcut hint / clear button */}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+          {query ? (
+            <button
+              type="button"
+              onClick={() => { setQuery(''); inputRef.current?.focus(); }}
+              className="text-surface-400 hover:text-surface-600 transition-colors"
+              aria-label="Clear search"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          ) : (
+            <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-surface-100 border border-surface-200 rounded text-[10px] text-surface-400 font-mono select-none">
+              ⌘K
+            </kbd>
+          )}
+        </div>
       </div>
 
       {/* Dropdown results */}

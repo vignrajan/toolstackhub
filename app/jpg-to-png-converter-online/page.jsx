@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JpgToPng from '../../components/tools/JpgToPng';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JPG to PNG Converter – Convert JPEG to PNG Instantly Free',
@@ -232,6 +233,7 @@ export default function Page() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="jpg-to-png-converter-online" />
       <Footer />
     </>
   );

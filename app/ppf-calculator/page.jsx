@@ -4,6 +4,7 @@ import PPFCalculator from '../../components/tools/PPFCalculator';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'PPF Calculator FY 2026-27 — Maturity & Interest',
@@ -580,6 +581,7 @@ export default function PPFCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="ppf-calculator" />
       <Footer />
     </>
   );

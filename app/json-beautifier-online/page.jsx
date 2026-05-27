@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JSON Beautifier Online Free – Beautify & Pretty Print JSON',
@@ -26,6 +27,14 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  { q: 'What is a JSON beautifier?', a: 'A JSON beautifier formats compressed or minified JSON into properly indented, human-readable output with consistent spacing and line breaks — without changing the data.' },
+  { q: 'What is the difference between a JSON beautifier and a JSON formatter?', a: 'They are the same thing. "Beautify" and "format" both mean adding indentation and whitespace to make JSON readable. The terms are used interchangeably.' },
+  { q: 'Does beautifying change my JSON data?', a: 'No — beautifying only adds whitespace. The underlying data, structure, and values are identical before and after.' },
+  { q: 'Can it detect JSON errors?', a: 'Yes — if your JSON has syntax errors, the tool shows a specific error message so you know what to fix before beautifying.' },
+  { q: 'Is my JSON data safe?', a: 'Yes — all processing runs locally in your browser. Your JSON is never sent to any server.' },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -44,6 +53,16 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'JSON Beautifier', item: `${SITE_CONFIG.url}/json-beautifier-online` },
+      ],
+    },
+    { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    {
+      '@type': 'HowTo',
+      name: 'How to Beautify JSON Online',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste your JSON', text: 'Paste your raw or minified JSON into the input panel.' },
+        { '@type': 'HowToStep', position: 2, name: 'Click Beautify', text: 'Click the Beautify or Format button to apply indentation and line breaks.' },
+        { '@type': 'HowToStep', position: 3, name: 'Copy the output', text: 'Click Copy to copy the beautified JSON to your clipboard.' },
       ],
     },
   ],
@@ -143,6 +162,23 @@ export default function JsonBeautifierPage() {
           </section>
 
           <section>
+            <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <details key={i} className="group border border-surface-200 rounded-xl bg-white overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-medium text-surface-800 hover:bg-surface-50 transition-colors">
+                    {faq.q}
+                    <svg className="w-4 h-4 text-surface-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-surface-600 text-sm leading-relaxed">{faq.a}</div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related JSON Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
@@ -163,6 +199,7 @@ export default function JsonBeautifierPage() {
           </section>
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="json-beautifier-online" />
       <Footer />
     </>
   );

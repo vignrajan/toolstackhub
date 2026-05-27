@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
 import JsonFormatter from '../../components/tools/JsonFormatter';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'JSON Validator Online Free – Validate JSON Syntax Instantly',
@@ -195,6 +196,7 @@ export default function JsonValidatorPage() {
           </section>
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="json-validator-online" />
       <Footer />
     </>
   );

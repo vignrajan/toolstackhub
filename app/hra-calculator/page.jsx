@@ -4,6 +4,7 @@ import HRACalculator from '../../components/tools/HRACalculator';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'HRA Calculator FY 2026-27 — HRA Exemption India',
@@ -616,6 +617,7 @@ export default function HRACalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="hra-calculator" />
       <Footer />
     </>
   );

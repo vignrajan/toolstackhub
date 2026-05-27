@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AgeCalculator from '../../components/tools/AgeCalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ─────────────────────────────────────────────────────────────
 // METADATA — covers every short + long-tail keyword
@@ -653,6 +654,7 @@ export default function AgeCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="age-calculator-online" />
       <Footer />
     </>
   );

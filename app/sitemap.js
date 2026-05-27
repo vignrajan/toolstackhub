@@ -112,6 +112,25 @@ export default function sitemap() {
     p('/blog/claude-code-for-non-programmers',                    0.92),
     p('/blog/best-mcp-servers-claude-code-2026',                  0.92),
 
+    // ── Category landing pages ────────────────────────────────
+    p('/tools/text',      0.88, 'weekly'),
+    p('/tools/image',     0.88, 'weekly'),
+    p('/tools/developer', 0.88, 'weekly'),
+    p('/tools/utility',   0.88, 'weekly'),
+    p('/tools/finance',   0.90, 'weekly'),
+
+    // ── New India tools ───────────────────────────────────────
+    p('/whatsapp-link-generator', 0.92),
+    p('/pan-validator',           0.92),
+    p('/ifsc-finder',             0.92),
+    p('/gst-number-validator',    0.92),
+    p('/epf-calculator',          0.92),
+    p('/jwt-decoder-online',           0.88),
+    p('/diff-checker',                 0.88),
+    p('/cron-expression-builder',      0.85),
+    p('/form-16-calculator',           0.92),
+    p('/salary-slip-generator',        0.90),
+
     // ── Utility tools ─────────────────────────────────────────
     p('/qr-code-generator-online',     0.95),
     p('/password-generator-online',    0.90),

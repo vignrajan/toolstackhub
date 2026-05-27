@@ -4,6 +4,7 @@ import TextRepeater from '../../components/tools/TextRepeater';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── CHANGED: title, description, keywords all India-focused ──────────────────
 export const metadata = {
@@ -588,6 +589,7 @@ export default function TextRepeaterPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="text-repeater" />
       <Footer />
     </>
   );

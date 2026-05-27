@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import EMICalculator from '../../components/tools/EMICalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 // ── Metadata ──────────────────────────────────────────────────
 export const metadata = {
@@ -504,6 +505,7 @@ export default function EMICalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="emi-calculator" />
       <Footer />
     </>
   );

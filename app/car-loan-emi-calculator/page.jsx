@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import EMICalculator from '../../components/tools/EMICalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'Car Loan EMI Calculator Free – Auto Loan EMI 2026',
@@ -352,6 +353,7 @@ export default function CarLoanEMIPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="car-loan-emi-calculator" />
       <Footer />
     </>
   );

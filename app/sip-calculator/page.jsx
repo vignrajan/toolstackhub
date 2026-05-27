@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import AdBanner from '../../components/AdBanner';
 import SIPCalculator from '../../components/tools/SIPCalculator';
 import { SITE_CONFIG } from '../../data/tools';
+import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
   title: 'SIP Calculator – Mutual Fund SIP Returns Calculator Free',
@@ -386,6 +387,7 @@ export default function SIPCalculatorPage() {
 
         </div>
       </main>
+      <RelatedToolsCluster currentSlug="sip-calculator" />
       <Footer />
     </>
   );
