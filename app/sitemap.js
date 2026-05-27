@@ -135,6 +135,9 @@ export default function sitemap() {
     p('/markdown-to-html',             0.88),
     p('/unit-converter',               0.90),
     p('/color-palette-generator',      0.88),
+    p('/cgpa-calculator',              0.92),
+    p('/html-to-markdown',             0.88),
+    p('/tools/student',                0.88, 'weekly'),
 
     // ── Utility tools ─────────────────────────────────────────
     p('/qr-code-generator-online',     0.95),

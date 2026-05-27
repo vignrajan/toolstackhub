@@ -1147,6 +1147,26 @@ export const tools = [
     keywords:    ['color palette generator', 'color scheme generator online', 'complementary color generator', 'analogous colors', 'color palette tool free'],
     relatedSlugs: ['color-picker-online', 'css-minifier-online', 'html-formatter-online'],
   },
+  {
+    slug:        'cgpa-calculator',
+    name:        'CGPA Calculator',
+    href:        '/cgpa-calculator',
+    category:    'utility',
+    icon:        '🎓',
+    description: 'Calculate CGPA from grades and credits. Convert CGPA to percentage for VTU, Anna University, Mumbai, Pune (SPPU), Osmania, CBSE. Free.',
+    keywords:    ['cgpa calculator', 'cgpa to percentage calculator', 'cgpa calculator vtu', 'cgpa anna university', 'cgpa percentage conversion india'],
+    relatedSlugs: ['percentage-calculator-online', 'age-calculator-online', 'typing-test'],
+  },
+  {
+    slug:        'html-to-markdown',
+    name:        'HTML to Markdown',
+    href:        '/html-to-markdown',
+    category:    'developer',
+    icon:        '🔁',
+    description: 'Convert HTML to clean Markdown online. Headings, bold, italic, code blocks, tables, links, images. Free, browser-based, instant.',
+    keywords:    ['html to markdown converter', 'html to md online', 'convert html to markdown free', 'html markdown converter online'],
+    relatedSlugs: ['markdown-to-html', 'html-formatter-online', 'markdown-editor-online'],
+  },
 ];
 
 /**
