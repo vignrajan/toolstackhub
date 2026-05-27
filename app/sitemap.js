@@ -123,6 +123,10 @@ export default function sitemap() {
     p('/pan-validator',           0.92),
     p('/ifsc-finder',             0.92),
     p('/gst-number-validator',    0.92),
+    p('/epf-calculator',          0.92),
+    p('/jwt-decoder-online',           0.88),
+    p('/diff-checker',                 0.88),
+    p('/cron-expression-builder',      0.85),
 
     // ── Utility tools ─────────────────────────────────────────
     p('/qr-code-generator-online',     0.95),

@@ -1057,6 +1057,26 @@ export const tools = [
     keywords:    ['jwt decoder', 'jwt decoder online', 'decode jwt token', 'json web token decoder', 'jwt inspector'],
     relatedSlugs: ['base64-encoder', 'json-formatter', 'url-encoder'],
   },
+  {
+    slug:        'diff-checker',
+    name:        'Diff Checker',
+    href:        '/diff-checker',
+    category:    'developer',
+    icon:        '⟺',
+    description: 'Compare two texts side by side and highlight differences. Split view and unified diff modes. Free, no signup, runs entirely in your browser.',
+    keywords:    ['diff checker', 'text diff online', 'compare two texts', 'diff tool online', 'text comparison tool'],
+    relatedSlugs: ['json-formatter', 'regex-tester', 'html-formatter'],
+  },
+  {
+    slug:        'cron-expression-builder',
+    name:        'Cron Expression Builder',
+    href:        '/cron-expression-builder',
+    category:    'developer',
+    icon:        '⏰',
+    description: 'Build and validate cron expressions with human-readable output. Visual field editor, 12 common presets, instant description. Free, browser-based.',
+    keywords:    ['cron expression builder', 'cron job generator', 'cron syntax', 'cron expression generator online', 'cron validator'],
+    relatedSlugs: ['unix-timestamp-converter', 'regex-tester', 'json-formatter'],
+  },
 ];
 
 /**
