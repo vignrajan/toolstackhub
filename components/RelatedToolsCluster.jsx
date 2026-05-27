@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { getRelatedTools, TOOL_META } from '../data/related-tools';
+import ShareButtons from './ShareButtons';
+import { SITE_CONFIG } from '../data/tools';
 
 /**
  * RelatedToolsCluster
@@ -23,8 +25,18 @@ export default function RelatedToolsCluster({ currentSlug }) {
 
   const getMeta = (slug) => TOOL_META[slug] || {};
 
+  const currentMeta = getMeta(currentSlug);
+  const toolName = currentMeta?.name || currentSlug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  const toolUrl  = `${SITE_CONFIG.url}/${currentSlug}`;
+
   return (
     <div className="space-y-8">
+
+      {/* Share buttons */}
+      <div className="flex items-center justify-between flex-wrap gap-3 py-4 border-t border-surface-100">
+        <p className="text-sm text-surface-500">Found this tool helpful?</p>
+        <ShareButtons toolName={toolName} toolUrl={toolUrl} />
+      </div>
 
       {/* Related tools — same cluster */}
       {related.length > 0 && (
