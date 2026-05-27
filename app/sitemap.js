@@ -130,6 +130,8 @@ export default function sitemap() {
     p('/cron-expression-builder',      0.85),
     p('/form-16-calculator',           0.92),
     p('/salary-slip-generator',        0.90),
+    p('/rent-agreement-generator',     0.90),
+    p('/sql-formatter-online',         0.88),
 
     // ── Utility tools ─────────────────────────────────────────
     p('/qr-code-generator-online',     0.95),

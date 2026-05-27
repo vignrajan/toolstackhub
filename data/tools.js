@@ -1097,6 +1097,26 @@ export const tools = [
     keywords:    ['salary slip generator', 'payslip generator india', 'salary slip format india', 'pay stub generator free', 'salary slip online free'],
     relatedSlugs: ['salary-calculator', 'form-16-calculator', 'epf-calculator'],
   },
+  {
+    slug:        'rent-agreement-generator',
+    name:        'Rent Agreement Generator',
+    href:        '/rent-agreement-generator',
+    category:    'utility',
+    icon:        '🏠',
+    description: 'Generate a legally formatted rent agreement for India. Enter landlord, tenant, and property details. Print or download as PDF. Free, browser-based.',
+    keywords:    ['rent agreement generator india', 'rent agreement format india', 'rental agreement generator free', 'tenancy agreement india', 'lease agreement generator'],
+    relatedSlugs: ['invoice-generator', 'salary-slip-generator', 'pan-validator'],
+  },
+  {
+    slug:        'sql-formatter-online',
+    name:        'SQL Formatter',
+    href:        '/sql-formatter-online',
+    category:    'developer',
+    icon:        '🗃️',
+    description: 'Format and beautify SQL queries online. Choose keyword casing (UPPER/lower), indent style, and comma placement. MySQL, PostgreSQL, SQLite support. Free.',
+    keywords:    ['sql formatter online', 'sql beautifier', 'sql prettifier', 'format sql online', 'sql query formatter free'],
+    relatedSlugs: ['json-formatter-online', 'html-formatter-online', 'regex-tester-online'],
+  },
 ];
 
 /**
