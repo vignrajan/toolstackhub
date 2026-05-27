@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { SITE_CONFIG } from '../data/tools';
 
 /**
@@ -11,14 +11,30 @@ import { SITE_CONFIG } from '../data/tools';
  */
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen,  setSearchOpen]  = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const searchRef = useRef(null);
+
+  // Cmd+K / Ctrl+K shortcut opens nav search
+  useEffect(() => {
+    const handler = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(true);
+        setTimeout(() => searchRef.current?.focus(), 50);
+      }
+      if (e.key === 'Escape') setSearchOpen(false);
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, []);
 
   const navLinks = [
     { href: '/#categories', label: 'Categories' },
     { href: '/#all-tools',  label: 'All Tools'  },
+    { href: '/blog',        label: 'Blog'        },
+    { href: '/ai-tools',    label: 'AI Tools'    },
     { href: '/about',       label: 'About'       },
-    { href: '/blog', label: "Blog"},
-    { href: '/ai-tools', label: 'AI Tools' },
-    
   ];
 
   return (
@@ -53,8 +69,45 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Desktop CTA + Search */}
+          <div className="hidden md:flex items-center gap-2">
+            {/* Compact search bar */}
+            {searchOpen ? (
+              <div className="flex items-center gap-2 bg-surface-50 border border-surface-200 rounded-xl px-3 py-1.5 w-56">
+                <svg className="w-4 h-4 text-surface-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  ref={searchRef}
+                  type="search"
+                  value={searchQuery}
+                  onChange={e => {
+                    setSearchQuery(e.target.value);
+                    if (e.target.value) window.location.href = `/?q=${encodeURIComponent(e.target.value)}#all-tools`;
+                  }}
+                  onBlur={() => { if (!searchQuery) setSearchOpen(false); }}
+                  placeholder="Search tools…"
+                  className="bg-transparent text-sm text-surface-800 placeholder:text-surface-400 outline-none w-full"
+                  autoComplete="off"
+                />
+                <button onClick={() => { setSearchOpen(false); setSearchQuery(''); }} className="text-surface-400 hover:text-surface-600">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => { setSearchOpen(true); setTimeout(() => searchRef.current?.focus(), 50); }}
+                className="p-2 rounded-lg text-surface-500 hover:text-surface-900 hover:bg-surface-100 transition-colors"
+                aria-label="Search tools (⌘K)"
+                title="Search tools (⌘K)"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            )}
             <Link href="/#all-tools" className="btn-primary text-sm">
               Browse Tools
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -101,10 +154,6 @@ export default function Header() {
               <Link href="/#all-tools" className="btn-primary text-sm w-full" onClick={() => setMobileOpen(false)}>
                 Browse Tools
               </Link>
-              <Link href="/blog" className="text-sm font-medium text-surface-600 hover:text-brand-600 transition-colors">
-  Blog
-</Link>
-
             </div>
           </div>
         )}
