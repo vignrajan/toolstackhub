@@ -1117,6 +1117,36 @@ export const tools = [
     keywords:    ['sql formatter online', 'sql beautifier', 'sql prettifier', 'format sql online', 'sql query formatter free'],
     relatedSlugs: ['json-formatter-online', 'html-formatter-online', 'regex-tester-online'],
   },
+  {
+    slug:        'markdown-to-html',
+    name:        'Markdown to HTML',
+    href:        '/markdown-to-html',
+    category:    'developer',
+    icon:        '📝',
+    description: 'Convert Markdown to HTML with live preview. Supports headings, bold, italic, lists, code blocks, links, images. Free, browser-based.',
+    keywords:    ['markdown to html converter', 'markdown converter online', 'markdown preview', 'md to html', 'markdown editor online'],
+    relatedSlugs: ['markdown-editor-online', 'html-formatter-online', 'json-formatter-online'],
+  },
+  {
+    slug:        'unit-converter',
+    name:        'Unit Converter',
+    href:        '/unit-converter',
+    category:    'utility',
+    icon:        '🔄',
+    description: 'Convert between units of length, weight, temperature, area, volume, speed, and digital storage. 7 categories, instant conversion. Free.',
+    keywords:    ['unit converter online', 'unit conversion calculator', 'length converter', 'weight converter', 'temperature converter free'],
+    relatedSlugs: ['percentage-calculator-online', 'age-calculator-online', 'bmi-calculator'],
+  },
+  {
+    slug:        'color-palette-generator',
+    name:        'Color Palette Generator',
+    href:        '/color-palette-generator',
+    category:    'developer',
+    icon:        '🎨',
+    description: 'Generate color palettes from any base color. Monochromatic, analogous, complementary, triadic, tetradic, tints & shades. Copy HEX, RGB, HSL.',
+    keywords:    ['color palette generator', 'color scheme generator online', 'complementary color generator', 'analogous colors', 'color palette tool free'],
+    relatedSlugs: ['color-picker-online', 'css-minifier-online', 'html-formatter-online'],
+  },
 ];
 
 /**
