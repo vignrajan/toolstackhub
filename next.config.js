@@ -94,6 +94,7 @@ const nextConfig = {
       { source: '/tools/bmi-calculator',               destination: '/bmi-calculator',        permanent: true },
       { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
       { source: '/tools/claude-code-token-calculator', destination: '/claude-code-token-calculator', permanent: true },
+      { source: '/tools/cgpa-calculator',              destination: '/cgpa-calculator',        permanent: true },
 
       // ════════════════════════════════════════════════
       // URL NORMALISATION — old short URLs → corrected -online suffix

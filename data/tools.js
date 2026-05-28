@@ -1097,6 +1097,16 @@ export const tools = [
     keywords:    ['salary slip generator', 'payslip generator india', 'salary slip format india', 'pay stub generator free', 'salary slip online free'],
     relatedSlugs: ['salary-calculator', 'form-16-calculator', 'epf-calculator'],
   },
+  {
+    slug:        'cgpa-calculator',
+    name:        'CGPA Calculator',
+    href:        '/cgpa-calculator',
+    category:    'utility',
+    icon:        '🎓',
+    description: 'Calculate CGPA from subject credits and grades. Supports 10-point and 4-point scales. Converts CGPA to percentage for VTU, Mumbai, Anna University, DU, and CBSE.',
+    keywords:    ['cgpa calculator', 'cgpa to percentage', 'cgpa calculator india', 'cgpa calculator online', 'cgpa to percentage vtu', 'cgpa to percentage anna university', 'gpa calculator india'],
+    relatedSlugs: ['percentage-calculator', 'age-calculator', 'bmi-calculator'],
+  },
 ];
 
 /**

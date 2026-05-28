@@ -157,6 +157,7 @@ export default function sitemap() {
     p('/ppf-calculator',               0.92),
     p('/fuel-bill-generator',          0.90),
     p('/claude-code-token-calculator', 0.90),
+    p('/cgpa-calculator',              0.92),
 
     // ── Number to Words — main tool ───────────────────────────
     p('/number-to-words', 0.92),
