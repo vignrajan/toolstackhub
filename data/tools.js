@@ -207,7 +207,7 @@ export const tools = [
   {
     slug:        'typing-speed-test',
     name:        'Typing Speed Test',
-    href: '/typing-test',
+    href: '/typing-speed-test-online',
     category:    'utility',
     icon:        '⌨️',
     description: 'Test your typing speed in WPM. Real-time accuracy tracking, color-coded feedback, easy/medium/hard difficulty, and 4 time modes. Free, no signup.',
@@ -318,7 +318,7 @@ export const tools = [
   {
     slug:        'timestamp-converter',
     name:        'Timestamp Converter',
-    href: '/unix-timestamp-converter',
+    href: '/unix-timestamp-converter-online',
     category:    'developer',
     icon:        '⏱️',
     description: 'Convert Unix timestamps to human-readable dates and vice versa. Support for seconds and milliseconds. Free online timestamp tool.',
@@ -608,7 +608,7 @@ export const tools = [
   {
     slug:        'binary-converter',
     name:        'Binary Converter',
-    href: '/binary-to-decimal-converter',
+    href: '/binary-to-decimal-converter-online',
     category:    'developer',
     icon:        '💾',
     description: 'Convert between binary, decimal, hexadecimal, and octal number systems online for free. Instant number base converter.',
@@ -674,7 +674,7 @@ export const tools = [
   {
     slug:        'stopwatch',
     name:        'Stopwatch Online',
-    href: '/online-stopwatch',
+    href: '/stopwatch-online',
     category:    'utility',
     icon:        '⏱️',
     description: 'Free online stopwatch with lap timer. Start, pause, and record lap times with millisecond precision in your browser.',
@@ -970,7 +970,7 @@ export const tools = [
   {
     slug:        'json-to-csv',
     name:        'JSON to CSV Converter',
-    href: '/json-to-csv-converter',
+    href: '/json-to-csv-converter-online',
     category:    'developer',
     icon:        '📊',
     description: 'Convert JSON to CSV format online for free. Paste your JSON array and instantly download a properly formatted CSV file.',
@@ -1060,7 +1060,7 @@ export const tools = [
   {
     slug:        'diff-checker',
     name:        'Diff Checker',
-    href:        '/diff-checker',
+    href:        '/diff-checker-online',
     category:    'developer',
     icon:        '⟺',
     description: 'Compare two texts side by side and highlight differences. Split view and unified diff modes. Free, no signup, runs entirely in your browser.',
@@ -1070,7 +1070,7 @@ export const tools = [
   {
     slug:        'cron-expression-builder',
     name:        'Cron Expression Builder',
-    href:        '/cron-expression-builder',
+    href:        '/cron-expression-builder-online',
     category:    'developer',
     icon:        '⏰',
     description: 'Build and validate cron expressions with human-readable output. Visual field editor, 12 common presets, instant description. Free, browser-based.',

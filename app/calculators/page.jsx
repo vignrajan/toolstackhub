@@ -187,7 +187,7 @@ const TIME_TOOLS = [
   },
   {
     slug: 'stopwatch',
-    href: '/online-stopwatch',
+    href: '/stopwatch-online',
     name: 'Stopwatch Online',
     icon: '⏱️',
     desc: 'Precise online stopwatch with lap time recording. Works in any browser.',

@@ -45,15 +45,15 @@ const nextConfig = {
       { source: '/tools/base64-encoder',      destination: '/base64-encoder-online',       permanent: true },
       { source: '/tools/url-encoder',         destination: '/url-encoder-online',          permanent: true },
       { source: '/tools/uuid-generator',      destination: '/uuid-generator-online',       permanent: true },
-      { source: '/tools/timestamp-converter', destination: '/unix-timestamp-converter',    permanent: true },
-      { source: '/tools/binary-converter',    destination: '/binary-to-decimal-converter', permanent: true },
-      { source: '/tools/text-to-binary-converter', destination: '/binary-to-decimal-converter', permanent: true },
-      { source: '/text-to-binary-converter', destination: '/binary-to-decimal-converter', permanent: true },
+      { source: '/tools/timestamp-converter', destination: '/unix-timestamp-converter-online',    permanent: true },
+      { source: '/tools/binary-converter',    destination: '/binary-to-decimal-converter-online', permanent: true },
+      { source: '/tools/text-to-binary-converter', destination: '/binary-to-decimal-converter-online', permanent: true },
+      { source: '/text-to-binary-converter', destination: '/binary-to-decimal-converter-online', permanent: true },
       { source: '/tools/regex-tester',        destination: '/regex-tester-online',         permanent: true },
       { source: '/tools/css-minifier',        destination: '/css-minifier-online',         permanent: true },
       { source: '/tools/html-formatter',      destination: '/html-formatter-online',       permanent: true },
       { source: '/tools/color-picker',        destination: '/color-picker-online',         permanent: true },
-      { source: '/tools/json-to-csv', destination: '/json-to-csv-converter', permanent: true },
+      { source: '/tools/json-to-csv', destination: '/json-to-csv-converter-online', permanent: true },
 
       // ════════════════════════════════════════════════
       // SEO TOOLS — /tools/* → clean URL (301 permanent)
@@ -71,10 +71,10 @@ const nextConfig = {
       { source: '/tools/percentage-calculator',      destination: '/percentage-calculator-online', permanent: true },
       { source: '/tools/pomodoro-timer',             destination: '/pomodoro-timer-online',       permanent: true },
       { source: '/tools/countdown-timer',            destination: '/countdown-timer-online',      permanent: true },
-      { source: '/tools/stopwatch',                  destination: '/online-stopwatch',            permanent: true },
+      { source: '/tools/stopwatch',                  destination: '/stopwatch-online',            permanent: true },
       { source: '/tools/screen-resolution',          destination: '/screen-resolution-checker',   permanent: true },
       { source: '/tools/ai-prompt-generator',        destination: '/ai-prompt-generator-online',  permanent: true },
-      { source: '/tools/typing-speed-test',          destination: '/typing-test',                 permanent: true },
+      { source: '/tools/typing-speed-test',          destination: '/typing-speed-test-online',     permanent: true },
       { source: '/tools/ai-prompts-seo',              destination: '/ai-prompts/seo',              permanent: true },
       { source: '/tools/emi-calculator',              destination: '/emi-calculator',              permanent: true },
       { source: '/tools/home-loan-emi-calculator',    destination: '/home-loan-emi-calculator',    permanent: true },
@@ -95,7 +95,18 @@ const nextConfig = {
       { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
       { source: '/tools/claude-code-token-calculator', destination: '/claude-code-token-calculator', permanent: true },
 
-      // BLOG-CLUADE TOKENS
+      // ════════════════════════════════════════════════
+      // URL NORMALISATION — old short URLs → corrected -online suffix
+      // ════════════════════════════════════════════════
+      { source: '/online-stopwatch',              destination: '/stopwatch-online',                  permanent: true },
+      { source: '/typing-test',                   destination: '/typing-speed-test-online',          permanent: true },
+      { source: '/binary-to-decimal-converter',   destination: '/binary-to-decimal-converter-online', permanent: true },
+      { source: '/unix-timestamp-converter',      destination: '/unix-timestamp-converter-online',   permanent: true },
+      { source: '/json-to-csv-converter',         destination: '/json-to-csv-converter-online',      permanent: true },
+      { source: '/diff-checker',                  destination: '/diff-checker-online',               permanent: true },
+      { source: '/cron-expression-builder',       destination: '/cron-expression-builder-online',    permanent: true },
+
+      // BLOG-CLAUDE TOKENS
       { source: '/blog/save-claude-tokens-guide',      destination: '/blog/how-to-save-tokens-in-claude',        permanent: true },
 
       // ════════════════════════════════════════════════

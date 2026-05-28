@@ -56,8 +56,8 @@ const BENTO_CHIPS = [
   { label: 'Regex Tester',       href: '/regex-tester-online',          icon: '🔍' },
   { label: 'CSS Minifier',       href: '/css-minifier-online',          icon: '⚡' },
   { label: 'Meta Tag Generator', href: '/meta-tag-generator-online',    icon: '🏷️' },
-  { label: 'Timestamp',          href: '/unix-timestamp-converter',     icon: '⏱️' },
-  { label: 'Binary Converter',   href: '/binary-to-decimal-converter',  icon: '💻' },
+  { label: 'Timestamp',          href: '/unix-timestamp-converter-online',     icon: '⏱️' },
+  { label: 'Binary Converter',   href: '/binary-to-decimal-converter-online',  icon: '💻' },
   { label: 'Password Checker',   href: '/password-strength-checker',    icon: '🛡️' },
   { label: 'Resize Image',       href: '/resize-image-online',          icon: '📐' },
 ];

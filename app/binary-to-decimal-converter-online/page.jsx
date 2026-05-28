@@ -2,26 +2,26 @@ import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AdBanner, { AffiliateCTA } from '../../components/AdBanner';
-import Stopwatch from '../../components/tools/Stopwatch';
+import BinaryConverter from '../../components/tools/BinaryConverter';
 import { SITE_CONFIG } from '../../data/tools';
 import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 
 export const metadata = {
-  title: 'Stopwatch Online Free – Millisecond Precision & Laps',
-  description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
-  alternates: { canonical: `${SITE_CONFIG.url}/online-stopwatch` },
+  title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
+  description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
+  alternates: { canonical: `${SITE_CONFIG.url}/binary-to-decimal-converter-online` },
   openGraph: {
-    title: 'Stopwatch Online Free – Millisecond Precision & Laps',
-    description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
-    url: `${SITE_CONFIG.url}/online-stopwatch`,
+    title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
+    description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
+    url: `${SITE_CONFIG.url}/binary-to-decimal-converter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stopwatch Online Free – Millisecond Precision & Laps',
-    description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup.',
+    title: 'Binary to Decimal Converter – Binary, Hex & Octal Free',
+    description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
     creator: SITE_CONFIG.twitterHandle,
   },
 };
@@ -31,9 +31,9 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'SoftwareApplication',
-      name: 'Free',
-      description: 'Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup. Try now!',
-      url: `${SITE_CONFIG.url}/online-stopwatch`,
+      name: 'Free Binary Converter',
+      description: 'Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!',
+      url: `${SITE_CONFIG.url}/binary-to-decimal-converter-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -43,29 +43,29 @@ const jsonLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
-        { '@type': 'ListItem', position: 2, name: 'Utility Tools', item: `${SITE_CONFIG.url}/#utility` },
-        { '@type': 'ListItem', position: 3, name: 'Free', item: `${SITE_CONFIG.url}/online-stopwatch` },
+        { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/#developer` },
+        { '@type': 'ListItem', position: 3, name: 'Free Binary Converter', item: `${SITE_CONFIG.url}/binary-to-decimal-converter-online` },
       ],
     },
   ],
 };
 
 const relatedLinks = [
-  { href: '/pomodoro-timer-online', label: 'Pomodoro Timer Online', desc: 'Structured focus sessions with breaks' },
-              { href: '/countdown-timer-online', label: 'Countdown Timer Online', desc: 'Count down from a set duration' },
-              { href: '/age-calculator-online', label: 'Age Calculator Online', desc: 'Calculate exact time elapsed' },
-              { href: '/unix-timestamp-converter', label: 'Unix Timestamp Converter', desc: 'Convert elapsed time to timestamps' },
+  { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode binary data as text' },
+              { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format JSON with hex/decimal values' },
+              { href: '/uuid-generator-online', label: 'UUID Generator Online', desc: 'Generate 128-bit random identifiers' },
+              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Get hex color codes' },
 ];
 
 const variantLinks = [
 ];
 
 const faqs = [
-  { q: 'How accurate is the stopwatch?', a: 'Millisecond precision using the performance.now() API — more accurate than Date.now().' },
-  { q: 'Does it work when I switch tabs?', a: 'Yes — timing continues in the background and the display updates correctly when you return.' },
-  { q: 'Can I record lap times?', a: 'Yes — press L or click Lap to record unlimited split times with individual lap durations shown.' },
-  { q: 'What are the keyboard shortcuts?', a: 'Space to start/pause, L to record a lap, and R to reset the timer and clear all lap records.' },
-  { q: 'Is the stopwatch free?', a: 'Yes — completely free with no account or download required.' },
+  { q: 'What is binary?', a: 'Base-2 number system using only 0 and 1 — the fundamental language of computers and digital systems.' },
+  { q: 'What is hexadecimal used for?', a: 'Hex is used in programming, HTML color codes (#FF5733), memory addresses, and network protocols.' },
+  { q: 'Can it convert text to binary?', a: 'Yes — use the ASCII text section to convert any text string into binary representation.' },
+  { q: 'What is octal used for?', a: 'Octal (base-8) is used in Unix file permissions (chmod 755) and some low-level programming contexts.' },
+  { q: 'Is the converter free?', a: 'Yes — completely free with no account required.' },
 ];
 
 export default function Page() {
@@ -86,18 +86,18 @@ export default function Page() {
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li>
-                  <Link href="/#utility" className="hover:text-brand-600 transition-colors text-violet-600">
-                    Utility Tools
+                  <Link href="/#developer" className="hover:text-brand-600 transition-colors text-blue-600">
+                    Developer Tools
                   </Link>
                 </li>
                 <li><span className="text-surface-300">/</span></li>
-                <li className="text-surface-800 font-medium">Free</li>
+                <li className="text-surface-800 font-medium">Free Binary Converter</li>
               </ol>
             </nav>
             <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">
-              Free Online Stopwatch – Precise Millisecond Timing with Unlimited Laps
+              Free Binary Converter Online – Convert Binary, Decimal, Hex & Octal
             </h1>
-            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">Free online stopwatch with millisecond precision and unlimited lap recording. Keyboard shortcuts: Space, L, R. Continues in background. No signup. Try now!</p>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">Convert between binary, decimal, hexadecimal, and octal online for free. All formats update simultaneously. Text to binary included. No signup. Try now!</p>
             <div className="flex flex-wrap gap-2 mt-5">
               {['✅ 100% Free', '⚡ Instant Results', '🔒 No Signup', '📱 Mobile Friendly', '🔐 No Data Stored'].map(b => (
                 <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
@@ -107,11 +107,11 @@ export default function Page() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Stopwatch />
+          <BinaryConverter />
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-          <AffiliateCTA toolName="Free" />
+          <AffiliateCTA toolName="Free Binary Converter" />
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
           <AdBanner variant="content" />
@@ -123,12 +123,12 @@ export default function Page() {
             <h2 className="font-display font-bold text-2xl text-surface-900 mb-5">Common Use Cases</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: '🏃', title: 'Athletic Training', desc: 'Time running laps, swimming sets, cycling intervals, and workout circuits with millisecond accuracy.' },
-              { icon: '⏱️', title: 'Productivity Tracking', desc: 'Measure exactly how long individual tasks take to improve time estimates and find inefficiencies.' },
-              { icon: '🎤', title: 'Presentation Rehearsal', desc: 'Time presentations, speeches, and pitches to ensure they fit within allotted time slots.' },
-              { icon: '🧪', title: 'Scientific Experiments', desc: 'Record precise timing data for controlled experiments and reaction time tests.' },
-              { icon: '🍳', title: 'Cooking Timing', desc: 'Track cooking steps with accurate timing when multiple recipe components have different cook times.' },
-              { icon: '💻', title: 'Performance Testing', desc: 'Manually benchmark code execution time and API response times during development.' },
+                { icon: '💻', title: 'Computer Science Study', desc: 'Convert between number bases for coursework, assignments, and exam preparation.' },
+              { icon: '🌐', title: 'Networking', desc: 'Convert IP addresses and subnet masks between decimal and binary for subnetting calculations.' },
+              { icon: '🎨', title: 'Color Codes', desc: 'Convert hex color codes to decimal RGB and binary for graphics programming and shader work.' },
+              { icon: '🔐', title: 'Permissions', desc: 'Convert Unix permission values between octal, binary, and decimal for chmod and access control.' },
+              { icon: '🔌', title: 'Embedded Systems', desc: 'Convert between binary, hex, and decimal for microcontrollers and memory addresses.' },
+              { icon: '📚', title: 'Education', desc: "Teach and learn binary arithmetic, two's complement, and bit shifting fundamentals." },
               ].map(uc => (
                 <div key={uc.title} className="flex gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl">
                   <span className="text-2xl shrink-0">{uc.icon}</span>
@@ -187,7 +187,7 @@ export default function Page() {
 
         </div>
       </main>
-      <RelatedToolsCluster currentSlug="online-stopwatch" />
+      <RelatedToolsCluster currentSlug="binary-to-decimal-converter" />
       <Footer />
     </>
   );

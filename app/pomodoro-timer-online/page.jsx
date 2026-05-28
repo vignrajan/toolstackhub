@@ -51,7 +51,7 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/online-stopwatch', label: 'Online Stopwatch', desc: 'Measure elapsed time with lap timer' },
+  { href: '/stopwatch-online', label: 'Online Stopwatch', desc: 'Measure elapsed time with lap timer' },
               { href: '/countdown-timer-online', label: 'Countdown Timer Online', desc: 'Set a custom countdown duration' },
               { href: '/word-counter-online', label: 'Word Counter Online', desc: 'Count output from each Pomodoro session' },
               { href: '/random-number-generator', label: 'Random Number Generator', desc: 'Pick a random task to focus on' },

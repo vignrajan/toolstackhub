@@ -9,11 +9,11 @@ import { SITE_CONFIG } from '../../data/tools';
 export const metadata = {
   title: 'Diff Checker Online – Compare Two Text Files Free',
   description: 'Compare two texts side by side and highlight differences instantly. Split view and unified diff modes. Free, no signup — runs entirely in your browser.',
-  alternates: { canonical: `${SITE_CONFIG.url}/diff-checker` },
+  alternates: { canonical: `${SITE_CONFIG.url}/diff-checker-online` },
   openGraph: {
     title: 'Diff Checker Online – Compare Two Text Files Free',
     description: 'Side-by-side text comparison with line-by-line diff highlighting. Free, browser-based.',
-    url: `${SITE_CONFIG.url}/diff-checker`,
+    url: `${SITE_CONFIG.url}/diff-checker-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
@@ -55,7 +55,7 @@ const jsonLd = {
     {
       '@type': 'WebApplication',
       name: 'Diff Checker Online',
-      url: `${SITE_CONFIG.url}/diff-checker`,
+      url: `${SITE_CONFIG.url}/diff-checker-online`,
       description: 'Free browser-based diff checker. Compare two texts and see line-by-line differences with added (green), removed (red) highlighting. Split and unified views.',
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'Web',
@@ -66,7 +66,7 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home',            item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/tools/developer` },
-        { '@type': 'ListItem', position: 3, name: 'Diff Checker',    item: `${SITE_CONFIG.url}/diff-checker` },
+        { '@type': 'ListItem', position: 3, name: 'Diff Checker',    item: `${SITE_CONFIG.url}/diff-checker-online` },
       ],
     },
     {
