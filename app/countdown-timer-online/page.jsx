@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/online-stopwatch', label: 'Online Stopwatch', desc: 'Measure elapsed time upward' },
+  { href: '/stopwatch-online', label: 'Online Stopwatch', desc: 'Measure elapsed time upward' },
               { href: '/pomodoro-timer-online', label: 'Pomodoro Timer Online', desc: 'Structured 25/5-minute focus cycles' },
               { href: '/age-calculator-online', label: 'Age Calculator Online', desc: 'Calculate time until a future date' },
-              { href: '/unix-timestamp-converter', label: 'Unix Timestamp Converter', desc: 'Convert countdown end time to timestamp' },
+              { href: '/unix-timestamp-converter-online', label: 'Unix Timestamp Converter', desc: 'Convert countdown end time to timestamp' },
 ];
 
 const variantLinks = [

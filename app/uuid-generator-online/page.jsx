@@ -472,7 +472,7 @@ export default function UuidGeneratorOnlinePage() {
                 { href: '/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range' },
                 { href: '/base64-encoder-online',      icon: '🔡', label: 'Base64 Encoder Online',      desc: 'Encode and decode Base64 strings and data' },
                 { href: '/json-formatter-online',      icon: '{ }',label: 'JSON Formatter Online',     desc: 'Format and validate JSON containing UUID fields' },
-                { href: '/unix-timestamp-converter',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert timestamps to pair with UUID primary keys' },
+                { href: '/unix-timestamp-converter-online',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert timestamps to pair with UUID primary keys' },
                 { href: '/regex-tester-online',        icon: '🔍', label: 'Regex Tester Online',        desc: 'Test UUID validation regex patterns in real time' },
               ].map(l => (
                 <Link key={l.href} href={l.href}

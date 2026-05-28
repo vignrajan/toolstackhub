@@ -506,7 +506,7 @@ export default function Base64EncoderOnlinePage() {
                 { href: '/uuid-generator-online',      icon: '🆔',  label: 'UUID Generator Online',    desc: 'Generate cryptographically secure unique identifiers' },
                 { href: '/password-generator-online',  icon: '🔐',  label: 'Password Generator',       desc: 'Generate secure random passwords for API credentials' },
                 { href: '/regex-tester-online',        icon: '🔍',  label: 'Regex Tester Online',      desc: 'Test Base64 validation patterns with live highlighting' },
-                { href: '/binary-to-decimal-converter',icon: '💻',  label: 'Binary Converter',         desc: 'Convert between binary, decimal, hex, and octal' },
+                { href: '/binary-to-decimal-converter-online',icon: '💻',  label: 'Binary Converter',         desc: 'Convert between binary, decimal, hex, and octal' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-blue-200 hover:bg-blue-50 transition-colors group">

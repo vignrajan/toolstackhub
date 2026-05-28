@@ -58,7 +58,7 @@ export default function sitemap() {
     p('/remove-empty-lines',              0.80),
     p('/remove-extra-spaces',             0.80),
     p('/text-repeater',                   0.85),
-    p('/typing-test',                     0.80),
+    p('/typing-speed-test-online',                     0.80),
 
     // ── Developer tools ───────────────────────────────────────
     p('/json-formatter-online',        0.95),
@@ -67,16 +67,16 @@ export default function sitemap() {
     p('/json-validator-online',        0.90),
     p('/json-minifier-online',         0.85),
     p('/json-viewer-online',           0.85),
-    p('/json-to-csv-converter',        0.85),
+    p('/json-to-csv-converter-online',        0.85),
     p('/base64-encoder-online',        0.90),
     p('/url-encoder-online',           0.85),
     p('/uuid-generator-online',        0.90),
-    p('/unix-timestamp-converter',     0.85),
+    p('/unix-timestamp-converter-online',     0.85),
     p('/regex-tester-online',          0.85),
     p('/css-minifier-online',          0.85),
     p('/html-formatter-online',        0.85),
     p('/color-picker-online',          0.85),
-    p('/binary-to-decimal-converter',  0.85),
+    p('/binary-to-decimal-converter-online',  0.85),
 
     // ── SEO tools ─────────────────────────────────────────────
     p('/meta-tag-generator-online', 0.85),
@@ -118,6 +118,7 @@ export default function sitemap() {
     p('/tools/developer', 0.88, 'weekly'),
     p('/tools/utility',   0.88, 'weekly'),
     p('/tools/finance',   0.90, 'weekly'),
+    p('/calculators',     0.92, 'weekly'),
 
     // ── New India tools ───────────────────────────────────────
     p('/whatsapp-link-generator', 0.92),
@@ -126,8 +127,8 @@ export default function sitemap() {
     p('/gst-number-validator',    0.92),
     p('/epf-calculator',          0.92),
     p('/jwt-decoder-online',           0.88),
-    p('/diff-checker',                 0.88),
-    p('/cron-expression-builder',      0.85),
+    p('/diff-checker-online',                 0.88),
+    p('/cron-expression-builder-online',      0.85),
     p('/form-16-calculator',           0.92),
     p('/salary-slip-generator',        0.90),
     p('/rent-agreement-generator',     0.90),
@@ -194,7 +195,7 @@ export default function sitemap() {
     p('/percentage-calculator-online', 0.85),
     p('/pomodoro-timer-online',        0.85),
     p('/countdown-timer-online',       0.85),
-    p('/online-stopwatch',             0.85),
+    p('/stopwatch-online',             0.85),
     p('/screen-resolution-checker',    0.80),
     p('/ai-prompt-generator-online',   0.85),
     p('/ai-prompts/seo',               0.85),

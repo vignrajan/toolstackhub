@@ -661,7 +661,7 @@ export default function JsonFormatterPage() {
                   color: 'emerald',
                 },
                 {
-                  href: '/unix-timestamp-converter',
+                  href: '/unix-timestamp-converter-online',
                   icon: '⏱️',
                   name: 'Timestamp Converter',
                   desc: 'Convert Unix timestamps commonly found in JSON data',
@@ -675,7 +675,7 @@ export default function JsonFormatterPage() {
                   color: 'blue',
                 },
                 {
-                  href: '/binary-to-decimal-converter',
+                  href: '/binary-to-decimal-converter-online',
                   icon: '💾',
                   name: 'Binary Converter',
                   desc: 'Convert decimal and hex values found in JSON numeric fields',

@@ -9,11 +9,11 @@ import RelatedToolsCluster from '../../components/RelatedToolsCluster';
 export const metadata = {
   title: 'JSON to CSV Converter – Convert JSON to CSV Instantly Free',
   description: 'Convert JSON to CSV online free. Paste your JSON array and download a properly formatted CSV file instantly. Supports all delimiters. No signup needed.',
-  alternates: { canonical: `${SITE_CONFIG.url}/json-to-csv-converter` },
+  alternates: { canonical: `${SITE_CONFIG.url}/json-to-csv-converter-online` },
   openGraph: {
     title: 'JSON to CSV Converter – Convert JSON to CSV Instantly Free',
     description: 'Convert JSON arrays to CSV format instantly. Free, supports all delimiters, download as .csv. No signup.',
-    url: `${SITE_CONFIG.url}/json-to-csv-converter`,
+    url: `${SITE_CONFIG.url}/json-to-csv-converter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
@@ -33,7 +33,7 @@ const jsonLd = {
       '@type': 'SoftwareApplication',
       name: 'JSON to CSV Converter',
       description: 'Free online tool to convert JSON arrays to properly formatted CSV files with any delimiter.',
-      url: `${SITE_CONFIG.url}/json-to-csv-converter`,
+      url: `${SITE_CONFIG.url}/json-to-csv-converter-online`,
       applicationCategory: 'WebApplication',
       operatingSystem: 'Web Browser',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -54,7 +54,7 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/#developer` },
-        { '@type': 'ListItem', position: 3, name: 'JSON to CSV Converter', item: `${SITE_CONFIG.url}/json-to-csv-converter` },
+        { '@type': 'ListItem', position: 3, name: 'JSON to CSV Converter', item: `${SITE_CONFIG.url}/json-to-csv-converter-online` },
       ],
     },
   ],

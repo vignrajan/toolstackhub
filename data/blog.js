@@ -33,7 +33,7 @@ export const blogPosts = [
     coverEmoji:  '⌨️',
     coverBg:     'from-brand-500 to-violet-600',
     tags:        ['typing', 'productivity', 'wpm'],
-    toolUrl:     '/typing-test',
+    toolUrl:     '/typing-speed-test-online',
     toolName:    'Typing Speed Test',
     featured:    true,
   },

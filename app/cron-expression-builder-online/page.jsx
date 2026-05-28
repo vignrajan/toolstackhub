@@ -9,11 +9,11 @@ import { SITE_CONFIG } from '../../data/tools';
 export const metadata = {
   title: 'Cron Expression Builder – Generate & Validate Cron Jobs Free',
   description: 'Build cron expressions with a visual editor and get instant human-readable descriptions. 12 presets, field-by-field editing, copy button. Free, browser-based.',
-  alternates: { canonical: `${SITE_CONFIG.url}/cron-expression-builder` },
+  alternates: { canonical: `${SITE_CONFIG.url}/cron-expression-builder-online` },
   openGraph: {
     title: 'Cron Expression Builder – Generate & Validate Cron Jobs Free',
     description: 'Build and validate cron expressions with human-readable output. Free, instant.',
-    url: `${SITE_CONFIG.url}/cron-expression-builder`,
+    url: `${SITE_CONFIG.url}/cron-expression-builder-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
@@ -40,7 +40,7 @@ const jsonLd = {
     {
       '@type': 'WebApplication',
       name: 'Cron Expression Builder',
-      url: `${SITE_CONFIG.url}/cron-expression-builder`,
+      url: `${SITE_CONFIG.url}/cron-expression-builder-online`,
       description: 'Free cron expression builder with visual field editor, human-readable descriptions, and 12 common presets. No signup required.',
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'Web',
@@ -51,7 +51,7 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home',            item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/tools/developer` },
-        { '@type': 'ListItem', position: 3, name: 'Cron Builder',    item: `${SITE_CONFIG.url}/cron-expression-builder` },
+        { '@type': 'ListItem', position: 3, name: 'Cron Builder',    item: `${SITE_CONFIG.url}/cron-expression-builder-online` },
       ],
     },
     { '@type': 'FAQPage', mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },

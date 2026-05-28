@@ -20,11 +20,11 @@ export const metadata = {
     'date to unix timestamp',
     'unix timestamp to human readable',
   ],
-  alternates: { canonical: `${SITE_CONFIG.url}/unix-timestamp-converter` },
+  alternates: { canonical: `${SITE_CONFIG.url}/unix-timestamp-converter-online` },
   openGraph: {
     title: 'Unix Timestamp Converter – Epoch to Date Instantly Free',
     description: 'Convert Unix timestamps to readable dates and back. Seconds and milliseconds supported. Live clock. Free, no signup.',
-    url: `${SITE_CONFIG.url}/unix-timestamp-converter`,
+    url: `${SITE_CONFIG.url}/unix-timestamp-converter-online`,
     type: 'website',
     siteName: SITE_CONFIG.name,
     images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
@@ -69,7 +69,7 @@ const jsonLd = {
       '@type': 'SoftwareApplication',
       name: 'Unix Timestamp Converter',
       description: 'Free online Unix timestamp converter. Convert epoch timestamps to human-readable dates and back. Supports seconds and milliseconds. Live current timestamp clock included.',
-      url: `${SITE_CONFIG.url}/unix-timestamp-converter`,
+      url: `${SITE_CONFIG.url}/unix-timestamp-converter-online`,
       applicationCategory: 'DeveloperApplication',
       operatingSystem: 'Web Browser',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -96,7 +96,7 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home',            item: SITE_CONFIG.url },
         { '@type': 'ListItem', position: 2, name: 'Developer Tools', item: `${SITE_CONFIG.url}/#developer` },
-        { '@type': 'ListItem', position: 3, name: 'Unix Timestamp Converter', item: `${SITE_CONFIG.url}/unix-timestamp-converter` },
+        { '@type': 'ListItem', position: 3, name: 'Unix Timestamp Converter', item: `${SITE_CONFIG.url}/unix-timestamp-converter-online` },
       ],
     },
     {

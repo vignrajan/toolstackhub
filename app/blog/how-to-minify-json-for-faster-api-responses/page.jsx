@@ -673,11 +673,11 @@ export default function PostMinifyJson() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { href: '/json-formatter-online',      icon: '{ }', label: 'JSON Formatter & Minifier',   desc: 'Format, validate, and minify JSON in one tool' },
-                  { href: '/json-to-csv-converter',      icon: '📊',  label: 'JSON to CSV Converter',       desc: 'Convert JSON arrays to CSV for spreadsheets' },
+                  { href: '/json-to-csv-converter-online',      icon: '📊',  label: 'JSON to CSV Converter',       desc: 'Convert JSON arrays to CSV for spreadsheets' },
                   { href: '/base64-encoder-online',      icon: '🔡',  label: 'Base64 Encoder Online',       desc: 'Encode JSON payloads for API transmission' },
                   { href: '/url-encoder-online',         icon: '🔗',  label: 'URL Encoder Online',          desc: 'Encode URL parameters in API endpoints' },
                   { href: '/regex-tester-online',        icon: '🔍',  label: 'Regex Tester Online',         desc: 'Test patterns for extracting JSON fields' },
-                  { href: '/unix-timestamp-converter',   icon: '⏱️',  label: 'Timestamp Converter',         desc: 'Convert Unix timestamps in JSON responses' },
+                  { href: '/unix-timestamp-converter-online',   icon: '⏱️',  label: 'Timestamp Converter',         desc: 'Convert Unix timestamps in JSON responses' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-300 hover:bg-violet-50 transition-colors group">

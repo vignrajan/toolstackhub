@@ -80,7 +80,7 @@ const FEATURED_TOOLS = [
   { emoji:'{ }', name:'JSON Formatter',              href:'/json-formatter-online'        },
   { emoji:'🔁',  name:'Text Repeater',               href:'/text-repeater'                },
   { emoji:'🗜️', name:'Image Compressor',            href:'/compress-image-online'        },
-  { emoji:'⌨️',  name:'Typing Speed Test',           href:'/typing-test'                  },
+  { emoji:'⌨️',  name:'Typing Speed Test',           href:'/typing-speed-test-online'                  },
   { emoji:'⚖️',  name:'Professional Tax Calculator', href:'/professional-tax-calculator'  },
 ];
 
