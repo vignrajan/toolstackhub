@@ -8,11 +8,17 @@ import SpeechBubbleMaker from '../../components/tools/SpeechBubbleMaker';
 import AgeCalculator from '../../components/tools/AgeCalculator';
 import InvoiceGenerator from '../../components/tools/InvoiceGenerator';
 import NumberToWords from '../../components/tools/NumberToWords';
+import EMICalculator from '../../components/tools/EMICalculator';
+import GSTCalculator from '../../components/tools/GSTCalculator';
+import SalaryGratuityCalculator from '../../components/tools/SalaryGratuityCalculator';
 import { getBMIPageBySlug, getAllBMISlugs } from '../../data/bmi-pages';
 import { getPageBySlug, getRelatedPages, getAllSlugs } from '../../data/speech-bubble-pages';
 import { getAgePageBySlug, getAllAgeSlugs } from '../../data/age-pages';
 import { getInvoicePageBySlug, getAllInvoiceSlugs } from '../../data/invoice-pages';
 import { getNumberWordsPageBySlug, getAllNumberWordsSlugs } from '../../data/number-words-pages';
+import { getEmiBankPageBySlug, getAllEmiBankSlugs } from '../../data/emi-bank-pages';
+import { getGstStatePageBySlug, getAllGstStateSlugs } from '../../data/gst-state-pages';
+import { getSalaryCityPageBySlug, getAllSalaryCitySlugs } from '../../data/salary-city-pages';
 import { SITE_CONFIG } from '../../data/tools';
 
 // ── Static params — all slugs from all datasets ───────────────
@@ -23,6 +29,9 @@ export async function generateStaticParams() {
     ...getAllAgeSlugs().map(slug => ({ slug })),
     ...getAllInvoiceSlugs().map(slug => ({ slug })),
     ...getAllNumberWordsSlugs().map(slug => ({ slug })),
+    ...getAllEmiBankSlugs().map(slug => ({ slug })),
+    ...getAllGstStateSlugs().map(slug => ({ slug })),
+    ...getAllSalaryCitySlugs().map(slug => ({ slug })),
   ];
 }
 
@@ -33,7 +42,10 @@ export async function generateMetadata({ params }) {
   const age      = getAgePageBySlug(params.slug);
   const invoice  = getInvoicePageBySlug(params.slug);
   const numWords = getNumberWordsPageBySlug(params.slug);
-  const page     = bmi || speech || age || invoice || numWords;
+  const emiBank  = getEmiBankPageBySlug(params.slug);
+  const gstState = getGstStatePageBySlug(params.slug);
+  const salaryCity = getSalaryCityPageBySlug(params.slug);
+  const page     = bmi || speech || age || invoice || numWords || emiBank || gstState || salaryCity;
   if (!page) return {};
   return {
     title:       `${page.title} | ToolStackHub`,
@@ -679,5 +691,251 @@ export default function DynamicSlugPage({ params }) {
   const numWordsPage = getNumberWordsPageBySlug(params.slug);
   if (numWordsPage) return <NumberWordsPage page={numWordsPage} />;
 
+  const emiBankPage = getEmiBankPageBySlug(params.slug);
+  if (emiBankPage) return <EmiBankPage page={emiBankPage} />;
+
+  const gstStatePage = getGstStatePageBySlug(params.slug);
+  if (gstStatePage) return <GstStatePage page={gstStatePage} />;
+
+  const salaryCityPage = getSalaryCityPageBySlug(params.slug);
+  if (salaryCityPage) return <SalaryCityPage page={salaryCityPage} />;
+
   notFound();
+}
+
+// ══════════════════════════════════════════════════════════════
+// EMI BANK PAGE
+// ══════════════════════════════════════════════════════════════
+function EmiBankPage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        name: page.title,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        description: page.metaDesc,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',            item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'EMI Calculator',  item: `${SITE_CONFIG.url}/emi-calculator` },
+          { '@type': 'ListItem', position: 3, name: page.h1,           item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li><Link href="/emi-calculator" className="hover:text-brand-600 transition-colors">EMI Calculator</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium truncate">{page.h1}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {[`💰 Rate from ${page.rate}% p.a.`, '✅ Free', '⚡ Instant', '📊 Amortization Schedule'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 mb-6">
+            <p className="text-sm text-amber-800"><strong>Note:</strong> {page.rateNote}</p>
+          </div>
+          <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
+            <EMICalculator />
+          </Suspense>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-8">
+          <section>
+            <h2 className="font-display font-bold text-xl text-surface-900 mb-4">About {page.bank} {page.loanType}</h2>
+            <p className="text-surface-600 text-sm leading-relaxed">{page.intro}</p>
+          </section>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/emi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <span className="text-2xl">🏦</span>
+              <div><div className="font-bold text-white text-sm">EMI Calculator</div><div className="text-xs text-brand-200">Compare all banks</div></div>
+            </Link>
+            <Link href="/home-loan-emi-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+              <span className="text-2xl">🏠</span>
+              <div><div className="font-semibold text-surface-800 text-sm">Home Loan EMI</div><div className="text-xs text-surface-500">With amortization schedule</div></div>
+            </Link>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+// ══════════════════════════════════════════════════════════════
+// GST STATE PAGE
+// ══════════════════════════════════════════════════════════════
+function GstStatePage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        name: page.title,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        description: page.metaDesc,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',           item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'GST Calculator', item: `${SITE_CONFIG.url}/gst-calculator` },
+          { '@type': 'ListItem', position: 3, name: page.h1,          item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li><Link href="/gst-calculator" className="hover:text-brand-600 transition-colors">GST Calculator</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium truncate">{page.h1}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {['✅ Free', '⚡ Instant', '🧮 All GST Rates', '📊 CGST/SGST/IGST'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
+            <GSTCalculator />
+          </Suspense>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
+          <div className="bg-surface-50 border border-surface-200 rounded-xl p-5">
+            <h2 className="font-semibold text-surface-900 mb-2">About GST in {page.state}</h2>
+            <p className="text-surface-600 text-sm leading-relaxed">{page.notes}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/gst-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <span className="text-2xl">🧮</span>
+              <div><div className="font-bold text-white text-sm">GST Calculator</div><div className="text-xs text-brand-200">All rates, all states</div></div>
+            </Link>
+            <Link href="/gst-number-validator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+              <span className="text-2xl">✅</span>
+              <div><div className="font-semibold text-surface-800 text-sm">GST Number Validator</div><div className="text-xs text-surface-500">Validate GSTIN instantly</div></div>
+            </Link>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+// ══════════════════════════════════════════════════════════════
+// SALARY CITY PAGE
+// ══════════════════════════════════════════════════════════════
+function SalaryCityPage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        name: page.title,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        description: page.metaDesc,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',              item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'Salary Calculator', item: `${SITE_CONFIG.url}/salary-calculator` },
+          { '@type': 'ListItem', position: 3, name: page.h1,             item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li><Link href="/salary-calculator" className="hover:text-brand-600 transition-colors">Salary Calculator</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium truncate">{page.city}</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {[`🏙️ ${page.city}`, `⚖️ PT ₹${page.pt.toLocaleString('en-IN')}/yr`, `🏠 HRA ${page.hraPct}%`, '✅ Free', '⚡ Instant'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
+            <SalaryGratuityCalculator />
+          </Suspense>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
+          <div className="bg-surface-50 border border-surface-200 rounded-xl p-5">
+            <h2 className="font-semibold text-surface-900 mb-2">Cost of Living in {page.city}</h2>
+            <p className="text-surface-600 text-sm leading-relaxed">{page.costNote}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/salary-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <span className="text-2xl">💰</span>
+              <div><div className="font-bold text-white text-sm">Salary Calculator</div><div className="text-xs text-brand-200">Full CTC breakdown</div></div>
+            </Link>
+            <Link href="/form-16-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+              <span className="text-2xl">🧾</span>
+              <div><div className="font-semibold text-surface-800 text-sm">Form 16 Tax Calculator</div><div className="text-xs text-surface-500">Old vs new regime</div></div>
+            </Link>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }
