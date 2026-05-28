@@ -179,7 +179,7 @@ export default function JsonValidatorPage() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related JSON Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
+                { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
                 { href: '/json-beautifier-online', label: 'JSON Beautifier', desc: 'Beautify and pretty-print JSON' },
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indent' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },

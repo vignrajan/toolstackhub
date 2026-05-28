@@ -182,7 +182,7 @@ export default function JsonBeautifierPage() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related JSON Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Full-featured format, validate & minify tool' },
+                { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Full-featured format, validate & minify tool' },
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indentation options' },
                 { href: '/json-validator-online', label: 'JSON Validator Online', desc: 'Validate JSON syntax and find errors' },
                 { href: '/json-minifier-online', label: 'JSON Minifier Online', desc: 'Compress JSON for production use' },
