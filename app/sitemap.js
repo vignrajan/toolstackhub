@@ -118,6 +118,7 @@ export default function sitemap() {
     p('/tools/developer', 0.88, 'weekly'),
     p('/tools/utility',   0.88, 'weekly'),
     p('/tools/finance',   0.90, 'weekly'),
+    p('/calculators',     0.92, 'weekly'),
 
     // ── New India tools ───────────────────────────────────────
     p('/whatsapp-link-generator', 0.92),
