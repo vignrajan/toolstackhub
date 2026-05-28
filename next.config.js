@@ -110,22 +110,16 @@ const nextConfig = {
       { source: '/blog/save-claude-tokens-guide',      destination: '/blog/how-to-save-tokens-in-claude',        permanent: true },
 
       // ════════════════════════════════════════════════
-      // JSON CLUSTER — variant pages soft-redirect to main
-      // (302 = temporary, keeps variants indexable separately)
+      // JSON CLUSTER — each URL is a standalone indexable page
+      // targeting its own keyword (beautifier, pretty-print,
+      // validator, minifier, viewer). Do NOT add redirects here.
       // ════════════════════════════════════════════════
-      // NOTE: comment these out if your variant pages have
-      // unique enough content to rank independently
-      // { source: '/json-beautifier-online', destination: '/json-formatter-online', permanent: false },
-      // { source: '/json-pretty-print',      destination: '/json-formatter-online', permanent: false },
-      // { source: '/json-validator-online',  destination: '/json-formatter-online', permanent: false },
-      // { source: '/json-minifier-online',   destination: '/json-formatter-online', permanent: false },
-      // { source: '/json-viewer-online',     destination: '/json-formatter-online', permanent: false },
 
       // ════════════════════════════════════════════════
-      // HANDWRITING CLUSTER — variant → main
+      // HANDWRITING CLUSTER — each URL targets a distinct
+      // keyword variant and has unique page content.
+      // Do NOT add redirects here.
       // ════════════════════════════════════════════════
-      // { source: '/convert-text-to-handwriting', destination: '/text-to-handwriting-online', permanent: false },
-      // { source: '/text-to-handwritten-notes',   destination: '/text-to-handwriting-online', permanent: false },
 
     ];
   },
