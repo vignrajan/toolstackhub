@@ -517,12 +517,12 @@ export default function UnixTimestampConverterPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/json-formatter-online',     icon: '{ }', label: 'JSON Formatter Online',     desc: 'Format API responses containing timestamp fields' },
-                { href: '/base64-encoder-online',     icon: '🔡',  label: 'Base64 Encoder Online',     desc: 'Decode JWT tokens containing timestamp claims' },
-                { href: '/uuid-generator-online',     icon: '🆔',  label: 'UUID Generator Online',     desc: 'Generate UUIDs to pair with timestamp-based records' },
-                { href: '/regex-tester-online',       icon: '🔍',  label: 'Regex Tester Online',       desc: 'Test patterns for extracting timestamps from log files' },
-                { href: '/age-calculator-online',     icon: '🎂',  label: 'Age Calculator Online',     desc: 'Calculate exact age between dates with similar precision' },
-                { href: '/url-encoder-online',        icon: '🔗',  label: 'URL Encoder Online',        desc: 'Encode timestamps for use in URL query parameters' },
+                { href: '/tools/json-formatter',     icon: '{ }', label: 'JSON Formatter Online',     desc: 'Format API responses containing timestamp fields' },
+                { href: '/tools/base64-encoder',     icon: '🔡',  label: 'Base64 Encoder Online',     desc: 'Decode JWT tokens containing timestamp claims' },
+                { href: '/tools/uuid-generator',     icon: '🆔',  label: 'UUID Generator Online',     desc: 'Generate UUIDs to pair with timestamp-based records' },
+                { href: '/tools/regex-tester',       icon: '🔍',  label: 'Regex Tester Online',       desc: 'Test patterns for extracting timestamps from log files' },
+                { href: '/tools/age-calculator',     icon: '🎂',  label: 'Age Calculator Online',     desc: 'Calculate exact age between dates with similar precision' },
+                { href: '/tools/url-encoder',        icon: '🔗',  label: 'URL Encoder Online',        desc: 'Encode timestamps for use in URL query parameters' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-blue-200 hover:bg-blue-50 transition-colors group">

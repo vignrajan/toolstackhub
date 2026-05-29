@@ -104,7 +104,7 @@ function NumberWordsPage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-400">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li>/</li>
-                <li><Link href="/number-to-words" className="hover:text-brand-600 text-brand-600">Number to Words</Link></li>
+                <li><Link href="/tools/number-to-words" className="hover:text-brand-600 text-brand-600">Number to Words</Link></li>
                 <li>/</li>
                 <li className="text-surface-700 font-medium">{page.h1}</li>
               </ol>
@@ -163,7 +163,7 @@ function NumberWordsPage({ page }) {
           <div className="mb-8">
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related Amounts in Words</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <Link href="/number-to-words" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/tools/number-to-words" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">🔤</span>
                 <div>
                   <div className="font-bold text-white text-sm">Number to Words Tool</div>
@@ -257,7 +257,7 @@ function BMIPage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/bmi-calculator" className="hover:text-brand-600 text-brand-600">BMI Calculator</Link></li>
+                <li><Link href="/tools/bmi-calculator" className="hover:text-brand-600 text-brand-600">BMI Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -314,7 +314,7 @@ function BMIPage({ page }) {
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More BMI Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/bmi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/tools/bmi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">⚖️</span>
                 <div><div className="font-bold text-white text-sm">BMI Calculator India</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
@@ -374,7 +374,7 @@ function SpeechBubblePage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/speech-bubble-maker" className="hover:text-brand-600 text-brand-600">Speech Bubble Maker</Link></li>
+                <li><Link href="/tools/speech-bubble-maker" className="hover:text-brand-600 text-brand-600">Speech Bubble Maker</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -427,7 +427,7 @@ function SpeechBubblePage({ page }) {
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Speech Bubble Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/speech-bubble-maker" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/tools/speech-bubble-maker" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">💬</span>
                 <div><div className="font-bold text-white text-sm">Free Speech Bubble Maker</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
@@ -486,7 +486,7 @@ function AgePage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/age-calculator-online" className="hover:text-brand-600 text-brand-600">Age Calculator</Link></li>
+                <li><Link href="/tools/age-calculator" className="hover:text-brand-600 text-brand-600">Age Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -526,7 +526,7 @@ function AgePage({ page }) {
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Age Calculators</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/age-calculator-online" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/tools/age-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">🎂</span>
                 <div><div className="font-bold text-white text-sm">Age Calculator</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
@@ -586,7 +586,7 @@ function InvoicePage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/invoice-generator" className="hover:text-brand-600 text-brand-600">Invoice Generator</Link></li>
+                <li><Link href="/tools/invoice-generator" className="hover:text-brand-600 text-brand-600">Invoice Generator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -638,7 +638,7 @@ function InvoicePage({ page }) {
           <section>
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Invoice Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link href="/invoice-generator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <Link href="/tools/invoice-generator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                 <span className="text-2xl">🧾</span>
                 <div><div className="font-bold text-white text-sm">Free Invoice Generator</div><div className="text-xs text-brand-200">Main tool — all features</div></div>
               </Link>
@@ -740,7 +740,7 @@ function EmiBankPage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 transition-colors">EMI Calculator</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 transition-colors">EMI Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -768,11 +768,11 @@ function EmiBankPage({ page }) {
             <p className="text-surface-600 text-sm leading-relaxed">{page.intro}</p>
           </section>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/emi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+            <Link href="/tools/emi-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
               <span className="text-2xl">🏦</span>
               <div><div className="font-bold text-white text-sm">EMI Calculator</div><div className="text-xs text-brand-200">Compare all banks</div></div>
             </Link>
-            <Link href="/home-loan-emi-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+            <Link href="/tools/home-loan-emi-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
               <span className="text-2xl">🏠</span>
               <div><div className="font-semibold text-surface-800 text-sm">Home Loan EMI</div><div className="text-xs text-surface-500">With amortization schedule</div></div>
             </Link>
@@ -821,7 +821,7 @@ function GstStatePage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/gst-calculator" className="hover:text-brand-600 transition-colors">GST Calculator</Link></li>
+                <li><Link href="/tools/gst-calculator" className="hover:text-brand-600 transition-colors">GST Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.h1}</li>
               </ol>
@@ -846,11 +846,11 @@ function GstStatePage({ page }) {
             <p className="text-surface-600 text-sm leading-relaxed">{page.notes}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/gst-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+            <Link href="/tools/gst-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
               <span className="text-2xl">🧮</span>
               <div><div className="font-bold text-white text-sm">GST Calculator</div><div className="text-xs text-brand-200">All rates, all states</div></div>
             </Link>
-            <Link href="/gst-number-validator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+            <Link href="/tools/gst-number-validator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
               <span className="text-2xl">✅</span>
               <div><div className="font-semibold text-surface-800 text-sm">GST Number Validator</div><div className="text-xs text-surface-500">Validate GSTIN instantly</div></div>
             </Link>
@@ -899,7 +899,7 @@ function SalaryCityPage({ page }) {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/salary-calculator" className="hover:text-brand-600 transition-colors">Salary Calculator</Link></li>
+                <li><Link href="/tools/salary-calculator" className="hover:text-brand-600 transition-colors">Salary Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium truncate">{page.city}</li>
               </ol>
@@ -924,11 +924,11 @@ function SalaryCityPage({ page }) {
             <p className="text-surface-600 text-sm leading-relaxed">{page.costNote}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/salary-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+            <Link href="/tools/salary-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
               <span className="text-2xl">💰</span>
               <div><div className="font-bold text-white text-sm">Salary Calculator</div><div className="text-xs text-brand-200">Full CTC breakdown</div></div>
             </Link>
-            <Link href="/form-16-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+            <Link href="/tools/form-16-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
               <span className="text-2xl">🧾</span>
               <div><div className="font-semibold text-surface-800 text-sm">Form 16 Tax Calculator</div><div className="text-xs text-surface-500">Old vs new regime</div></div>
             </Link>

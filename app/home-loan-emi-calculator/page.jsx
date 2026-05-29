@@ -70,7 +70,7 @@ export default function HomeLoanEMIPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 transition-colors text-brand-600">EMI Calculator</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 transition-colors text-brand-600">EMI Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">Home Loan EMI</li>
               </ol>
@@ -113,7 +113,7 @@ export default function HomeLoanEMIPage() {
             <div className="space-y-3 text-surface-600 leading-relaxed">
               <p>A home loan is the largest financial commitment most Indian families make — and a single percentage point difference in interest rate can mean paying ₹8–15 lakh more over the loan lifetime. Using a home loan EMI calculator before applying lets you compare offers objectively, negotiate from a position of knowledge, and choose the right combination of loan amount, tenure, and lender.</p>
               <p>Our calculator uses the standard reducing balance method — the same formula used by every RBI-regulated bank and NBFC in India. Each EMI consists of a principal component and an interest component. In the early months, 70–80% of your EMI goes toward interest. By the final years, 80–90% goes toward principal. This is why prepayment in the first 5 years has dramatically more impact than prepayment in the last 5 years.</p>
-              <p>Use our <Link href="/percentage-calculator-online" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> to determine the right down payment percentage, or the <Link href="/age-calculator-online" className="text-brand-700 hover:underline font-medium">age calculator</Link> to ensure your loan tenure ends comfortably before retirement.</p>
+              <p>Use our <Link href="/tools/percentage-calculator" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> to determine the right down payment percentage, or the <Link href="/tools/age-calculator" className="text-brand-700 hover:underline font-medium">age calculator</Link> to ensure your loan tenure ends comfortably before retirement.</p>
             </div>
           </section>
 
@@ -304,8 +304,8 @@ export default function HomeLoanEMIPage() {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More EMI Calculators</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/emi-calculator',               label: 'EMI Calculator — All Loans'        },
-                { href: '/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'           },
+                { href: '/tools/emi-calculator',               label: 'EMI Calculator — All Loans'        },
+                { href: '/tools/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'           },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">
                   <span className="text-brand-600">🧮</span>
@@ -320,10 +320,10 @@ export default function HomeLoanEMIPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',  desc: 'Calculate down payment % and loan-to-value ratio' },
-                { href: '/age-calculator-online',        icon: '🎂', label: 'Age Calculator',         desc: 'Plan loan tenure to end before retirement age' },
-                { href: '/countdown-timer-online',       icon: '⏳', label: 'Countdown Timer',        desc: 'Count down to your loan payoff milestone' },
-                { href: '/qr-code-generator-online',     icon: '📱', label: 'QR Code Generator',      desc: 'Generate QR codes for UPI payment links' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',  desc: 'Calculate down payment % and loan-to-value ratio' },
+                { href: '/tools/age-calculator',        icon: '🎂', label: 'Age Calculator',         desc: 'Plan loan tenure to end before retirement age' },
+                { href: '/tools/countdown-timer',       icon: '⏳', label: 'Countdown Timer',        desc: 'Count down to your loan payoff milestone' },
+                { href: '/tools/qr-code-generator',     icon: '📱', label: 'QR Code Generator',      desc: 'Generate QR codes for UPI payment links' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

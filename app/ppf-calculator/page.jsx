@@ -197,7 +197,7 @@ export default function PPFCalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-400">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li>/</li>
-                <li><Link href="/salary-calculator" className="hover:text-brand-600">Finance Tools</Link></li>
+                <li><Link href="/tools/salary-calculator" className="hover:text-brand-600">Finance Tools</Link></li>
                 <li>/</li>
                 <li className="text-surface-700 font-medium">PPF Calculator</li>
               </ol>

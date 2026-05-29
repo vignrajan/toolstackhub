@@ -198,12 +198,12 @@ export default function JsonViewerPage() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related JSON Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
+                { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
                 { href: '/json-beautifier-online', label: 'JSON Beautifier', desc: 'Beautify and pretty-print JSON' },
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indent' },
                 { href: '/json-validator-online', label: 'JSON Validator', desc: 'Validate JSON syntax instantly' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },
-                { href: '/url-encoder-online', label: 'URL Encoder', desc: 'Encode URL values found in JSON' },
+                { href: '/tools/url-encoder', label: 'URL Encoder', desc: 'Encode URL values found in JSON' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

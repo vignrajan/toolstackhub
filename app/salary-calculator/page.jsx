@@ -104,7 +104,7 @@ export default function SalaryCalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">Salary Calculator</li>
               </ol>
@@ -159,9 +159,9 @@ export default function SalaryCalculatorPage() {
             </div>
             <p className="text-surface-600 leading-relaxed">
               For this ₹12L CTC example, the take-home is approximately ₹84,000/month — 30% less than the CTC figure. Use our{' '}
-              <Link href="/percentage-calculator-online" className="text-brand-700 hover:underline font-medium">percentage calculator</Link>{' '}
+              <Link href="/tools/percentage-calculator" className="text-brand-700 hover:underline font-medium">percentage calculator</Link>{' '}
               to verify any deduction percentages, and the{' '}
-              <Link href="/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link>{' '}
+              <Link href="/tools/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link>{' '}
               to determine what home loan your in-hand salary can comfortably support.
             </p>
           </section>
@@ -414,12 +414,12 @@ export default function SalaryCalculatorPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Financial Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/emi-calculator',               icon: '🧮', label: 'EMI Calculator',           desc: 'Calculate home loan affordable on your in-hand salary' },
-                { href: '/sip-calculator',               icon: '📈', label: 'SIP Calculator',           desc: 'Invest your savings for long-term wealth' },
-                { href: '/gst-calculator',               icon: '🧾', label: 'GST Calculator',           desc: 'Calculate GST for freelance and business income' },
-                { href: '/invoice-generator',            icon: '📄', label: 'Invoice Generator',        desc: 'Create professional invoices for freelance work' },
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',    desc: 'Calculate salary hike percentage and deductions' },
-                { href: '/home-loan-emi-calculator',     icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'Plan a home loan based on your take-home salary' },
+                { href: '/tools/emi-calculator',               icon: '🧮', label: 'EMI Calculator',           desc: 'Calculate home loan affordable on your in-hand salary' },
+                { href: '/tools/sip-calculator',               icon: '📈', label: 'SIP Calculator',           desc: 'Invest your savings for long-term wealth' },
+                { href: '/tools/gst-calculator',               icon: '🧾', label: 'GST Calculator',           desc: 'Calculate GST for freelance and business income' },
+                { href: '/tools/invoice-generator',            icon: '📄', label: 'Invoice Generator',        desc: 'Create professional invoices for freelance work' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',    desc: 'Calculate salary hike percentage and deductions' },
+                { href: '/tools/home-loan-emi-calculator',     icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'Plan a home loan based on your take-home salary' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

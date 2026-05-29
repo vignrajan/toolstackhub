@@ -365,7 +365,7 @@ export default function BestMCPServersBlog() {
                 <div className="bg-emerald-600 rounded-2xl p-4 text-white">
                   <div className="font-bold text-sm mb-1">🧮 Token calculator</div>
                   <p className="text-emerald-200 text-xs leading-relaxed mb-2">MCP servers affect token usage. Estimate your Claude Code bill before adding servers.</p>
-                  <Link href="/claude-code-token-calculator" className="block text-center bg-white text-emerald-700 font-bold text-xs py-2 rounded-xl hover:bg-emerald-50 transition-colors">
+                  <Link href="/tools/claude-code-token-calculator" className="block text-center bg-white text-emerald-700 font-bold text-xs py-2 rounded-xl hover:bg-emerald-50 transition-colors">
                     Calculate now →
                   </Link>
                 </div>
@@ -728,7 +728,7 @@ export default function BestMCPServersBlog() {
                   </div>
 
                   <p>
-                    Run the <Link href="/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> before committing to more than three servers — schema overhead compounds fast, and the calculator shows exactly where your session budget goes. The <Link href="/blog/how-to-save-tokens-in-claude" className="text-brand-600 hover:text-brand-700 font-medium">Claude token habits guide</Link> covers the broader patterns that apply with or without MCP.
+                    Run the <Link href="/tools/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> before committing to more than three servers — schema overhead compounds fast, and the calculator shows exactly where your session budget goes. The <Link href="/blog/how-to-save-tokens-in-claude" className="text-brand-600 hover:text-brand-700 font-medium">Claude token habits guide</Link> covers the broader patterns that apply with or without MCP.
                   </p>
                 </div>
               </section>
@@ -784,7 +784,7 @@ export default function BestMCPServersBlog() {
                     Three well-chosen MCP servers turn Claude Code from a chat interface into a genuine agentic environment. The gap is not marginal.
                   </p>
                   <p>
-                    Don't install all ten at once. Each server loads its tool schema into context at session start — five servers means up to 10,000 tokens of overhead before you type anything. Start with two or three, prove the value, then expand. Use the <Link href="/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> before adding a fourth.
+                    Don't install all ten at once. Each server loads its tool schema into context at session start — five servers means up to 10,000 tokens of overhead before you type anything. Start with two or three, prove the value, then expand. Use the <Link href="/tools/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> before adding a fourth.
                   </p>
                 </div>
 

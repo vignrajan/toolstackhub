@@ -245,7 +245,7 @@ export default function PostRemoveDuplicateLines() {
                       Runs entirely in your browser.
                     </p>
                     <div className="flex flex-wrap gap-3">
-                      <Link href="/remove-duplicate-lines-online"
+                      <Link href="/tools/remove-duplicate-lines"
                         className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                         Try the Free Tool →
                       </Link>
@@ -278,7 +278,7 @@ export default function PostRemoveDuplicateLines() {
                     content: (
                       <p className="text-surface-600 text-sm leading-relaxed">
                         Go to{' '}
-                        <Link href="/remove-duplicate-lines-online"
+                        <Link href="/tools/remove-duplicate-lines"
                           className="text-emerald-700 hover:underline font-medium">
                           toolstackhub.in/remove-duplicate-lines-online
                         </Link>{' '}
@@ -500,12 +500,12 @@ export default function PostRemoveDuplicateLines() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/remove-duplicate-lines-online', icon: '🧹', label: 'Remove Duplicate Lines Tool',  desc: 'The free tool covered in this guide' },
-                  { href: '/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks Online',     desc: 'Remove newlines from multi-line text' },
-                  { href: '/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines Online',     desc: 'Strip blank lines from any text' },
-                  { href: '/word-counter-online',           icon: '📝', label: 'Word Counter Online',           desc: 'Count words and lines after cleaning' },
-                  { href: '/case-converter-online',         icon: '🔡', label: 'Case Converter Online',         desc: 'Normalize case before deduplication' },
-                  { href: '/character-counter-online',      icon: '🔢', label: 'Character Counter Online',      desc: 'Measure text length before and after' },
+                  { href: '/tools/remove-duplicate-lines', icon: '🧹', label: 'Remove Duplicate Lines Tool',  desc: 'The free tool covered in this guide' },
+                  { href: '/tools/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks Online',     desc: 'Remove newlines from multi-line text' },
+                  { href: '/tools/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines Online',     desc: 'Strip blank lines from any text' },
+                  { href: '/tools/word-counter',           icon: '📝', label: 'Word Counter Online',           desc: 'Count words and lines after cleaning' },
+                  { href: '/tools/case-converter',         icon: '🔡', label: 'Case Converter Online',         desc: 'Normalize case before deduplication' },
+                  { href: '/tools/character-counter',      icon: '🔢', label: 'Character Counter Online',      desc: 'Measure text length before and after' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">
@@ -531,7 +531,7 @@ export default function PostRemoveDuplicateLines() {
                   Use the free Remove Duplicate Lines tool — paste your text, click one button,
                   and get a clean unique list in under a second. No account, no install.
                 </p>
-                <Link href="/remove-duplicate-lines-online"
+                <Link href="/tools/remove-duplicate-lines"
                   className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
                   Remove Duplicate Lines Now — Free →
                 </Link>

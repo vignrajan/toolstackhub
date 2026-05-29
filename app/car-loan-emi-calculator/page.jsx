@@ -69,7 +69,7 @@ export default function CarLoanEMIPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 transition-colors text-brand-600">EMI Calculator</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 transition-colors text-brand-600">EMI Calculator</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">Car Loan EMI</li>
               </ol>
@@ -113,7 +113,7 @@ export default function CarLoanEMIPage() {
             <div className="space-y-3 text-surface-600 leading-relaxed">
               <p>A car loan is one of the most common consumer loans in India — but it is also one of the most misunderstood. Unlike a home loan where the asset (property) appreciates over time, a car depreciates from the moment you drive it out of the showroom. This fundamental difference means car loan decisions need different thinking than home loans.</p>
               <p>A new car loses 15–20% of its value in the first year and 10–15% per year after that. If you take a 7-year car loan with a 10% down payment, for the first 2–3 years you will owe more than the car is worth — a situation called being "underwater" or having negative equity. Our car loan EMI calculator helps you model scenarios with different down payments and tenures so you can make an informed decision before visiting the dealership.</p>
-              <p>Use our <Link href="/percentage-calculator-online" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> to determine the right down payment percentage, or the <Link href="/emi-calculator" className="text-brand-700 hover:underline font-medium">main EMI calculator</Link> to compare car loan against home loan and personal loan scenarios.</p>
+              <p>Use our <Link href="/tools/percentage-calculator" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> to determine the right down payment percentage, or the <Link href="/tools/emi-calculator" className="text-brand-700 hover:underline font-medium">main EMI calculator</Link> to compare car loan against home loan and personal loan scenarios.</p>
             </div>
           </section>
 
@@ -318,9 +318,9 @@ export default function CarLoanEMIPage() {
             <h2 id="variants-heading" className="font-display font-bold text-xl text-surface-900 mb-4">More EMI Calculators</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/emi-calculator',               label: 'EMI Calculator — All Loans'        },
-                { href: '/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'          },
-                { href: '/percentage-calculator-online', label: 'Percentage Calculator'             },
+                { href: '/tools/emi-calculator',               label: 'EMI Calculator — All Loans'        },
+                { href: '/tools/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'          },
+                { href: '/tools/percentage-calculator', label: 'Percentage Calculator'             },
               ].map(v => (
                 <Link key={v.href} href={v.href} className="flex items-center gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl hover:bg-brand-100 transition-colors group">
                   <span className="text-brand-600">🧮</span>
@@ -335,10 +335,10 @@ export default function CarLoanEMIPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator', desc: 'Calculate down payment % and loan-to-value ratio' },
-                { href: '/age-calculator-online',        icon: '🎂', label: 'Age Calculator',        desc: 'Calculate your age for loan eligibility' },
-                { href: '/emi-calculator',               icon: '🧮', label: 'EMI Calculator',        desc: 'Calculate EMI for home loan and personal loan too' },
-                { href: '/countdown-timer-online',       icon: '⏳', label: 'Countdown Timer',       desc: 'Count down to your car loan payoff date' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator', desc: 'Calculate down payment % and loan-to-value ratio' },
+                { href: '/tools/age-calculator',        icon: '🎂', label: 'Age Calculator',        desc: 'Calculate your age for loan eligibility' },
+                { href: '/tools/emi-calculator',               icon: '🧮', label: 'EMI Calculator',        desc: 'Calculate EMI for home loan and personal loan too' },
+                { href: '/tools/countdown-timer',       icon: '⏳', label: 'Countdown Timer',       desc: 'Count down to your car loan payoff date' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

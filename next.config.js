@@ -11,103 +11,122 @@ const nextConfig = {
         permanent: true,
       },
 
+      // ════════════════════════════════════════════════
+      // IMAGE TOOLS — old URL → /tools/* (301 permanent)
+      // ════════════════════════════════════════════════
+      { source: '/compress-image-online',       destination: '/tools/image-compressor', permanent: true },
+      { source: '/resize-image-online',         destination: '/tools/image-resizer',    permanent: true },
+      { source: '/jpg-to-png-converter-online', destination: '/tools/jpg-to-png',       permanent: true },
+      { source: '/image-to-pdf-converter-online', destination: '/tools/image-to-pdf',   permanent: true },
+      { source: '/speech-bubble-maker',         destination: '/tools/speech-bubble-maker', permanent: true },
 
       // ════════════════════════════════════════════════
-      // IMAGE TOOLS — /tools/* → clean URL (301 permanent)
+      // TEXT TOOLS — old URL → /tools/* (301 permanent)
       // ════════════════════════════════════════════════
-      { source: '/tools/image-compressor', destination: '/compress-image-online',       permanent: true },
-      { source: '/tools/image-resizer',    destination: '/resize-image-online',         permanent: true },
-      { source: '/tools/jpg-to-png',       destination: '/jpg-to-png-converter-online', permanent: true },
-      { source: '/tools/Image-to-pdf', destination: '/image-to-pdf-converter-online', permanent:true},
-      { source: '/tools/speech-bubble-maker', destination: '/speech-bubble-maker', permanent:true},
-
-
-      // ════════════════════════════════════════════════
-      // TEXT TOOLS — /tools/* → clean URL (301 permanent)
-      // ════════════════════════════════════════════════
-      { source: '/tools/word-counter',          destination: '/word-counter-online',        permanent: true },
-      { source: '/tools/character-counter',     destination: '/character-counter-online',   permanent: true },
-      { source: '/tools/case-converter',        destination: '/case-converter-online',      permanent: true },
-      { source: '/tools/lorem-ipsum-generator', destination: '/lorem-ipsum-generator',      permanent: true },
-      { source: '/tools/text-to-handwriting',   destination: '/text-to-handwriting-online', permanent: true },
-      { source: '/tools/markdown-preview',      destination: '/markdown-editor-online',     permanent: true },
-      { source: '/tools/text-to-speech',        destination: '/text-to-speech-online',      permanent: true },
-      { source: '/tools/remove-duplicate-lines',destination: '/remove-duplicate-lines-online', permanent: true },
-      { source: '/tools/remove-extra-spaces',   destination: '/remove-extra-spaces',         permanent: true },
-      { source: '/tools/remove-line-breaks',    destination: '/remove-line-breaks',          permanent: true },
-      { source: '/tools/remove-empty-lines',    destination: '/remove-empty-lines',          permanent: true },
-      { source: '/tools/text-repeater',         destination: '/text-repeater',               permanent: true },
+      { source: '/word-counter-online',          destination: '/tools/word-counter',           permanent: true },
+      { source: '/character-counter-online',     destination: '/tools/character-counter',      permanent: true },
+      { source: '/case-converter-online',        destination: '/tools/case-converter',         permanent: true },
+      { source: '/lorem-ipsum-generator',        destination: '/tools/lorem-ipsum-generator',  permanent: true },
+      { source: '/text-to-handwriting-online',   destination: '/tools/text-to-handwriting',    permanent: true },
+      { source: '/markdown-editor-online',       destination: '/tools/markdown-preview',       permanent: true },
+      { source: '/text-to-speech-online',        destination: '/tools/text-to-speech',         permanent: true },
+      { source: '/remove-duplicate-lines-online',destination: '/tools/remove-duplicate-lines', permanent: true },
+      { source: '/remove-extra-spaces',          destination: '/tools/remove-extra-spaces',    permanent: true },
+      { source: '/remove-line-breaks',           destination: '/tools/remove-line-breaks',     permanent: true },
+      { source: '/remove-empty-lines',           destination: '/tools/remove-empty-lines',     permanent: true },
+      { source: '/text-repeater',                destination: '/tools/text-repeater',          permanent: true },
+      { source: '/typing-speed-test-online',     destination: '/tools/typing-speed-test',      permanent: true },
 
       // ════════════════════════════════════════════════
-      // DEVELOPER TOOLS — /tools/* → clean URL (301 permanent)
+      // DEVELOPER TOOLS — old URL → /tools/* (301 permanent)
       // ════════════════════════════════════════════════
-      { source: '/tools/json-formatter',      destination: '/json-formatter-online',       permanent: true },
-      { source: '/tools/base64-encoder',      destination: '/base64-encoder-online',       permanent: true },
-      { source: '/tools/url-encoder',         destination: '/url-encoder-online',          permanent: true },
-      { source: '/tools/uuid-generator',      destination: '/uuid-generator-online',       permanent: true },
-      { source: '/tools/timestamp-converter', destination: '/unix-timestamp-converter-online',    permanent: true },
-      { source: '/tools/binary-converter',    destination: '/binary-to-decimal-converter-online', permanent: true },
-      { source: '/tools/text-to-binary-converter', destination: '/binary-to-decimal-converter-online', permanent: true },
-      { source: '/text-to-binary-converter', destination: '/binary-to-decimal-converter-online', permanent: true },
-      { source: '/tools/regex-tester',        destination: '/regex-tester-online',         permanent: true },
-      { source: '/tools/css-minifier',        destination: '/css-minifier-online',         permanent: true },
-      { source: '/tools/html-formatter',      destination: '/html-formatter-online',       permanent: true },
-      { source: '/tools/color-picker',        destination: '/color-picker-online',         permanent: true },
-      { source: '/tools/json-to-csv', destination: '/json-to-csv-converter-online', permanent: true },
+      { source: '/json-formatter-online',              destination: '/tools/json-formatter',      permanent: true },
+      { source: '/base64-encoder-online',              destination: '/tools/base64-encoder',      permanent: true },
+      { source: '/url-encoder-online',                 destination: '/tools/url-encoder',         permanent: true },
+      { source: '/uuid-generator-online',              destination: '/tools/uuid-generator',      permanent: true },
+      { source: '/unix-timestamp-converter-online',    destination: '/tools/timestamp-converter', permanent: true },
+      { source: '/binary-to-decimal-converter-online', destination: '/tools/binary-converter',    permanent: true },
+      { source: '/regex-tester-online',                destination: '/tools/regex-tester',        permanent: true },
+      { source: '/css-minifier-online',                destination: '/tools/css-minifier',        permanent: true },
+      { source: '/html-formatter-online',              destination: '/tools/html-formatter',      permanent: true },
+      { source: '/color-picker-online',                destination: '/tools/color-picker',        permanent: true },
+      { source: '/json-to-csv-converter-online',       destination: '/tools/json-to-csv',         permanent: true },
+      { source: '/jwt-decoder-online',                 destination: '/tools/jwt-decoder',         permanent: true },
+      { source: '/diff-checker-online',                destination: '/tools/diff-checker',        permanent: true },
+      { source: '/cron-expression-builder-online',     destination: '/tools/cron-expression-builder', permanent: true },
+      { source: '/sql-formatter-online',               destination: '/tools/sql-formatter',       permanent: true },
+      { source: '/markdown-to-html',                   destination: '/tools/markdown-to-html',    permanent: true },
+      { source: '/html-to-markdown',                   destination: '/tools/html-to-markdown',    permanent: true },
+      { source: '/color-palette-generator',            destination: '/tools/color-palette-generator', permanent: true },
 
       // ════════════════════════════════════════════════
-      // SEO TOOLS — /tools/* → clean URL (301 permanent)
+      // SEO TOOLS — old URL → /tools/* (301 permanent)
       // ════════════════════════════════════════════════
-      { source: '/tools/meta-tag-generator', destination: '/meta-tag-generator-online', permanent: true },
+      { source: '/meta-tag-generator-online', destination: '/tools/meta-tag-generator', permanent: true },
 
       // ════════════════════════════════════════════════
-      // UTILITY TOOLS — /tools/* → clean URL (301 permanent)
+      // UTILITY TOOLS — old URL → /tools/* (301 permanent)
       // ════════════════════════════════════════════════
-      { source: '/tools/qr-code-generator',         destination: '/qr-code-generator-online',    permanent: true },
-      { source: '/tools/password-generator',         destination: '/password-generator-online',   permanent: true },
-      { source: '/tools/password-strength-checker',  destination: '/password-strength-checker',   permanent: true },
-      { source: '/tools/random-number-generator',    destination: '/random-number-generator',     permanent: true },
-      { source: '/tools/age-calculator',             destination: '/age-calculator-online',       permanent: true },
-      { source: '/tools/percentage-calculator',      destination: '/percentage-calculator-online', permanent: true },
-      { source: '/tools/pomodoro-timer',             destination: '/pomodoro-timer-online',       permanent: true },
-      { source: '/tools/countdown-timer',            destination: '/countdown-timer-online',      permanent: true },
-      { source: '/tools/stopwatch',                  destination: '/stopwatch-online',            permanent: true },
-      { source: '/tools/screen-resolution',          destination: '/screen-resolution-checker',   permanent: true },
-      { source: '/tools/ai-prompt-generator',        destination: '/ai-prompt-generator-online',  permanent: true },
-      { source: '/tools/typing-speed-test',          destination: '/typing-speed-test-online',     permanent: true },
-      { source: '/tools/ai-prompts-seo',              destination: '/ai-prompts/seo',              permanent: true },
-      { source: '/tools/emi-calculator',              destination: '/emi-calculator',              permanent: true },
-      { source: '/tools/home-loan-emi-calculator',    destination: '/home-loan-emi-calculator',    permanent: true },
-      { source: '/tools/sip-calculator',              destination: '/sip-calculator',              permanent: true },  
-      { source: '/tools/invoice-generator',           destination: '/invoice-generator',           permanent: true },
-      { source: '/tools/gst-calculator',              destination: '/gst-calculator',              permanent: true },
-      { source: '/gst-inclusive-exclusive-calculator',destination: '/gst-calculator',              permanent: true },      
-      { source: '/tools/salary-calculator',              destination: '/salary-calculator',        permanent: true },
-      { source: '/tools/hra-calculator',              destination: '/hra-calculator',              permanent: true },
-      { source: '/tools/fuel-bill-generator',              destination: '/fuel-bill-generator',    permanent: true },
-      { source: '/tools/chat-screenshot-generator',  destination: '/chat-screenshot-generator',    permanent: true },
-      { source: '/tools/professional-tax-calculator', destination: '/professional-tax-calculator', permanent: true },
-      { source: '/tools/ppf-calculator',              destination: '/ppf-calculator',              permanent: true },
-
-
-      // UTILITY TOOLS — /tools/* → clean URL (301 permanent)
-      { source: '/tools/bmi-calculator',               destination: '/bmi-calculator',        permanent: true },
-      { source: '/tools/number-to-words',              destination: '/number-to-words',        permanent: true },
-      { source: '/tools/claude-code-token-calculator', destination: '/claude-code-token-calculator', permanent: true },
+      { source: '/qr-code-generator-online',    destination: '/tools/qr-code-generator',        permanent: true },
+      { source: '/password-generator-online',   destination: '/tools/password-generator',       permanent: true },
+      { source: '/password-strength-checker',   destination: '/tools/password-strength-checker', permanent: true },
+      { source: '/random-number-generator',     destination: '/tools/random-number-generator',  permanent: true },
+      { source: '/age-calculator-online',       destination: '/tools/age-calculator',           permanent: true },
+      { source: '/percentage-calculator-online',destination: '/tools/percentage-calculator',    permanent: true },
+      { source: '/pomodoro-timer-online',       destination: '/tools/pomodoro-timer',           permanent: true },
+      { source: '/countdown-timer-online',      destination: '/tools/countdown-timer',          permanent: true },
+      { source: '/stopwatch-online',            destination: '/tools/stopwatch',                permanent: true },
+      { source: '/screen-resolution-checker',   destination: '/tools/screen-resolution',        permanent: true },
+      { source: '/ai-prompt-generator-online',  destination: '/tools/ai-prompt-generator',      permanent: true },
+      { source: '/whatsapp-link-generator',     destination: '/tools/whatsapp-link-generator',  permanent: true },
+      { source: '/unit-converter',              destination: '/tools/unit-converter',           permanent: true },
 
       // ════════════════════════════════════════════════
-      // URL NORMALISATION — old short URLs → corrected -online suffix
+      // FINANCE TOOLS — old URL → /tools/* (301 permanent)
       // ════════════════════════════════════════════════
-      { source: '/online-stopwatch',              destination: '/stopwatch-online',                  permanent: true },
-      { source: '/typing-test',                   destination: '/typing-speed-test-online',          permanent: true },
-      { source: '/binary-to-decimal-converter',   destination: '/binary-to-decimal-converter-online', permanent: true },
-      { source: '/unix-timestamp-converter',      destination: '/unix-timestamp-converter-online',   permanent: true },
-      { source: '/json-to-csv-converter',         destination: '/json-to-csv-converter-online',      permanent: true },
-      { source: '/diff-checker',                  destination: '/diff-checker-online',               permanent: true },
-      { source: '/cron-expression-builder',       destination: '/cron-expression-builder-online',    permanent: true },
+      { source: '/emi-calculator',              destination: '/tools/emi-calculator',              permanent: true },
+      { source: '/home-loan-emi-calculator',    destination: '/tools/home-loan-emi-calculator',    permanent: true },
+      { source: '/car-loan-emi-calculator',     destination: '/tools/car-loan-emi-calculator',     permanent: true },
+      { source: '/sip-calculator',              destination: '/tools/sip-calculator',              permanent: true },
+      { source: '/invoice-generator',           destination: '/tools/invoice-generator',           permanent: true },
+      { source: '/gst-calculator',              destination: '/tools/gst-calculator',              permanent: true },
+      { source: '/salary-calculator',           destination: '/tools/salary-calculator',           permanent: true },
+      { source: '/professional-tax-calculator', destination: '/tools/professional-tax-calculator', permanent: true },
+      { source: '/hra-calculator',              destination: '/tools/hra-calculator',              permanent: true },
+      { source: '/ppf-calculator',              destination: '/tools/ppf-calculator',              permanent: true },
+      { source: '/fuel-bill-generator',         destination: '/tools/fuel-bill-generator',         permanent: true },
+      { source: '/epf-calculator',              destination: '/tools/epf-calculator',              permanent: true },
+      { source: '/form-16-calculator',          destination: '/tools/form-16-calculator',          permanent: true },
+      { source: '/salary-slip-generator',       destination: '/tools/salary-slip-generator',       permanent: true },
+      { source: '/rent-agreement-generator',    destination: '/tools/rent-agreement-generator',    permanent: true },
+      { source: '/pan-validator',               destination: '/tools/pan-validator',               permanent: true },
+      { source: '/ifsc-finder',                 destination: '/tools/ifsc-finder',                 permanent: true },
+      { source: '/gst-number-validator',        destination: '/tools/gst-number-validator',        permanent: true },
 
-      // BLOG-CLAUDE TOKENS
-      { source: '/blog/save-claude-tokens-guide',      destination: '/blog/how-to-save-tokens-in-claude',        permanent: true },
+      // ════════════════════════════════════════════════
+      // STUDENT / MISC TOOLS — old URL → /tools/* (301 permanent)
+      // ════════════════════════════════════════════════
+      { source: '/bmi-calculator',               destination: '/tools/bmi-calculator',               permanent: true },
+      { source: '/number-to-words',              destination: '/tools/number-to-words',              permanent: true },
+      { source: '/chat-screenshot-generator',    destination: '/tools/chat-screenshot-generator',    permanent: true },
+      { source: '/claude-code-token-calculator', destination: '/tools/claude-code-token-calculator', permanent: true },
+      { source: '/cgpa-calculator',              destination: '/tools/cgpa-calculator',              permanent: true },
+
+      // ════════════════════════════════════════════════
+      // URL NORMALISATION — short/alias URLs → /tools/*
+      // ════════════════════════════════════════════════
+      { source: '/online-stopwatch',              destination: '/tools/stopwatch',          permanent: true },
+      { source: '/typing-test',                   destination: '/tools/typing-speed-test',  permanent: true },
+      { source: '/binary-to-decimal-converter',   destination: '/tools/binary-converter',   permanent: true },
+      { source: '/unix-timestamp-converter',      destination: '/tools/timestamp-converter', permanent: true },
+      { source: '/json-to-csv-converter',         destination: '/tools/json-to-csv',        permanent: true },
+      { source: '/diff-checker',                  destination: '/tools/diff-checker',       permanent: true },
+      { source: '/cron-expression-builder',       destination: '/tools/cron-expression-builder', permanent: true },
+      { source: '/text-to-binary-converter',      destination: '/tools/binary-converter',   permanent: true },
+      { source: '/gst-inclusive-exclusive-calculator', destination: '/tools/gst-calculator', permanent: true },
+
+      // BLOG
+      { source: '/blog/save-claude-tokens-guide', destination: '/blog/how-to-save-tokens-in-claude', permanent: true },
 
       // ════════════════════════════════════════════════
       // JSON CLUSTER — each URL is a standalone indexable page

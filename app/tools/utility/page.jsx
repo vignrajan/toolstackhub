@@ -117,19 +117,19 @@ export default function UtilityToolsCategoryPage() {
                   Most global utility tool sites lack India-specific finance calculators that
                   account for Indian tax rules, salary structures, and banking norms. ToolStackHub
                   is built with India-first finance tools: the{' '}
-                  <Link href="/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
+                  <Link href="/tools/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
                   includes all current GST slabs (5%, 12%, 18%, 28%), the{' '}
-                  <Link href="/salary-calculator" className="text-brand-700 hover:underline font-medium">salary calculator</Link>{' '}
+                  <Link href="/tools/salary-calculator" className="text-brand-700 hover:underline font-medium">salary calculator</Link>{' '}
                   handles CTC-to-in-hand with PF, professional tax, and HRA deductions, and the{' '}
-                  <Link href="/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link>{' '}
+                  <Link href="/tools/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link>{' '}
                   computes home loan, car loan, and personal loan EMIs with amortization schedules.
                 </p>
                 <p>
                   The{' '}
-                  <Link href="/professional-tax-calculator" className="text-brand-700 hover:underline font-medium">professional tax calculator</Link>{' '}
+                  <Link href="/tools/professional-tax-calculator" className="text-brand-700 hover:underline font-medium">professional tax calculator</Link>{' '}
                   includes state-wise PT slabs for Maharashtra, Karnataka, Andhra Pradesh, Tamil Nadu,
                   and West Bengal. The{' '}
-                  <Link href="/hra-calculator" className="text-brand-700 hover:underline font-medium">HRA calculator</Link>{' '}
+                  <Link href="/tools/hra-calculator" className="text-brand-700 hover:underline font-medium">HRA calculator</Link>{' '}
                   follows the Income Tax Act Section 10(13A) formula to compute your actual HRA exemption.
                 </p>
               </div>
@@ -142,13 +142,13 @@ export default function UtilityToolsCategoryPage() {
               <div className="space-y-3 text-surface-600 leading-relaxed">
                 <p>
                   The{' '}
-                  <Link href="/qr-code-generator-online" className="text-brand-700 hover:underline font-medium">QR code generator</Link>{' '}
+                  <Link href="/tools/qr-code-generator" className="text-brand-700 hover:underline font-medium">QR code generator</Link>{' '}
                   creates scannable QR codes for URLs, text, and contact details — used by 180,000+
                   people monthly. The{' '}
-                  <Link href="/password-generator-online" className="text-brand-700 hover:underline font-medium">password generator</Link>{' '}
+                  <Link href="/tools/password-generator" className="text-brand-700 hover:underline font-medium">password generator</Link>{' '}
                   creates cryptographically strong passwords with custom length and character sets,
                   running entirely offline in your browser. The{' '}
-                  <Link href="/age-calculator-online" className="text-brand-700 hover:underline font-medium">age calculator</Link>{' '}
+                  <Link href="/tools/age-calculator" className="text-brand-700 hover:underline font-medium">age calculator</Link>{' '}
                   computes exact age from a date of birth in years, months, and days — useful for
                   form filling, KYC documents, and birthday planning.
                 </p>

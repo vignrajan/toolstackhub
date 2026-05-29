@@ -540,12 +540,12 @@ export default function AiPromptGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/word-counter-online',         icon: '📝', label: 'Word Counter Online',         desc: 'Count words and measure reading time in your AI output' },
-                { href: '/case-converter-online',       icon: '🔡', label: 'Case Converter Online',       desc: 'Format headings and titles in your AI-generated content' },
-                { href: '/remove-duplicate-lines-online',icon:'🧹', label: 'Remove Duplicate Lines',      desc: 'Clean up repetitive lines in AI-generated lists and content' },
-                { href: '/character-counter-online',    icon: '🔢', label: 'Character Counter Online',    desc: 'Check AI output length against platform character limits' },
-                { href: '/lorem-ipsum-generator',       icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate placeholder text when testing AI prompt templates' },
-                { href: '/text-to-speech-online',       icon: '🔊', label: 'Text to Speech Online',       desc: 'Listen to your AI-generated content read aloud for review' },
+                { href: '/tools/word-counter',         icon: '📝', label: 'Word Counter Online',         desc: 'Count words and measure reading time in your AI output' },
+                { href: '/tools/case-converter',       icon: '🔡', label: 'Case Converter Online',       desc: 'Format headings and titles in your AI-generated content' },
+                { href: '/tools/remove-duplicate-lines',icon:'🧹', label: 'Remove Duplicate Lines',      desc: 'Clean up repetitive lines in AI-generated lists and content' },
+                { href: '/tools/character-counter',    icon: '🔢', label: 'Character Counter Online',    desc: 'Check AI output length against platform character limits' },
+                { href: '/tools/lorem-ipsum-generator',       icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate placeholder text when testing AI prompt templates' },
+                { href: '/tools/text-to-speech',       icon: '🔊', label: 'Text to Speech Online',       desc: 'Listen to your AI-generated content read aloud for review' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">

@@ -193,7 +193,7 @@ export default function HRAExemptionBlog() {
                 <div className="bg-brand-600 rounded-2xl p-5 text-white">
                   <div className="font-bold mb-2">🏠 Free HRA Calculator</div>
                   <p className="text-brand-200 text-xs leading-relaxed mb-3">Calculate your exact HRA exemption with the 8-metro update. See all 3 conditions + ideal rent.</p>
-                  <Link href="/hra-calculator" className="block w-full text-center bg-white text-brand-700 font-bold text-sm py-2 rounded-xl hover:bg-brand-50 transition-colors">
+                  <Link href="/tools/hra-calculator" className="block w-full text-center bg-white text-brand-700 font-bold text-sm py-2 rounded-xl hover:bg-brand-50 transition-colors">
                     Calculate Now →
                   </Link>
                 </div>
@@ -313,9 +313,9 @@ export default function HRAExemptionBlog() {
                 <div className="mt-5 bg-brand-50 border border-brand-200 rounded-2xl p-5 flex items-center justify-between gap-4 flex-wrap">
                   <div>
                     <div className="font-bold text-brand-900">Calculate with the updated 8-metro rule instantly</div>
-                    <p className="text-sm text-brand-700 mt-1">Our <Link href="/hra-calculator" className="font-bold underline">free HRA calculator</Link> is already updated with all 8 metro cities for FY 2026-27. Select your city type and get your exact exemption in seconds.</p>
+                    <p className="text-sm text-brand-700 mt-1">Our <Link href="/tools/hra-calculator" className="font-bold underline">free HRA calculator</Link> is already updated with all 8 metro cities for FY 2026-27. Select your city type and get your exact exemption in seconds.</p>
                   </div>
-                  <Link href="/hra-calculator" className="shrink-0 bg-brand-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-brand-700 transition-colors text-sm">
+                  <Link href="/tools/hra-calculator" className="shrink-0 bg-brand-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-brand-700 transition-colors text-sm">
                     Try HRA Calculator →
                   </Link>
                 </div>
@@ -507,9 +507,9 @@ export default function HRAExemptionBlog() {
                 <div className="bg-surface-900 rounded-2xl p-5 flex items-center justify-between gap-4 flex-wrap">
                   <div>
                     <div className="font-bold" style={{color:'#ffffff'}}>Don't calculate manually — use the free calculator</div>
-                    <p className="text-sm mt-1" style={{color:'#94a3b8'}}>Our <Link href="/hra-calculator" className="text-brand-400 font-bold hover:text-brand-300">HRA exemption calculator</Link> shows all 3 conditions, highlights the binding one, and gives you the ideal rent figure automatically.</p>
+                    <p className="text-sm mt-1" style={{color:'#94a3b8'}}>Our <Link href="/tools/hra-calculator" className="text-brand-400 font-bold hover:text-brand-300">HRA exemption calculator</Link> shows all 3 conditions, highlights the binding one, and gives you the ideal rent figure automatically.</p>
                   </div>
-                  <Link href="/hra-calculator" className="shrink-0 bg-brand-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-brand-700 transition-colors text-sm">
+                  <Link href="/tools/hra-calculator" className="shrink-0 bg-brand-600 text-white font-bold px-5 py-2.5 rounded-xl hover:bg-brand-700 transition-colors text-sm">
                     Calculate My HRA →
                   </Link>
                 </div>
@@ -548,7 +548,7 @@ export default function HRAExemptionBlog() {
                     This is particularly relevant for employees who have recently received salary hikes and haven't renegotiated their rent — or who are paying below-market rent (e.g., to family members) to minimise household expenses without realising it reduces their HRA benefit.
                   </p>
                   <p>
-                    Our <Link href="/hra-calculator" className="text-brand-600 hover:underline font-semibold">HRA calculator</Link> automatically computes and displays the ideal rent as Section D of the results — a feature most other calculators don't provide.
+                    Our <Link href="/tools/hra-calculator" className="text-brand-600 hover:underline font-semibold">HRA calculator</Link> automatically computes and displays the ideal rent as Section D of the results — a feature most other calculators don't provide.
                   </p>
                 </div>
               </section>
@@ -651,14 +651,14 @@ export default function HRAExemptionBlog() {
 
                 {/* Cross-link box */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Link href="/hra-calculator"
+                  <Link href="/tools/hra-calculator"
                     className="block p-5 bg-brand-50 border-2 border-brand-200 rounded-2xl hover:border-brand-400 hover:bg-brand-100 transition-all group">
                     <div className="text-2xl mb-2">🏠</div>
                     <div className="font-bold text-brand-900 group-hover:text-brand-700 mb-1">HRA Exemption Calculator</div>
                     <div className="text-sm text-brand-700 leading-relaxed">Calculate your exact HRA exemption with the updated 8-metro rule. See all 3 conditions, ideal rent, and annual tax saving.</div>
                     <div className="text-xs font-bold text-brand-600 mt-3">Open Calculator →</div>
                   </Link>
-                  <Link href="/professional-tax-calculator"
+                  <Link href="/tools/professional-tax-calculator"
                     className="block p-5 bg-surface-50 border-2 border-surface-200 rounded-2xl hover:border-brand-300 hover:bg-brand-50 transition-all group">
                     <div className="text-2xl mb-2">⚖️</div>
                     <div className="font-bold text-surface-900 group-hover:text-brand-700 mb-1">Professional Tax Calculator</div>
@@ -722,10 +722,10 @@ export default function HRAExemptionBlog() {
                   The formula has three variables, two city types, and a dozen edge cases. You shouldn't be computing this manually. Our free HRA calculator handles all of it — 8 updated metro cities, all 3 conditions shown side by side, ideal rent figure, and annual tax saving estimate — in under 30 seconds.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/hra-calculator" className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors text-sm">
+                  <Link href="/tools/hra-calculator" className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors text-sm">
                     🏠 Open HRA Calculator →
                   </Link>
-                  <Link href="/professional-tax-calculator" className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-xl transition-colors text-sm border border-white/20 hover:bg-white/10" style={{color:'#ffffff'}}>
+                  <Link href="/tools/professional-tax-calculator" className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-xl transition-colors text-sm border border-white/20 hover:bg-white/10" style={{color:'#ffffff'}}>
                     ⚖️ Professional Tax Calculator →
                   </Link>
                 </div>

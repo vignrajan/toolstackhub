@@ -495,12 +495,12 @@ export default function QrCodeGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/url-encoder-online',         icon: '🔗', label: 'URL Encoder Online',         desc: 'Encode and decode URLs and query parameters' },
-                { href: '/password-generator-online',  icon: '🔐', label: 'Password Generator Online',  desc: 'Generate strong WiFi and account passwords' },
-                { href: '/compress-image-online',      icon: '🗜️', label: 'Compress Image Online',      desc: 'Compress your downloaded QR PNG for web use' },
-                { href: '/image-to-pdf-converter-online',icon:'📄', label: 'Image to PDF Converter',    desc: 'Combine QR codes and images into PDF documents' },
-                { href: '/meta-tag-generator-online',  icon: '🔍', label: 'Meta Tag Generator',         desc: 'Add SEO meta tags to your QR code landing pages' },
-                { href: '/uuid-generator-online',      icon: '🆔', label: 'UUID Generator Online',      desc: 'Generate unique IDs for QR code tracking systems' },
+                { href: '/tools/url-encoder',         icon: '🔗', label: 'URL Encoder Online',         desc: 'Encode and decode URLs and query parameters' },
+                { href: '/tools/password-generator',  icon: '🔐', label: 'Password Generator Online',  desc: 'Generate strong WiFi and account passwords' },
+                { href: '/tools/image-compressor',      icon: '🗜️', label: 'Compress Image Online',      desc: 'Compress your downloaded QR PNG for web use' },
+                { href: '/tools/image-to-pdf',icon:'📄', label: 'Image to PDF Converter',    desc: 'Combine QR codes and images into PDF documents' },
+                { href: '/tools/meta-tag-generator',  icon: '🔍', label: 'Meta Tag Generator',         desc: 'Add SEO meta tags to your QR code landing pages' },
+                { href: '/tools/uuid-generator',      icon: '🆔', label: 'UUID Generator Online',      desc: 'Generate unique IDs for QR code tracking systems' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">

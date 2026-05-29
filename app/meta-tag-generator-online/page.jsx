@@ -527,12 +527,12 @@ export default function MetaTagGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/character-counter-online',     icon: '🔢', label: 'Character Counter Online',     desc: 'Count characters with live Twitter, SMS, and meta description limit bars' },
-                { href: '/word-counter-online',          icon: '📝', label: 'Word Counter Online',          desc: 'Count words and measure reading time in your page content' },
-                { href: '/url-encoder-online',           icon: '🔗', label: 'URL Encoder Online',           desc: 'Encode canonical URLs with special characters properly' },
-                { href: '/compress-image-online',        icon: '🗜️', label: 'Compress Image Online',        desc: 'Optimize your Open Graph images before using their URL' },
-                { href: '/resize-image-online',          icon: '📐', label: 'Resize Image Online',          desc: 'Resize images to exactly 1200×630px for Open Graph' },
-                { href: '/json-formatter-online',        icon: '{ }',label: 'JSON Formatter Online',       desc: 'Format JSON-LD structured data to add alongside meta tags' },
+                { href: '/tools/character-counter',     icon: '🔢', label: 'Character Counter Online',     desc: 'Count characters with live Twitter, SMS, and meta description limit bars' },
+                { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter Online',          desc: 'Count words and measure reading time in your page content' },
+                { href: '/tools/url-encoder',           icon: '🔗', label: 'URL Encoder Online',           desc: 'Encode canonical URLs with special characters properly' },
+                { href: '/tools/image-compressor',        icon: '🗜️', label: 'Compress Image Online',        desc: 'Optimize your Open Graph images before using their URL' },
+                { href: '/tools/image-resizer',          icon: '📐', label: 'Resize Image Online',          desc: 'Resize images to exactly 1200×630px for Open Graph' },
+                { href: '/tools/json-formatter',        icon: '{ }',label: 'JSON Formatter Online',       desc: 'Format JSON-LD structured data to add alongside meta tags' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-pink-200 hover:bg-pink-50 transition-colors group">

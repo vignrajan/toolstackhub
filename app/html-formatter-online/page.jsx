@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/css-minifier-online', label: 'CSS Minifier Online', desc: 'Minify the CSS in your HTML files' },
-              { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format JSON embedded in HTML' },
-              { href: '/url-encoder-online', label: 'URL Encoder Online', desc: 'Encode URLs used in HTML attributes' },
-              { href: '/meta-tag-generator-online', label: 'Meta Tag Generator', desc: 'Generate HTML meta tags' },
+  { href: '/tools/css-minifier', label: 'CSS Minifier Online', desc: 'Minify the CSS in your HTML files' },
+              { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format JSON embedded in HTML' },
+              { href: '/tools/url-encoder', label: 'URL Encoder Online', desc: 'Encode URLs used in HTML attributes' },
+              { href: '/tools/meta-tag-generator', label: 'Meta Tag Generator', desc: 'Generate HTML meta tags' },
 ];
 
 const variantLinks = [

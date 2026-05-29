@@ -261,7 +261,7 @@ export default function PostMinifyJson() {
                       Runs entirely in your browser.
                     </p>
                     <div className="flex flex-wrap gap-3 items-center">
-                      <Link href="/json-formatter-online"
+                      <Link href="/tools/json-formatter"
                         className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                         Open JSON Minifier →
                       </Link>
@@ -292,7 +292,7 @@ export default function PostMinifyJson() {
                     body: (
                       <p className="text-surface-600 text-sm leading-relaxed">
                         Go to{' '}
-                        <Link href="/json-formatter-online" className="text-violet-700 hover:underline font-medium">
+                        <Link href="/tools/json-formatter" className="text-violet-700 hover:underline font-medium">
                           toolstackhub.in/json-formatter-online
                         </Link>.
                         The tool works as both a JSON formatter and a JSON minifier in the same interface.
@@ -672,12 +672,12 @@ export default function PostMinifyJson() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/json-formatter-online',      icon: '{ }', label: 'JSON Formatter & Minifier',   desc: 'Format, validate, and minify JSON in one tool' },
-                  { href: '/json-to-csv-converter-online',      icon: '📊',  label: 'JSON to CSV Converter',       desc: 'Convert JSON arrays to CSV for spreadsheets' },
-                  { href: '/base64-encoder-online',      icon: '🔡',  label: 'Base64 Encoder Online',       desc: 'Encode JSON payloads for API transmission' },
-                  { href: '/url-encoder-online',         icon: '🔗',  label: 'URL Encoder Online',          desc: 'Encode URL parameters in API endpoints' },
-                  { href: '/regex-tester-online',        icon: '🔍',  label: 'Regex Tester Online',         desc: 'Test patterns for extracting JSON fields' },
-                  { href: '/unix-timestamp-converter-online',   icon: '⏱️',  label: 'Timestamp Converter',         desc: 'Convert Unix timestamps in JSON responses' },
+                  { href: '/tools/json-formatter',      icon: '{ }', label: 'JSON Formatter & Minifier',   desc: 'Format, validate, and minify JSON in one tool' },
+                  { href: '/tools/json-to-csv',      icon: '📊',  label: 'JSON to CSV Converter',       desc: 'Convert JSON arrays to CSV for spreadsheets' },
+                  { href: '/tools/base64-encoder',      icon: '🔡',  label: 'Base64 Encoder Online',       desc: 'Encode JSON payloads for API transmission' },
+                  { href: '/tools/url-encoder',         icon: '🔗',  label: 'URL Encoder Online',          desc: 'Encode URL parameters in API endpoints' },
+                  { href: '/tools/regex-tester',        icon: '🔍',  label: 'Regex Tester Online',         desc: 'Test patterns for extracting JSON fields' },
+                  { href: '/tools/timestamp-converter',   icon: '⏱️',  label: 'Timestamp Converter',         desc: 'Convert Unix timestamps in JSON responses' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-300 hover:bg-violet-50 transition-colors group">
@@ -726,7 +726,7 @@ export default function PostMinifyJson() {
                   Paste, click Minify, copy. Also works as a formatter, validator, and
                   pretty-printer for debugging. No signup, no upload, runs in your browser.
                 </p>
-                <Link href="/json-formatter-online"
+                <Link href="/tools/json-formatter"
                   className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
                   Open JSON Minifier Free →
                 </Link>

@@ -42,7 +42,7 @@ export const metadata = {
 const FINANCE_CALCULATORS = [
   {
     slug: 'emi-calculator',
-    href: '/emi-calculator',
+    href: '/tools/emi-calculator',
     name: 'EMI Calculator',
     icon: '🧮',
     desc: 'Calculate monthly EMI for home, car, or personal loan with full amortization schedule.',
@@ -50,21 +50,21 @@ const FINANCE_CALCULATORS = [
   },
   {
     slug: 'home-loan-emi-calculator',
-    href: '/home-loan-emi-calculator',
+    href: '/tools/home-loan-emi-calculator',
     name: 'Home Loan EMI Calculator',
     icon: '🏠',
     desc: 'Home loan EMI with SBI, HDFC, ICICI rate comparison and year-wise interest breakdown.',
   },
   {
     slug: 'car-loan-emi-calculator',
-    href: '/car-loan-emi-calculator',
+    href: '/tools/car-loan-emi-calculator',
     name: 'Car Loan EMI Calculator',
     icon: '🚗',
     desc: 'Car and two-wheeler loan EMI. See total interest payable and payment breakdown.',
   },
   {
     slug: 'sip-calculator',
-    href: '/sip-calculator',
+    href: '/tools/sip-calculator',
     name: 'SIP Calculator',
     icon: '📈',
     desc: 'Mutual fund SIP returns and maturity value with step-up SIP and lumpsum options.',
@@ -72,7 +72,7 @@ const FINANCE_CALCULATORS = [
   },
   {
     slug: 'ppf-calculator',
-    href: '/ppf-calculator',
+    href: '/tools/ppf-calculator',
     name: 'PPF Calculator',
     icon: '🏦',
     desc: 'PPF maturity value at 7.1% with year-by-year interest and EEE tax-exempt status.',
@@ -82,7 +82,7 @@ const FINANCE_CALCULATORS = [
 const TAX_SALARY_CALCULATORS = [
   {
     slug: 'salary-calculator',
-    href: '/salary-calculator',
+    href: '/tools/salary-calculator',
     name: 'Salary & Gratuity Calculator',
     icon: '💰',
     desc: 'CTC to take-home salary, old vs new tax regime comparison, and gratuity. FY 2025-26.',
@@ -90,7 +90,7 @@ const TAX_SALARY_CALCULATORS = [
   },
   {
     slug: 'gst-calculator',
-    href: '/gst-calculator',
+    href: '/tools/gst-calculator',
     name: 'GST Calculator',
     icon: '🧾',
     desc: 'Add or remove GST instantly. CGST/SGST/IGST breakdown for all GST rates.',
@@ -98,28 +98,28 @@ const TAX_SALARY_CALCULATORS = [
   },
   {
     slug: 'form-16-calculator',
-    href: '/form-16-calculator',
+    href: '/tools/form-16-calculator',
     name: 'Form 16 Tax Calculator',
     icon: '📋',
     desc: 'Compute income tax from Form 16 data. Compare old vs new regime with exact figures.',
   },
   {
     slug: 'hra-calculator',
-    href: '/hra-calculator',
+    href: '/tools/hra-calculator',
     name: 'HRA Exemption Calculator',
     icon: '🏡',
     desc: 'HRA exemption under Section 10(13A) with metro/non-metro city rules for FY 2026-27.',
   },
   {
     slug: 'epf-calculator',
-    href: '/epf-calculator',
+    href: '/tools/epf-calculator',
     name: 'EPF Calculator',
     icon: '📊',
     desc: 'EPF balance projection, monthly PF deductions, and EPS pension fund estimate.',
   },
   {
     slug: 'professional-tax-calculator',
-    href: '/professional-tax-calculator',
+    href: '/tools/professional-tax-calculator',
     name: 'Professional Tax Calculator',
     icon: '⚖️',
     desc: 'Professional tax for all 18 PT-levying Indian states with monthly and annual amounts.',
@@ -129,7 +129,7 @@ const TAX_SALARY_CALCULATORS = [
 const HEALTH_CALCULATORS = [
   {
     slug: 'bmi-calculator',
-    href: '/bmi-calculator',
+    href: '/tools/bmi-calculator',
     name: 'BMI Calculator',
     icon: '⚖️',
     desc: 'Calculate Body Mass Index with Indian health guidelines. Underweight, normal, overweight, obese ranges.',
@@ -140,7 +140,7 @@ const HEALTH_CALCULATORS = [
 const GENERAL_CALCULATORS = [
   {
     slug: 'age-calculator',
-    href: '/age-calculator-online',
+    href: '/tools/age-calculator',
     name: 'Age Calculator',
     icon: '🎂',
     desc: 'Exact age in years, months, days, hours, and minutes with next birthday countdown.',
@@ -148,21 +148,21 @@ const GENERAL_CALCULATORS = [
   },
   {
     slug: 'percentage-calculator',
-    href: '/percentage-calculator-online',
+    href: '/tools/percentage-calculator',
     name: 'Percentage Calculator',
     icon: '💯',
     desc: 'Find what % of a number, percentage change, percentage difference — all in one tool.',
   },
   {
     slug: 'number-to-words',
-    href: '/number-to-words',
+    href: '/tools/number-to-words',
     name: 'Number to Words',
     icon: '🔤',
     desc: 'Convert rupee amounts to Indian words (Lakh, Crore) for cheques and GST invoices.',
   },
   {
     slug: 'random-number-generator',
-    href: '/random-number-generator',
+    href: '/tools/random-number-generator',
     name: 'Random Number Generator',
     icon: '🎲',
     desc: 'Generate random integers or decimals in any range. Single or bulk number generation.',
@@ -172,7 +172,7 @@ const GENERAL_CALCULATORS = [
 const TIME_TOOLS = [
   {
     slug: 'pomodoro-timer',
-    href: '/pomodoro-timer-online',
+    href: '/tools/pomodoro-timer',
     name: 'Pomodoro Timer',
     icon: '🍅',
     desc: '25-minute focus sessions with short and long breaks. Boost productivity the Pomodoro way.',
@@ -180,14 +180,14 @@ const TIME_TOOLS = [
   },
   {
     slug: 'countdown-timer',
-    href: '/countdown-timer-online',
+    href: '/tools/countdown-timer',
     name: 'Countdown Timer',
     icon: '⏳',
     desc: 'Set hours, minutes, seconds and count down with an alarm. No signup needed.',
   },
   {
     slug: 'stopwatch',
-    href: '/stopwatch-online',
+    href: '/tools/stopwatch',
     name: 'Stopwatch Online',
     icon: '⏱️',
     desc: 'Precise online stopwatch with lap time recording. Works in any browser.',

@@ -23,17 +23,17 @@ export const metadata = {
 };
 
 const TEXT_TOOLS = [
-  { href: '/word-counter-online',           icon: '📝', name: 'Word Counter Online',           desc: 'Count words, characters, sentences, and reading time in real time.' },
-  { href: '/character-counter-online',      icon: '🔢', name: 'Character Counter Online',       desc: 'Count characters with Twitter, SMS, and meta description limit bars.' },
-  { href: '/case-converter-online',         icon: '🔡', name: 'Case Converter Online',          desc: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, and more.' },
-  { href: '/remove-duplicate-lines-online', icon: '🧹', name: 'Remove Duplicate Lines',         desc: 'Remove repeated lines from any list, email export, or keyword list.' },
-  { href: '/remove-line-breaks',            icon: '✂️', name: 'Remove Line Breaks',             desc: 'Remove or replace line breaks from pasted text instantly.' },
-  { href: '/remove-empty-lines',            icon: '📄', name: 'Remove Empty Lines',             desc: 'Strip all blank lines from text, code, or data exports.' },
-  { href: '/remove-extra-spaces',           icon: '⎵',  name: 'Remove Extra Spaces',            desc: 'Collapse multiple whitespace characters into single spaces.' },
-  { href: '/lorem-ipsum-generator',         icon: '📄', name: 'Lorem Ipsum Generator',          desc: 'Generate placeholder text in any length for design mockups.' },
-  { href: '/text-to-handwriting-online',    icon: '✍️', name: 'Text to Handwriting',            desc: 'Convert typed text into realistic handwritten style images.' },
-  { href: '/markdown-editor-online',        icon: '📋', name: 'Markdown Editor Online',         desc: 'Write and preview Markdown with live rendering.' },
-  { href: '/text-to-speech-online',         icon: '🔊', name: 'Text to Speech Online',          desc: 'Convert any text to spoken audio in your browser.' },
+  { href: '/tools/word-counter',           icon: '📝', name: 'Word Counter Online',           desc: 'Count words, characters, sentences, and reading time in real time.' },
+  { href: '/tools/character-counter',      icon: '🔢', name: 'Character Counter Online',       desc: 'Count characters with Twitter, SMS, and meta description limit bars.' },
+  { href: '/tools/case-converter',         icon: '🔡', name: 'Case Converter Online',          desc: 'Convert text to UPPERCASE, lowercase, Title Case, camelCase, and more.' },
+  { href: '/tools/remove-duplicate-lines', icon: '🧹', name: 'Remove Duplicate Lines',         desc: 'Remove repeated lines from any list, email export, or keyword list.' },
+  { href: '/tools/remove-line-breaks',            icon: '✂️', name: 'Remove Line Breaks',             desc: 'Remove or replace line breaks from pasted text instantly.' },
+  { href: '/tools/remove-empty-lines',            icon: '📄', name: 'Remove Empty Lines',             desc: 'Strip all blank lines from text, code, or data exports.' },
+  { href: '/tools/remove-extra-spaces',           icon: '⎵',  name: 'Remove Extra Spaces',            desc: 'Collapse multiple whitespace characters into single spaces.' },
+  { href: '/tools/lorem-ipsum-generator',         icon: '📄', name: 'Lorem Ipsum Generator',          desc: 'Generate placeholder text in any length for design mockups.' },
+  { href: '/tools/text-to-handwriting',    icon: '✍️', name: 'Text to Handwriting',            desc: 'Convert typed text into realistic handwritten style images.' },
+  { href: '/tools/markdown-preview',        icon: '📋', name: 'Markdown Editor Online',         desc: 'Write and preview Markdown with live rendering.' },
+  { href: '/tools/text-to-speech',         icon: '🔊', name: 'Text to Speech Online',          desc: 'Convert any text to spoken audio in your browser.' },
 ];
 
 const jsonLd = {
@@ -129,22 +129,22 @@ export default function TextToolsCategoryPage() {
                 </p>
                 <p>
                   Writers use the{' '}
-                  <Link href="/word-counter-online" className="text-sky-700 hover:underline font-medium">word counter online</Link>{' '}
+                  <Link href="/tools/word-counter" className="text-sky-700 hover:underline font-medium">word counter online</Link>{' '}
                   to track article length and reading time. Developers use the{' '}
-                  <Link href="/remove-line-breaks" className="text-sky-700 hover:underline font-medium">line break remover</Link>{' '}
+                  <Link href="/tools/remove-line-breaks" className="text-sky-700 hover:underline font-medium">line break remover</Link>{' '}
                   to clean up multi-line strings for SQL queries and API calls. Data analysts use
                   the{' '}
-                  <Link href="/remove-duplicate-lines-online" className="text-sky-700 hover:underline font-medium">duplicate line remover</Link>{' '}
+                  <Link href="/tools/remove-duplicate-lines" className="text-sky-700 hover:underline font-medium">duplicate line remover</Link>{' '}
                   to deduplicate keyword lists, email lists, and data exports. All tools run
                   entirely in your browser — your text never leaves your device.
                 </p>
                 <p>
                   The{' '}
-                  <Link href="/case-converter-online" className="text-sky-700 hover:underline font-medium">case converter</Link>{' '}
+                  <Link href="/tools/case-converter" className="text-sky-700 hover:underline font-medium">case converter</Link>{' '}
                   is particularly useful for programmers who need to switch between camelCase,
                   snake_case, SCREAMING_SNAKE_CASE, and Title Case when working with different
                   codebases and APIs. The{' '}
-                  <Link href="/character-counter-online" className="text-sky-700 hover:underline font-medium">character counter</Link>{' '}
+                  <Link href="/tools/character-counter" className="text-sky-700 hover:underline font-medium">character counter</Link>{' '}
                   includes live limit bars for Twitter (280), SMS (160), and meta descriptions
                   (160) — making it the fastest way to check if your content fits platform limits.
                 </p>
@@ -159,12 +159,12 @@ export default function TextToolsCategoryPage() {
                 <p>
                   The text cleaning tools on this page handle the most common data quality
                   issues in real-world text processing. The{' '}
-                  <Link href="/remove-line-breaks" className="text-sky-700 hover:underline font-medium">remove line breaks tool</Link>{' '}
+                  <Link href="/tools/remove-line-breaks" className="text-sky-700 hover:underline font-medium">remove line breaks tool</Link>{' '}
                   solves the universal problem of multi-line text that needs to be a single line
                   for spreadsheets, databases, or code. The{' '}
-                  <Link href="/remove-empty-lines" className="text-sky-700 hover:underline font-medium">remove empty lines tool</Link>{' '}
+                  <Link href="/tools/remove-empty-lines" className="text-sky-700 hover:underline font-medium">remove empty lines tool</Link>{' '}
                   cleans up blank rows in data exports. The{' '}
-                  <Link href="/remove-extra-spaces" className="text-sky-700 hover:underline font-medium">remove extra spaces tool</Link>{' '}
+                  <Link href="/tools/remove-extra-spaces" className="text-sky-700 hover:underline font-medium">remove extra spaces tool</Link>{' '}
                   normalizes whitespace issues from PDFs and document copies.
                 </p>
                 <p>

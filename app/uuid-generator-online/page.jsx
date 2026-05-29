@@ -468,12 +468,12 @@ export default function UuidGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/password-generator-online',  icon: '🔐', label: 'Password Generator Online',  desc: 'Generate cryptographically secure random passwords' },
-                { href: '/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range' },
-                { href: '/base64-encoder-online',      icon: '🔡', label: 'Base64 Encoder Online',      desc: 'Encode and decode Base64 strings and data' },
-                { href: '/json-formatter-online',      icon: '{ }',label: 'JSON Formatter Online',     desc: 'Format and validate JSON containing UUID fields' },
-                { href: '/unix-timestamp-converter-online',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert timestamps to pair with UUID primary keys' },
-                { href: '/regex-tester-online',        icon: '🔍', label: 'Regex Tester Online',        desc: 'Test UUID validation regex patterns in real time' },
+                { href: '/tools/password-generator',  icon: '🔐', label: 'Password Generator Online',  desc: 'Generate cryptographically secure random passwords' },
+                { href: '/tools/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range' },
+                { href: '/tools/base64-encoder',      icon: '🔡', label: 'Base64 Encoder Online',      desc: 'Encode and decode Base64 strings and data' },
+                { href: '/tools/json-formatter',      icon: '{ }',label: 'JSON Formatter Online',     desc: 'Format and validate JSON containing UUID fields' },
+                { href: '/tools/timestamp-converter',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert timestamps to pair with UUID primary keys' },
+                { href: '/tools/regex-tester',        icon: '🔍', label: 'Regex Tester Online',        desc: 'Test UUID validation regex patterns in real time' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-blue-200 hover:bg-blue-50 transition-colors group">

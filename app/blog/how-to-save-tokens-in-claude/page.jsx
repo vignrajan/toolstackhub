@@ -640,7 +640,7 @@ export default function ClaudeTokenBlogPage() {
                     Everything above applies to Claude's chat interface at claude.ai. If you use <strong className="text-surface-800">Claude Code</strong> — Anthropic's command-line coding agent — the token dynamics are different and the stakes are higher.
                   </p>
                   <p>
-                  Claude Code charges by API token consumption. According to Anthropic's documentation, the average cost across enterprise deployments is around <strong className="text-surface-800">$13 per developer per active day</strong> and <strong className="text-surface-800">$150–250 per developer per month</strong>. Use our <Link href="/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> to estimate your own monthly spend before committing. Most of that cost comes from context bloat
+                  Claude Code charges by API token consumption. According to Anthropic's documentation, the average cost across enterprise deployments is around <strong className="text-surface-800">$13 per developer per active day</strong> and <strong className="text-surface-800">$150–250 per developer per month</strong>. Use our <Link href="/tools/claude-code-token-calculator" className="text-brand-600 hover:text-brand-700 font-medium">Claude Code token calculator</Link> to estimate your own monthly spend before committing. Most of that cost comes from context bloat
                   </p>
                 </div>
 

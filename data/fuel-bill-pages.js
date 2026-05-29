@@ -160,7 +160,7 @@ export const fuelBillPages = [
                 <ol className="flex items-center gap-2 text-sm text-surface-500">
                   <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                   <li><span className="text-surface-300">/</span></li>
-                  <li><Link href="/fuel-bill-generator" className="hover:text-brand-600 text-brand-600">Fuel Bill Generator</Link></li>
+                  <li><Link href="/tools/fuel-bill-generator" className="hover:text-brand-600 text-brand-600">Fuel Bill Generator</Link></li>
                   <li><span className="text-surface-300">/</span></li>
                   <li className="text-surface-800 font-medium truncate">{page.h1}</li>
                 </ol>
@@ -205,7 +205,7 @@ export const fuelBillPages = [
             <section>
               <h2 className="font-display font-bold text-xl text-surface-900 mb-4">More Fuel Bill Generators</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <Link href="/fuel-bill-generator"
+                <Link href="/tools/fuel-bill-generator"
                   className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
                   <span className="text-2xl">⛽</span>
                   <div>

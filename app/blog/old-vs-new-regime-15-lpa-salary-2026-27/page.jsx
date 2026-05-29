@@ -593,7 +593,7 @@ export default function OldVsNewRegime15LPABlog() {
                 </div>
               ))}
             </div>
-            <Link href="/salary-calculator"
+            <Link href="/tools/salary-calculator"
               className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
               Calculate My In-Hand Salary for Free →
             </Link>
@@ -681,7 +681,7 @@ export default function OldVsNewRegime15LPABlog() {
             <p className="text-sm leading-relaxed mb-4" style={{color:'#a3aac4'}}>
               For most 15 LPA earners without a home loan, the new regime wins by ₹29,223/year. You need deductions exceeding ₹5,79,330 — practically achievable only with a significant home loan — for the old regime to pull ahead. If you have a home loan with ₹2 lakh+ annual interest, do the old regime calculation before deciding. For everyone else: new regime, confidently.
             </p>
-            <Link href="/salary-calculator"
+            <Link href="/tools/salary-calculator"
               className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors text-sm">
               Use Free Salary Calculator for Your Exact Numbers →
             </Link>

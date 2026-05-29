@@ -111,7 +111,7 @@ export default function EPFCalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-400">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li>/</li>
-                <li><Link href="/hra-calculator" className="hover:text-brand-600">Utility Tools</Link></li>
+                <li><Link href="/tools/hra-calculator" className="hover:text-brand-600">Utility Tools</Link></li>
                 <li>/</li>
                 <li className="text-surface-700 font-medium">EPF Calculator</li>
               </ol>
@@ -278,11 +278,11 @@ export default function EPFCalculatorPage() {
             <h2 className="font-display font-bold text-2xl text-surface-900 mb-4">Related Finance & Salary Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { href: '/hra-calculator', icon: '🏠', label: 'HRA Calculator', desc: 'Calculate HRA exemption under Section 10(13A). Updated 8-metro-city rule.' },
-                { href: '/salary-calculator', icon: '💰', label: 'Salary Calculator', desc: 'CTC to in-hand salary with full deduction breakdown.' },
-                { href: '/professional-tax-calculator', icon: '⚖️', label: 'Professional Tax Calculator', desc: 'State-wise PT for all 18 Indian states. Instant.' },
-                { href: '/gst-calculator', icon: '📊', label: 'GST Calculator', desc: 'Calculate GST with CGST, SGST, and IGST split.' },
-                { href: '/emi-calculator', icon: '🏦', label: 'EMI Calculator', desc: 'Home loan, car loan, personal loan EMI calculation.' },
+                { href: '/tools/hra-calculator', icon: '🏠', label: 'HRA Calculator', desc: 'Calculate HRA exemption under Section 10(13A). Updated 8-metro-city rule.' },
+                { href: '/tools/salary-calculator', icon: '💰', label: 'Salary Calculator', desc: 'CTC to in-hand salary with full deduction breakdown.' },
+                { href: '/tools/professional-tax-calculator', icon: '⚖️', label: 'Professional Tax Calculator', desc: 'State-wise PT for all 18 Indian states. Instant.' },
+                { href: '/tools/gst-calculator', icon: '📊', label: 'GST Calculator', desc: 'Calculate GST with CGST, SGST, and IGST split.' },
+                { href: '/tools/emi-calculator', icon: '🏦', label: 'EMI Calculator', desc: 'Home loan, car loan, personal loan EMI calculation.' },
                 { href: '/gratuity-calculator', icon: '🎁', label: 'Gratuity Calculator', desc: 'Calculate your gratuity amount as per Payment of Gratuity Act.' },
               ].map(t => (
                 <Link key={t.href} href={t.href}

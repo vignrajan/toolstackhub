@@ -501,12 +501,12 @@ export default function Base64EncoderOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/json-formatter-online',      icon: '{ }', label: 'JSON Formatter Online',    desc: 'Format and validate JSON containing Base64 encoded fields' },
-                { href: '/url-encoder-online',         icon: '🔗',  label: 'URL Encoder Online',       desc: 'Encode and decode URL query parameters and paths' },
-                { href: '/uuid-generator-online',      icon: '🆔',  label: 'UUID Generator Online',    desc: 'Generate cryptographically secure unique identifiers' },
-                { href: '/password-generator-online',  icon: '🔐',  label: 'Password Generator',       desc: 'Generate secure random passwords for API credentials' },
-                { href: '/regex-tester-online',        icon: '🔍',  label: 'Regex Tester Online',      desc: 'Test Base64 validation patterns with live highlighting' },
-                { href: '/binary-to-decimal-converter-online',icon: '💻',  label: 'Binary Converter',         desc: 'Convert between binary, decimal, hex, and octal' },
+                { href: '/tools/json-formatter',      icon: '{ }', label: 'JSON Formatter Online',    desc: 'Format and validate JSON containing Base64 encoded fields' },
+                { href: '/tools/url-encoder',         icon: '🔗',  label: 'URL Encoder Online',       desc: 'Encode and decode URL query parameters and paths' },
+                { href: '/tools/uuid-generator',      icon: '🆔',  label: 'UUID Generator Online',    desc: 'Generate cryptographically secure unique identifiers' },
+                { href: '/tools/password-generator',  icon: '🔐',  label: 'Password Generator',       desc: 'Generate secure random passwords for API credentials' },
+                { href: '/tools/regex-tester',        icon: '🔍',  label: 'Regex Tester Online',      desc: 'Test Base64 validation patterns with live highlighting' },
+                { href: '/tools/binary-converter',icon: '💻',  label: 'Binary Converter',         desc: 'Convert between binary, decimal, hex, and octal' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-blue-200 hover:bg-blue-50 transition-colors group">

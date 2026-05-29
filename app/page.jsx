@@ -35,31 +35,31 @@ const BENTO_HERO = {
   desc:    'Estimate your monthly Claude Code bill before you commit. Get an INR + USD breakdown instantly.',
   vol:     'New Tool',
   badge:   'New',
-  href:    '/claude-code-token-calculator',
+  href:    '/tools/claude-code-token-calculator',
 };
 
 const BENTO_TOOLS = [
-  { slug: 'compress-image-online',       icon: '🗜️', name: 'Compress Image',       vol: '450k/mo', badge: 'Hot',     href: '/compress-image-online'       },
-  { slug: 'qr-code-generator-online',    icon: '📱', name: 'QR Code Generator',    vol: '180k/mo', badge: 'Hot',     href: '/qr-code-generator-online'    },
-  { slug: 'json-formatter-online',       icon: '{ }',name: 'JSON Formatter',       vol: '200k/mo', badge: 'Top',     href: '/json-formatter-online'       },
-  { slug: 'password-generator-online',   icon: '🔐', name: 'Password Generator',   vol: '150k/mo', badge: 'Hot',     href: '/password-generator-online'   },
-  { slug: 'ai-prompt-generator-online',  icon: '🤖', name: 'AI Prompt Generator',  vol: '35k/mo',  badge: 'New',     href: '/ai-prompt-generator-online'  },
-  { slug: 'percentage-calculator-online',icon: '📊', name: 'Percentage Calculator',vol: '70k/mo',  badge: 'Popular', href: '/percentage-calculator-online' },
-  { slug: 'age-calculator-online',       icon: '🎂', name: 'Age Calculator',       vol: '80k/mo',  badge: 'Top',     href: '/age-calculator-online'       },
-  { slug: 'color-picker-online',         icon: '🎨', name: 'Color Picker',         vol: '60k/mo',  badge: 'Top',     href: '/color-picker-online'         },
+  { slug: 'image-compressor',       icon: '🗜️', name: 'Compress Image',       vol: '450k/mo', badge: 'Hot',     href: '/tools/image-compressor'       },
+  { slug: 'qr-code-generator',      icon: '📱', name: 'QR Code Generator',    vol: '180k/mo', badge: 'Hot',     href: '/tools/qr-code-generator'      },
+  { slug: 'json-formatter',         icon: '{ }',name: 'JSON Formatter',       vol: '200k/mo', badge: 'Top',     href: '/tools/json-formatter'         },
+  { slug: 'password-generator',     icon: '🔐', name: 'Password Generator',   vol: '150k/mo', badge: 'Hot',     href: '/tools/password-generator'     },
+  { slug: 'ai-prompt-generator',    icon: '🤖', name: 'AI Prompt Generator',  vol: '35k/mo',  badge: 'New',     href: '/tools/ai-prompt-generator'    },
+  { slug: 'percentage-calculator',  icon: '📊', name: 'Percentage Calculator',vol: '70k/mo',  badge: 'Popular', href: '/tools/percentage-calculator'  },
+  { slug: 'age-calculator',         icon: '🎂', name: 'Age Calculator',       vol: '80k/mo',  badge: 'Top',     href: '/tools/age-calculator'         },
+  { slug: 'color-picker',           icon: '🎨', name: 'Color Picker',         vol: '60k/mo',  badge: 'Top',     href: '/tools/color-picker'           },
 ];
 
 const BENTO_CHIPS = [
-  { label: 'Word Counter',       href: '/word-counter-online',          icon: '📝' },
-  { label: 'Base64 Encoder',     href: '/base64-encoder-online',        icon: '🔡' },
-  { label: 'UUID Generator',     href: '/uuid-generator-online',        icon: '🆔' },
-  { label: 'Regex Tester',       href: '/regex-tester-online',          icon: '🔍' },
-  { label: 'CSS Minifier',       href: '/css-minifier-online',          icon: '⚡' },
-  { label: 'Meta Tag Generator', href: '/meta-tag-generator-online',    icon: '🏷️' },
-  { label: 'Timestamp',          href: '/unix-timestamp-converter-online',     icon: '⏱️' },
-  { label: 'Binary Converter',   href: '/binary-to-decimal-converter-online',  icon: '💻' },
-  { label: 'Password Checker',   href: '/password-strength-checker',    icon: '🛡️' },
-  { label: 'Resize Image',       href: '/resize-image-online',          icon: '📐' },
+  { label: 'Word Counter',       href: '/tools/word-counter',          icon: '📝' },
+  { label: 'Base64 Encoder',     href: '/tools/base64-encoder',        icon: '🔡' },
+  { label: 'UUID Generator',     href: '/tools/uuid-generator',        icon: '🆔' },
+  { label: 'Regex Tester',       href: '/tools/regex-tester',          icon: '🔍' },
+  { label: 'CSS Minifier',       href: '/tools/css-minifier',          icon: '⚡' },
+  { label: 'Meta Tag Generator', href: '/tools/meta-tag-generator',    icon: '🏷️' },
+  { label: 'Timestamp',          href: '/tools/timestamp-converter',   icon: '⏱️' },
+  { label: 'Binary Converter',   href: '/tools/binary-converter',      icon: '💻' },
+  { label: 'Password Checker',   href: '/tools/password-strength-checker', icon: '🛡️' },
+  { label: 'Resize Image',       href: '/tools/image-resizer',         icon: '📐' },
 ];
 
 const BADGE_CLS = {

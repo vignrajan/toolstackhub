@@ -453,12 +453,12 @@ export default function PasswordGeneratorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/password-strength-checker', icon: '🛡️', label: 'Password Strength Checker', desc: 'Test how strong your existing passwords are' },
-                { href: '/uuid-generator-online',     icon: '🆔', label: 'UUID Generator Online',     desc: 'Generate cryptographically secure unique identifiers' },
-                { href: '/random-number-generator',   icon: '🎲', label: 'Random Number Generator',   desc: 'Generate random numbers in any range' },
-                { href: '/base64-encoder-online',     icon: '🔐', label: 'Base64 Encoder Online',     desc: 'Encode passwords and tokens in Base64 for transmission' },
-                { href: '/qr-code-generator-online',  icon: '📱', label: 'QR Code Generator',         desc: 'Share passwords securely via QR code' },
-                { href: '/json-formatter-online',     icon: '{ }', label: 'JSON Formatter Online',    desc: 'Format API responses containing auth tokens' },
+                { href: '/tools/password-strength-checker', icon: '🛡️', label: 'Password Strength Checker', desc: 'Test how strong your existing passwords are' },
+                { href: '/tools/uuid-generator',     icon: '🆔', label: 'UUID Generator Online',     desc: 'Generate cryptographically secure unique identifiers' },
+                { href: '/tools/random-number-generator',   icon: '🎲', label: 'Random Number Generator',   desc: 'Generate random numbers in any range' },
+                { href: '/tools/base64-encoder',     icon: '🔐', label: 'Base64 Encoder Online',     desc: 'Encode passwords and tokens in Base64 for transmission' },
+                { href: '/tools/qr-code-generator',  icon: '📱', label: 'QR Code Generator',         desc: 'Share passwords securely via QR code' },
+                { href: '/tools/json-formatter',     icon: '{ }', label: 'JSON Formatter Online',    desc: 'Format API responses containing auth tokens' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">

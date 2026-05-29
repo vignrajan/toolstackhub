@@ -489,12 +489,12 @@ export default function PercentageCalculatorOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/age-calculator-online',      icon: '🎂', label: 'Age Calculator Online',      desc: 'Calculate exact age in years, months, and days from any birth date' },
-                { href: '/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range instantly' },
-                { href: '/countdown-timer-online',     icon: '⏳', label: 'Countdown Timer Online',     desc: 'Count down from any duration with an alarm' },
-                { href: '/unix-timestamp-converter-online',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert Unix timestamps to readable dates and back' },
-                { href: '/word-counter-online',        icon: '📝', label: 'Word Counter Online',        desc: 'Count words and characters in real time' },
-                { href: '/qr-code-generator-online',   icon: '📱', label: 'QR Code Generator',          desc: 'Create custom QR codes for any URL or text' },
+                { href: '/tools/age-calculator',      icon: '🎂', label: 'Age Calculator Online',      desc: 'Calculate exact age in years, months, and days from any birth date' },
+                { href: '/tools/random-number-generator',    icon: '🎲', label: 'Random Number Generator',    desc: 'Generate random numbers in any range instantly' },
+                { href: '/tools/countdown-timer',     icon: '⏳', label: 'Countdown Timer Online',     desc: 'Count down from any duration with an alarm' },
+                { href: '/tools/timestamp-converter',   icon: '⏱️', label: 'Timestamp Converter',        desc: 'Convert Unix timestamps to readable dates and back' },
+                { href: '/tools/word-counter',        icon: '📝', label: 'Word Counter Online',        desc: 'Count words and characters in real time' },
+                { href: '/tools/qr-code-generator',   icon: '📱', label: 'QR Code Generator',          desc: 'Create custom QR codes for any URL or text' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">

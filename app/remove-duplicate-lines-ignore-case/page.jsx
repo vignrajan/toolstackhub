@@ -139,7 +139,7 @@ export default function Page() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">All Duplicate Removal Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/remove-duplicate-lines-online',          label: 'Remove Duplicate Lines Online' },
+                { href: '/tools/remove-duplicate-lines',          label: 'Remove Duplicate Lines Online' },
                 { href: '/remove-duplicate-lines-case-sensitive',  label: 'Remove Duplicate Lines Case Sensitive' },
                 { href: '/remove-duplicate-lines-ignore-case',     label: 'Remove Duplicate Lines Ignore Case' },
                 { href: '/remove-duplicate-words-online',          label: 'Remove Duplicate Words Online' },
@@ -161,10 +161,10 @@ export default function Page() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-5">More Free Text Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/word-counter-online',      label: 'Word Counter Online',      desc: 'Count words, characters, sentences, and reading time' },
-                { href: '/character-counter-online', label: 'Character Counter Online', desc: 'Count characters with Twitter, SMS, and meta limits' },
-                { href: '/case-converter-online',    label: 'Case Converter Online',    desc: 'Convert text to UPPERCASE, lowercase, Title Case and more' },
-                { href: '/lorem-ipsum-generator',    label: 'Lorem Ipsum Generator',    desc: 'Generate placeholder text by paragraphs, sentences, or words' },
+                { href: '/tools/word-counter',      label: 'Word Counter Online',      desc: 'Count words, characters, sentences, and reading time' },
+                { href: '/tools/character-counter', label: 'Character Counter Online', desc: 'Count characters with Twitter, SMS, and meta limits' },
+                { href: '/tools/case-converter',    label: 'Case Converter Online',    desc: 'Convert text to UPPERCASE, lowercase, Title Case and more' },
+                { href: '/tools/lorem-ipsum-generator',    label: 'Lorem Ipsum Generator',    desc: 'Generate placeholder text by paragraphs, sentences, or words' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors group">

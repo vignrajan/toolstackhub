@@ -453,12 +453,12 @@ export default function CompressImageOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/resize-image-online',          icon: '📐', label: 'Resize Image Online',          desc: 'Resize images to any pixel dimension with aspect ratio lock' },
-                { href: '/jpg-to-png-converter-online',  icon: '🔄', label: 'JPG to PNG Converter',         desc: 'Convert JPEG images to lossless PNG format instantly' },
-                { href: '/image-to-pdf-converter-online',icon: '📄', label: 'Image to PDF Converter',       desc: 'Combine multiple images into a single PDF file' },
-                { href: '/color-picker-online',          icon: '🎨', label: 'Color Picker Online',          desc: 'Get HEX, RGB, HSL, and CMYK values from any color' },
-                { href: '/word-counter-online',          icon: '📝', label: 'Word Counter Online',          desc: 'Count words and characters in your content' },
-                { href: '/meta-tag-generator-online',    icon: '🔍', label: 'Meta Tag Generator',           desc: 'Generate SEO meta tags for your optimized pages' },
+                { href: '/tools/image-resizer',          icon: '📐', label: 'Resize Image Online',          desc: 'Resize images to any pixel dimension with aspect ratio lock' },
+                { href: '/tools/jpg-to-png',  icon: '🔄', label: 'JPG to PNG Converter',         desc: 'Convert JPEG images to lossless PNG format instantly' },
+                { href: '/tools/image-to-pdf',icon: '📄', label: 'Image to PDF Converter',       desc: 'Combine multiple images into a single PDF file' },
+                { href: '/tools/color-picker',          icon: '🎨', label: 'Color Picker Online',          desc: 'Get HEX, RGB, HSL, and CMYK values from any color' },
+                { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter Online',          desc: 'Count words and characters in your content' },
+                { href: '/tools/meta-tag-generator',    icon: '🔍', label: 'Meta Tag Generator',           desc: 'Generate SEO meta tags for your optimized pages' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-amber-200 hover:bg-amber-50 transition-colors group">

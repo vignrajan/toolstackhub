@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/pomodoro-timer-online', label: 'Pomodoro Timer Online', desc: 'Structured focus sessions with breaks' },
-              { href: '/countdown-timer-online', label: 'Countdown Timer Online', desc: 'Count down from a set duration' },
-              { href: '/age-calculator-online', label: 'Age Calculator Online', desc: 'Calculate exact time elapsed' },
-              { href: '/unix-timestamp-converter-online', label: 'Unix Timestamp Converter', desc: 'Convert elapsed time to timestamps' },
+  { href: '/tools/pomodoro-timer', label: 'Pomodoro Timer Online', desc: 'Structured focus sessions with breaks' },
+              { href: '/tools/countdown-timer', label: 'Countdown Timer Online', desc: 'Count down from a set duration' },
+              { href: '/tools/age-calculator', label: 'Age Calculator Online', desc: 'Calculate exact time elapsed' },
+              { href: '/tools/timestamp-converter', label: 'Unix Timestamp Converter', desc: 'Convert elapsed time to timestamps' },
 ];
 
 const variantLinks = [

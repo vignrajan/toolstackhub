@@ -29,7 +29,7 @@ export const tools = [
   {
     slug:        'image-compressor',
     name:        'Image Compressor',
-    href:        '/compress-image-online',
+    href:        '/tools/image-compressor',
     category:    'image',
     icon:        '🗜️',
     description: 'Compress images online for free without losing quality. Reduce JPEG, PNG, and WebP file sizes instantly in your browser.',
@@ -52,7 +52,7 @@ export const tools = [
   {
     slug:        'image-resizer',
     name:        'Image Resizer',
-    href: '/resize-image-online',
+    href: '/tools/image-resizer',
     category:    'image',
     icon:        '📐',
     description: 'Resize images online to any dimension. Set exact pixel width and height while maintaining aspect ratio. Free and instant.',
@@ -74,7 +74,7 @@ export const tools = [
   {
     slug:        'jpg-to-png',
     name:        'JPG to PNG Converter',
-    href: '/jpg-to-png-converter-online',
+    href: '/tools/jpg-to-png',
     category:    'image',
     icon:        '🔄',
     description: 'Convert JPG images to PNG format online for free. Maintain transparency and quality with instant browser-based conversion.',
@@ -96,7 +96,7 @@ export const tools = [
   {
     slug:        'image-to-pdf',
     name:        'Image to PDF Converter',
-    href: '/image-to-pdf-converter-online',
+    href: '/tools/image-to-pdf',
     category:    'image',
     icon:        '📄',
     description: 'Convert JPG, PNG, and WEBP images to a single PDF file instantly. Multiple images supported with drag-to-reorder. No server upload, no watermarks.',
@@ -106,14 +106,14 @@ export const tools = [
     slug: 'speech-bubble-maker', name: 'Speech Bubble Maker',
     category: 'image', icon: '💬',
     description: 'Add speech bubbles to any image free online. 6 styles, drag & resize, instant PNG download.',
-    href: '/speech-bubble-maker',
+    href: '/tools/speech-bubble-maker',
   },
 
   // ── TEXT TOOLS ───────────────────────────────────────────
   {
     slug:        'word-counter',
     name:        'Word Counter',
-    href: '/word-counter-online',
+    href: '/tools/word-counter',
     category:    'text',
     icon:        '📝',
     description: 'Count words, characters, sentences, and paragraphs in any text. Free online word counter tool with real-time statistics.',
@@ -135,7 +135,7 @@ export const tools = [
   {
     slug:        'character-counter',
     name:        'Character Counter',
-    href: '/character-counter-online',
+    href: '/tools/character-counter',
     category:    'text',
     icon:        '🔢',
     description: 'Count characters with and without spaces, letters, numbers, and special characters. Perfect for Twitter, SMS, and form limits.',
@@ -157,7 +157,7 @@ export const tools = [
   {
     slug:        'case-converter',
     name:        'Case Converter',
-    href: '/case-converter-online',
+    href: '/tools/case-converter',
     category:    'text',
     icon:        '🔡',
     description: 'Convert text to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and more. Free text case changer.',
@@ -178,7 +178,7 @@ export const tools = [
   {
     slug:        'remove-duplicate-lines',
     name:        'Remove Duplicate Lines',
-    href: '/remove-duplicate-lines-online',
+    href: '/tools/remove-duplicate-lines',
     category:    'text',
     icon:        '🧹',
     description: 'Remove duplicate lines from any text instantly. Clean email lists, keyword lists, CSV rows, and log files. Case-sensitive and case-insensitive modes.',
@@ -207,7 +207,7 @@ export const tools = [
   {
     slug:        'typing-speed-test',
     name:        'Typing Speed Test',
-    href: '/typing-speed-test-online',
+    href: '/tools/typing-speed-test',
     category:    'utility',
     icon:        '⌨️',
     description: 'Test your typing speed in WPM. Real-time accuracy tracking, color-coded feedback, easy/medium/hard difficulty, and 4 time modes. Free, no signup.',
@@ -216,11 +216,11 @@ export const tools = [
   {
     slug:        'remove-line-breaks',
     name:        'Remove Line Breaks',
-    href:        '/remove-line-breaks',
+    href:        '/tools/remove-line-breaks',
     category:    'text',
     icon:        '✂️',
     description: 'Remove line breaks from any text instantly. Options to replace with space or strip empty lines. Free, no signup.',
-    href:        '/remove-line-breaks',
+    href:        '/tools/remove-line-breaks',
   },
   {
     slug:        'remove-empty-lines',
@@ -228,7 +228,7 @@ export const tools = [
     category:    'text',
     icon:        '📄',
     description: 'Strip all blank and empty lines from text, code, or data exports. Free, browser-based, instant.',
-    href:        '/remove-empty-lines',
+    href:        '/tools/remove-empty-lines',
   },
   {
     slug:        'remove-extra-spaces',
@@ -236,7 +236,7 @@ export const tools = [
     category:    'text',
     icon:        '⎵',
     description: 'Collapse multiple spaces into single spaces and clean up whitespace from any text. Free.',
-    href:        '/remove-extra-spaces',
+    href:        '/tools/remove-extra-spaces',
   },
   {
     slug:        'text-repeater',
@@ -244,7 +244,7 @@ export const tools = [
     category:    'text',
     icon:        '🔁',
     description: 'Repeat any text, word, or sentence multiple times instantly. Choose new line, space, comma, or custom separator. Free, no signup.',
-    href:        '/text-repeater',
+    href:        '/tools/text-repeater',
   },
 
 
@@ -274,7 +274,7 @@ export const tools = [
   {
     slug:        'base64-encoder',
     name:        'Base64 Encoder / Decoder',
-    href: '/base64-encoder-online',
+    href: '/tools/base64-encoder',
     category:    'developer',
     icon:        '🔐',
     description: 'Encode text to Base64 or decode Base64 strings online. Free, instant, and works entirely in your browser.',
@@ -296,7 +296,7 @@ export const tools = [
   {
     slug:        'uuid-generator',
     name:        'UUID Generator',
-    href: '/uuid-generator-online',
+    href: '/tools/uuid-generator',
     category:    'developer',
     icon:        '🆔',
     description: 'Generate random UUIDs (v4) online instantly. Create single or bulk UUIDs for your applications, databases, and testing.',
@@ -318,7 +318,7 @@ export const tools = [
   {
     slug:        'timestamp-converter',
     name:        'Timestamp Converter',
-    href: '/unix-timestamp-converter-online',
+    href: '/tools/timestamp-converter',
     category:    'developer',
     icon:        '⏱️',
     description: 'Convert Unix timestamps to human-readable dates and vice versa. Support for seconds and milliseconds. Free online timestamp tool.',
@@ -340,7 +340,7 @@ export const tools = [
   {
     slug:        'url-encoder',
     name:        'URL Encoder / Decoder',
-    href: '/url-encoder-online',
+    href: '/tools/url-encoder',
     category:    'developer',
     icon:        '🔗',
     description: 'Encode or decode URLs online. Convert special characters to percent-encoded format and back. Free URL encoding tool.',
@@ -363,7 +363,7 @@ export const tools = [
   {
     slug:        'qr-code-generator',
     name:        'QR Code Generator',
-    href: '/qr-code-generator-online',
+    href: '/tools/qr-code-generator',
     category:    'utility',
     icon:        '📱',
     description: 'Generate QR codes online for free. Create QR codes for URLs, text, WiFi, and more. Download as PNG or SVG.',
@@ -385,7 +385,7 @@ export const tools = [
   {
     slug:        'password-generator',
     name:        'Password Generator',
-    href: '/password-generator-online',
+    href: '/tools/password-generator',
     category:    'utility',
     icon:        '🔑',
     description: 'Generate strong, secure random passwords online. Customize length, complexity, and character types. Free password generator.',
@@ -407,7 +407,7 @@ export const tools = [
   {
     slug:        'random-number-generator',
     name:        'Random Number Generator',
-    href: '/random-number-generator',
+    href: '/tools/random-number-generator',
     category:    'utility',
     icon:        '🎲',
     description: 'Generate random numbers online. Set min/max range, generate integers or decimals, and create bulk random numbers.',
@@ -429,7 +429,7 @@ export const tools = [
   {
     slug:        'markdown-preview',
     name:        'Markdown Preview',
-    href: '/markdown-editor-online',
+    href: '/tools/markdown-preview',
     category:    'utility',
     icon:        '✍️',
     description: 'Live Markdown editor with real-time preview. Write markdown and see it rendered instantly. Supports GFM, tables, and code highlighting.',
@@ -454,7 +454,7 @@ export const tools = [
   {
     slug:        'color-picker',
     name:        'Color Picker',
-    href: '/color-picker-online',
+    href: '/tools/color-picker',
     category:    'developer',
     icon:        '🎨',
     description: 'Pick any color and instantly get HEX, RGB, HSL, and CMYK values. Free online color picker with sliders and preset palettes.',
@@ -476,7 +476,7 @@ export const tools = [
   {
     slug:        'meta-tag-generator',
     name:        'Meta Tag Generator',
-    href: '/meta-tag-generator-online',
+    href: '/tools/meta-tag-generator',
     category:    'seo',
     icon:        '🏷️',
     description: 'Generate SEO meta tags for your website instantly. Create title, description, Open Graph, and Twitter Card tags for free.',
@@ -498,7 +498,7 @@ export const tools = [
   {
     slug:        'css-minifier',
     name:        'CSS Minifier',
-    href: '/css-minifier-online',
+    href: '/tools/css-minifier',
     category:    'developer',
     icon:        '🎯',
     description: 'Minify and compress CSS code online for free. Remove whitespace, comments, and redundant code to reduce CSS file size.',
@@ -520,7 +520,7 @@ export const tools = [
   {
     slug:        'html-formatter',
     name:        'HTML Formatter',
-    href: '/html-formatter-online',
+    href: '/tools/html-formatter',
     category:    'developer',
     icon:        '🌐',
     description: 'Format and beautify HTML code online for free. Pretty-print minified HTML or minify formatted HTML instantly.',
@@ -542,7 +542,7 @@ export const tools = [
   {
     slug:        'regex-tester',
     name:        'Regex Tester',
-    href: '/regex-tester-online',
+    href: '/tools/regex-tester',
     category:    'developer',
     icon:        '🔎',
     description: 'Test and debug regular expressions online. Match, highlight, and explain regex patterns in real time. Free online regex tester.',
@@ -564,7 +564,7 @@ export const tools = [
   {
     slug:        'age-calculator',
     name:        'Age Calculator',
-    href: '/age-calculator-online',
+    href: '/tools/age-calculator',
     category:    'utility',
     icon:        '🎂',
     description: 'Calculate your exact age in years, months, days, hours, and minutes. Free online age calculator with next birthday countdown.',
@@ -586,7 +586,7 @@ export const tools = [
   {
     slug:        'percentage-calculator',
     name:        'Percentage Calculator',
-    href: '/percentage-calculator-online',
+    href: '/tools/percentage-calculator',
     category:    'utility',
     icon:        '💯',
     description: 'Calculate percentages online for free. Find what percent of a number, percentage change, and more with instant results.',
@@ -608,7 +608,7 @@ export const tools = [
   {
     slug:        'binary-converter',
     name:        'Binary Converter',
-    href: '/binary-to-decimal-converter-online',
+    href: '/tools/binary-converter',
     category:    'developer',
     icon:        '💾',
     description: 'Convert between binary, decimal, hexadecimal, and octal number systems online for free. Instant number base converter.',
@@ -630,7 +630,7 @@ export const tools = [
   {
     slug:        'lorem-ipsum-generator',
     name:        'Lorem Ipsum Generator',
-    href: '/lorem-ipsum-generator',
+    href: '/tools/lorem-ipsum-generator',
     category:    'text',
     icon:        '📄',
     description: 'Generate Lorem Ipsum placeholder text instantly. Choose paragraphs, sentences, or words. Free lorem ipsum generator online.',
@@ -652,7 +652,7 @@ export const tools = [
   {
     slug:        'pomodoro-timer',
     name:        'Pomodoro Timer',
-    href: '/pomodoro-timer-online',
+    href: '/tools/pomodoro-timer',
     category:    'utility',
     icon:        '🍅',
     description: 'Free online Pomodoro timer to boost productivity. 25-minute focus sessions with short and long break intervals.',
@@ -674,7 +674,7 @@ export const tools = [
   {
     slug:        'stopwatch',
     name:        'Stopwatch Online',
-    href: '/stopwatch-online',
+    href: '/tools/stopwatch',
     category:    'utility',
     icon:        '⏱️',
     description: 'Free online stopwatch with lap timer. Start, pause, and record lap times with millisecond precision in your browser.',
@@ -696,7 +696,7 @@ export const tools = [
   {
     slug:        'countdown-timer',
     name:        'Countdown Timer',
-    href: '/countdown-timer-online',
+    href: '/tools/countdown-timer',
     category:    'utility',
     icon:        '⏳',
     description: 'Free online countdown timer. Set hours, minutes, and seconds and count down with an alarm sound. No sign-up needed.',
@@ -718,7 +718,7 @@ export const tools = [
   {
     slug:        'screen-resolution',
     name:        'Screen Resolution Checker',
-    href: '/screen-resolution-checker',
+    href: '/tools/screen-resolution',
     category:    'utility',
     icon:        '🖥️',
     description: 'Check your screen resolution, viewport size, device pixel ratio, and browser window dimensions instantly online.',
@@ -740,7 +740,7 @@ export const tools = [
   {
     slug:        'text-to-speech',
     name:        'Text to Speech',
-    href: '/text-to-speech-online',
+    href: '/tools/text-to-speech',
     category:    'utility',
     icon:        '🔊',
     description: 'Convert text to speech online for free. Listen to any text read aloud using your browser\'s speech synthesis. Multiple voices and speeds.',
@@ -762,7 +762,7 @@ export const tools = [
   {
     slug:        'password-strength-checker',
     name:        'Password Strength Checker',
-    href: '/password-strength-checker',
+    href: '/tools/password-strength-checker',
     category:    'utility',
     icon:        '🛡️',
     description: 'Check how strong your password is instantly. Get a detailed security analysis and tips to make your password stronger.',
@@ -791,7 +791,7 @@ export const tools = [
   category:    'utility',
   icon:        '🧮',
   description: 'Calculate monthly EMI for home loan, car loan, and personal loan. View amortization schedule, total interest, and payment breakdown.',
-  href:        '/emi-calculator',
+  href:        '/tools/emi-calculator',
 },
 {
   slug:        'home-loan-emi-calculator',
@@ -799,7 +799,7 @@ export const tools = [
   category:    'utility',
   icon:        '🏠',
   description: 'Calculate home loan EMI for any amount and tenure. Compare SBI, HDFC, ICICI rates. Full amortization schedule included.',
-  href:        '/home-loan-emi-calculator',
+  href:        '/tools/home-loan-emi-calculator',
 },
 {
   slug:        'car-loan-emi-calculator',
@@ -807,7 +807,7 @@ export const tools = [
   category:    'utility',
   icon:        '🚗',
   description: 'Calculate car loan and two-wheeler loan EMI instantly. Compare bank rates and see full payment breakdown.',
-  href:        '/car-loan-emi-calculator',
+  href:        '/tools/car-loan-emi-calculator',
 },
 {
   slug:        'sip-calculator',
@@ -815,7 +815,7 @@ export const tools = [
   category:    'utility',
   icon:        '📈',
   description: 'Calculate mutual fund SIP returns, maturity value, and wealth gained. Includes step-up SIP and lumpsum calculator with growth chart.',
-  href:        '/sip-calculator',
+  href:        '/tools/sip-calculator',
 },
 {
   slug:        'invoice-generator',
@@ -823,7 +823,7 @@ export const tools = [
   category:    'utility',
   icon:        '🧾',
   description: 'Create professional PDF invoices free. GST support, 6 currencies, 4 templates, discount. No signup, no watermark, unlimited invoices.',
-  href:        '/invoice-generator',
+  href:        '/tools/invoice-generator',
 },
 {
   slug:        'gst-calculator',
@@ -831,7 +831,7 @@ export const tools = [
   category:    'utility',
   icon:        '🧮',
   description: 'Calculate GST for all rates. Add or remove GST, CGST/SGST/IGST breakdown, intra and inter-state. Free, instant, no signup.',
-  href:        '/gst-calculator',
+  href:        '/tools/gst-calculator',
 },
 {
   slug:        'salary-calculator',
@@ -839,7 +839,7 @@ export const tools = [
   category:    'utility',
   icon:        '💰',
   description: 'Calculate take-home salary, CTC breakup, old vs new tax regime, and gratuity. India 2026. Free, no signup.',
-  href:        '/salary-calculator',
+  href:        '/tools/salary-calculator',
 },
 {
   slug: 'professional-tax-calculator',
@@ -847,7 +847,7 @@ export const tools = [
   category: 'utility',
   icon: '⚖️',
   description: 'Calculate Professional Tax for all 18 PT-levying Indian states. State-wise slabs, monthly & annual PT, take-home after deduction. Free, instant, no login.',
-  href: '/professional-tax-calculator',
+  href: '/tools/professional-tax-calculator',
 },
 {
   slug: 'hra-calculator',
@@ -855,7 +855,7 @@ export const tools = [
   category: 'utility',
   icon: '🏠',
   description: 'Calculate HRA exemption under Section 10(13A). All 3 conditions shown, 8 updated metro cities for FY 2026-27, ideal rent calculator, and tax saving estimate.',
-  href: '/hra-calculator',
+  href: '/tools/hra-calculator',
 },
 {
   slug: 'ppf-calculator',
@@ -863,14 +863,14 @@ export const tools = [
   category: 'utility',
   icon: '🏦',
   description: 'Calculate PPF maturity value, year-wise interest, and tax savings at 7.1%. Full year-by-year breakdown, EEE tax status explained. Free, no login.',
-  href: '/ppf-calculator',
+  href: '/tools/ppf-calculator',
 },
 
 {
   slug: 'fuel-bill-generator', name: 'Fuel Bill Generator',
   category: 'utility', icon: '⛽',
   description: 'Generate petrol, diesel, CNG bills for reimbursement. GST support, PDF download, WhatsApp sharing. Free, no signup.',
-  href: '/fuel-bill-generator',
+  href: '/tools/fuel-bill-generator',
 },
 {
   slug:        'number-to-words',
@@ -878,7 +878,7 @@ export const tools = [
   category:    'utility',
   icon:        '🔤',
   description: 'Convert any number or rupee amount to words in Indian format — Lakh, Crore. Perfect for cheques, GST invoices, and legal documents. Free, no signup.',
-  href:        '/number-to-words',
+  href:        '/tools/number-to-words',
 },
 {
   slug:        'chat-screenshot-generator',
@@ -886,14 +886,14 @@ export const tools = [
   category:    'utility',
   icon:        '💬',
   description: 'Create realistic WhatsApp, iMessage, and Instagram DM chat screenshots. 10 viral templates, HD PNG export, phone frame toggle. Free, no login, nothing uploaded.',
-  href:        '/chat-screenshot-generator',
+  href:        '/tools/chat-screenshot-generator',
 },
 
 {
   slug: 'bmi-calculator', name: 'BMI Calculator',
   category: 'health', icon: '⚖️',
   description: 'Free BMI calculator India with Indian/Asian WHO thresholds. Healthy weight range, health risk assessment.',
-  href: '/bmi-calculator',
+  href: '/tools/bmi-calculator',
 },
 {
   slug: 'claude-code-token-calculator',
@@ -901,7 +901,7 @@ export const tools = [
   category: 'utility',
   icon: '+-', // Lucide icon. Alternatives: 'Coins', 'Wallet', 'Receipt', 'Bot'
   description: 'Estimate your monthly Claude Code cost in seconds. Compares API, Pro, Max 5x, and Max 20x plans with INR pricing.',
-  href: '/claude-code-token-calculator',
+  href: '/tools/claude-code-token-calculator',
 },
 
 
@@ -912,7 +912,7 @@ export const tools = [
   {
     slug:        'ai-prompt-generator',
     name:        'AI Prompt Generator',
-    href: '/ai-prompt-generator-online',
+    href: '/tools/ai-prompt-generator',
     category:    'utility',
     icon:        '🤖',
     description: 'Generate optimized AI prompts for ChatGPT, Claude, and Gemini. Create better prompts with tone, format, and audience controls.',
@@ -934,7 +934,7 @@ export const tools = [
   {
     slug:        'text-to-handwriting',
     name:        'Text to Handwriting Generator',
-    href: '/text-to-handwriting-online',
+    href: '/tools/text-to-handwriting',
     category:    'text',
     icon:        '✍️',
     description: 'Convert typed text into realistic handwritten notes instantly. Free text to handwriting generator with notebook paper, multiple fonts, pen colors, and PNG/PDF download.',
@@ -970,7 +970,7 @@ export const tools = [
   {
     slug:        'json-to-csv',
     name:        'JSON to CSV Converter',
-    href: '/json-to-csv-converter-online',
+    href: '/tools/json-to-csv',
     category:    'developer',
     icon:        '📊',
     description: 'Convert JSON to CSV format online for free. Paste your JSON array and instantly download a properly formatted CSV file.',
@@ -1000,7 +1000,7 @@ export const tools = [
   {
     slug:        'whatsapp-link-generator',
     name:        'WhatsApp Link Generator',
-    href:        '/whatsapp-link-generator',
+    href:        '/tools/whatsapp-link-generator',
     category:    'utility',
     icon:        '💬',
     description: 'Generate WhatsApp click-to-chat links with pre-filled messages. Perfect for business cards, websites, and social bios. Free, no signup.',
@@ -1010,7 +1010,7 @@ export const tools = [
   {
     slug:        'pan-validator',
     name:        'PAN Card Validator',
-    href:        '/pan-validator',
+    href:        '/tools/pan-validator',
     category:    'utility',
     icon:        '🪪',
     description: 'Validate any PAN card number instantly. Check PAN format, identify holder type (Individual, Company, HUF), and decode PAN structure. Free, India-specific.',
@@ -1020,7 +1020,7 @@ export const tools = [
   {
     slug:        'ifsc-finder',
     name:        'IFSC Code Finder',
-    href:        '/ifsc-finder',
+    href:        '/tools/ifsc-finder',
     category:    'utility',
     icon:        '🏦',
     description: 'Find bank branch details by IFSC code. Get bank name, branch address, city, MICR, and SWIFT code. Covers all Indian banks. Free, instant.',
@@ -1030,7 +1030,7 @@ export const tools = [
   {
     slug:        'gst-number-validator',
     name:        'GST Number Validator',
-    href:        '/gst-number-validator',
+    href:        '/tools/gst-number-validator',
     category:    'utility',
     icon:        '🧾',
     description: 'Validate any GSTIN (GST number) instantly. Check format, decode state code, entity type, and embedded PAN. Covers all Indian states. Free, no signup.',
@@ -1040,7 +1040,7 @@ export const tools = [
   {
     slug:        'epf-calculator',
     name:        'EPF Calculator',
-    href:        '/epf-calculator',
+    href:        '/tools/epf-calculator',
     category:    'utility',
     icon:        '💰',
     description: 'Calculate EPF/PF balance at retirement, monthly PF deductions, and EPS pension. Uses current EPFO interest rate of 8.25%. Free, India-specific.',
@@ -1050,7 +1050,7 @@ export const tools = [
   {
     slug:        'jwt-decoder-online',
     name:        'JWT Decoder',
-    href:        '/jwt-decoder-online',
+    href:        '/tools/jwt-decoder',
     category:    'developer',
     icon:        '🔑',
     description: 'Decode JWT tokens instantly in your browser. View header, payload claims, expiry time, and signature. 100% browser-based — no data sent to servers.',
@@ -1060,7 +1060,7 @@ export const tools = [
   {
     slug:        'diff-checker',
     name:        'Diff Checker',
-    href:        '/diff-checker-online',
+    href:        '/tools/diff-checker',
     category:    'developer',
     icon:        '⟺',
     description: 'Compare two texts side by side and highlight differences. Split view and unified diff modes. Free, no signup, runs entirely in your browser.',
@@ -1070,7 +1070,7 @@ export const tools = [
   {
     slug:        'cron-expression-builder',
     name:        'Cron Expression Builder',
-    href:        '/cron-expression-builder-online',
+    href:        '/tools/cron-expression-builder',
     category:    'developer',
     icon:        '⏰',
     description: 'Build and validate cron expressions with human-readable output. Visual field editor, 12 common presets, instant description. Free, browser-based.',
@@ -1080,7 +1080,7 @@ export const tools = [
   {
     slug:        'form-16-calculator',
     name:        'Form 16 Tax Calculator',
-    href:        '/form-16-calculator',
+    href:        '/tools/form-16-calculator',
     category:    'utility',
     icon:        '🧾',
     description: 'Calculate income tax from Form 16 data. Compare old vs new tax regime, HRA exemption, Chapter VI-A deductions, and monthly TDS. FY 2025-26.',
@@ -1090,7 +1090,7 @@ export const tools = [
   {
     slug:        'salary-slip-generator',
     name:        'Salary Slip Generator',
-    href:        '/salary-slip-generator',
+    href:        '/tools/salary-slip-generator',
     category:    'utility',
     icon:        '🖨️',
     description: 'Generate professional salary slips with earnings, deductions, EPF, and TDS. Print or download as PDF. Free, no signup, browser-based.',
@@ -1100,7 +1100,7 @@ export const tools = [
   {
     slug:        'rent-agreement-generator',
     name:        'Rent Agreement Generator',
-    href:        '/rent-agreement-generator',
+    href:        '/tools/rent-agreement-generator',
     category:    'utility',
     icon:        '🏠',
     description: 'Generate a legally formatted rent agreement for India. Enter landlord, tenant, and property details. Print or download as PDF. Free, browser-based.',
@@ -1110,7 +1110,7 @@ export const tools = [
   {
     slug:        'sql-formatter-online',
     name:        'SQL Formatter',
-    href:        '/sql-formatter-online',
+    href:        '/tools/sql-formatter',
     category:    'developer',
     icon:        '🗃️',
     description: 'Format and beautify SQL queries online. Choose keyword casing (UPPER/lower), indent style, and comma placement. MySQL, PostgreSQL, SQLite support. Free.',
@@ -1120,7 +1120,7 @@ export const tools = [
   {
     slug:        'markdown-to-html',
     name:        'Markdown to HTML',
-    href:        '/markdown-to-html',
+    href:        '/tools/markdown-to-html',
     category:    'developer',
     icon:        '📝',
     description: 'Convert Markdown to HTML with live preview. Supports headings, bold, italic, lists, code blocks, links, images. Free, browser-based.',
@@ -1130,7 +1130,7 @@ export const tools = [
   {
     slug:        'unit-converter',
     name:        'Unit Converter',
-    href:        '/unit-converter',
+    href:        '/tools/unit-converter',
     category:    'utility',
     icon:        '🔄',
     description: 'Convert between units of length, weight, temperature, area, volume, speed, and digital storage. 7 categories, instant conversion. Free.',
@@ -1140,7 +1140,7 @@ export const tools = [
   {
     slug:        'color-palette-generator',
     name:        'Color Palette Generator',
-    href:        '/color-palette-generator',
+    href:        '/tools/color-palette-generator',
     category:    'developer',
     icon:        '🎨',
     description: 'Generate color palettes from any base color. Monochromatic, analogous, complementary, triadic, tetradic, tints & shades. Copy HEX, RGB, HSL.',
@@ -1150,7 +1150,7 @@ export const tools = [
   {
     slug:        'cgpa-calculator',
     name:        'CGPA Calculator',
-    href:        '/cgpa-calculator',
+    href:        '/tools/cgpa-calculator',
     category:    'utility',
     icon:        '🎓',
     description: 'Calculate CGPA from grades and credits. Convert CGPA to percentage for VTU, Anna University, Mumbai, Pune (SPPU), Osmania, CBSE. Free.',
@@ -1160,7 +1160,7 @@ export const tools = [
   {
     slug:        'html-to-markdown',
     name:        'HTML to Markdown',
-    href:        '/html-to-markdown',
+    href:        '/tools/html-to-markdown',
     category:    'developer',
     icon:        '🔁',
     description: 'Convert HTML to clean Markdown online. Headings, bold, italic, code blocks, tables, links, images. Free, browser-based, instant.',

@@ -482,12 +482,12 @@ export default function ColorPickerOnlinePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/css-minifier-online',          icon: '⚡', label: 'CSS Minifier Online',          desc: 'Minify CSS containing your color variables for production' },
-                { href: '/html-formatter-online',        icon: '🔤', label: 'HTML Formatter Online',        desc: 'Format and beautify HTML that uses your color codes' },
-                { href: '/meta-tag-generator-online',    icon: '🔍', label: 'Meta Tag Generator',           desc: 'Add theme-color meta tags using your picked color' },
-                { href: '/compress-image-online',        icon: '🗜️', label: 'Compress Image Online',        desc: 'Optimize images after designing with your color palette' },
-                { href: '/qr-code-generator-online',     icon: '📱', label: 'QR Code Generator',           desc: 'Create custom-colored QR codes using your picked colors' },
-                { href: '/json-formatter-online',        icon: '{ }',label: 'JSON Formatter Online',       desc: 'Format JSON theme configuration files with color tokens' },
+                { href: '/tools/css-minifier',          icon: '⚡', label: 'CSS Minifier Online',          desc: 'Minify CSS containing your color variables for production' },
+                { href: '/tools/html-formatter',        icon: '🔤', label: 'HTML Formatter Online',        desc: 'Format and beautify HTML that uses your color codes' },
+                { href: '/tools/meta-tag-generator',    icon: '🔍', label: 'Meta Tag Generator',           desc: 'Add theme-color meta tags using your picked color' },
+                { href: '/tools/image-compressor',        icon: '🗜️', label: 'Compress Image Online',        desc: 'Optimize images after designing with your color palette' },
+                { href: '/tools/qr-code-generator',     icon: '📱', label: 'QR Code Generator',           desc: 'Create custom-colored QR codes using your picked colors' },
+                { href: '/tools/json-formatter',        icon: '{ }',label: 'JSON Formatter Online',       desc: 'Format JSON theme configuration files with color tokens' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-violet-200 hover:bg-violet-50 transition-colors group">

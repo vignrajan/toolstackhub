@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/password-generator-online', label: 'Password Generator Online', desc: 'Generate secure random passwords' },
-              { href: '/uuid-generator-online', label: 'UUID Generator Online', desc: 'Generate unique random identifiers' },
-              { href: '/age-calculator-online', label: 'Age Calculator Online', desc: 'Calculate with random birth dates' },
-              { href: '/percentage-calculator-online', label: 'Percentage Calculator Online', desc: 'Calculate percentages of numbers' },
+  { href: '/tools/password-generator', label: 'Password Generator Online', desc: 'Generate secure random passwords' },
+              { href: '/tools/uuid-generator', label: 'UUID Generator Online', desc: 'Generate unique random identifiers' },
+              { href: '/tools/age-calculator', label: 'Age Calculator Online', desc: 'Calculate with random birth dates' },
+              { href: '/tools/percentage-calculator', label: 'Percentage Calculator Online', desc: 'Calculate percentages of numbers' },
 ];
 
 const variantLinks = [

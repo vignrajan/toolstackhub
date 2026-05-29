@@ -391,12 +391,12 @@ export default function GstValidatorPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/pan-validator',               icon: '🪪', label: 'PAN Card Validator',          desc: 'Validate & decode any PAN card number'                },
-                { href: '/gst-calculator',               icon: '🧾', label: 'GST Calculator',              desc: 'Add or remove GST at 5%, 12%, 18%, 28%'               },
-                { href: '/salary-calculator',             icon: '💰', label: 'Salary Calculator',           desc: 'Take-home salary under old vs new tax regime'         },
-                { href: '/hra-calculator',                icon: '🏠', label: 'HRA Calculator',              desc: 'Calculate HRA exemption for income tax'               },
-                { href: '/professional-tax-calculator',   icon: '📋', label: 'Professional Tax Calculator', desc: 'State-wise professional tax calculation'              },
-                { href: '/percentage-calculator-online',  icon: '📊', label: 'Percentage Calculator',       desc: 'Quick percentage calculations for marks and ratios'   },
+                { href: '/tools/pan-validator',               icon: '🪪', label: 'PAN Card Validator',          desc: 'Validate & decode any PAN card number'                },
+                { href: '/tools/gst-calculator',               icon: '🧾', label: 'GST Calculator',              desc: 'Add or remove GST at 5%, 12%, 18%, 28%'               },
+                { href: '/tools/salary-calculator',             icon: '💰', label: 'Salary Calculator',           desc: 'Take-home salary under old vs new tax regime'         },
+                { href: '/tools/hra-calculator',                icon: '🏠', label: 'HRA Calculator',              desc: 'Calculate HRA exemption for income tax'               },
+                { href: '/tools/professional-tax-calculator',   icon: '📋', label: 'Professional Tax Calculator', desc: 'State-wise professional tax calculation'              },
+                { href: '/tools/percentage-calculator',  icon: '📊', label: 'Percentage Calculator',       desc: 'Quick percentage calculations for marks and ratios'   },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-start gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

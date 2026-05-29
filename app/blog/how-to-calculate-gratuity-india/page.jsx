@@ -370,7 +370,7 @@ export default function GratuityBlogPage() {
                 <div className="mt-8 p-6 bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl text-center">
                   <div className="text-white font-bold text-lg mb-2">Calculate Your Exact Gratuity Instantly</div>
                   <p className="text-brand-200 text-sm mb-4">Enter your basic salary and years of service to get your exact gratuity amount in seconds.</p>
-                  <Link href="/salary-calculator"
+                  <Link href="/tools/salary-calculator"
                     className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
                     Use Free Gratuity Calculator →
                   </Link>
@@ -728,15 +728,15 @@ export default function GratuityBlogPage() {
                     in-hand salary, and full CTC breakdown. No signup required.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <Link href="/salary-calculator"
+                    <Link href="/tools/salary-calculator"
                       className="inline-flex items-center gap-2 bg-brand-600 text-white font-bold px-5 py-3 rounded-xl hover:bg-brand-700 transition-colors text-sm">
                       Gratuity Calculator →
                     </Link>
-                    <Link href="/gst-calculator"
+                    <Link href="/tools/gst-calculator"
                       className="inline-flex items-center gap-2 bg-white text-surface-700 font-semibold px-5 py-3 rounded-xl border border-surface-200 hover:border-brand-300 transition-colors text-sm">
                       GST Calculator
                     </Link>
-                    <Link href="/emi-calculator"
+                    <Link href="/tools/emi-calculator"
                       className="inline-flex items-center gap-2 bg-white text-surface-700 font-semibold px-5 py-3 rounded-xl border border-surface-200 hover:border-brand-300 transition-colors text-sm">
                       EMI Calculator
                     </Link>

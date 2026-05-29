@@ -270,12 +270,12 @@ export default function RemoveEmptyLinesPage() {
               </p>
               <p>
                 You can also combine this with the{' '}
-                <Link href="/remove-line-breaks" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-line-breaks" className="text-emerald-700 hover:underline font-medium">
                   remove line breaks tool
                 </Link>{' '}
                 — enable both toggles simultaneously to first strip empty lines and then join all
                 remaining lines into a single continuous string. Or pair it with the{' '}
-                <Link href="/remove-duplicate-lines-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-duplicate-lines" className="text-emerald-700 hover:underline font-medium">
                   remove duplicate lines tool
                 </Link>{' '}
                 for a complete deduplication and cleanup workflow.
@@ -450,15 +450,15 @@ export default function RemoveEmptyLinesPage() {
               </p>
               <p>
                 For further cleaning, use our{' '}
-                <Link href="/word-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/word-counter" className="text-emerald-700 hover:underline font-medium">
                   word counter online
                 </Link>{' '}
                 to measure your content after removing blanks, the{' '}
-                <Link href="/character-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/character-counter" className="text-emerald-700 hover:underline font-medium">
                   character counter
                 </Link>{' '}
                 to verify output length, or the{' '}
-                <Link href="/case-converter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/case-converter" className="text-emerald-700 hover:underline font-medium">
                   case converter
                 </Link>{' '}
                 to normalize text casing after cleanup.
@@ -498,8 +498,8 @@ export default function RemoveEmptyLinesPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-line-breaks',         label: 'Remove Line Breaks',           desc: 'Remove all newline characters entirely' },
-                { href: '/remove-extra-spaces',        label: 'Remove Extra Spaces',          desc: 'Collapse multiple whitespace into single spaces' },
+                { href: '/tools/remove-line-breaks',         label: 'Remove Line Breaks',           desc: 'Remove all newline characters entirely' },
+                { href: '/tools/remove-extra-spaces',        label: 'Remove Extra Spaces',          desc: 'Collapse multiple whitespace into single spaces' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-colors group">
@@ -517,12 +517,12 @@ export default function RemoveEmptyLinesPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-duplicate-lines-online', icon: '🧹', label: 'Remove Duplicate Lines',   desc: 'Remove repeated lines from keyword lists and data' },
-                { href: '/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks',        desc: 'Remove all newline characters from text' },
-                { href: '/remove-extra-spaces',           icon: '⎵',  label: 'Remove Extra Spaces',       desc: 'Collapse multiple spaces into single spaces' },
-                { href: '/word-counter-online',           icon: '📝', label: 'Word Counter Online',       desc: 'Count words and lines in cleaned text' },
-                { href: '/character-counter-online',      icon: '🔢', label: 'Character Counter Online',  desc: 'Check character count after removing blank lines' },
-                { href: '/case-converter-online',         icon: '🔡', label: 'Case Converter Online',     desc: 'Normalize text case after cleanup' },
+                { href: '/tools/remove-duplicate-lines', icon: '🧹', label: 'Remove Duplicate Lines',   desc: 'Remove repeated lines from keyword lists and data' },
+                { href: '/tools/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks',        desc: 'Remove all newline characters from text' },
+                { href: '/tools/remove-extra-spaces',           icon: '⎵',  label: 'Remove Extra Spaces',       desc: 'Collapse multiple spaces into single spaces' },
+                { href: '/tools/word-counter',           icon: '📝', label: 'Word Counter Online',       desc: 'Count words and lines in cleaned text' },
+                { href: '/tools/character-counter',      icon: '🔢', label: 'Character Counter Online',  desc: 'Check character count after removing blank lines' },
+                { href: '/tools/case-converter',         icon: '🔡', label: 'Case Converter Online',     desc: 'Normalize text case after cleanup' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">

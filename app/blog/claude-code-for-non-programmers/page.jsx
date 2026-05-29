@@ -419,7 +419,7 @@ export default function ClaudeCodeNonProgrammersBlog() {
                       </ul>
                     </div>
                     <p className="text-surface-500 text-xs">
-                      Our <Link href="/invoice-generator" className="text-brand-600 hover:text-brand-700 font-medium">free invoice generator</Link> handles basic GST invoices instantly — but for custom automation across your existing data, Claude Code gives you something no pre-built tool can match.
+                      Our <Link href="/tools/invoice-generator" className="text-brand-600 hover:text-brand-700 font-medium">free invoice generator</Link> handles basic GST invoices instantly — but for custom automation across your existing data, Claude Code gives you something no pre-built tool can match.
                     </p>
                   </div>
 

@@ -23,24 +23,24 @@ export const metadata = {
 };
 
 const DEV_TOOLS = [
-  { href: '/json-formatter-online',      icon: '{ }', name: 'JSON Formatter',         desc: 'Beautify, minify, and validate JSON with syntax highlighting.' },
+  { href: '/tools/json-formatter',      icon: '{ }', name: 'JSON Formatter',         desc: 'Beautify, minify, and validate JSON with syntax highlighting.' },
   { href: '/json-validator-online',      icon: '✅',  name: 'JSON Validator',          desc: 'Validate JSON syntax and get detailed error messages with line numbers.' },
   { href: '/json-minifier-online',       icon: '⚡',  name: 'JSON Minifier',           desc: 'Minify JSON by removing whitespace for smaller payload sizes.' },
   { href: '/json-beautifier-online',     icon: '🎨',  name: 'JSON Beautifier',         desc: 'Prettify compressed JSON with 2 or 4 space indentation.' },
   { href: '/json-viewer-online',         icon: '👁️',  name: 'JSON Viewer',             desc: 'Explore JSON as a collapsible tree for easy navigation.' },
-  { href: '/json-to-csv-converter-online',      icon: '📊',  name: 'JSON to CSV',             desc: 'Convert JSON arrays to CSV format with custom delimiters.' },
-  { href: '/base64-encoder-online',      icon: '🔡',  name: 'Base64 Encoder/Decoder', desc: 'Encode or decode Base64 strings instantly in your browser.' },
-  { href: '/uuid-generator-online',      icon: '🆔',  name: 'UUID Generator',          desc: 'Generate v4 UUIDs (universally unique identifiers) in bulk.' },
-  { href: '/url-encoder-online',         icon: '🔗',  name: 'URL Encoder/Decoder',    desc: 'Encode special characters for URLs or decode percent-encoded strings.' },
-  { href: '/regex-tester-online',        icon: '🔍',  name: 'Regex Tester',            desc: 'Test regular expressions with live highlighting and match details.' },
-  { href: '/binary-to-decimal-converter-online', icon: '💻', name: 'Binary Converter',        desc: 'Convert between binary, decimal, octal, and hexadecimal.' },
-  { href: '/css-minifier-online',        icon: '⚡',  name: 'CSS Minifier',            desc: 'Minify CSS files to reduce stylesheet file size.' },
-  { href: '/html-formatter-online',      icon: '🏷️',  name: 'HTML Formatter',          desc: 'Beautify minified HTML with proper indentation.' },
-  { href: '/markdown-editor-online',     icon: '📋',  name: 'Markdown Editor',         desc: 'Write and preview Markdown with side-by-side live rendering.' },
-  { href: '/unix-timestamp-converter-online',   icon: '⏱️',  name: 'Timestamp Converter',    desc: 'Convert between Unix timestamps and human-readable dates.' },
-  { href: '/color-picker-online',        icon: '🎨',  name: 'Color Picker',            desc: 'Pick colors and copy HEX, RGB, and HSL values instantly.' },
-  { href: '/meta-tag-generator-online',  icon: '🏷️',  name: 'Meta Tag Generator',      desc: 'Generate open graph, Twitter card, and SEO meta tags.' },
-  { href: '/lorem-ipsum-generator',      icon: '📄',  name: 'Lorem Ipsum Generator',   desc: 'Generate placeholder text for wireframes and mockups.' },
+  { href: '/tools/json-to-csv',      icon: '📊',  name: 'JSON to CSV',             desc: 'Convert JSON arrays to CSV format with custom delimiters.' },
+  { href: '/tools/base64-encoder',      icon: '🔡',  name: 'Base64 Encoder/Decoder', desc: 'Encode or decode Base64 strings instantly in your browser.' },
+  { href: '/tools/uuid-generator',      icon: '🆔',  name: 'UUID Generator',          desc: 'Generate v4 UUIDs (universally unique identifiers) in bulk.' },
+  { href: '/tools/url-encoder',         icon: '🔗',  name: 'URL Encoder/Decoder',    desc: 'Encode special characters for URLs or decode percent-encoded strings.' },
+  { href: '/tools/regex-tester',        icon: '🔍',  name: 'Regex Tester',            desc: 'Test regular expressions with live highlighting and match details.' },
+  { href: '/tools/binary-converter', icon: '💻', name: 'Binary Converter',        desc: 'Convert between binary, decimal, octal, and hexadecimal.' },
+  { href: '/tools/css-minifier',        icon: '⚡',  name: 'CSS Minifier',            desc: 'Minify CSS files to reduce stylesheet file size.' },
+  { href: '/tools/html-formatter',      icon: '🏷️',  name: 'HTML Formatter',          desc: 'Beautify minified HTML with proper indentation.' },
+  { href: '/tools/markdown-preview',     icon: '📋',  name: 'Markdown Editor',         desc: 'Write and preview Markdown with side-by-side live rendering.' },
+  { href: '/tools/timestamp-converter',   icon: '⏱️',  name: 'Timestamp Converter',    desc: 'Convert between Unix timestamps and human-readable dates.' },
+  { href: '/tools/color-picker',        icon: '🎨',  name: 'Color Picker',            desc: 'Pick colors and copy HEX, RGB, and HSL values instantly.' },
+  { href: '/tools/meta-tag-generator',  icon: '🏷️',  name: 'Meta Tag Generator',      desc: 'Generate open graph, Twitter card, and SEO meta tags.' },
+  { href: '/tools/lorem-ipsum-generator',      icon: '📄',  name: 'Lorem Ipsum Generator',   desc: 'Generate placeholder text for wireframes and mockups.' },
 ];
 
 const jsonLd = {
@@ -160,13 +160,13 @@ export default function DeveloperToolsCategoryPage() {
                 </p>
                 <p>
                   The{' '}
-                  <Link href="/json-formatter-online" className="text-violet-700 hover:underline font-medium">JSON Formatter</Link>{' '}
+                  <Link href="/tools/json-formatter" className="text-violet-700 hover:underline font-medium">JSON Formatter</Link>{' '}
                   is the most-used tool on ToolStackHub, handling over 200,000 monthly searches.
                   It formats, validates, minifies, and syntax-highlights JSON in a single interface.
                   The{' '}
-                  <Link href="/base64-encoder-online" className="text-violet-700 hover:underline font-medium">Base64 encoder/decoder</Link>{' '}
+                  <Link href="/tools/base64-encoder" className="text-violet-700 hover:underline font-medium">Base64 encoder/decoder</Link>{' '}
                   handles both encoding and decoding in one tool. The{' '}
-                  <Link href="/regex-tester-online" className="text-violet-700 hover:underline font-medium">regex tester</Link>{' '}
+                  <Link href="/tools/regex-tester" className="text-violet-700 hover:underline font-medium">regex tester</Link>{' '}
                   supports all JavaScript regex flags with live match highlighting and a replace mode.
                 </p>
                 <p>

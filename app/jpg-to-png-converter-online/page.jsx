@@ -61,14 +61,14 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/compress-image-online', label: 'Compress Image Online', desc: 'Reduce image file size by up to 90%' },
-              { href: '/resize-image-online', label: 'Image Resizer Online', desc: 'Resize to any pixel dimension' },
-              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Get HEX, RGB, HSL color codes' },
-              { href: '/qr-code-generator-online', label: 'QR Code Generator', desc: 'Create custom QR codes free' },
+  { href: '/tools/image-compressor', label: 'Compress Image Online', desc: 'Reduce image file size by up to 90%' },
+              { href: '/tools/image-resizer', label: 'Image Resizer Online', desc: 'Resize to any pixel dimension' },
+              { href: '/tools/color-picker', label: 'Color Picker Online', desc: 'Get HEX, RGB, HSL color codes' },
+              { href: '/tools/qr-code-generator', label: 'QR Code Generator', desc: 'Create custom QR codes free' },
 ];
 
 const variantLinks = [
-              { href: '/compress-image-online', label: 'Compress PNG After Converting' },
+              { href: '/tools/image-compressor', label: 'Compress PNG After Converting' },
 ];
 
 const faqs = [
