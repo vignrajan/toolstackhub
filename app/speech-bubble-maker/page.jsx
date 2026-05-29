@@ -321,10 +321,10 @@ export default function SpeechBubbleMakerPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Image Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/compress-image-online',    icon: '🗜️', label: 'Image Compressor',      desc: 'Compress your speech bubble image for faster sharing' },
-                { href: '/qr-code-generator-online', icon: '📱', label: 'QR Code Generator',      desc: 'Generate QR codes for your meme or content' },
-                { href: '/text-repeater',            icon: '🔁', label: 'Text Repeater',          desc: 'Repeat text for creative bubble fills' },
-                { href: '/invoice-generator',        icon: '🧾', label: 'Invoice Generator',      desc: 'For creative professionals and content creators' },
+                { href: '/tools/image-compressor',    icon: '🗜️', label: 'Image Compressor',      desc: 'Compress your speech bubble image for faster sharing' },
+                { href: '/tools/qr-code-generator', icon: '📱', label: 'QR Code Generator',      desc: 'Generate QR codes for your meme or content' },
+                { href: '/tools/text-repeater',            icon: '🔁', label: 'Text Repeater',          desc: 'Repeat text for creative bubble fills' },
+                { href: '/tools/invoice-generator',        icon: '🧾', label: 'Invoice Generator',      desc: 'For creative professionals and content creators' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

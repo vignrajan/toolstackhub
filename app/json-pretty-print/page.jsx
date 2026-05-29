@@ -167,12 +167,12 @@ export default function JsonPrettyPrintPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
+                { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format, validate & minify JSON' },
                 { href: '/json-beautifier-online', label: 'JSON Beautifier', desc: 'Beautify and pretty-print JSON' },
                 { href: '/json-validator-online', label: 'JSON Validator', desc: 'Validate JSON syntax instantly' },
                 { href: '/json-minifier-online', label: 'JSON Minifier', desc: 'Compress JSON for production' },
                 { href: '/json-viewer-online', label: 'JSON Viewer', desc: 'View and explore JSON structure' },
-                { href: '/base64-encoder-online', label: 'Base64 Encoder', desc: 'Encode/decode Base64 in JSON payloads' },
+                { href: '/tools/base64-encoder', label: 'Base64 Encoder', desc: 'Encode/decode Base64 in JSON payloads' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

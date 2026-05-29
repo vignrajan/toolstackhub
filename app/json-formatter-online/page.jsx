@@ -83,10 +83,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode/decode Base64 strings in JSON' },
-              { href: '/url-encoder-online', label: 'URL Encoder Online', desc: 'Encode URL values in JSON strings' },
-              { href: '/uuid-generator-online', label: 'UUID Generator Online', desc: 'Generate UUIDs for JSON objects' },
-              { href: '/regex-tester-online', label: 'Regex Tester Online', desc: 'Test patterns on JSON strings' },
+  { href: '/tools/base64-encoder', label: 'Base64 Encoder Online', desc: 'Encode/decode Base64 strings in JSON' },
+              { href: '/tools/url-encoder', label: 'URL Encoder Online', desc: 'Encode URL values in JSON strings' },
+              { href: '/tools/uuid-generator', label: 'UUID Generator Online', desc: 'Generate UUIDs for JSON objects' },
+              { href: '/tools/regex-tester', label: 'Regex Tester Online', desc: 'Test patterns on JSON strings' },
 ];
 
 const variantLinks = [

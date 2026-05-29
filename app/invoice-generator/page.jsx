@@ -189,9 +189,9 @@ export default function InvoiceGeneratorPage() {
                 ToolStackHub is genuinely free — your data stays in your browser, never on our servers.
               </p>
               <p>
-                Use it alongside our <Link href="/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
+                Use it alongside our <Link href="/tools/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
                 to verify tax amounts, and the{' '}
-                <Link href="/salary-calculator" className="text-brand-700 hover:underline font-medium">salary calculator</Link>{' '}
+                <Link href="/tools/salary-calculator" className="text-brand-700 hover:underline font-medium">salary calculator</Link>{' '}
                 to compare contractor vs employee costs for your business.
               </p>
             </div>

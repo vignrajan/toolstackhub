@@ -238,11 +238,11 @@ export default function RemoveLineBreaksPage() {
                 essential. Instead of manually scanning and deleting newlines — an error-prone
                 process with long texts — you paste your content, click one button, and get
                 perfectly cleaned text in under a second. You can also use our{' '}
-                <Link href="/remove-duplicate-lines-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-duplicate-lines" className="text-emerald-700 hover:underline font-medium">
                   remove duplicate lines tool
                 </Link>{' '}
                 to clean up repeated entries after removing line breaks, or the{' '}
-                <Link href="/word-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/word-counter" className="text-emerald-700 hover:underline font-medium">
                   word counter
                 </Link>{' '}
                 to verify the size of your cleaned output.
@@ -327,11 +327,11 @@ export default function RemoveLineBreaksPage() {
               </p>
               <p>
                 You can combine this tool with our{' '}
-                <Link href="/character-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/character-counter" className="text-emerald-700 hover:underline font-medium">
                   character counter online
                 </Link>{' '}
                 to measure the size difference before and after cleaning, or use the{' '}
-                <Link href="/case-converter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/case-converter" className="text-emerald-700 hover:underline font-medium">
                   case converter
                 </Link>{' '}
                 to normalize text after removing line breaks.
@@ -396,12 +396,12 @@ export default function RemoveLineBreaksPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-duplicate-lines-online', icon: '🧹', label: 'Remove Duplicate Lines',  desc: 'Remove repeated lines from any list or text' },
-                { href: '/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines',       desc: 'Strip all blank lines from your text instantly' },
-                { href: '/remove-extra-spaces',           icon: '⎵',  label: 'Remove Extra Spaces',      desc: 'Collapse multiple spaces into single spaces' },
-                { href: '/word-counter-online',           icon: '📝', label: 'Word Counter Online',      desc: 'Count words and characters in your cleaned text' },
-                { href: '/case-converter-online',         icon: '🔡', label: 'Case Converter Online',    desc: 'Convert text to UPPER, lower, or Title Case' },
-                { href: '/character-counter-online',      icon: '🔢', label: 'Character Counter Online', desc: 'Count characters and check platform limits' },
+                { href: '/tools/remove-duplicate-lines', icon: '🧹', label: 'Remove Duplicate Lines',  desc: 'Remove repeated lines from any list or text' },
+                { href: '/tools/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines',       desc: 'Strip all blank lines from your text instantly' },
+                { href: '/tools/remove-extra-spaces',           icon: '⎵',  label: 'Remove Extra Spaces',      desc: 'Collapse multiple spaces into single spaces' },
+                { href: '/tools/word-counter',           icon: '📝', label: 'Word Counter Online',      desc: 'Count words and characters in your cleaned text' },
+                { href: '/tools/case-converter',         icon: '🔡', label: 'Case Converter Online',    desc: 'Convert text to UPPER, lower, or Title Case' },
+                { href: '/tools/character-counter',      icon: '🔢', label: 'Character Counter Online', desc: 'Count characters and check platform limits' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">

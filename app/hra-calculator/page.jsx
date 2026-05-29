@@ -150,7 +150,7 @@ export default function HRACalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-400">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li>/</li>
-                <li><Link href="/salary-calculator" className="hover:text-brand-600">Finance Tools</Link></li>
+                <li><Link href="/tools/salary-calculator" className="hover:text-brand-600">Finance Tools</Link></li>
                 <li>/</li>
                 <li className="text-surface-700 font-medium">HRA Calculator</li>
               </ol>
@@ -488,7 +488,7 @@ export default function HRACalculatorPage() {
                 <strong className="text-surface-800">When the old regime still wins despite higher rates:</strong> If your annual HRA exemption is large — say ₹2–3 lakh/year — the tax saving from that exemption alone can outweigh the benefit of lower slab rates in the new regime. Add Section 80C (₹1.5L), 80D (₹25K), and home loan interest (₹2L), and many higher-income employees find the old regime significantly more tax-efficient.
               </p>
               <p>
-                Use our <Link href="/salary-calculator" className="text-brand-600 hover:underline font-semibold">salary calculator</Link> to compare your take-home under both regimes with your specific HRA exemption factored in.
+                Use our <Link href="/tools/salary-calculator" className="text-brand-600 hover:underline font-semibold">salary calculator</Link> to compare your take-home under both regimes with your specific HRA exemption factored in.
               </p>
             </div>
           </section>

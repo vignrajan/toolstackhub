@@ -602,12 +602,12 @@ export default function AgeCalculatorPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {[
-                { href: '/bmi-calculator',              icon: '⚖️', label: 'BMI Calculator',         desc: 'Body Mass Index with Indian health standards'       },
-                { href: '/salary-calculator',           icon: '💰', label: 'Salary Calculator',       desc: 'Take-home salary under old vs new tax regime'       },
-                { href: '/emi-calculator',              icon: '🧮', label: 'EMI Calculator',          desc: 'Plan home, car, or personal loan EMIs'              },
-                { href: '/sip-calculator',              icon: '📈', label: 'SIP Calculator',          desc: 'Project SIP returns and retirement corpus'          },
-                { href: '/hra-calculator',              icon: '🏠', label: 'HRA Calculator',          desc: 'Calculate HRA exemption for tax planning'           },
-                { href: '/percentage-calculator-online',icon: '📊', label: 'Percentage Calculator',   desc: 'Quick percentage calculations for marks and ratios' },
+                { href: '/tools/bmi-calculator',              icon: '⚖️', label: 'BMI Calculator',         desc: 'Body Mass Index with Indian health standards'       },
+                { href: '/tools/salary-calculator',           icon: '💰', label: 'Salary Calculator',       desc: 'Take-home salary under old vs new tax regime'       },
+                { href: '/tools/emi-calculator',              icon: '🧮', label: 'EMI Calculator',          desc: 'Plan home, car, or personal loan EMIs'              },
+                { href: '/tools/sip-calculator',              icon: '📈', label: 'SIP Calculator',          desc: 'Project SIP returns and retirement corpus'          },
+                { href: '/tools/hra-calculator',              icon: '🏠', label: 'HRA Calculator',          desc: 'Calculate HRA exemption for tax planning'           },
+                { href: '/tools/percentage-calculator',icon: '📊', label: 'Percentage Calculator',   desc: 'Quick percentage calculations for marks and ratios' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-start gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

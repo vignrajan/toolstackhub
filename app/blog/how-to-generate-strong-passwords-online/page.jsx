@@ -102,7 +102,7 @@ export default function PostStrongPassword() {
           {/* CTA */}
           <div className="rounded-2xl p-5 border-2 border-rose-200 bg-rose-50">
             <div className="font-bold text-rose-900 mb-2">Generate a strong password now — free, browser-based, no account needed</div>
-            <Link href="/password-generator-online" className="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-colors">
+            <Link href="/tools/password-generator" className="inline-flex items-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-colors">
               🔐 Open Password Generator Free →
             </Link>
           </div>
@@ -215,10 +215,10 @@ export default function PostStrongPassword() {
             <h3 className="font-display font-bold text-lg text-surface-900 mb-4">Related Free Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/password-generator-online',    icon: '🔐', label: 'Password Generator',        desc: 'Generate strong random passwords free' },
-                { href: '/uuid-generator-online',        icon: '🔑', label: 'UUID Generator',            desc: 'Generate secure unique identifiers' },
-                { href: '/qr-code-generator-online',     icon: '📱', label: 'QR Code Generator',         desc: 'Create secure QR codes' },
-                { href: '/word-counter-online',          icon: '📝', label: 'Word Counter',              desc: 'Count characters in passwords and text' },
+                { href: '/tools/password-generator',    icon: '🔐', label: 'Password Generator',        desc: 'Generate strong random passwords free' },
+                { href: '/tools/uuid-generator',        icon: '🔑', label: 'UUID Generator',            desc: 'Generate secure unique identifiers' },
+                { href: '/tools/qr-code-generator',     icon: '📱', label: 'QR Code Generator',         desc: 'Create secure QR codes' },
+                { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter',              desc: 'Count characters in passwords and text' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-3 bg-white border border-surface-200 rounded-xl hover:border-rose-300 hover:bg-rose-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

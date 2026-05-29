@@ -297,8 +297,8 @@ export default function BMICalculatorPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/bmi-calculator',          icon: '⚖️', label: 'BMI Calculator',         desc: 'Body Mass Index with Indian standards',       active: true  },
-                { href: '/age-calculator-online',    icon: '🎂', label: 'Age Calculator',          desc: 'Exact age in years, months and days',          active: true  },
+                { href: '/tools/bmi-calculator',          icon: '⚖️', label: 'BMI Calculator',         desc: 'Body Mass Index with Indian standards',       active: true  },
+                { href: '/tools/age-calculator',    icon: '🎂', label: 'Age Calculator',          desc: 'Exact age in years, months and days',          active: true  },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className={`flex items-center gap-3 p-4 rounded-xl border transition-colors ${l.active ? 'bg-white border-surface-200 hover:border-brand-300 hover:bg-brand-50 group' : 'bg-surface-50 border-surface-100 pointer-events-none opacity-60'}`}>
@@ -359,10 +359,10 @@ export default function BMICalculatorPage() {
             <h2 id="related-tools" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/salary-calculator',    icon: '💰', label: 'Salary Calculator',  desc: 'Calculate in-hand salary from CTC'      },
-                { href: '/emi-calculator',        icon: '🧮', label: 'EMI Calculator',      desc: 'Plan your home or car loan repayment'   },
-                { href: '/gst-calculator',        icon: '🧾', label: 'GST Calculator',      desc: 'Calculate GST on any amount instantly'  },
-                { href: '/age-calculator-online', icon: '🎂', label: 'Age Calculator',      desc: 'Calculate exact age from date of birth' },
+                { href: '/tools/salary-calculator',    icon: '💰', label: 'Salary Calculator',  desc: 'Calculate in-hand salary from CTC'      },
+                { href: '/tools/emi-calculator',        icon: '🧮', label: 'EMI Calculator',      desc: 'Plan your home or car loan repayment'   },
+                { href: '/tools/gst-calculator',        icon: '🧾', label: 'GST Calculator',      desc: 'Calculate GST on any amount instantly'  },
+                { href: '/tools/age-calculator', icon: '🎂', label: 'Age Calculator',      desc: 'Calculate exact age from date of birth' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

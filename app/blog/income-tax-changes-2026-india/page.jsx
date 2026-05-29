@@ -144,7 +144,7 @@ export default function IncomeTaxChanges2026Page() {
                   ))}
                 </ol>
                 <div className="mt-5 pt-4 border-t border-surface-200">
-                  <Link href="/salary-calculator" className="block w-full text-center bg-brand-600 text-white font-semibold text-sm py-2.5 rounded-xl hover:bg-brand-700 transition-colors">
+                  <Link href="/tools/salary-calculator" className="block w-full text-center bg-brand-600 text-white font-semibold text-sm py-2.5 rounded-xl hover:bg-brand-700 transition-colors">
                     Calculate My Tax →
                   </Link>
                 </div>
@@ -427,7 +427,7 @@ export default function IncomeTaxChanges2026Page() {
                     <div className="font-bold text-white mb-1">Not Sure Which Regime Saves You More?</div>
                     <div className="text-brand-200 text-sm">Our salary calculator compares both regimes instantly with your exact numbers.</div>
                   </div>
-                  <Link href="/salary-calculator"
+                  <Link href="/tools/salary-calculator"
                     className="shrink-0 bg-white text-brand-700 font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors">
                     Calculate My Tax →
                   </Link>
@@ -559,7 +559,7 @@ export default function IncomeTaxChanges2026Page() {
                         and savings under both old and new regimes — based on your actual CTC and deductions.
                         Updated for all FY 2026-27 rules including the new tax act.
                       </p>
-                      <Link href="/salary-calculator"
+                      <Link href="/tools/salary-calculator"
                         className="inline-flex items-center gap-2 bg-brand-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl hover:bg-brand-700 transition-colors">
                         Calculate My In-Hand Salary →
                       </Link>
@@ -697,7 +697,7 @@ export default function IncomeTaxChanges2026Page() {
                     Our salary calculator is fully updated for the new Income Tax Act 2025 and all FY 2026-27 rules.
                     Enter your CTC → get exact in-hand salary, tax liability, and old vs new regime comparison in 10 seconds.
                   </p>
-                  <Link href="/salary-calculator"
+                  <Link href="/tools/salary-calculator"
                     className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors text-sm">
                     Free Salary Calculator →
                   </Link>

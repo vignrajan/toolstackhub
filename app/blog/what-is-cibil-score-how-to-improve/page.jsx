@@ -113,7 +113,7 @@ export default function PostCIBIL() {
               Every time you apply for a home loan, car loan, personal loan, or credit card, the lender
               checks your CIBIL score. A higher score means lower risk — which translates to lower interest
               rates, higher loan amounts, and faster approvals. Use our{' '}
-              <Link href="/home-loan-emi-calculator" className="text-brand-700 hover:underline font-medium">home loan EMI calculator</Link>{' '}
+              <Link href="/tools/home-loan-emi-calculator" className="text-brand-700 hover:underline font-medium">home loan EMI calculator</Link>{' '}
               to see exactly how much a higher CIBIL score saves you in interest.
             </p>
           </section>
@@ -233,9 +233,9 @@ export default function PostCIBIL() {
             </div>
             <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-sm text-emerald-800">
               <strong>The takeaway:</strong> Spending 12–18 months improving your CIBIL score from 680 to 750+ before applying for a home loan can save ₹9–15 lakh in total interest. Use our{' '}
-              <Link href="/home-loan-emi-calculator" className="text-emerald-700 font-bold hover:underline">home loan EMI calculator</Link>{' '}
+              <Link href="/tools/home-loan-emi-calculator" className="text-emerald-700 font-bold hover:underline">home loan EMI calculator</Link>{' '}
               and{' '}
-              <Link href="/emi-calculator" className="text-emerald-700 font-bold hover:underline">EMI calculator</Link>{' '}
+              <Link href="/tools/emi-calculator" className="text-emerald-700 font-bold hover:underline">EMI calculator</Link>{' '}
               to model exactly how much you save at different interest rates.
             </div>
           </section>
@@ -264,10 +264,10 @@ export default function PostCIBIL() {
             <h3 className="font-display font-bold text-lg text-surface-900 mb-4">Related Free Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/emi-calculator',           icon: '🧮', label: 'EMI Calculator',          desc: 'Calculate home loan EMI at different rates' },
-                { href: '/home-loan-emi-calculator', icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'See EMI savings from a better CIBIL score' },
-                { href: '/sip-calculator',           icon: '📈', label: 'SIP Calculator',           desc: 'Build wealth alongside debt repayment' },
-                { href: '/percentage-calculator-online',icon:'📊',label:'Percentage Calculator',    desc: 'Calculate credit utilization percentage' },
+                { href: '/tools/emi-calculator',           icon: '🧮', label: 'EMI Calculator',          desc: 'Calculate home loan EMI at different rates' },
+                { href: '/tools/home-loan-emi-calculator', icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'See EMI savings from a better CIBIL score' },
+                { href: '/tools/sip-calculator',           icon: '📈', label: 'SIP Calculator',           desc: 'Build wealth alongside debt repayment' },
+                { href: '/tools/percentage-calculator',icon:'📊',label:'Percentage Calculator',    desc: 'Calculate credit utilization percentage' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-3 bg-white border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

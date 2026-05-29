@@ -23,12 +23,12 @@ export const metadata = {
 };
 
 const IMAGE_TOOLS = [
-  { href: '/compress-image-online',       icon: '🗜️', name: 'Image Compressor',       desc: 'Reduce JPEG, PNG, and WebP file sizes by up to 90% without visible quality loss.' },
-  { href: '/resize-image-online',         icon: '📐', name: 'Image Resizer',           desc: 'Resize images to exact pixel dimensions with optional aspect ratio lock.' },
-  { href: '/jpg-to-png-converter-online', icon: '🔄', name: 'JPG to PNG Converter',   desc: 'Convert JPEG images to PNG format with transparency support.' },
-  { href: '/image-to-pdf-converter-online', icon: '📄', name: 'Image to PDF',          desc: 'Combine one or more images into a single PDF document instantly.' },
-  { href: '/color-picker-online',         icon: '🎨', name: 'Color Picker',           desc: 'Pick, convert, and copy color codes in HEX, RGB, and HSL formats.' },
-  { href: '/compress-image-online',       icon: '📸', name: 'WebP Compressor',        desc: 'Compress WebP files for faster web page loading.' },
+  { href: '/tools/image-compressor',       icon: '🗜️', name: 'Image Compressor',       desc: 'Reduce JPEG, PNG, and WebP file sizes by up to 90% without visible quality loss.' },
+  { href: '/tools/image-resizer',         icon: '📐', name: 'Image Resizer',           desc: 'Resize images to exact pixel dimensions with optional aspect ratio lock.' },
+  { href: '/tools/jpg-to-png', icon: '🔄', name: 'JPG to PNG Converter',   desc: 'Convert JPEG images to PNG format with transparency support.' },
+  { href: '/tools/image-to-pdf', icon: '📄', name: 'Image to PDF',          desc: 'Combine one or more images into a single PDF document instantly.' },
+  { href: '/tools/color-picker',         icon: '🎨', name: 'Color Picker',           desc: 'Pick, convert, and copy color codes in HEX, RGB, and HSL formats.' },
+  { href: '/tools/image-compressor',       icon: '📸', name: 'WebP Compressor',        desc: 'Compress WebP files for faster web page loading.' },
 ];
 
 const jsonLd = {
@@ -149,13 +149,13 @@ export default function ImageToolsCategoryPage() {
                 </p>
                 <p>
                   Our{' '}
-                  <Link href="/compress-image-online" className="text-amber-700 hover:underline font-medium">image compressor</Link>{' '}
+                  <Link href="/tools/image-compressor" className="text-amber-700 hover:underline font-medium">image compressor</Link>{' '}
                   uses the browser&apos;s native Canvas API to reduce file sizes by 40–90% without
                   installing anything. The{' '}
-                  <Link href="/resize-image-online" className="text-amber-700 hover:underline font-medium">image resizer</Link>{' '}
+                  <Link href="/tools/image-resizer" className="text-amber-700 hover:underline font-medium">image resizer</Link>{' '}
                   lets you set exact pixel dimensions with aspect ratio lock, perfect for social
                   media thumbnails and banner ads. The{' '}
-                  <Link href="/jpg-to-png-converter-online" className="text-amber-700 hover:underline font-medium">JPG to PNG converter</Link>{' '}
+                  <Link href="/tools/jpg-to-png" className="text-amber-700 hover:underline font-medium">JPG to PNG converter</Link>{' '}
                   handles format conversion while preserving image quality.
                 </p>
                 <p>

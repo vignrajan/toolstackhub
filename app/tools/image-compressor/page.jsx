@@ -23,7 +23,7 @@ export const metadata = {
     'compress image without losing quality',
   ],
   alternates: {
-    canonical: `${SITE_CONFIG.url}/compress-image-online`,
+    canonical: `${SITE_CONFIG.url}/tools/image-compressor`,
   },
   openGraph: {
     title: 'Image Compressor – Compress Images Online Free',

@@ -381,7 +381,7 @@ export default function LinkedGrowReviewBlog() {
                       LinkedGrow repurposes content from three sources that most competitors handle poorly or ignore: <strong className="text-surface-800">Reddit threads, YouTube videos, and any webpage</strong>. Feed it a video transcript, a popular Reddit thread, or a competitor's blog post, and it produces LinkedIn-native content in your voice. One existing piece of content becomes a week of posts without you writing anything from scratch.
                     </p>
                     <p className="text-surface-600 leading-relaxed mt-2">
-                      For the text-processing side of repurposing workflows — cleaning transcripts, counting words against LinkedIn's character limits — our <Link href="/word-counter" className="text-brand-600 hover:text-brand-700 font-medium">word counter</Link> and <Link href="/text-repeater" className="text-brand-600 hover:text-brand-700 font-medium">text tools</Link> handle the formatting prep before content goes into the tool.
+                      For the text-processing side of repurposing workflows — cleaning transcripts, counting words against LinkedIn's character limits — our <Link href="/word-counter" className="text-brand-600 hover:text-brand-700 font-medium">word counter</Link> and <Link href="/tools/text-repeater" className="text-brand-600 hover:text-brand-700 font-medium">text tools</Link> handle the formatting prep before content goes into the tool.
                     </p>
                   </div>
 
@@ -408,7 +408,7 @@ export default function LinkedGrowReviewBlog() {
                       On the top plan, LinkedGrow exposes a full REST API. This is rare in this category — most LinkedIn tools are closed systems that require you to use their dashboard. LinkedGrow's API means a developer can wire Claude Code, any LLM, or any external workflow (Notion, Make, Zapier) to generate content, push it into LinkedGrow, schedule it, and auto-publish to LinkedIn without touching the UI.
                     </p>
                     <p className="text-surface-600 leading-relaxed">
-                      For agencies or technical founders, this is the feature that makes LinkedIn a fully automated channel. When building API integrations, our <Link href="/json-formatter-online" className="text-brand-600 hover:text-brand-700 font-medium">JSON formatter</Link> is useful for debugging payloads and responses during setup.
+                      For agencies or technical founders, this is the feature that makes LinkedIn a fully automated channel. When building API integrations, our <Link href="/tools/json-formatter" className="text-brand-600 hover:text-brand-700 font-medium">JSON formatter</Link> is useful for debugging payloads and responses during setup.
                     </p>
                   </div>
 

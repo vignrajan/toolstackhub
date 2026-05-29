@@ -399,12 +399,12 @@ export default function TypingTestPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/word-counter-online',         icon: '📝', label: 'Word Counter Online',         desc: 'Count words, characters, and reading time in your typed text' },
-                { href: '/character-counter-online',    icon: '🔢', label: 'Character Counter Online',    desc: 'Count characters for platform-specific text limits' },
-                { href: '/pomodoro-timer-online',       icon: '🍅', label: 'Pomodoro Timer Online',       desc: 'Use structured 25-minute sessions to practice typing consistently' },
-                { href: '/stopwatch-online',            icon: '⏱️', label: 'Online Stopwatch',            desc: 'Time your typing practice sessions with millisecond precision' },
-                { href: '/ai-prompt-generator-online',  icon: '🤖', label: 'AI Prompt Generator',         desc: 'Generate text prompts to practice typing different content styles' },
-                { href: '/lorem-ipsum-generator',       icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate practice text passages for typing exercises' },
+                { href: '/tools/word-counter',         icon: '📝', label: 'Word Counter Online',         desc: 'Count words, characters, and reading time in your typed text' },
+                { href: '/tools/character-counter',    icon: '🔢', label: 'Character Counter Online',    desc: 'Count characters for platform-specific text limits' },
+                { href: '/tools/pomodoro-timer',       icon: '🍅', label: 'Pomodoro Timer Online',       desc: 'Use structured 25-minute sessions to practice typing consistently' },
+                { href: '/tools/stopwatch',            icon: '⏱️', label: 'Online Stopwatch',            desc: 'Time your typing practice sessions with millisecond precision' },
+                { href: '/tools/ai-prompt-generator',  icon: '🤖', label: 'AI Prompt Generator',         desc: 'Generate text prompts to practice typing different content styles' },
+                { href: '/tools/lorem-ipsum-generator',       icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate practice text passages for typing exercises' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors group">

@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format JSON to extract data with regex' },
-              { href: '/url-encoder-online', label: 'URL Encoder Online', desc: 'Encode URL patterns for use in regex' },
-              { href: '/css-minifier-online', label: 'CSS Minifier Online', desc: 'Minify CSS after regex find/replace' },
-              { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode data found via regex' },
+  { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format JSON to extract data with regex' },
+              { href: '/tools/url-encoder', label: 'URL Encoder Online', desc: 'Encode URL patterns for use in regex' },
+              { href: '/tools/css-minifier', label: 'CSS Minifier Online', desc: 'Minify CSS after regex find/replace' },
+              { href: '/tools/base64-encoder', label: 'Base64 Encoder Online', desc: 'Encode data found via regex' },
 ];
 
 const variantLinks = [

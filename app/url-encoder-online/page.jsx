@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode/decode Base64 strings' },
-              { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format JSON with URL-encoded values' },
-              { href: '/meta-tag-generator-online', label: 'Meta Tag Generator', desc: 'Generate canonical URLs properly' },
-              { href: '/regex-tester-online', label: 'Regex Tester Online', desc: 'Test URL patterns with regex' },
+  { href: '/tools/base64-encoder', label: 'Base64 Encoder Online', desc: 'Encode/decode Base64 strings' },
+              { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format JSON with URL-encoded values' },
+              { href: '/tools/meta-tag-generator', label: 'Meta Tag Generator', desc: 'Generate canonical URLs properly' },
+              { href: '/tools/regex-tester', label: 'Regex Tester Online', desc: 'Test URL patterns with regex' },
 ];
 
 const variantLinks = [

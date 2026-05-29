@@ -182,12 +182,12 @@ export default function JsonBeautifierPage() {
             <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Related JSON Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Full-featured format, validate & minify tool' },
+                { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Full-featured format, validate & minify tool' },
                 { href: '/json-pretty-print', label: 'JSON Pretty Print', desc: 'Pretty-print with custom indentation options' },
                 { href: '/json-validator-online', label: 'JSON Validator Online', desc: 'Validate JSON syntax and find errors' },
                 { href: '/json-minifier-online', label: 'JSON Minifier Online', desc: 'Compress JSON for production use' },
                 { href: '/json-viewer-online', label: 'JSON Viewer Online', desc: 'Explore JSON tree structure visually' },
-                { href: '/base64-encoder-online', label: 'Base64 Encoder', desc: 'Encode/decode Base64 strings in JSON' },
+                { href: '/tools/base64-encoder', label: 'Base64 Encoder', desc: 'Encode/decode Base64 strings in JSON' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex flex-col gap-1 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors">

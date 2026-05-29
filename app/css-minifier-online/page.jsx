@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/html-formatter-online', label: 'HTML Formatter Online', desc: 'Beautify and minify HTML files' },
-              { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format and minify JSON data' },
-              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Get color codes to use in CSS' },
-              { href: '/regex-tester-online', label: 'Regex Tester Online', desc: 'Test CSS selector patterns' },
+  { href: '/tools/html-formatter', label: 'HTML Formatter Online', desc: 'Beautify and minify HTML files' },
+              { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format and minify JSON data' },
+              { href: '/tools/color-picker', label: 'Color Picker Online', desc: 'Get color codes to use in CSS' },
+              { href: '/tools/regex-tester', label: 'Regex Tester Online', desc: 'Test CSS selector patterns' },
 ];
 
 const variantLinks = [

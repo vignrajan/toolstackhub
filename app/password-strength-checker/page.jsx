@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/password-generator-online', label: 'Password Generator Online', desc: 'Generate a cryptographically strong password' },
-              { href: '/uuid-generator-online', label: 'UUID Generator Online', desc: 'Generate unique identifiers as tokens' },
-              { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode passwords for transmission' },
-              { href: '/random-number-generator', label: 'Random Number Generator', desc: 'Generate random password components' },
+  { href: '/tools/password-generator', label: 'Password Generator Online', desc: 'Generate a cryptographically strong password' },
+              { href: '/tools/uuid-generator', label: 'UUID Generator Online', desc: 'Generate unique identifiers as tokens' },
+              { href: '/tools/base64-encoder', label: 'Base64 Encoder Online', desc: 'Encode passwords for transmission' },
+              { href: '/tools/random-number-generator', label: 'Random Number Generator', desc: 'Generate random password components' },
 ];
 
 const variantLinks = [

@@ -137,7 +137,7 @@ export default function GSTCalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">GST Calculator</li>
               </ol>
@@ -368,10 +368,10 @@ export default function GSTCalculatorPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/invoice-generator',            icon: '🧾', label: 'Invoice Generator',           desc: 'Create GST invoices with auto tax calculation' },
-                { href: '/emi-calculator',               icon: '🧮', label: 'EMI Calculator',              desc: 'Calculate loan EMI for home, car, personal loans' },
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',       desc: 'Calculate percentages, discounts, and margins' },
-                { href: '/sip-calculator',               icon: '📈', label: 'SIP Calculator',              desc: 'Calculate mutual fund SIP returns' },
+                { href: '/tools/invoice-generator',            icon: '🧾', label: 'Invoice Generator',           desc: 'Create GST invoices with auto tax calculation' },
+                { href: '/tools/emi-calculator',               icon: '🧮', label: 'EMI Calculator',              desc: 'Calculate loan EMI for home, car, personal loans' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',       desc: 'Calculate percentages, discounts, and margins' },
+                { href: '/tools/sip-calculator',               icon: '📈', label: 'SIP Calculator',              desc: 'Calculate mutual fund SIP returns' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

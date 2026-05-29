@@ -639,7 +639,7 @@ export default function NumberToWordsPage() {
                 className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
                 ↑ Convert a Number Now
               </a>
-              <Link href="/invoice-generator"
+              <Link href="/tools/invoice-generator"
                 className="inline-flex items-center gap-2 bg-brand-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-brand-400 transition-colors border border-brand-400">
                 🧾 Create GST Invoice Free
               </Link>

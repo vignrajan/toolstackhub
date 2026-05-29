@@ -88,7 +88,7 @@ export default function SIPCalculatorPage() {
               <ol className="flex items-center gap-2 text-sm text-surface-500">
                 <li><Link href="/" className="hover:text-brand-600">Home</Link></li>
                 <li><span className="text-surface-300">/</span></li>
-                <li><Link href="/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
+                <li><Link href="/tools/emi-calculator" className="hover:text-brand-600 text-brand-600">Calculators</Link></li>
                 <li><span className="text-surface-300">/</span></li>
                 <li className="text-surface-800 font-medium">SIP Calculator</li>
               </ol>
@@ -144,7 +144,7 @@ export default function SIPCalculatorPage() {
                 on just ₹12 lakh invested.
               </p>
               <p>
-                Use our <Link href="/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link> alongside this SIP calculator to plan your finances — determine how much goes toward loan repayment and how much you can invest in SIP from your monthly income. The <Link href="/percentage-calculator-online" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> can help you figure out what percentage of your salary to invest.
+                Use our <Link href="/tools/emi-calculator" className="text-brand-700 hover:underline font-medium">EMI calculator</Link> alongside this SIP calculator to plan your finances — determine how much goes toward loan repayment and how much you can invest in SIP from your monthly income. The <Link href="/tools/percentage-calculator" className="text-brand-700 hover:underline font-medium">percentage calculator</Link> can help you figure out what percentage of your salary to invest.
               </p>
             </div>
           </section>
@@ -369,10 +369,10 @@ export default function SIPCalculatorPage() {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Financial Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/emi-calculator',               icon: '🧮', label: 'EMI Calculator',           desc: 'Calculate loan EMI alongside your SIP investments' },
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',    desc: 'Calculate what % of salary to invest in SIP' },
-                { href: '/age-calculator-online',        icon: '🎂', label: 'Age Calculator',           desc: 'Calculate years to your investment goal date' },
-                { href: '/home-loan-emi-calculator',     icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'Balance home loan EMI vs SIP investments' },
+                { href: '/tools/emi-calculator',               icon: '🧮', label: 'EMI Calculator',           desc: 'Calculate loan EMI alongside your SIP investments' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',    desc: 'Calculate what % of salary to invest in SIP' },
+                { href: '/tools/age-calculator',        icon: '🎂', label: 'Age Calculator',           desc: 'Calculate years to your investment goal date' },
+                { href: '/tools/home-loan-emi-calculator',     icon: '🏠', label: 'Home Loan EMI Calculator', desc: 'Balance home loan EMI vs SIP investments' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-indigo-300 hover:bg-indigo-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

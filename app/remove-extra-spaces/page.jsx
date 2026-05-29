@@ -273,11 +273,11 @@ export default function RemoveExtraSpacesPage() {
               </p>
               <p>
                 For the most complete text cleanup, combine this tool with the{' '}
-                <Link href="/remove-empty-lines" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-empty-lines" className="text-emerald-700 hover:underline font-medium">
                   remove empty lines tool
                 </Link>{' '}
                 (enable both toggles simultaneously) and then run the output through the{' '}
-                <Link href="/remove-duplicate-lines-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-duplicate-lines" className="text-emerald-700 hover:underline font-medium">
                   remove duplicate lines tool
                 </Link>{' '}
                 for a fully normalized, deduplicated, single-spaced result ready for
@@ -418,19 +418,19 @@ multiple   lines.`}</pre>
               </p>
               <p>
                 Use our{' '}
-                <Link href="/word-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/word-counter" className="text-emerald-700 hover:underline font-medium">
                   word counter
                 </Link>{' '}
                 to verify word count after cleaning, or our{' '}
-                <Link href="/character-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/character-counter" className="text-emerald-700 hover:underline font-medium">
                   character counter
                 </Link>{' '}
                 to confirm how much whitespace was removed. Pair with the{' '}
-                <Link href="/remove-empty-lines" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-empty-lines" className="text-emerald-700 hover:underline font-medium">
                   remove empty lines tool
                 </Link>{' '}
                 and the{' '}
-                <Link href="/remove-duplicate-lines-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/remove-duplicate-lines" className="text-emerald-700 hover:underline font-medium">
                   remove duplicate lines tool
                 </Link>{' '}
                 for a complete text normalization pipeline.
@@ -470,9 +470,9 @@ multiple   lines.`}</pre>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-empty-lines',           label: 'Remove Empty Lines',             desc: 'Delete blank lines alongside normalizing spaces' },
-                { href: '/remove-line-breaks',           label: 'Remove Line Breaks',             desc: 'Remove all newline characters from text' },
-                { href: '/remove-duplicate-lines-online',label: 'Remove Duplicate Lines',         desc: 'Deduplicate after normalizing whitespace' },
+                { href: '/tools/remove-empty-lines',           label: 'Remove Empty Lines',             desc: 'Delete blank lines alongside normalizing spaces' },
+                { href: '/tools/remove-line-breaks',           label: 'Remove Line Breaks',             desc: 'Remove all newline characters from text' },
+                { href: '/tools/remove-duplicate-lines',label: 'Remove Duplicate Lines',         desc: 'Deduplicate after normalizing whitespace' },
               ].map(v => (
                 <Link key={v.href} href={v.href}
                   className="flex flex-col gap-1 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group">
@@ -490,12 +490,12 @@ multiple   lines.`}</pre>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/remove-duplicate-lines-online', icon: '🧹', label: 'Remove Duplicate Lines',   desc: 'Remove repeated lines from any list or text' },
-                { href: '/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks',        desc: 'Remove all newline characters from text' },
-                { href: '/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines',        desc: 'Delete blank lines from any text or list' },
-                { href: '/word-counter-online',           icon: '📝', label: 'Word Counter Online',       desc: 'Measure word count after cleaning whitespace' },
-                { href: '/character-counter-online',      icon: '🔢', label: 'Character Counter Online',  desc: 'Count characters after removing extra spaces' },
-                { href: '/case-converter-online',         icon: '🔡', label: 'Case Converter Online',     desc: 'Normalize text case as part of full cleanup' },
+                { href: '/tools/remove-duplicate-lines', icon: '🧹', label: 'Remove Duplicate Lines',   desc: 'Remove repeated lines from any list or text' },
+                { href: '/tools/remove-line-breaks',            icon: '✂️', label: 'Remove Line Breaks',        desc: 'Remove all newline characters from text' },
+                { href: '/tools/remove-empty-lines',            icon: '📄', label: 'Remove Empty Lines',        desc: 'Delete blank lines from any text or list' },
+                { href: '/tools/word-counter',           icon: '📝', label: 'Word Counter Online',       desc: 'Measure word count after cleaning whitespace' },
+                { href: '/tools/character-counter',      icon: '🔢', label: 'Character Counter Online',  desc: 'Count characters after removing extra spaces' },
+                { href: '/tools/case-converter',         icon: '🔡', label: 'Case Converter Online',     desc: 'Normalize text case as part of full cleanup' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-colors group">

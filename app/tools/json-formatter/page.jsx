@@ -23,7 +23,7 @@ export const metadata = {
     'json minifier online',
   ],
   alternates: {
-    canonical: `${SITE_CONFIG.url}/json-formatter-online`,
+    canonical: `${SITE_CONFIG.url}/tools/json-formatter`,
   },
   openGraph: {
     title: 'JSON Formatter Online – Free & Fast JSON Beautifier',
@@ -640,42 +640,42 @@ export default function JsonFormatterPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
               {[
                 {
-                  href: '/base64-encoder-online',
+                  href: '/tools/base64-encoder',
                   icon: '🔐',
                   name: 'Base64 Encoder / Decoder',
                   desc: 'Encode and decode Base64 strings found in JSON payloads',
                   color: 'brand',
                 },
                 {
-                  href: '/url-encoder-online',
+                  href: '/tools/url-encoder',
                   icon: '🔗',
                   name: 'URL Encoder / Decoder',
                   desc: 'Encode and decode URL-encoded values in JSON strings',
                   color: 'violet',
                 },
                 {
-                  href: '/uuid-generator-online',
+                  href: '/tools/uuid-generator',
                   icon: '🆔',
                   name: 'UUID Generator',
                   desc: 'Generate UUID v4 identifiers for JSON objects and APIs',
                   color: 'emerald',
                 },
                 {
-                  href: '/unix-timestamp-converter-online',
+                  href: '/tools/timestamp-converter',
                   icon: '⏱️',
                   name: 'Timestamp Converter',
                   desc: 'Convert Unix timestamps commonly found in JSON data',
                   color: 'amber',
                 },
                 {
-                  href: '/regex-tester-online',
+                  href: '/tools/regex-tester',
                   icon: '🔎',
                   name: 'Regex Tester',
                   desc: 'Test regular expressions to match patterns in JSON strings',
                   color: 'blue',
                 },
                 {
-                  href: '/binary-to-decimal-converter-online',
+                  href: '/tools/binary-converter',
                   icon: '💾',
                   name: 'Binary Converter',
                   desc: 'Convert decimal and hex values found in JSON numeric fields',

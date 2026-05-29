@@ -23,7 +23,7 @@ export const metadata = {
     'snake case converter',
   ],
   alternates: {
-    canonical: `${SITE_CONFIG.url}/case-converter-online`,
+    canonical: `${SITE_CONFIG.url}/tools/case-converter`,
   },
   openGraph: {
     title: 'Case Converter – Free Online Text Case Changer',

@@ -106,8 +106,8 @@ const BANK_RATES = [
 
 // ── Programmatic variant pages ────────────────────────────────
 const VARIANTS = [
-  { href: '/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'     },
-  { href: '/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'      },
+  { href: '/tools/home-loan-emi-calculator',     label: 'Home Loan EMI Calculator'     },
+  { href: '/tools/car-loan-emi-calculator',      label: 'Car Loan EMI Calculator'      },
 ];
 
 // ── Structured data ───────────────────────────────────────────
@@ -269,12 +269,12 @@ export default function EMICalculatorPage() {
                 Our EMI calculator applies this exact formula — the same one used by SBI,
                 HDFC, ICICI, and every RBI-regulated lender. The results are identical to
                 what your bank would show you. You can also use our{' '}
-                <Link href="/percentage-calculator-online" className="text-brand-700 hover:underline font-medium">
+                <Link href="/tools/percentage-calculator" className="text-brand-700 hover:underline font-medium">
                   percentage calculator
                 </Link>{' '}
                 to calculate what percentage of your income should go toward loan repayment,
                 or the{' '}
-                <Link href="/age-calculator-online" className="text-brand-700 hover:underline font-medium">
+                <Link href="/tools/age-calculator" className="text-brand-700 hover:underline font-medium">
                   age calculator
                 </Link>{' '}
                 to plan your loan tenure relative to your retirement age.
@@ -484,12 +484,12 @@ export default function EMICalculatorPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',   desc: 'Calculate loan-to-income ratio and down payment percentages' },
-                { href: '/age-calculator-online',        icon: '🎂', label: 'Age Calculator',          desc: 'Plan loan tenure relative to your retirement age' },
-                { href: '/random-number-generator',      icon: '🎲', label: 'Random Number Generator', desc: 'Generate random numbers for financial simulations' },
-                { href: '/word-counter-online',          icon: '📝', label: 'Word Counter Online',      desc: 'Count words in loan documents and agreements' },
-                { href: '/countdown-timer-online',       icon: '⏳', label: 'Countdown Timer',         desc: 'Count down to your loan payoff date' },
-                { href: '/qr-code-generator-online',     icon: '📱', label: 'QR Code Generator',       desc: 'Create QR codes for payment UPI links' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',   desc: 'Calculate loan-to-income ratio and down payment percentages' },
+                { href: '/tools/age-calculator',        icon: '🎂', label: 'Age Calculator',          desc: 'Plan loan tenure relative to your retirement age' },
+                { href: '/tools/random-number-generator',      icon: '🎲', label: 'Random Number Generator', desc: 'Generate random numbers for financial simulations' },
+                { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter Online',      desc: 'Count words in loan documents and agreements' },
+                { href: '/tools/countdown-timer',       icon: '⏳', label: 'Countdown Timer',         desc: 'Count down to your loan payoff date' },
+                { href: '/tools/qr-code-generator',     icon: '📱', label: 'QR Code Generator',       desc: 'Create QR codes for payment UPI links' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

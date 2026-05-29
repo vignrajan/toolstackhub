@@ -222,7 +222,7 @@ export default function PostTypingSpeed() {
                       No signup. Instant results with a benchmark comparison.
                     </p>
                     <div className="flex flex-wrap gap-3 items-center">
-                      <Link href="/typing-speed-test-online"
+                      <Link href="/tools/typing-speed-test"
                         className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                         Take the Free Typing Test →
                       </Link>
@@ -255,7 +255,7 @@ export default function PostTypingSpeed() {
                     body: (
                       <p className="text-surface-600 text-sm leading-relaxed">
                         Go to{' '}
-                        <Link href="/typing-speed-test-online" className="text-brand-700 hover:underline font-medium">
+                        <Link href="/tools/typing-speed-test" className="text-brand-700 hover:underline font-medium">
                           toolstackhub.in/typing-speed-test-online
                         </Link>{' '}
                         in any browser on any device. No account, extension, or installation required.
@@ -586,12 +586,12 @@ export default function PostTypingSpeed() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/typing-speed-test-online',                  icon: '⌨️', label: 'Typing Speed Test',          desc: 'Take the free WPM test covered in this guide' },
-                  { href: '/word-counter-online',          icon: '📝', label: 'Word Counter Online',         desc: 'Count words and measure reading time in real time' },
-                  { href: '/character-counter-online',     icon: '🔢', label: 'Character Counter Online',    desc: 'Count characters for platform limits and forms' },
-                  { href: '/pomodoro-timer-online',        icon: '🍅', label: 'Pomodoro Timer Online',       desc: 'Structure your typing practice in 25-min sessions' },
-                  { href: '/lorem-ipsum-generator',        icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate custom text passages for typing practice' },
-                  { href: '/countdown-timer-online',       icon: '⏳', label: 'Countdown Timer Online',      desc: 'Set timed typing practice sessions with an alarm' },
+                  { href: '/tools/typing-speed-test',                  icon: '⌨️', label: 'Typing Speed Test',          desc: 'Take the free WPM test covered in this guide' },
+                  { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter Online',         desc: 'Count words and measure reading time in real time' },
+                  { href: '/tools/character-counter',     icon: '🔢', label: 'Character Counter Online',    desc: 'Count characters for platform limits and forms' },
+                  { href: '/tools/pomodoro-timer',        icon: '🍅', label: 'Pomodoro Timer Online',       desc: 'Structure your typing practice in 25-min sessions' },
+                  { href: '/tools/lorem-ipsum-generator',        icon: '📄', label: 'Lorem Ipsum Generator',       desc: 'Generate custom text passages for typing practice' },
+                  { href: '/tools/countdown-timer',       icon: '⏳', label: 'Countdown Timer Online',      desc: 'Set timed typing practice sessions with an alarm' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
@@ -641,7 +641,7 @@ export default function PostTypingSpeed() {
                   accuracy, and a benchmark comparison in under 2 minutes. No signup,
                   no ads during the test, instant results.
                 </p>
-                <Link href="/typing-speed-test-online"
+                <Link href="/tools/typing-speed-test"
                   className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
                   Take the Free WPM Test Now →
                 </Link>

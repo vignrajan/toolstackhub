@@ -155,11 +155,11 @@ export default function PostInHandSalary() {
               This guide walks through every component of an Indian salary slip, explains
               what gets deducted and why, and gives you a free interactive calculator to
               see your exact numbers instantly. Use our{' '}
-              <Link href="/emi-calculator" className="text-brand-700 hover:underline font-medium">
+              <Link href="/tools/emi-calculator" className="text-brand-700 hover:underline font-medium">
                 EMI calculator
               </Link>{' '}
               to check what home loan your in-hand salary can comfortably support, and the{' '}
-              <Link href="/sip-calculator" className="text-brand-700 hover:underline font-medium">
+              <Link href="/tools/sip-calculator" className="text-brand-700 hover:underline font-medium">
                 SIP calculator
               </Link>{' '}
               to plan how to invest your monthly savings.
@@ -196,7 +196,7 @@ export default function PostInHandSalary() {
                 <div className="font-semibold text-blue-900 text-sm">Want more options? Try the full calculator page</div>
                 <div className="text-xs text-blue-700 mt-0.5">State-wise professional tax, HRA exemption, home loan deduction, and 25+ salary variants</div>
               </div>
-              <Link href="/salary-calculator"
+              <Link href="/tools/salary-calculator"
                 className="shrink-0 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition-colors">
                 Full Salary Calculator →
               </Link>
@@ -450,12 +450,12 @@ export default function PostInHandSalary() {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/salary-calculator',        icon: '💰', label: 'Salary & Gratuity Calculator',  desc: 'Full calculator with old/new regime, HRA, PF, gratuity' },
-                { href: '/emi-calculator',           icon: '🧮', label: 'EMI Calculator',               desc: 'Calculate home loan affordable on your in-hand salary' },
-                { href: '/sip-calculator',           icon: '📈', label: 'SIP Calculator',               desc: 'Grow your monthly savings through mutual fund SIPs' },
-                { href: '/gst-calculator',           icon: '🧾', label: 'GST Calculator',               desc: 'Calculate GST for freelance and business income' },
-                { href: '/home-loan-emi-calculator', icon: '🏠', label: 'Home Loan EMI Calculator',     desc: 'Plan a home loan based on your take-home salary' },
-                { href: '/percentage-calculator-online',icon:'📊',label:'Percentage Calculator',        desc: 'Calculate salary hike % and deduction amounts' },
+                { href: '/tools/salary-calculator',        icon: '💰', label: 'Salary & Gratuity Calculator',  desc: 'Full calculator with old/new regime, HRA, PF, gratuity' },
+                { href: '/tools/emi-calculator',           icon: '🧮', label: 'EMI Calculator',               desc: 'Calculate home loan affordable on your in-hand salary' },
+                { href: '/tools/sip-calculator',           icon: '📈', label: 'SIP Calculator',               desc: 'Grow your monthly savings through mutual fund SIPs' },
+                { href: '/tools/gst-calculator',           icon: '🧾', label: 'GST Calculator',               desc: 'Calculate GST for freelance and business income' },
+                { href: '/tools/home-loan-emi-calculator', icon: '🏠', label: 'Home Loan EMI Calculator',     desc: 'Plan a home loan based on your take-home salary' },
+                { href: '/tools/percentage-calculator',icon:'📊',label:'Percentage Calculator',        desc: 'Calculate salary hike % and deduction amounts' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-3 bg-white border border-surface-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-colors group">

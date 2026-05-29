@@ -290,10 +290,10 @@ export default function PostWordToPDF() {
             <h3 className="font-display font-bold text-lg text-surface-900 mb-4">Related Free Document Tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/invoice-generator',             icon: '🧾', label: 'Invoice Generator',    desc: 'Create PDF invoices free — no upload' },
-                { href: '/compress-image-online',         icon: '🗜️', label: 'Image Compressor',     desc: 'Compress images before adding to documents' },
-                { href: '/word-counter-online',           icon: '📝', label: 'Word Counter',          desc: 'Count words and pages in your document' },
-                { href: '/remove-duplicate-lines-online', icon: '🧹', label: 'Remove Duplicate Lines',desc: 'Clean up text before creating documents' },
+                { href: '/tools/invoice-generator',             icon: '🧾', label: 'Invoice Generator',    desc: 'Create PDF invoices free — no upload' },
+                { href: '/tools/image-compressor',         icon: '🗜️', label: 'Image Compressor',     desc: 'Compress images before adding to documents' },
+                { href: '/tools/word-counter',           icon: '📝', label: 'Word Counter',          desc: 'Count words and pages in your document' },
+                { href: '/tools/remove-duplicate-lines', icon: '🧹', label: 'Remove Duplicate Lines',desc: 'Clean up text before creating documents' },
               ].map(l => (
                 <Link key={l.href} href={l.href} className="flex items-center gap-3 p-3 bg-white border border-surface-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group">
                   <span className="text-xl">{l.icon}</span>

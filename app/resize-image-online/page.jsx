@@ -70,10 +70,10 @@ const presets = [
 ];
 
 const relatedLinks = [
-  { href: '/compress-image-online', label: 'Compress Image Online', desc: 'Reduce image file size by up to 90%' },
-              { href: '/jpg-to-png-converter-online', label: 'JPG to PNG Converter', desc: 'Convert JPEG to lossless PNG' },
-              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Get HEX, RGB, HSL color codes' },
-              { href: '/screen-resolution-checker', label: 'Screen Resolution Checker', desc: 'Check your display dimensions' },
+  { href: '/tools/image-compressor', label: 'Compress Image Online', desc: 'Reduce image file size by up to 90%' },
+              { href: '/tools/jpg-to-png', label: 'JPG to PNG Converter', desc: 'Convert JPEG to lossless PNG' },
+              { href: '/tools/color-picker', label: 'Color Picker Online', desc: 'Get HEX, RGB, HSL color codes' },
+              { href: '/tools/screen-resolution', label: 'Screen Resolution Checker', desc: 'Check your display dimensions' },
 ];
 
 const variantLinks = [

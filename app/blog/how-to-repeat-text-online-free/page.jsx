@@ -210,7 +210,7 @@ export default function PostTextRepeater() {
                       characters. Everything runs in your browser.
                     </p>
                     <div className="flex flex-wrap gap-3 items-center">
-                      <Link href="/text-repeater"
+                      <Link href="/tools/text-repeater"
                         className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                         Use Text Repeater Free →
                       </Link>
@@ -240,7 +240,7 @@ export default function PostTextRepeater() {
                     title: 'Open the Free Text Repeater',
                     body: <p className="text-surface-600 text-sm leading-relaxed">
                       Go to{' '}
-                      <Link href="/text-repeater" className="text-brand-700 hover:underline font-medium">
+                      <Link href="/tools/text-repeater" className="text-brand-700 hover:underline font-medium">
                         toolstackhub.in/text-repeater
                       </Link>{' '}
                       in any browser on any device. No account, no extension, no installation required.
@@ -568,12 +568,12 @@ export default function PostTextRepeater() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/text-repeater',                icon: '🔁', label: 'Text Repeater Tool',           desc: 'The free tool covered in this guide' },
-                  { href: '/word-counter-online',          icon: '📝', label: 'Word Counter Online',           desc: 'Count words and lines in repeated output' },
-                  { href: '/character-counter-online',     icon: '🔢', label: 'Character Counter Online',      desc: 'Check character count against limits' },
-                  { href: '/remove-duplicate-lines-online',icon: '🧹', label: 'Remove Duplicate Lines',        desc: 'Remove repeated lines from your output' },
-                  { href: '/lorem-ipsum-generator',        icon: '📄', label: 'Lorem Ipsum Generator',         desc: 'Generate placeholder text of any length' },
-                  { href: '/case-converter-online',        icon: '🔡', label: 'Case Converter Online',         desc: 'Change case of your repeated text' },
+                  { href: '/tools/text-repeater',                icon: '🔁', label: 'Text Repeater Tool',           desc: 'The free tool covered in this guide' },
+                  { href: '/tools/word-counter',          icon: '📝', label: 'Word Counter Online',           desc: 'Count words and lines in repeated output' },
+                  { href: '/tools/character-counter',     icon: '🔢', label: 'Character Counter Online',      desc: 'Check character count against limits' },
+                  { href: '/tools/remove-duplicate-lines',icon: '🧹', label: 'Remove Duplicate Lines',        desc: 'Remove repeated lines from your output' },
+                  { href: '/tools/lorem-ipsum-generator',        icon: '📄', label: 'Lorem Ipsum Generator',         desc: 'Generate placeholder text of any length' },
+                  { href: '/tools/case-converter',        icon: '🔡', label: 'Case Converter Online',         desc: 'Change case of your repeated text' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">
@@ -622,7 +622,7 @@ export default function PostTextRepeater() {
                   count and separator, and copy the output in under 5 seconds.
                   No signup, no ads during use, everything stays on your device.
                 </p>
-                <Link href="/text-repeater"
+                <Link href="/tools/text-repeater"
                   className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
                   Repeat Text Now — Free →
                 </Link>

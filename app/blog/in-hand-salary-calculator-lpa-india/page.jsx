@@ -252,7 +252,7 @@ export default function InHandSalaryBlogPage() {
                   ))}
                 </ol>
                 <div className="mt-5 pt-4 border-t border-surface-200">
-                  <Link href="/salary-calculator" className="block w-full text-center bg-brand-600 text-white font-semibold text-sm py-2.5 rounded-xl hover:bg-brand-700 transition-colors">
+                  <Link href="/tools/salary-calculator" className="block w-full text-center bg-brand-600 text-white font-semibold text-sm py-2.5 rounded-xl hover:bg-brand-700 transition-colors">
                     Calculate Exact Salary →
                   </Link>
                 </div>
@@ -415,7 +415,7 @@ export default function InHandSalaryBlogPage() {
                 </div>
                 <p className="text-xs text-surface-400 mt-2">
                   * Approximate. Actual figures depend on your exact salary structure, city (professional tax varies), employer PF policy, and variable pay.{' '}
-                  <Link href="/salary-calculator" className="text-brand-600 hover:underline">Use our calculator for exact numbers.</Link>
+                  <Link href="/tools/salary-calculator" className="text-brand-600 hover:underline">Use our calculator for exact numbers.</Link>
                 </p>
               </section>
 
@@ -524,7 +524,7 @@ export default function InHandSalaryBlogPage() {
                   {/* CTA */}
                   <div className="mt-4 p-4 bg-gradient-to-r from-brand-600 to-brand-700 rounded-xl flex items-center justify-between flex-wrap gap-3">
                     <div className="text-white text-sm">Get your exact in-hand salary based on your actual salary structure</div>
-                    <Link href="/salary-calculator" className="bg-white text-brand-700 font-bold text-sm px-4 py-2 rounded-lg hover:bg-brand-50 transition-colors shrink-0">
+                    <Link href="/tools/salary-calculator" className="bg-white text-brand-700 font-bold text-sm px-4 py-2 rounded-lg hover:bg-brand-50 transition-colors shrink-0">
                       Use Salary Calculator →
                     </Link>
                   </div>

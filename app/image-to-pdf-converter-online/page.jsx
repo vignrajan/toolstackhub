@@ -417,10 +417,10 @@ export default function ImageToPdfPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/compress-image-online',       icon: '🗜️', label: 'Compress Image Online',       desc: 'Reduce image file size by up to 90% without losing quality' },
-                { href: '/resize-image-online',         icon: '📐', label: 'Resize Image Online',         desc: 'Resize images to any pixel dimension with aspect ratio lock' },
-                { href: '/jpg-to-png-converter-online', icon: '🔄', label: 'JPG to PNG Converter',        desc: 'Convert JPEG images to lossless PNG format instantly' },
-                { href: '/color-picker-online',         icon: '🎨', label: 'Color Picker Online',         desc: 'Get HEX, RGB, HSL, and CMYK values from any color' },
+                { href: '/tools/image-compressor',       icon: '🗜️', label: 'Compress Image Online',       desc: 'Reduce image file size by up to 90% without losing quality' },
+                { href: '/tools/image-resizer',         icon: '📐', label: 'Resize Image Online',         desc: 'Resize images to any pixel dimension with aspect ratio lock' },
+                { href: '/tools/jpg-to-png', icon: '🔄', label: 'JPG to PNG Converter',        desc: 'Convert JPEG images to lossless PNG format instantly' },
+                { href: '/tools/color-picker',         icon: '🎨', label: 'Color Picker Online',         desc: 'Get HEX, RGB, HSL, and CMYK values from any color' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-amber-200 hover:bg-amber-50 transition-colors group">

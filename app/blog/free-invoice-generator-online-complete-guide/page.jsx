@@ -184,7 +184,7 @@ export default function PostInvoiceGenerator() {
                     <span key={t} className="flex items-center gap-1">{t}</span>
                   ))}
                 </div>
-                <Link href="/invoice-generator"
+                <Link href="/tools/invoice-generator"
                   className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-6 py-3 rounded-xl transition-colors">
                   🧾 Use Free Invoice Generator Now →
                 </Link>
@@ -263,7 +263,7 @@ export default function PostInvoiceGenerator() {
               </h2>
               <p className="text-surface-600 leading-relaxed mb-6">
                 Using the{' '}
-                <Link href="/invoice-generator" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/invoice-generator" className="text-emerald-700 hover:underline font-medium">
                   ToolStackHub free invoice generator
                 </Link>
                 , here is the exact process:
@@ -322,7 +322,7 @@ export default function PostInvoiceGenerator() {
                   <div className="font-bold text-emerald-900">Ready to create your first invoice?</div>
                   <div className="text-sm text-emerald-700 mt-0.5">Free, no signup, no watermark. Takes 60 seconds.</div>
                 </div>
-                <Link href="/invoice-generator"
+                <Link href="/tools/invoice-generator"
                   className="shrink-0 inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-colors">
                   Create Invoice Free →
                 </Link>
@@ -558,12 +558,12 @@ export default function PostInvoiceGenerator() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/invoice-generator',         icon: '🧾', label: 'Invoice Generator',          desc: 'Create professional invoices free' },
-                  { href: '/emi-calculator',            icon: '🧮', label: 'EMI Calculator',             desc: 'Plan installment payment schedules' },
-                  { href: '/percentage-calculator-online',icon: '📊',label: 'Percentage Calculator',     desc: 'Calculate GST, discount percentages' },
-                  { href: '/qr-code-generator-online',  icon: '📱', label: 'QR Code Generator',          desc: 'Generate UPI payment QR codes' },
-                  { href: '/compress-image-online',     icon: '🗜️', label: 'Image Compressor',           desc: 'Compress product images for invoices' },
-                  { href: '/remove-duplicate-lines-online',icon:'🧹',label:'Remove Duplicate Lines',     desc: 'Clean up client email lists' },
+                  { href: '/tools/invoice-generator',         icon: '🧾', label: 'Invoice Generator',          desc: 'Create professional invoices free' },
+                  { href: '/tools/emi-calculator',            icon: '🧮', label: 'EMI Calculator',             desc: 'Plan installment payment schedules' },
+                  { href: '/tools/percentage-calculator',icon: '📊',label: 'Percentage Calculator',     desc: 'Calculate GST, discount percentages' },
+                  { href: '/tools/qr-code-generator',  icon: '📱', label: 'QR Code Generator',          desc: 'Generate UPI payment QR codes' },
+                  { href: '/tools/image-compressor',     icon: '🗜️', label: 'Image Compressor',           desc: 'Compress product images for invoices' },
+                  { href: '/tools/remove-duplicate-lines',icon:'🧹',label:'Remove Duplicate Lines',     desc: 'Clean up client email lists' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-3 bg-white border border-surface-200 rounded-xl hover:border-emerald-300 hover:bg-emerald-50 transition-colors group">
@@ -634,7 +634,7 @@ export default function PostInvoiceGenerator() {
                   in 60 seconds. Join 10,000+ freelancers and small businesses who use
                   ToolStackHub to invoice their clients.
                 </p>
-                <Link href="/invoice-generator"
+                <Link href="/tools/invoice-generator"
                   className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base px-7 py-3.5 rounded-xl transition-colors">
                   🧾 Use Free Invoice Generator Now →
                 </Link>

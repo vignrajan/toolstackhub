@@ -215,7 +215,7 @@ function ToolPage({ tool }) {
               <div className="text-brand-200 text-sm">  See exactly how many tokens you'll use and what Claude Code costs per month in INR and USD.
               </div>
             </div>
-            <Link href="/claude-code-token-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
+            <Link href="/tools/claude-code-token-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
               Claude Token Calculator →
             </Link>
           </div>
@@ -362,7 +362,7 @@ function ComparisonPage({ comp }) {
           <div className="bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl p-6 text-center">
             <div className="font-bold text-white text-lg mb-2">Skip AI for Salary Calculations</div>
             <p className="text-brand-200 text-sm mb-4">Our free salary calculator gives exact results instantly — no prompting needed.</p>
-            <Link href="/salary-calculator" className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
+            <Link href="/tools/salary-calculator" className="inline-flex items-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
               Free Salary Calculator →
             </Link>
           </div>
@@ -462,7 +462,7 @@ function UseCasePage({ uc }) {
               <div className="font-bold text-white mb-1">Start with Our Free Salary Calculator</div>
               <div className="text-brand-200 text-sm">Get exact in-hand salary, tax comparison, and CTC breakdown instantly.</div>
             </div>
-            <Link href="/salary-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
+            <Link href="/tools/salary-calculator" className="bg-white text-brand-700 font-bold px-5 py-2.5 rounded-xl hover:bg-brand-50 transition-colors shrink-0">
               Open Free Calculator →
             </Link>
           </div>

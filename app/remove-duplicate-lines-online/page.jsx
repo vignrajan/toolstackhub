@@ -262,11 +262,11 @@ export default function RemoveDuplicateLinesPage() {
                 the distinct entries from a large dataset — this tool handles all of
                 it with zero configuration and no sign-up required. Use it alongside
                 our{' '}
-                <Link href="/word-counter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/word-counter" className="text-emerald-700 hover:underline font-medium">
                   word counter online
                 </Link>{' '}
                 to check the size of your cleaned output, or pair it with the{' '}
-                <Link href="/case-converter-online" className="text-emerald-700 hover:underline font-medium">
+                <Link href="/tools/case-converter" className="text-emerald-700 hover:underline font-medium">
                   case converter online
                 </Link>{' '}
                 to normalize text before deduplication.
@@ -533,19 +533,19 @@ export default function RemoveDuplicateLinesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 {
-                  href: '/word-counter-online',
+                  href: '/tools/word-counter',
                   label: 'Word Counter Online',
                   desc: 'Count words, characters, sentences, and reading time after cleaning your text',
                   icon: '📝',
                 },
                 {
-                  href: '/character-counter-online',
+                  href: '/tools/character-counter',
                   label: 'Character Counter Online',
                   desc: 'Count characters with live Twitter, SMS, and meta description limit bars',
                   icon: '🔢',
                 },
                 {
-                  href: '/case-converter-online',
+                  href: '/tools/case-converter',
                   label: 'Case Converter Online',
                   desc: 'Convert deduplicated text to UPPERCASE, lowercase, Title Case, or camelCase',
                   icon: '🔡',

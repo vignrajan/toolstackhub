@@ -187,8 +187,8 @@ export default function FuelBillGeneratorPage({ searchParams }) {
                 For business owners and self-employed professionals, fuel bills are also important
                 for income tax calculations. Vehicle-related expenses (including fuel) can be claimed
                 as business expenses under Section 30–37 of the Income Tax Act when the vehicle is
-                used for business purposes. Use our <Link href="/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
-                to verify tax amounts, and the <Link href="/invoice-generator" className="text-brand-700 hover:underline font-medium">invoice generator</Link>{' '}
+                used for business purposes. Use our <Link href="/tools/gst-calculator" className="text-brand-700 hover:underline font-medium">GST calculator</Link>{' '}
+                to verify tax amounts, and the <Link href="/tools/invoice-generator" className="text-brand-700 hover:underline font-medium">invoice generator</Link>{' '}
                 for other business billing needs.
               </p>
             </div>
@@ -326,10 +326,10 @@ export default function FuelBillGeneratorPage({ searchParams }) {
             <h2 id="related-heading" className="font-display font-bold text-xl text-surface-900 mb-4">Related Free Tools</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                { href: '/invoice-generator',            icon: '🧾', label: 'Invoice Generator',          desc: 'Create GST invoices for your business' },
-                { href: '/gst-calculator',               icon: '🧮', label: 'GST Calculator',             desc: 'Calculate GST on fuel and other expenses' },
-                { href: '/salary-calculator',            icon: '💰', label: 'Salary & Gratuity Calculator',desc: 'Calculate take-home pay and gratuity' },
-                { href: '/percentage-calculator-online', icon: '📊', label: 'Percentage Calculator',       desc: 'Calculate expense percentages and ratios' },
+                { href: '/tools/invoice-generator',            icon: '🧾', label: 'Invoice Generator',          desc: 'Create GST invoices for your business' },
+                { href: '/tools/gst-calculator',               icon: '🧮', label: 'GST Calculator',             desc: 'Calculate GST on fuel and other expenses' },
+                { href: '/tools/salary-calculator',            icon: '💰', label: 'Salary & Gratuity Calculator',desc: 'Calculate take-home pay and gratuity' },
+                { href: '/tools/percentage-calculator', icon: '📊', label: 'Percentage Calculator',       desc: 'Calculate expense percentages and ratios' },
               ].map(l => (
                 <Link key={l.href} href={l.href}
                   className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group">

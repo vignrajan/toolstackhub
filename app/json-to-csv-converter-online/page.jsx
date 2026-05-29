@@ -61,10 +61,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/json-formatter-online',  label: 'JSON Formatter Online',  desc: 'Format and validate your JSON before converting' },
-  { href: '/base64-encoder-online',  label: 'Base64 Encoder Online',  desc: 'Encode CSV data for secure transmission' },
-  { href: '/url-encoder-online',     label: 'URL Encoder Online',     desc: 'Encode URL values found in JSON data' },
-  { href: '/regex-tester-online',    label: 'Regex Tester Online',    desc: 'Test patterns on your CSV output' },
+  { href: '/tools/json-formatter',  label: 'JSON Formatter Online',  desc: 'Format and validate your JSON before converting' },
+  { href: '/tools/base64-encoder',  label: 'Base64 Encoder Online',  desc: 'Encode CSV data for secure transmission' },
+  { href: '/tools/url-encoder',     label: 'URL Encoder Online',     desc: 'Encode URL values found in JSON data' },
+  { href: '/tools/regex-tester',    label: 'Regex Tester Online',    desc: 'Test patterns on your CSV output' },
 ];
 
 const variantLinks = [

@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/base64-encoder-online', label: 'Base64 Encoder Online', desc: 'Encode binary data as text' },
-              { href: '/json-formatter-online', label: 'JSON Formatter Online', desc: 'Format JSON with hex/decimal values' },
-              { href: '/uuid-generator-online', label: 'UUID Generator Online', desc: 'Generate 128-bit random identifiers' },
-              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Get hex color codes' },
+  { href: '/tools/base64-encoder', label: 'Base64 Encoder Online', desc: 'Encode binary data as text' },
+              { href: '/tools/json-formatter', label: 'JSON Formatter Online', desc: 'Format JSON with hex/decimal values' },
+              { href: '/tools/uuid-generator', label: 'UUID Generator Online', desc: 'Generate 128-bit random identifiers' },
+              { href: '/tools/color-picker', label: 'Color Picker Online', desc: 'Get hex color codes' },
 ];
 
 const variantLinks = [

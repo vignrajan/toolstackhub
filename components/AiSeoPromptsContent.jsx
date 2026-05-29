@@ -493,10 +493,10 @@ export default function AiSeoPromptsContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { href: '/meta-tag-generator-online', icon: '🏷️', label: 'Meta Tag Generator', desc: 'Generate title tags and meta descriptions — then optimize them with the AI prompts above' },
-              { href: '/word-counter-online',        icon: '📝', label: 'Word Counter Online', desc: 'Check content length against SEO targets after writing with AI assistance' },
-              { href: '/ai-prompt-generator-online', icon: '🤖', label: 'AI Prompt Generator', desc: 'Generate custom prompts for any SEO or content creation task' },
-              { href: '/character-counter-online',   icon: '🔢', label: 'Character Counter',   desc: 'Verify meta description length (160 chars) before publishing' },
+              { href: '/tools/meta-tag-generator', icon: '🏷️', label: 'Meta Tag Generator', desc: 'Generate title tags and meta descriptions — then optimize them with the AI prompts above' },
+              { href: '/tools/word-counter',        icon: '📝', label: 'Word Counter Online', desc: 'Check content length against SEO targets after writing with AI assistance' },
+              { href: '/tools/ai-prompt-generator', icon: '🤖', label: 'AI Prompt Generator', desc: 'Generate custom prompts for any SEO or content creation task' },
+              { href: '/tools/character-counter',   icon: '🔢', label: 'Character Counter',   desc: 'Verify meta description length (160 chars) before publishing' },
             ].map(l => (
               <Link key={l.href} href={l.href}
                 className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-200 hover:bg-brand-50 transition-colors group">
@@ -547,7 +547,7 @@ export default function AiSeoPromptsContent() {
                 className="inline-flex items-center gap-2 bg-white text-brand-700 px-6 py-3 rounded-xl font-semibold hover:bg-white/90 transition-colors">
                 ✨ Generate Your Prompt
               </a>
-              <Link href="/ai-prompt-generator-online"
+              <Link href="/tools/ai-prompt-generator"
                 className="inline-flex items-center gap-2 bg-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/30 transition-colors border border-white/30">
                 🤖 Try AI Prompt Generator
               </Link>

@@ -51,10 +51,10 @@ const jsonLd = {
 };
 
 const relatedLinks = [
-  { href: '/resize-image-online', label: 'Image Resizer Online', desc: 'Resize images to your detected screen size' },
-              { href: '/color-picker-online', label: 'Color Picker Online', desc: 'Check color display capabilities' },
-              { href: '/css-minifier-online', label: 'CSS Minifier Online', desc: 'Optimize CSS for different screen sizes' },
-              { href: '/meta-tag-generator-online', label: 'Meta Tag Generator', desc: 'Add viewport meta tags' },
+  { href: '/tools/image-resizer', label: 'Image Resizer Online', desc: 'Resize images to your detected screen size' },
+              { href: '/tools/color-picker', label: 'Color Picker Online', desc: 'Check color display capabilities' },
+              { href: '/tools/css-minifier', label: 'CSS Minifier Online', desc: 'Optimize CSS for different screen sizes' },
+              { href: '/tools/meta-tag-generator', label: 'Meta Tag Generator', desc: 'Add viewport meta tags' },
 ];
 
 const variantLinks = [

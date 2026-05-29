@@ -230,7 +230,7 @@ export default function PostCompressImages() {
                       Compare before and after quality side by side before downloading.
                     </p>
                     <div className="flex flex-wrap gap-3 items-center">
-                      <Link href="/compress-image-online"
+                      <Link href="/tools/image-compressor"
                         className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
                         Compress Image Free →
                       </Link>
@@ -338,7 +338,7 @@ export default function PostCompressImages() {
                     body: (
                       <p className="text-surface-600 text-sm leading-relaxed">
                         Go to{' '}
-                        <Link href="/compress-image-online" className="text-orange-700 hover:underline font-medium">
+                        <Link href="/tools/image-compressor" className="text-orange-700 hover:underline font-medium">
                           toolstackhub.in/compress-image-online
                         </Link>.
                         No account, no installation, no browser extension required.
@@ -695,12 +695,12 @@ export default function PostCompressImages() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/compress-image-online',        icon: '🗜️', label: 'Compress Image Online',         desc: 'The free tool covered in this guide' },
-                  { href: '/resize-image-online',          icon: '📐', label: 'Resize Image Online',            desc: 'Change image dimensions before compressing' },
-                  { href: '/jpg-to-png-converter-online',  icon: '🔄', label: 'JPG to PNG Converter',           desc: 'Convert between image formats' },
-                  { href: '/image-to-pdf-converter-online',icon: '📄', label: 'Image to PDF Converter',         desc: 'Combine compressed images into PDF' },
-                  { href: '/color-picker-online',          icon: '🎨', label: 'Color Picker Online',            desc: 'Sample exact colors from your images' },
-                  { href: '/meta-tag-generator-online',    icon: '🏷️', label: 'Meta Tag Generator',             desc: 'Add OG image tags for your compressed images' },
+                  { href: '/tools/image-compressor',        icon: '🗜️', label: 'Compress Image Online',         desc: 'The free tool covered in this guide' },
+                  { href: '/tools/image-resizer',          icon: '📐', label: 'Resize Image Online',            desc: 'Change image dimensions before compressing' },
+                  { href: '/tools/jpg-to-png',  icon: '🔄', label: 'JPG to PNG Converter',           desc: 'Convert between image formats' },
+                  { href: '/tools/image-to-pdf',icon: '📄', label: 'Image to PDF Converter',         desc: 'Combine compressed images into PDF' },
+                  { href: '/tools/color-picker',          icon: '🎨', label: 'Color Picker Online',            desc: 'Sample exact colors from your images' },
+                  { href: '/tools/meta-tag-generator',    icon: '🏷️', label: 'Meta Tag Generator',             desc: 'Add OG image tags for your compressed images' },
                 ].map(l => (
                   <Link key={l.href} href={l.href}
                     className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-colors group">
@@ -749,7 +749,7 @@ export default function PostCompressImages() {
                   90% with no visible quality loss. Works on JPEG, PNG, and WebP.
                   No signup, no uploads to servers, instant results.
                 </p>
-                <Link href="/compress-image-online"
+                <Link href="/tools/image-compressor"
                   className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm px-6 py-3 rounded-xl transition-colors">
                   Compress Images Free Now →
                 </Link>
