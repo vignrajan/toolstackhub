@@ -1048,7 +1048,7 @@ export const tools = [
     relatedSlugs: ['salary-calculator', 'hra-calculator', 'ppf-calculator'],
   },
   {
-    slug:        'jwt-decoder-online',
+    slug:        'jwt-decoder',
     name:        'JWT Decoder',
     href:        '/tools/jwt-decoder',
     category:    'developer',
