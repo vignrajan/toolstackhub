@@ -95,7 +95,7 @@ export default function ToolSearch({ className = '' }) {
           onChange={e => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onKeyDown={handleKeyDown}
-          placeholder="Search 50+ tools… (e.g. JSON, compress, QR)"
+          placeholder="Search 60+ tools… (e.g. JSON, compress, QR)"
           className="w-full pl-12 pr-20 py-3.5 bg-white rounded-2xl border border-surface-200 text-surface-800 placeholder:text-surface-400
             focus:outline-none focus:border-brand-400 focus:ring-4 focus:ring-brand-100
             shadow-sm text-base transition-all duration-150"
