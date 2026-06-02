@@ -1,4 +1,7 @@
 import { SITE_CONFIG } from '../data/tools';
+import { getAllEmiBankSlugs } from '../data/emi-bank-pages';
+import { getAllGstStateSlugs } from '../data/gst-state-pages';
+import { getAllSalaryCitySlugs } from '../data/salary-city-pages';
 
 export default function sitemap() {
   const base = SITE_CONFIG.url;
@@ -212,6 +215,15 @@ export default function sitemap() {
     p('/tools/fuel-bill-generator',      0.90),
     p('/tools/claude-code-token-calculator', 0.90),
     p('/tools/cgpa-calculator',          0.92),
+
+    // ── EMI bank programmatic pages (handled by [slug] router) ──
+    ...getAllEmiBankSlugs().map(slug => p(`/${slug}`, 0.88)),
+
+    // ── GST state programmatic pages (handled by [slug] router) ──
+    ...getAllGstStateSlugs().map(slug => p(`/${slug}`, 0.87)),
+
+    // ── Salary city programmatic pages (handled by [slug] router) ──
+    ...getAllSalaryCitySlugs().map(slug => p(`/${slug}`, 0.87)),
 
     // ── Number to Words — main tool ───────────────────────────
     p('/tools/number-to-words', 0.92),
