@@ -9,11 +9,11 @@ function fmt(n) {
   }).format(n);
 }
 
-export default function GSTCalculator() {
-  const [amount,    setAmount]    = useState('');
-  const [rate,      setRate]      = useState(18);
-  const [mode,      setMode]      = useState('exclusive'); // exclusive | inclusive
-  const [txnType,   setTxnType]   = useState('intra');     // intra | inter
+export default function GSTCalculator({ prefill = {} }) {
+  const [amount,    setAmount]    = useState(prefill.amount ?? '');
+  const [rate,      setRate]      = useState(prefill.rate ?? 18);
+  const [mode,      setMode]      = useState(prefill.mode ?? 'exclusive'); // exclusive | inclusive
+  const [txnType,   setTxnType]   = useState(prefill.txnType ?? 'intra');  // intra | inter
   const [copied,    setCopied]    = useState(false);
 
   const val = parseFloat(amount) || 0;

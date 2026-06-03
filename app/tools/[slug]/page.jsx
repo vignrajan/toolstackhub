@@ -37,6 +37,16 @@ import PasswordStrengthChecker   from '../../../components/tools/PasswordStrengt
 // ── Batch 3 ──
 import AiPromptGenerator         from '../../../components/tools/AiPromptGenerator';
 import TextToHandwriting         from '../../../components/tools/TextToHandwriting';
+// ── Batch 4 — newly migrated tools ──
+import ImageToPdf                from '../../../components/tools/ImageToPdf';
+import RemoveDuplicateLines      from '../../../components/tools/RemoveDuplicateLines';
+import TypingSpeedTest           from '../../../components/tools/TypingSpeedTest';
+import RemoveLineBreaks          from '../../../components/tools/RemoveLineBreaks';
+import TextRepeater              from '../../../components/tools/TextRepeater';
+import JsonToCsv                 from '../../../components/tools/JsonToCsv';
+import DiffChecker               from '../../../components/tools/DiffChecker';
+import CronBuilder               from '../../../components/tools/CronBuilder';
+import JwtDecoder                from '../../../components/tools/JwtDecoder';
 
 /**
  * Tool component registry
@@ -80,6 +90,18 @@ const TOOL_COMPONENTS = {
   // Batch 3
   'ai-prompt-generator':       AiPromptGenerator,
   'text-to-handwriting':       TextToHandwriting,
+  // Batch 4
+  'image-to-pdf':              ImageToPdf,
+  'remove-duplicate-lines':    RemoveDuplicateLines,
+  'typing-speed-test':         TypingSpeedTest,
+  'remove-line-breaks':        RemoveLineBreaks,
+  'remove-empty-lines':        RemoveLineBreaks,
+  'remove-extra-spaces':       RemoveLineBreaks,
+  'text-repeater':             TextRepeater,
+  'json-to-csv':               JsonToCsv,
+  'diff-checker':              DiffChecker,
+  'cron-expression-builder':   CronBuilder,
+  'jwt-decoder':               JwtDecoder,
 };
 
 // ── Static Params (SSG) ──────────────────────────────────────
@@ -100,7 +122,6 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords: tool.keywords,
-    robots: { index: false, follow: true},
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title,

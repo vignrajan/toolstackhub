@@ -38,7 +38,7 @@ function calcTax(income, slabs) {
 }
 
 // ── Salary Calculator ─────────────────────────────────────────
-function SalaryCalc() {
+function SalaryCalc({ prefill = {} }) {
   const [inputs, setInputs] = useState({
     ctcMode: 'annual', ctc: 1200000,
     basicPct: 40, hraPct: 50,
@@ -46,6 +46,7 @@ function SalaryCalc() {
     regime: 'new', state: 'Maharashtra',
     extraDeductions: 0, deduction80C: 150000,
     rent: 0, homeLoan: 0,
+    ...prefill,
   });
   const set = (k, v) => setInputs(p => ({ ...p, [k]: v }));
 
@@ -438,7 +439,7 @@ function GratuityCalc() {
 }
 
 // ── Main Export ───────────────────────────────────────────────
-export default function SalaryGratuityCalculator() {
+export default function SalaryGratuityCalculator({ prefill = {} }) {
   const [tab, setTab] = useState('salary');
   return (
     <div className="bg-white border border-surface-200 rounded-2xl overflow-hidden shadow-sm">
@@ -453,7 +454,7 @@ export default function SalaryGratuityCalculator() {
         ))}
       </div>
       <div className="p-6">
-        {tab==='salary'  ? <SalaryCalc /> : <GratuityCalc />}
+        {tab==='salary'  ? <SalaryCalc prefill={prefill} /> : <GratuityCalc />}
       </div>
     </div>
   );

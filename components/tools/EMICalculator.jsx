@@ -13,10 +13,10 @@ function formatNumber(n) {
   return new Intl.NumberFormat('en-IN').format(Math.round(n));
 }
 
-export default function EMICalculator() {
-  const [principal,  setPrincipal]  = useState(1000000);
-  const [rate,       setRate]       = useState(8.5);
-  const [tenure,     setTenure]     = useState(20);
+export default function EMICalculator({ prefill = {} }) {
+  const [principal,  setPrincipal]  = useState(prefill.principal ?? 1000000);
+  const [rate,       setRate]       = useState(prefill.rate ?? 8.5);
+  const [tenure,     setTenure]     = useState(prefill.tenure ?? 20);
   const [tenureType, setTenureType] = useState('years'); // years | months
   const [copied,     setCopied]     = useState(false);
 
