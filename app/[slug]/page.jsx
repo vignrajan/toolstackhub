@@ -37,24 +37,25 @@ export async function generateStaticParams() {
 
 // ── Dynamic metadata ──────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const bmi      = getBMIPageBySlug(params.slug);
-  const speech   = getPageBySlug(params.slug);
-  const age      = getAgePageBySlug(params.slug);
-  const invoice  = getInvoicePageBySlug(params.slug);
-  const numWords = getNumberWordsPageBySlug(params.slug);
-  const emiBank  = getEmiBankPageBySlug(params.slug);
-  const gstState = getGstStatePageBySlug(params.slug);
-  const salaryCity = getSalaryCityPageBySlug(params.slug);
+  const { slug } = await params;
+  const bmi      = getBMIPageBySlug(slug);
+  const speech   = getPageBySlug(slug);
+  const age      = getAgePageBySlug(slug);
+  const invoice  = getInvoicePageBySlug(slug);
+  const numWords = getNumberWordsPageBySlug(slug);
+  const emiBank  = getEmiBankPageBySlug(slug);
+  const gstState = getGstStatePageBySlug(slug);
+  const salaryCity = getSalaryCityPageBySlug(slug);
   const page     = bmi || speech || age || invoice || numWords || emiBank || gstState || salaryCity;
   if (!page) return {};
   return {
     title:       `${page.title} | ToolStackHub`,
     description:  page.metaDesc,
-    alternates: { canonical: `${SITE_CONFIG.url}/${params.slug}` },
+    alternates: { canonical: `${SITE_CONFIG.url}/${slug}` },
     openGraph: {
       title:       page.title,
       description: page.metaDesc,
-      url:        `${SITE_CONFIG.url}/${params.slug}`,
+      url:        `${SITE_CONFIG.url}/${slug}`,
       type:        'website',
       siteName:    SITE_CONFIG.name,
       images: [{ url: SITE_CONFIG.ogImage, width: 1200, height: 630 }],
@@ -675,29 +676,31 @@ function InvoicePage({ page }) {
 // ══════════════════════════════════════════════════════════════
 // MAIN ROUTER — checks all datasets in order
 // ══════════════════════════════════════════════════════════════
-export default function DynamicSlugPage({ params }) {
-  const bmiPage     = getBMIPageBySlug(params.slug);
+export default async function DynamicSlugPage({ params }) {
+  const { slug } = await params;
+
+  const bmiPage     = getBMIPageBySlug(slug);
   if (bmiPage)     return <BMIPage page={bmiPage} />;
 
-  const speechPage  = getPageBySlug(params.slug);
+  const speechPage  = getPageBySlug(slug);
   if (speechPage)  return <SpeechBubblePage page={speechPage} />;
 
-  const agePage     = getAgePageBySlug(params.slug);
+  const agePage     = getAgePageBySlug(slug);
   if (agePage)     return <AgePage page={agePage} />;
 
-  const invoicePage = getInvoicePageBySlug(params.slug);
+  const invoicePage = getInvoicePageBySlug(slug);
   if (invoicePage) return <InvoicePage page={invoicePage} />;
 
-  const numWordsPage = getNumberWordsPageBySlug(params.slug);
+  const numWordsPage = getNumberWordsPageBySlug(slug);
   if (numWordsPage) return <NumberWordsPage page={numWordsPage} />;
 
-  const emiBankPage = getEmiBankPageBySlug(params.slug);
+  const emiBankPage = getEmiBankPageBySlug(slug);
   if (emiBankPage) return <EmiBankPage page={emiBankPage} />;
 
-  const gstStatePage = getGstStatePageBySlug(params.slug);
+  const gstStatePage = getGstStatePageBySlug(slug);
   if (gstStatePage) return <GstStatePage page={gstStatePage} />;
 
-  const salaryCityPage = getSalaryCityPageBySlug(params.slug);
+  const salaryCityPage = getSalaryCityPageBySlug(slug);
   if (salaryCityPage) return <SalaryCityPage page={salaryCityPage} />;
 
   notFound();
