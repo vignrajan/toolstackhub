@@ -1108,7 +1108,7 @@ export const tools = [
     relatedSlugs: ['invoice-generator', 'salary-slip-generator', 'pan-validator'],
   },
   {
-    slug:        'sql-formatter-online',
+    slug:        'sql-formatter',
     name:        'SQL Formatter',
     href:        '/tools/sql-formatter',
     category:    'developer',
