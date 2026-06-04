@@ -171,7 +171,8 @@ export async function generateStaticParams() {
 
 // ── Dynamic Metadata ─────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const tool = getToolBySlug(params.slug);
+  const { slug } = await params;
+  const tool = getToolBySlug(slug);
   if (!tool) return {};
 
   const canonicalUrl = `${SITE_CONFIG.url}/tools/${tool.slug}`;
@@ -201,8 +202,9 @@ export async function generateMetadata({ params }) {
 }
 
 // ── Page Component ───────────────────────────────────────────
-export default function ToolPage({ params }) {
-  const tool = getToolBySlug(params.slug);
+export default async function ToolPage({ params }) {
+  const { slug } = await params;
+  const tool = getToolBySlug(slug);
 
   // 404 for unknown slugs
   if (!tool) notFound();
