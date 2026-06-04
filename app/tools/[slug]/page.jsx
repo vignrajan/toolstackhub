@@ -47,6 +47,35 @@ import JsonToCsv                 from '../../../components/tools/JsonToCsv';
 import DiffChecker               from '../../../components/tools/DiffChecker';
 import CronBuilder               from '../../../components/tools/CronBuilder';
 import JwtDecoder                from '../../../components/tools/JwtDecoder';
+import CgpaCalculator            from '../../../components/tools/CgpaCalculator';
+// ── Batch 5 — India tools + remaining ──
+import BmiCalculator             from '../../../components/tools/BMICalculator';
+import ChatScreenshotGenerator   from '../../../components/tools/ChatScreenshotGenerator';
+import ClaudeTokenCalculator     from '../../../components/tools/Calculator';
+import ColorPaletteGenerator     from '../../../components/tools/ColorPaletteGenerator';
+import EMICalculator             from '../../../components/tools/EMICalculator';
+import EpfCalculator             from '../../../components/tools/EpfCalculator';
+import Form16Calculator          from '../../../components/tools/Form16Calculator';
+import FuelBillGenerator         from '../../../components/tools/FuelBillGenerator';
+import GSTCalculator             from '../../../components/tools/GSTCalculator';
+import GstValidator              from '../../../components/tools/GstValidator';
+import HRACalculator             from '../../../components/tools/HRACalculator';
+import HtmlToMarkdown            from '../../../components/tools/HtmlToMarkdown';
+import IfscFinder                from '../../../components/tools/IfscFinder';
+import InvoiceGenerator          from '../../../components/tools/InvoiceGenerator';
+import MarkdownToHtml            from '../../../components/tools/MarkdownToHtml';
+import NumberToWords             from '../../../components/tools/NumberToWords';
+import PanValidator              from '../../../components/tools/PanValidator';
+import PPFCalculator             from '../../../components/tools/PPFCalculator';
+import ProfessionalTaxCalculator from '../../../components/tools/ProfessionalTaxCalculator';
+import RentAgreementGenerator    from '../../../components/tools/RentAgreementGenerator';
+import SalaryGratuityCalculator  from '../../../components/tools/SalaryGratuityCalculator';
+import SalarySlipGenerator       from '../../../components/tools/SalarySlipGenerator';
+import SIPCalculator             from '../../../components/tools/SIPCalculator';
+import SpeechBubbleMaker         from '../../../components/tools/SpeechBubbleMaker';
+import SqlFormatter              from '../../../components/tools/SqlFormatter';
+import UnitConverter             from '../../../components/tools/UnitConverter';
+import WhatsAppLinkGenerator     from '../../../components/tools/WhatsAppLinkGenerator';
 
 /**
  * Tool component registry
@@ -102,6 +131,37 @@ const TOOL_COMPONENTS = {
   'diff-checker':              DiffChecker,
   'cron-expression-builder':   CronBuilder,
   'jwt-decoder':               JwtDecoder,
+  'cgpa-calculator':           CgpaCalculator,
+  // Batch 5
+  'bmi-calculator':              BmiCalculator,
+  'car-loan-emi-calculator':     EMICalculator,
+  'chat-screenshot-generator':   ChatScreenshotGenerator,
+  'claude-code-token-calculator': ClaudeTokenCalculator,
+  'color-palette-generator':     ColorPaletteGenerator,
+  'emi-calculator':              EMICalculator,
+  'epf-calculator':              EpfCalculator,
+  'form-16-calculator':          Form16Calculator,
+  'fuel-bill-generator':         FuelBillGenerator,
+  'gst-calculator':              GSTCalculator,
+  'gst-number-validator':        GstValidator,
+  'home-loan-emi-calculator':    EMICalculator,
+  'hra-calculator':              HRACalculator,
+  'html-to-markdown':            HtmlToMarkdown,
+  'ifsc-finder':                 IfscFinder,
+  'invoice-generator':           InvoiceGenerator,
+  'markdown-to-html':            MarkdownToHtml,
+  'number-to-words':             NumberToWords,
+  'pan-validator':               PanValidator,
+  'ppf-calculator':              PPFCalculator,
+  'professional-tax-calculator': ProfessionalTaxCalculator,
+  'rent-agreement-generator':    RentAgreementGenerator,
+  'salary-calculator':           SalaryGratuityCalculator,
+  'salary-slip-generator':       SalarySlipGenerator,
+  'sip-calculator':              SIPCalculator,
+  'speech-bubble-maker':         SpeechBubbleMaker,
+  'sql-formatter':               SqlFormatter,
+  'unit-converter':              UnitConverter,
+  'whatsapp-link-generator':     WhatsAppLinkGenerator,
 };
 
 // ── Static Params (SSG) ──────────────────────────────────────
