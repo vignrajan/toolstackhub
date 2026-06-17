@@ -2,6 +2,7 @@ import { SITE_CONFIG } from '../data/tools';
 import { getAllEmiBankSlugs } from '../data/emi-bank-pages';
 import { getAllGstStateSlugs } from '../data/gst-state-pages';
 import { getAllSalaryCitySlugs } from '../data/salary-city-pages';
+import { getAllTdsSlugs } from '../data/tds-pages';
 import { getAllAIUseCaseSlugs } from '../data/ai-tools-data';
 
 export default function sitemap() {
@@ -171,6 +172,7 @@ export default function sitemap() {
     p('/tools/salary-calculator',        0.92),
     p('/tools/professional-tax-calculator', 0.92),
     p('/tools/hra-calculator',           0.92),
+    p('/tools/tds-calculator',           0.92),
     p('/tools/ppf-calculator',           0.92),
     p('/tools/fuel-bill-generator',      0.90),
     p('/tools/claude-code-token-calculator', 0.90),
@@ -184,6 +186,9 @@ export default function sitemap() {
 
     // ── Salary city programmatic pages (handled by [slug] router) ──
     ...getAllSalaryCitySlugs().map(slug => p(`/${slug}`, 0.87)),
+
+    // ── TDS programmatic pages (handled by [slug] router) ──
+    ...getAllTdsSlugs().map(slug => p(`/${slug}`, 0.87)),
 
     // ── Number to Words — main tool ───────────────────────────
     p('/tools/number-to-words', 0.92),
