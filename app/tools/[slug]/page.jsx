@@ -74,6 +74,7 @@ import SalarySlipGenerator       from '../../../components/tools/SalarySlipGener
 import SIPCalculator             from '../../../components/tools/SIPCalculator';
 import SpeechBubbleMaker         from '../../../components/tools/SpeechBubbleMaker';
 import SqlFormatter              from '../../../components/tools/SqlFormatter';
+import TDSCalculator             from '../../../components/tools/TDSCalculator';
 import UnitConverter             from '../../../components/tools/UnitConverter';
 import WhatsAppLinkGenerator     from '../../../components/tools/WhatsAppLinkGenerator';
 
@@ -160,6 +161,7 @@ const TOOL_COMPONENTS = {
   'sip-calculator':              SIPCalculator,
   'speech-bubble-maker':         SpeechBubbleMaker,
   'sql-formatter':               SqlFormatter,
+  'tds-calculator':              TDSCalculator,
   'unit-converter':              UnitConverter,
   'whatsapp-link-generator':     WhatsAppLinkGenerator,
 };
