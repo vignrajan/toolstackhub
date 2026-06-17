@@ -11,10 +11,12 @@ import {
 import { SITE_CONFIG } from '../../../data/tools';
 
 export async function generateStaticParams() {
+  // Use-cases are served by the dedicated /ai-tools/use-cases/[slug] route —
+  // a single [slug] segment here cannot hold the "use-cases/" path prefix
+  // (it URL-encodes to %2F and 404s).
   return [
     ...getAllAIToolSlugs().map(slug => ({ slug })),
     ...getAllAIComparisonSlugs().map(slug => ({ slug })),
-    ...getAllAIUseCaseSlugs().map(slug => ({ slug: `use-cases/${slug}` })),
   ];
 }
 

@@ -125,6 +125,13 @@ const nextConfig = {
       { source: '/text-to-binary-converter',      destination: '/tools/binary-converter',   permanent: true },
       { source: '/gst-inclusive-exclusive-calculator', destination: '/tools/gst-calculator', permanent: true },
 
+      // ════════════════════════════════════════════════
+      // PARENT / HUB URLs — no index page exists; send to
+      // closest equivalent so these never 404.
+      // ════════════════════════════════════════════════
+      { source: '/tools',         destination: '/',               permanent: true },
+      { source: '/ai-prompts',    destination: '/ai-prompts/seo', permanent: true },
+
       // BLOG
       { source: '/blog/save-claude-tokens-guide', destination: '/blog/how-to-save-tokens-in-claude', permanent: true },
 
