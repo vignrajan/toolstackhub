@@ -28,10 +28,12 @@ function buildEmiPage(b) {
   return {
     slug,
     bank:    b.name,
+    loanType: 'Home Loan',
     rate:    b.rate,
     maxRate: b.max,
     fee:     b.fee,
     maxTenure: b.tenure,
+    rateNote: `${b.name} home loan rates start at ${b.rate}% p.a. and can rise to about ${b.max}% depending on your CIBIL score, loan amount, and profile. Rates are linked to the RBI repo rate and may change over time. Processing fee: ${b.fee}.`,
     prefill: { rate: b.rate, principal: 3000000, tenure: 20 },
     h1:      `${b.name} Home Loan EMI Calculator 2026`,
     title:   `${b.name} Home Loan EMI Calculator 2026 – Free, Instant`,

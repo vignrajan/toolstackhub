@@ -40,6 +40,7 @@ function buildGstPage(s) {
     state:   s.name,
     code:    s.code,
     capital: s.capital,
+    notes:   `GST rates are uniform across India, but for an intra-state sale within ${s.name} the tax splits into CGST + SGST, while sales to other states are charged as IGST. ${s.name} carries GST state code ${s.code} — the first two digits of every GSTIN registered in the state (capital: ${s.capital}). A business in ${s.name} must register for GST once turnover crosses the prescribed threshold.`,
     prefill: { txnType: 'intra', rate: 18 },
     h1:      `GST Calculator for ${s.name}`,
     title:   `GST Calculator for ${s.name} – Free Online GST Tool 2026`,

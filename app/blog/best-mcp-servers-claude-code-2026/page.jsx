@@ -621,7 +621,7 @@ export default function BestMCPServersBlog() {
 
                   <div className="bg-brand-50 border-l-4 border-brand-600 rounded-r-2xl p-4">
                     <p className="text-sm text-surface-700 leading-relaxed">
-                      Once you have MCP servers running, pair them with <Link href="/blog/claude-prompt-templates" className="text-brand-600 hover:text-brand-700 font-medium">reusable Claude prompt templates</Link> to build repeatable workflows — for example, a template that always checks GitHub issues, queries your DB, and posts a Slack update in one structured prompt.
+                      Once you have MCP servers running, pair them with <Link href="/blog/claude-prompt-templates-save-tokens" className="text-brand-600 hover:text-brand-700 font-medium">reusable Claude prompt templates</Link> to build repeatable workflows — for example, a template that always checks GitHub issues, queries your DB, and posts a Slack update in one structured prompt.
                     </p>
                   </div>
                 </div>

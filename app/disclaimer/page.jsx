@@ -69,7 +69,7 @@ export default function DisclaimerPage() {
           </div>
  
           <div className="flex gap-4 text-sm pt-4 border-t border-surface-200">
-            <Link href="/privacy-policy" className="text-brand-700 hover:underline">Privacy Policy</Link>
+            <Link href="/privacy" className="text-brand-700 hover:underline">Privacy Policy</Link>
             <Link href="/terms" className="text-brand-700 hover:underline">Terms of Use</Link>
             <Link href="/contact" className="text-brand-700 hover:underline">Contact Us</Link>
           </div>

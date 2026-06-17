@@ -2,6 +2,7 @@ import { SITE_CONFIG } from '../data/tools';
 import { getAllEmiBankSlugs } from '../data/emi-bank-pages';
 import { getAllGstStateSlugs } from '../data/gst-state-pages';
 import { getAllSalaryCitySlugs } from '../data/salary-city-pages';
+import { getAllAIUseCaseSlugs } from '../data/ai-tools-data';
 
 export default function sitemap() {
   const base = SITE_CONFIG.url;
@@ -143,51 +144,10 @@ export default function sitemap() {
     p('/tools/cgpa-calculator',         0.92),
     p('/tools/student',                 0.88, 'weekly'),
 
-    // ── EMI by bank ───────────────────────────────────────────
-    p('/sbi-home-loan-emi-calculator',         0.88),
-    p('/hdfc-home-loan-emi-calculator',        0.88),
-    p('/icici-home-loan-emi-calculator',       0.87),
-    p('/axis-home-loan-emi-calculator',        0.85),
-    p('/kotak-home-loan-emi-calculator',       0.84),
-    p('/pnb-home-loan-emi-calculator',         0.84),
-    p('/bob-home-loan-emi-calculator',         0.83),
-    p('/canara-home-loan-emi-calculator',      0.83),
-    p('/union-bank-home-loan-emi-calculator',  0.82),
-    p('/lic-home-loan-emi-calculator',         0.84),
-    p('/bajaj-home-loan-emi-calculator',       0.83),
-    p('/tata-capital-home-loan-emi-calculator',0.82),
-    p('/sbi-car-loan-emi-calculator',          0.85),
-    p('/hdfc-car-loan-emi-calculator',         0.85),
-    p('/icici-car-loan-emi-calculator',        0.84),
-
-    // ── GST by state ──────────────────────────────────────────
-    p('/gst-calculator-maharashtra',    0.87),
-    p('/gst-calculator-karnataka',      0.87),
-    p('/gst-calculator-gujarat',        0.86),
-    p('/gst-calculator-tamil-nadu',     0.86),
-    p('/gst-calculator-delhi',          0.87),
-    p('/gst-calculator-rajasthan',      0.85),
-    p('/gst-calculator-uttar-pradesh',  0.85),
-    p('/gst-calculator-andhra-pradesh', 0.85),
-    p('/gst-calculator-telangana',      0.86),
-    p('/gst-calculator-west-bengal',    0.85),
-    p('/gst-calculator-kerala',         0.85),
-    p('/gst-calculator-punjab',         0.84),
-    p('/gst-calculator-haryana',        0.84),
-    p('/gst-calculator-madhya-pradesh', 0.84),
-    p('/gst-calculator-bihar',          0.83),
-
-    // ── Salary by city ────────────────────────────────────────
-    p('/salary-calculator-bangalore',   0.90),
-    p('/salary-calculator-mumbai',      0.90),
-    p('/salary-calculator-delhi',       0.89),
-    p('/salary-calculator-hyderabad',   0.88),
-    p('/salary-calculator-pune',        0.88),
-    p('/salary-calculator-chennai',     0.87),
-    p('/salary-calculator-kolkata',     0.86),
-    p('/salary-calculator-ahmedabad',   0.85),
-    p('/salary-calculator-noida',       0.86),
-    p('/salary-calculator-gurgaon',     0.87),
+    // ── EMI by bank / GST by state / Salary by city ───────────
+    // These programmatic clusters are generated from their data
+    // sources below (getAllEmiBankSlugs / getAllGstStateSlugs /
+    // getAllSalaryCitySlugs) to stay in sync — do NOT hardcode here.
 
     // ── Utility tools ─────────────────────────────────────────
     p('/tools/qr-code-generator',        0.95),
@@ -251,10 +211,10 @@ export default function sitemap() {
 
     // ── Age Calculator programmatic pages (handled by [slug] router) ──
     p('/tools/age-calculator',     0.85),
-    p('/age-calculator-by-dob',    0.80),
+    p('/age-calculator-by-date-of-birth', 0.80),
 
     // ── Invoice Generator programmatic pages (handled by [slug] router) ──
-    p('/gst-invoice-generator-online', 0.88),
+    p('/gst-invoice-generator-free',   0.88),
     p('/proforma-invoice-generator',   0.85),
 
     // ── AI Tools Hub ──────────────────────────────────────────
@@ -274,12 +234,8 @@ export default function sitemap() {
     p('/ai-tools/claude-vs-chatgpt', 0.90),
     p('/ai-tools/jasper-vs-copyai',  0.85),
 
-    // AI Tool Use Cases
-    p('/ai-tools/use-cases/ai-tools-for-salary-calculation',    0.88),
-    p('/ai-tools/use-cases/ai-tools-for-tax-planning-india',    0.87),
-    p('/ai-tools/use-cases/ai-tools-for-students-india-free',   0.88),
-    p('/ai-tools/use-cases/ai-tools-for-resume-freshers-india', 0.85),
-    p('/ai-tools/use-cases/ai-tools-for-job-offer-comparison',  0.85),
+    // AI Tool Use Cases (generated from data to stay in sync)
+    ...getAllAIUseCaseSlugs().map(slug => p(`/ai-tools/use-cases/${slug}`, 0.86)),
 
   ];
 }

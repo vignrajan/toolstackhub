@@ -910,7 +910,7 @@ function SalaryCityPage({ page }) {
             <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
             <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
             <div className="flex flex-wrap gap-2 mt-5">
-              {[`🏙️ ${page.city}`, `⚖️ PT ₹${page.pt.toLocaleString('en-IN')}/yr`, `🏠 HRA ${page.hraPct}%`, '✅ Free', '⚡ Instant'].map(b => (
+              {[`🏙️ ${page.city}`, page.metro ? '🌆 Metro city' : '🏘️ Non-metro', `🏠 HRA ${page.hraPct}%`, '✅ Free', '⚡ Instant'].map(b => (
                 <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
               ))}
             </div>
@@ -923,8 +923,14 @@ function SalaryCityPage({ page }) {
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-6">
           <div className="bg-surface-50 border border-surface-200 rounded-xl p-5">
-            <h2 className="font-semibold text-surface-900 mb-2">Cost of Living in {page.city}</h2>
-            <p className="text-surface-600 text-sm leading-relaxed">{page.costNote}</p>
+            <h2 className="font-semibold text-surface-900 mb-3">Salary &amp; Tax Facts for {page.city}</h2>
+            <ul className="space-y-2">
+              {(page.facts || []).map((fact, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-surface-600 leading-relaxed">
+                  <span className="text-brand-600 mt-0.5 shrink-0">•</span><span>{fact}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/tools/salary-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
