@@ -12,6 +12,7 @@ import EMICalculator from '../../components/tools/EMICalculator';
 import GSTCalculator from '../../components/tools/GSTCalculator';
 import SalaryGratuityCalculator from '../../components/tools/SalaryGratuityCalculator';
 import TDSCalculator from '../../components/tools/TDSCalculator';
+import IncomeTaxCalculator from '../../components/tools/IncomeTaxCalculator';
 import { getBMIPageBySlug, getAllBMISlugs } from '../../data/bmi-pages';
 import { getPageBySlug, getRelatedPages, getAllSlugs } from '../../data/speech-bubble-pages';
 import { getAgePageBySlug, getAllAgeSlugs } from '../../data/age-pages';
@@ -21,6 +22,8 @@ import { getEmiBankPageBySlug, getAllEmiBankSlugs } from '../../data/emi-bank-pa
 import { getGstStatePageBySlug, getAllGstStateSlugs } from '../../data/gst-state-pages';
 import { getSalaryCityPageBySlug, getAllSalaryCitySlugs } from '../../data/salary-city-pages';
 import { getTdsPageBySlug, getAllTdsSlugs } from '../../data/tds-pages';
+import { getIncomeTaxPageBySlug, getAllIncomeTaxSlugs } from '../../data/income-tax-pages';
+import { inr } from '../../data/income-tax-calc';
 import { SITE_CONFIG } from '../../data/tools';
 
 // ── Static params — all slugs from all datasets ───────────────
@@ -35,6 +38,7 @@ export async function generateStaticParams() {
     ...getAllGstStateSlugs().map(slug => ({ slug })),
     ...getAllSalaryCitySlugs().map(slug => ({ slug })),
     ...getAllTdsSlugs().map(slug => ({ slug })),
+    ...getAllIncomeTaxSlugs().map(slug => ({ slug })),
   ];
 }
 
@@ -50,7 +54,8 @@ export async function generateMetadata({ params }) {
   const gstState = getGstStatePageBySlug(slug);
   const salaryCity = getSalaryCityPageBySlug(slug);
   const tds      = getTdsPageBySlug(slug);
-  const page     = bmi || speech || age || invoice || numWords || emiBank || gstState || salaryCity || tds;
+  const incomeTax = getIncomeTaxPageBySlug(slug);
+  const page     = bmi || speech || age || invoice || numWords || emiBank || gstState || salaryCity || tds || incomeTax;
   if (!page) return {};
   return {
     title:       `${page.title} | ToolStackHub`,
@@ -710,6 +715,9 @@ export default async function DynamicSlugPage({ params }) {
   const tdsPage = getTdsPageBySlug(slug);
   if (tdsPage) return <TdsPage page={tdsPage} />;
 
+  const incomeTaxPage = getIncomeTaxPageBySlug(slug);
+  if (incomeTaxPage) return <IncomeTaxPage page={incomeTaxPage} />;
+
   notFound();
 }
 
@@ -1072,6 +1080,154 @@ function TdsPage({ page }) {
             <Link href="/tools/salary-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
               <span className="text-2xl">💰</span>
               <div><div className="font-semibold text-surface-800 text-sm">Salary Calculator</div><div className="text-xs text-surface-500">In-hand salary & tax</div></div>
+            </Link>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+// ══════════════════════════════════════════════════════════════
+// INCOME TAX PAGE
+// ══════════════════════════════════════════════════════════════
+function IncomeTaxPage({ page }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebApplication',
+        name: page.title,
+        url: `${SITE_CONFIG.url}/${page.slug}`,
+        description: page.metaDesc,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: (page.faqs || []).map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home',                  item: SITE_CONFIG.url },
+          { '@type': 'ListItem', position: 2, name: 'Income Tax Calculator', item: `${SITE_CONFIG.url}/tools/income-tax-calculator` },
+          { '@type': 'ListItem', position: 3, name: page.h1,                 item: `${SITE_CONFIG.url}/${page.slug}` },
+        ],
+      },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Header />
+      <main className="flex-1">
+        <div className="bg-white border-b border-surface-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <nav aria-label="Breadcrumb" className="mb-4">
+              <ol className="flex items-center gap-2 text-sm text-surface-500">
+                <li><Link href="/" className="hover:text-brand-600 transition-colors">Home</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li><Link href="/tools/income-tax-calculator" className="hover:text-brand-600 transition-colors">Income Tax Calculator</Link></li>
+                <li><span className="text-surface-300">/</span></li>
+                <li className="text-surface-800 font-medium truncate">{page.label} Salary</li>
+              </ol>
+            </nav>
+            <h1 className="font-display font-bold text-3xl sm:text-4xl text-surface-950 mb-3 tracking-tight">{page.h1}</h1>
+            <p className="text-surface-500 text-lg leading-relaxed max-w-3xl">{page.intro}</p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              {['🇮🇳 FY 2025-26', '⚖️ New vs Old', '✅ Free', '⚡ Instant', '🧾 87A Rebate'].map(b => (
+                <span key={b} className="text-xs font-medium text-surface-600 bg-surface-100 px-3 py-1.5 rounded-full">{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Quick answer — featured snippet target */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="bg-brand-50 border border-brand-200 rounded-2xl p-6">
+            <div className="text-xs font-bold uppercase tracking-wider text-brand-600 mb-3">
+              Income Tax on {page.label} Salary — FY 2025-26
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {page.quickAnswer.map((q, i) => (
+                <div key={i} className="bg-white rounded-xl border border-brand-100 p-4">
+                  <div className="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-1">{q.label}</div>
+                  <div className="text-2xl font-black text-surface-900">{q.value}</div>
+                  <div className="text-xs text-surface-400 mt-0.5">{q.note}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-brand-800 mt-4 font-medium">
+              ✅ {page.better === 'new' ? 'New' : 'Old'} regime is cheaper here — you save {inr(page.saving)} per year.
+            </p>
+          </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Calculate Your Exact Tax</h2>
+          <Suspense fallback={<div className="h-96 bg-surface-100 rounded-2xl animate-pulse" />}>
+            <IncomeTaxCalculator prefill={{ income: page.amount }} />
+          </Suspense>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-8">
+          <div className="bg-surface-50 border border-surface-200 rounded-xl p-5">
+            <h2 className="font-semibold text-surface-900 mb-3">Key Facts — Tax on {page.label} Salary</h2>
+            <ul className="space-y-2">
+              {(page.facts || []).map((fact, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-surface-600 leading-relaxed">
+                  <span className="text-brand-600 mt-0.5 shrink-0">•</span><span>{fact}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {page.faqs?.length > 0 && (
+            <section>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Frequently Asked Questions</h2>
+              <div className="space-y-3">
+                {page.faqs.map((f, i) => (
+                  <details key={i} className="group bg-white border border-surface-200 rounded-xl p-4">
+                    <summary className="font-semibold text-surface-800 text-sm cursor-pointer list-none flex justify-between items-center">
+                      {f.q}<span className="text-surface-400 group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p className="text-sm text-surface-600 leading-relaxed mt-3">{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {page.related?.length > 0 && (
+            <section>
+              <h2 className="font-display font-bold text-xl text-surface-900 mb-4">Income Tax on Other Salaries</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {page.related.map(rel => (
+                  <Link key={rel} href={`/${rel}`} className="flex items-center justify-center gap-2 p-3 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 hover:bg-brand-50 transition-colors group text-center">
+                    <span className="font-semibold text-surface-800 group-hover:text-brand-700 text-xs capitalize">
+                      {rel.replace('income-tax-on-', '').replace('-salary', '').replace(/-/g, ' ')}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link href="/tools/income-tax-calculator" className="flex items-center gap-3 p-4 bg-brand-600 rounded-xl hover:bg-brand-700 transition-colors">
+              <span className="text-2xl">🧮</span>
+              <div><div className="font-bold text-white text-sm">Income Tax Calculator</div><div className="text-xs text-brand-200">Any income, new vs old</div></div>
+            </Link>
+            <Link href="/tools/salary-calculator" className="flex items-center gap-3 p-4 bg-surface-50 border border-surface-200 rounded-xl hover:border-brand-300 transition-colors">
+              <span className="text-2xl">💰</span>
+              <div><div className="font-semibold text-surface-800 text-sm">Salary Calculator</div><div className="text-xs text-surface-500">In-hand salary & CTC</div></div>
             </Link>
           </div>
         </div>
