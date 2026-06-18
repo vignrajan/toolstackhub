@@ -1,13 +1,15 @@
 'use client';
 import { useState, useMemo } from 'react';
 
+// New regime slabs — Budget 2025, effective FY 2025-26 (AY 2026-27).
 const NEW_SLABS = [
-  { min: 0,       max: 300000,  rate: 0    },
-  { min: 300000,  max: 700000,  rate: 0.05 },
-  { min: 700000,  max: 1000000, rate: 0.10 },
-  { min: 1000000, max: 1200000, rate: 0.15 },
-  { min: 1200000, max: 1500000, rate: 0.20 },
-  { min: 1500000, max: Infinity, rate: 0.30 },
+  { min: 0,       max: 400000,   rate: 0    },
+  { min: 400000,  max: 800000,   rate: 0.05 },
+  { min: 800000,  max: 1200000,  rate: 0.10 },
+  { min: 1200000, max: 1600000,  rate: 0.15 },
+  { min: 1600000, max: 2000000,  rate: 0.20 },
+  { min: 2000000, max: 2400000,  rate: 0.25 },
+  { min: 2400000, max: Infinity, rate: 0.30 },
 ];
 const OLD_SLABS = [
   { min: 0,       max: 250000,  rate: 0    },
@@ -95,11 +97,16 @@ export default function Form16Calculator() {
     const cessOld = taxOld * 0.04;
     const totalTaxOld = taxOld + cessOld;
 
-    // New regime: no HRA/LTA exemption, standard deduction ₹75,000
-    // Only allows: standard deduction + employer NPS (80CCD(2)) + profTax
+    // New regime (FY 2025-26): no HRA/LTA exemption, standard deduction
+    // ₹75,000, full 87A rebate up to ₹12L taxable, marginal relief just
+    // above ₹12L. (Professional tax is not deductible under the new regime.)
     const netNew = gross;
-    const taxableNew = Math.max(0, netNew - 75000 - profTax);
-    let taxNew = taxableNew <= 700000 ? 0 : calcTax(taxableNew, NEW_SLABS);
+    const taxableNew = Math.max(0, netNew - 75000);
+    let taxNew = taxableNew <= 1200000 ? 0 : calcTax(taxableNew, NEW_SLABS);
+    if (taxableNew > 1200000) {
+      const excess = taxableNew - 1200000;       // marginal relief
+      if (taxNew > excess) taxNew = excess;
+    }
     const cessNew = taxNew * 0.04;
     const totalTaxNew = taxNew + cessNew;
 
@@ -302,9 +309,8 @@ export default function Form16Calculator() {
               <div className="px-4 pb-4">
                 <Row label="Gross Salary"                   value={fmt(result.gross)}            bold />
                 <Row label="Less: Standard Deduction"       value="(₹75,000)"                   red indent />
-                <Row label="Less: Professional Tax"         value={`(${fmt(profTax)})`}          red indent />
                 <Row label="Taxable Income"                 value={fmt(result.taxableNew)}       bold />
-                {result.taxableNew <= 700000 && (
+                {result.taxableNew <= 1200000 && (
                   <Row label="Rebate u/s 87A"               value="Full rebate — Zero tax"       green />
                 )}
                 <Row label="Income Tax"                     value={fmt(result.taxNew)}           />

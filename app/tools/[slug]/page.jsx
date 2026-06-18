@@ -62,6 +62,7 @@ import GstValidator              from '../../../components/tools/GstValidator';
 import HRACalculator             from '../../../components/tools/HRACalculator';
 import HtmlToMarkdown            from '../../../components/tools/HtmlToMarkdown';
 import IfscFinder                from '../../../components/tools/IfscFinder';
+import IncomeTaxCalculator       from '../../../components/tools/IncomeTaxCalculator';
 import InvoiceGenerator          from '../../../components/tools/InvoiceGenerator';
 import MarkdownToHtml            from '../../../components/tools/MarkdownToHtml';
 import NumberToWords             from '../../../components/tools/NumberToWords';
@@ -149,6 +150,7 @@ const TOOL_COMPONENTS = {
   'hra-calculator':              HRACalculator,
   'html-to-markdown':            HtmlToMarkdown,
   'ifsc-finder':                 IfscFinder,
+  'income-tax-calculator':       IncomeTaxCalculator,
   'invoice-generator':           InvoiceGenerator,
   'markdown-to-html':            MarkdownToHtml,
   'number-to-words':             NumberToWords,
