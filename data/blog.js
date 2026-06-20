@@ -748,9 +748,51 @@ export const blogPosts = [
     toolName:    'Claude Code Token Calculator',
     featured:    true,
     trending:    true,
-  }
-  
-  
+  },
+  {
+    slug:        'how-to-save-income-tax-india-fy-2025-26',
+    title:       'How to Save Income Tax in India — 12 Legal Ways (FY 2025-26)',
+    metaTitle:   'How to Save Income Tax in India — 12 Legal Ways FY 2025-26',
+    metaDesc:    'Complete guide to reducing your income tax in FY 2025-26. 12 legal tax-saving methods mapped to new vs old regime, with exact rupee savings and free calculators.',
+    excerpt:     'Every major deduction mapped to the correct regime — 80C, 80D, HRA, NPS, home loan interest, and more. Includes a regime break-even table by salary and 4 free calculators to verify your numbers.',
+    category:    'Income Tax',
+    categorySlug:'income-tax',
+    author:      'ToolStackHub Finance Team',
+    authorBio:   'Our finance team researches and verifies all content against official government sources including the Income Tax Department, Finance Act, and CBDT notifications.',
+    authorUrl:   '/about',
+    publishedAt: '2026-06-18',
+    updatedAt:   '2026-06-18',
+    readTime:    14,
+    coverEmoji:  '🧮',
+    coverBg:     'from-brand-700 to-indigo-800',
+    tags: ['income tax', 'tax saving', 'new regime', 'old regime', '80c', 'hra', 'nps', 'salaried employee', 'india', 'fy 2025-26'],
+    toolUrl:     '/tools/income-tax-calculator',
+    toolName:    'Income Tax Calculator',
+    featured:    true,
+    pinned:      true,
+    trending:    true,
+    canonicalUrl: '/blog/how-to-save-income-tax-india-fy-2025-26',
+    schemaType:  'Article',
+    hasFAQ:      true,
+    hasTable:    true,
+    relatedSlugs: ['old-vs-new-tax-regime-2025-26', 'how-to-calculate-hra-exemption-fy-2026-27', 'income-tax-changes-2026-india'],
+    relatedTools: [
+      { name: 'Income Tax Calculator',  url: '/tools/income-tax-calculator' },
+      { name: 'TDS Calculator',         url: '/tools/tds-calculator'        },
+      { name: 'HRA Calculator',         url: '/tools/hra-calculator'        },
+      { name: 'Salary Calculator',      url: '/tools/salary-calculator'     },
+    ],
+    primaryKeyword:    'how to save income tax in india',
+    secondaryKeywords: [
+      'income tax saving tips fy 2025-26', '80c deductions list fy 2025-26',
+      'how to reduce income tax india salaried', 'new regime tax saving',
+      'hra exemption how to calculate', 'nps tax benefit india',
+      'income tax deductions fy 2025-26', 'old regime vs new regime which is better',
+    ],
+    seasonal: true, seasonPeak: 'April-June',
+  },
+
+
 ];
 
 export function getPostBySlug(slug) {

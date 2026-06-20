@@ -124,6 +124,7 @@ export default function sitemap() {
     p('/blog/linkedgrow-review',                                  0.85),
     p('/blog/claude-code-for-non-programmers',                    0.92),
     p('/blog/best-mcp-servers-claude-code-2026',                  0.92),
+    p('/blog/how-to-save-income-tax-india-fy-2025-26',            0.95, 'weekly'),
 
     // ── Category landing pages ────────────────────────────────
     p('/tools/text',      0.88, 'weekly'),
