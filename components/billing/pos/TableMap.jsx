@@ -80,6 +80,7 @@ export default function TableMap() {
         <div className="flex gap-2">
           <button onClick={() => quickOrder('takeaway')} className="text-sm font-bold px-3.5 py-2 rounded-xl border border-surface-200 text-surface-700 hover:bg-surface-50">🥡 Takeaway</button>
           <button onClick={() => quickOrder('delivery')} className="text-sm font-bold px-3.5 py-2 rounded-xl border border-surface-200 text-surface-700 hover:bg-surface-50">🛵 Delivery</button>
+          <Link href="/billing/pos/reports" className="text-sm font-bold px-3.5 py-2 rounded-xl border border-surface-200 text-surface-700 hover:bg-surface-50">📊 Z-Report</Link>
           <Link href="/billing/pos/menu" className="text-sm font-bold px-3.5 py-2 rounded-xl border border-surface-200 text-surface-700 hover:bg-surface-50">Menu</Link>
         </div>
       </div>
