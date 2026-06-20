@@ -5,7 +5,7 @@ import { getBusiness, saveBusiness, exportAll, importAll } from '../../../lib/bi
 import { STATES } from '../../../lib/billing/gst';
 
 const empty = {
-  name: '', gstin: '', pan: '', email: '', phone: '',
+  name: '', gstin: '', pan: '', fssai: '', email: '', phone: '',
   address: '', stateCode: '', invoicePrefix: 'INV', invoiceCounter: 1,
 };
 
@@ -90,6 +90,10 @@ function SettingsForm() {
               placeholder="ABCDE1234F" className={inputCls} />
           </Field>
         </div>
+        <Field label="FSSAI licence no. (restaurants / food businesses)">
+          <input value={form.fssai} onChange={(e) => set('fssai', e.target.value)}
+            placeholder="12345678901234" className={inputCls} />
+        </Field>
         <Field label="Address">
           <textarea value={form.address} onChange={(e) => set('address', e.target.value)} rows={2}
             placeholder="Street, City, PIN" className={`${inputCls} resize-none`} />

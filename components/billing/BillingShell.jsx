@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const NAV = [
   { href: '/billing/invoices', label: 'Invoices',  icon: '🧾', ready: true },
+  { href: '/billing/pos',      label: 'Restaurant POS', icon: '🍽️', ready: true },
   { href: '/billing/customers', label: 'Customers', icon: '👥', ready: false },
   { href: '/billing/products',  label: 'Products',  icon: '📦', ready: false },
   { href: '/billing/reports',   label: 'Reports',   icon: '📊', ready: false },
